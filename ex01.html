@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Exercicio 01</title>
     <style>
-		fieldset{width:400px;}
-	</style>
+        fieldset{width:400px;}
+    </style>
 
   </head>
   <body>
@@ -90,21 +90,58 @@ informe-o, através de uma mensagem de alerta, a quantidade de palavras contidas
 palavras (uma de cada vez) e, por último, mostre o texto inicial ao usuário alterado, onde
 toda palavra contida no texto original idêntica à primeira palavra informada pelo usuário
 deverá ser substituída pela segunda palavra. */
+/********* VERSAO 1 COM PROMPT *********************************************/
 
-</script>
+    </script>
+        <p>Primeira versão com prompt</p>
         <p>Frase original inserida:</p>
         <p id="frase71"></p>
         <p>Frase com palavras alteradas:</p>
         <p id="frase72"></p>
     <script>
-        var texto = prompt("Digite um texto: ");
-        var word1 = prompt("Digite a 1a palavra: ");
-        var word2 = prompt("Digite a 2a palavra: ");
+        //var texto = prompt("Digite um texto: ");
+        //var word1 = prompt("Digite a 1a palavra: ");
+        //var word2 = prompt("Digite a 2a palavra: ");
+        var res = texto.replace(word1,word2);
         document.getElementById("frase71").innerHTML = texto;
+        document.getElementById("frase72").innerHTML = res;
+/********* VERSAO 2 NA PÁGINA ********************************************/
+    </script>
+        <br><hr><br>
+        <p>Segunda versão sem prompt</p>
+        <h2 id="frase73">The quick brown fox jumps over the lazy dog.</h2>
+        Palavra a ser substituída:<BR>
+        <input id="word3" type="text" size="20" maxlength="60" /><br>
+        Palavra nova:<BR>
+        <input id="word4" type="text" size="20" maxlength="60" /><BR>
+        <input type="button" value="Substituir" onClick='Substitui();'>  
+    <script>
+	function Substitui() {
+            var txt1 = document.getElementById('word3').value;
+	    var txt2 = document.getElementById('word4').value;
+            var str = document.getElementById("frase73").innerHTML; 
+            var res2 = str.replace(txt1, txt2);
+            document.getElementById("frase73").innerHTML = res2;
+        }
 /*****************************************************************************************************/
 /* 8. Construa uma página web capaz de solicitar ao usuário uma expressão matemática, como por
 exemplo ((5*8)-9), e, em seguida, informar, através de uma mensagem de alerta, o resultado
 da expressão. */
+</script>
+        <br><br><hr>
+        <p>Exercício 8</p>
+        Entre com uma expressão matemática:<br>
+        <input id="expressao" type="text" size="20" maxlength="60" placeholder="ex.: ((5*8)-9)" />
+        <input type="button" value="Calcular" onClick='Calcular();'>  <br>
+        Resultado<BR>
+        <input id="resultado" type="text" size="20" maxlength="60" /><BR>
+        
+    <script>
+	function Calcular() {
+            var exp = document.getElementById('expressao').value;
+            var res8 = exp.split()
+            document.getElementById("resultado").innerHTML = res8;
+        }
 /*****************************************************************************************************/
 /* 9. Construa uma página web capaz de solicitar do usuário um valor inteiro positivo maior que
 zero e em seguida o nome dele. Exiba no corpo do documento HTML o nome da pessoa
