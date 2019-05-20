@@ -1,10 +1,17 @@
 <!DOCTYPE html>
+<!-- Rodrigo CavanhaMan -->
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8">
     <title>Exercicio 01</title>
     <style>
         fieldset{width:400px;}
+		table, tr, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+			text-align: center;
+		}
+		td{width: 120px;)
     </style>
 
   </head>
@@ -91,7 +98,6 @@ palavras (uma de cada vez) e, por último, mostre o texto inicial ao usuário al
 toda palavra contida no texto original idêntica à primeira palavra informada pelo usuário
 deverá ser substituída pela segunda palavra. */
 /********* VERSAO 1 COM PROMPT *********************************************/
-
     </script>
         <p>Exercício 7 - Primeira versão com prompt</p>
         <p>Frase original inserida:</p>
@@ -123,7 +129,6 @@ deverá ser substituída pela segunda palavra. */
 			var txt1 = document.getElementById('word3').value;
 			var txt2 = document.getElementById('word4').value;
 			var str = document.getElementById("frase73").innerHTML; 
-			//var res2 = str.replaceAll(txt1, txt2);
 			var res2 = str.split(txt1).join(txt2);
 			document.getElementById("frase73").innerHTML = res2;
 		}
@@ -131,20 +136,24 @@ deverá ser substituída pela segunda palavra. */
 /* 8. Construa uma página web capaz de solicitar ao usuário uma expressão matemática, como por
 exemplo ((5*8)-9), e, em seguida, informar, através de uma mensagem de alerta, o resultado
 da expressão. */
+/********* VERSAO 1 COM PROMPT *********************************************/
+	    //var ex = prompt("Digite uma expressão matemática")
+        //alert(eval(ex))
+/********* VERSAO 2 NA PÁGINA ********************************************/
 	</script>
         <br><br><hr>
         <p>Exercício 8</p>
         Entre com uma expressão matemática:<br>
-        <input id="expressao" type="text" size="20" maxlength="60" placeholder="ex.: ((5*8)-9)" />
+        <input id="expressao" type="text" size="20" maxlength="60" value="((5*8)-9)" />
         <input type="button" value="Calcular" onClick='Calcular();'>  <br>
-        Resultado<BR>
-        <input id="resultado" type="text" size="20" maxlength="60" /><BR>
-        
+        Resultado: 
+        <b id="result8"></b>
+		<BR>
     <script>
 		function Calcular() {
             var exp = document.getElementById('expressao').value;
-            var res8 = exp.split()
-            document.getElementById("resultado").innerHTML = res8;
+            var res8 = eval(exp);
+			document.getElementById("result8").innerHTML = res8;
         }
 /*****************************************************************************************************/
 /* 9. Construa uma página web capaz de solicitar do usuário um valor inteiro positivo maior que
@@ -155,7 +164,9 @@ exibidos em linhas diferentes. */
         <br><br><hr>
 		<p>Exercício 9</p>
 	<script>
-/*		var n = prompt("Digite um inteiro positivo maior que zero:");
+/********* VERSAO 1 COM PROMPT *********************************************/
+/*
+		var n = prompt("Digite um inteiro positivo maior que zero:");
 		var nome = prompt("Digite seu nome:");
 		for(var i=0 ; i<n ; i++){
 			var h = document.createElement("p");
@@ -163,6 +174,11 @@ exibidos em linhas diferentes. */
 			h.appendChild(t)
 			document.body.appendChild(h);
 		}
+*/
+/********* VERSAO 2 COM PROMPT *********************************************/
+/*
+        for (var i = 0; i < n; i++)
+            document.write(nome + "<br>")
 */
 /*****************************************************************************************************/
 /* 10. Construa uma página web capaz de solicitar ao usuário um valor inteiro positivo maior ou
@@ -175,11 +191,27 @@ hexadecimal.
 	</script>
         <br><br><hr>
 		<p>Exercício 10</p>
+		<table id="tabela">
+		</table>
 	<script>
-		var n = prompt("Digite um inteiro positivo maior ou igual a 2:");
+		//var n = prompt("Digite um inteiro positivo maior ou igual a 2:");
+		var table = document.getElementById("tabela");
+		var row = table.insertRow(0);
+		var cell1 = row.insertCell(0);
+		var cell2 = row.insertCell(1);
+		var cell3 = row.insertCell(2);
+		cell1.innerHTML = "Base decimal";
+		cell2.innerHTML = "Base binária";
+		cell3.innerHTML = "Base hexadecimal";
+        for (var i = 0 ; i<=n ; i++) {
+			var row = table.insertRow(i+1);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(1);
+			var cell3 = row.insertCell(2);
+			cell1.innerHTML = i;
+			cell2.innerHTML = i.toString(2);
+			cell3.innerHTML = i.toString(16);
+        }
     </script>
   </body>
 </html>
-<!--
-
--->
