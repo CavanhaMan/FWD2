@@ -93,41 +93,45 @@ deverá ser substituída pela segunda palavra. */
 /********* VERSAO 1 COM PROMPT *********************************************/
 
     </script>
-        <p>Primeira versão com prompt</p>
+        <p>Exercício 7 - Primeira versão com prompt</p>
         <p>Frase original inserida:</p>
-        <p id="frase71"></p>
+        <b><p id="frase71"></p></b>
         <p>Frase com palavras alteradas:</p>
-        <p id="frase72"></p>
+        <b><p id="frase72"></p></b>
     <script>
-        //var texto = prompt("Digite um texto: ");
-        //var word1 = prompt("Digite a 1a palavra: ");
-        //var word2 = prompt("Digite a 2a palavra: ");
-        var res = texto.replace(word1,word2);
-        document.getElementById("frase71").innerHTML = texto;
+/*
+        var texto7 = prompt("Digite um texto:");
+        var word1 = prompt("Digite a 1a palavra:");
+        var word2 = prompt("Digite a 2a palavra:");
+		var res7 = texto7.split(word1).join(word2);
+		alert(res7);
+        document.getElementById("frase71").innerHTML = texto7;
         document.getElementById("frase72").innerHTML = res;
+*/
 /********* VERSAO 2 NA PÁGINA ********************************************/
     </script>
         <br><hr><br>
-        <p>Segunda versão sem prompt</p>
-        <h2 id="frase73">The quick brown fox jumps over the lazy dog.</h2>
+        <p>Exercício 7 - Segunda versão sem prompt</p>
+        <h2 id="frase73">The quick brown fox jumps over the lazy dog.<BR>The quick brown fox jumps over the lazy dog.</h2>
         Palavra a ser substituída:<BR>
         <input id="word3" type="text" size="20" maxlength="60" /><br>
         Palavra nova:<BR>
         <input id="word4" type="text" size="20" maxlength="60" /><BR>
         <input type="button" value="Substituir" onClick='Substitui();'>  
     <script>
-	function Substitui() {
-            var txt1 = document.getElementById('word3').value;
-	    var txt2 = document.getElementById('word4').value;
-            var str = document.getElementById("frase73").innerHTML; 
-            var res2 = str.replace(txt1, txt2);
-            document.getElementById("frase73").innerHTML = res2;
-        }
+		function Substitui() {
+			var txt1 = document.getElementById('word3').value;
+			var txt2 = document.getElementById('word4').value;
+			var str = document.getElementById("frase73").innerHTML; 
+			//var res2 = str.replaceAll(txt1, txt2);
+			var res2 = str.split(txt1).join(txt2);
+			document.getElementById("frase73").innerHTML = res2;
+		}
 /*****************************************************************************************************/
 /* 8. Construa uma página web capaz de solicitar ao usuário uma expressão matemática, como por
 exemplo ((5*8)-9), e, em seguida, informar, através de uma mensagem de alerta, o resultado
 da expressão. */
-</script>
+	</script>
         <br><br><hr>
         <p>Exercício 8</p>
         Entre com uma expressão matemática:<br>
@@ -137,7 +141,7 @@ da expressão. */
         <input id="resultado" type="text" size="20" maxlength="60" /><BR>
         
     <script>
-	function Calcular() {
+		function Calcular() {
             var exp = document.getElementById('expressao').value;
             var res8 = exp.split()
             document.getElementById("resultado").innerHTML = res8;
@@ -147,6 +151,19 @@ da expressão. */
 zero e em seguida o nome dele. Exiba no corpo do documento HTML o nome da pessoa
 informado correspondente a quantidade de vezes informado por ele. Os nomes deverão ser
 exibidos em linhas diferentes. */
+	</script>
+        <br><br><hr>
+		<p>Exercício 9</p>
+	<script>
+/*		var n = prompt("Digite um inteiro positivo maior que zero:");
+		var nome = prompt("Digite seu nome:");
+		for(var i=0 ; i<n ; i++){
+			var h = document.createElement("p");
+			var t = document.createTextNode(nome);
+			h.appendChild(t)
+			document.body.appendChild(h);
+		}
+*/
 /*****************************************************************************************************/
 /* 10. Construa uma página web capaz de solicitar ao usuário um valor inteiro positivo maior ou
 igual 2 e, em seguida, a partir do número lido, exiba uma tabela no corpo do documento da
@@ -155,6 +172,11 @@ número informado pelo usuário nos seguintes sistemas de numeração: decimal, 
 hexadecimal.
  Exemplo: número informado = 3
  Tabela gerada e exibida no corpo do documento:*/
+	</script>
+        <br><br><hr>
+		<p>Exercício 10</p>
+	<script>
+		var n = prompt("Digite um inteiro positivo maior ou igual a 2:");
     </script>
   </body>
 </html>
