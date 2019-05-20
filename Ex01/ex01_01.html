@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- Rodrigo CavanhaMan -->
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Exercicio 01</title>
+  </head>
+	<p>1. Solicite ao usuário as notas do 1o e 2o bimestres e em seguida informe se ele foi aprovado ou não na disciplina. Um aluno será aprovado se a soma das notas for maior ou igual a 60,0 pontos. Caso ele tenha sido reprovado informe-o a quantidade de pontos faltantes para ele ter sido aprovado.</p>
+  <body>
+    <script>
+        var nota1 = prompt("Diggite a nota do primeiro bimestre: ")
+        var nota2 = prompt("Diggite a nota do segundo bimestre: ")
+        var soma = parseFloat(nota1) + parseFloat(nota2);
+        if (soma >= 60)
+            alert("aprovado - voce obteve " + soma + " pontos");
+        else
+            alert("reprovado - faltaram " + (60-soma) + " pontos para aprovação.");
+    </script>
+  </body>
+</html>
