@@ -1,0 +1,2 @@
+Exercício 2
+Construa uma página web capaz de solicitar primeiramente o primeiro nome do usuário e, em seguida, o seu sobrenome. Por último, exiba em uma única mensagem o seu nome completo (nome + sobrenome).
