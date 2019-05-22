@@ -1,10 +1,20 @@
 /* Rodrigo CavanhaMan */
+clicked = true;
 $(document).ready(function (){
+	$('button').hover(
+		function(){$(this).css("background-color", "red");}, 
+		function(){$(this).css("background-color", "#380606");}
+	);
+	
 	$('#mem').click(function(e){
 		$("#frametxt").attr("src", "lembrar.txt");
 		$("#framehtml").attr("src", "lembrar.html");
+		$(this).css("background-color", "blue");
 	});
-	$('#mem').mouseover(function(e){$("#frametxt").attr("src", "lembrar.txt");});
+	$('#mem').mouseover(function(e){
+		$("#frametxt").attr("src", "lembrar.txt");
+		
+	});
 	$('#mem').mouseout(function(e){$("#frametxt").attr("src", "");});
 
 	$('#ex1').click(function(e){

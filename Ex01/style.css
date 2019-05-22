@@ -25,11 +25,11 @@ iframe{width:100%;}
 .menu li, button {
 	padding: 8px;
 	margin-bottom: 8px;
-	background-color: #33b5e5;
+	background-color: #380606;
 	color: #ffffff;
 	width: 100%;
 	text-align: left;
 }
-.clicked {background-color: yellow;}
+.clicked {background-color: red;}
 a:link{text-decoration:none;}
 .menu li:hover {background-color: #0099cc;}
