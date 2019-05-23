@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Rodrigo Cavanhaman -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2</title>
+</head>
+<script>
+    var grupo = [' maria',' joana',' rafael',' gustavo',' bruno',' suzie',' jordana',' rodrigo','  eloah',' roberto'];
+    for(var i=0 ; i<10 ; i++){
+        var sorteio = (Math.floor(Math.random()*10)+1);
+        grupo.splice(sorteio,1);
+        var sorteado = grupo.splice(sorteio,1);
+        //document.write(grupo);
+        document.write(sorteado);
+    }
+    //
+    //grupo = grupo.split(grupo[sorteio]);
+    // for(var i=grupo.length ; i>0 ; i--){
+    //     var sorteio = (Math.floor(Math.random()*i)+1);
+    //     document.write(sorteio);
+    //     document.write(grupo[sorteio]);
+    //     grupo=(grupo.splice(sorteio,1));
+    // }
+    // var sorteio = (Math.floor(Math.random()*10)+1);
+    // var grupo = [' maria',' joana',' rafael',' gustavo',' bruno',' suzie',' joao',' rodrigo','  eloah',' roberto'];
+    // grupo.splice(sorteio,1);
+    // var sorteado = grupo.splice(sorteio,1);
+    // document.write(grupo);
+    // document.write(sorteado);
+</script>
+<body>
+</body>
+</html>
