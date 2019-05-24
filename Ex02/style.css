@@ -1,8 +1,7 @@
 /* Rodrigo CavanhaMan */
 * {box-sizing: border-box;}
-iframe{width:100%;}
 .header,.footer {
-	background-color: grey;
+	background-color: #997a00;
 	color: white;
 	padding: 15px;
 }
@@ -16,7 +15,10 @@ iframe{width:100%;}
 	display: table;
 }
 .menu {width: 25%;}
-.content {width: 75%;}
+.content{width:75%}
+iframe{width:100%}
+.framehtml {height:200px;}
+.frametxt {height:200px;}
 .menu ul {
 	list-style-type: none;
 	margin: 0;
@@ -25,7 +27,7 @@ iframe{width:100%;}
 .menu li, button {
 	padding: 8px;
 	margin-bottom: 8px;
-	background-color: #380606;
+	background-color: #997a00;
 	color: #ffffff;
 	width: 100%;
 	text-align: left;
@@ -33,3 +35,14 @@ iframe{width:100%;}
 .clicked {background-color: red;}
 a:link{text-decoration:none;}
 .menu li:hover {background-color: #0099cc;}
+
+/* numeros da megasena com circulos */
+.dot {
+  height:75px;
+  width: 75px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+  font-size:60px;
+}
+

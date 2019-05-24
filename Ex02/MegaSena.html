@@ -1,17 +1,40 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <!-- Rodrigo Cavanhaman -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>ExercÃ­cio 2</title>
+	<meta http-equiv="Content-Language" content="pt-br">
+	<link href="style.css" rel="stylesheet">
+	<script src="jquery.min.js"></script>
+    <title>Exercício 2</title>
 </head>
 <script>
     var jogo = new Array;
     for(var i=0 ; i<6 ; i++)
 		jogo[i]=(Math.floor(Math.random()*60)+1);
-    document.write(jogo);
     console.log(jogo);
+
+$(document).ready(function(){
+    $("#dot0").text(jogo[0]);
+    $("#dot1").text(jogo[1]);
+    $("#dot2").text(jogo[2]);
+    $("#dot3").text(jogo[3]);
+    $("#dot4").text(jogo[4]);
+    $("#dot5").text(jogo[5]);
+    $("#dot6").text(jogo[6]);
+});
+
 </script>
 <body>
+	
+	<div style="text-align:center">
+	  <h1>Números Sorteados da MegaSena</h1>
+	  <p class="dot" id="dot0"></p>
+	  <p class="dot" id="dot1"></p>
+	  <p class="dot" id="dot2"></p>
+	  <p class="dot" id="dot3"></p>
+	  <p class="dot" id="dot4"></p>
+	  <p class="dot" id="dot5"></p>
+	</div>
 </body>
 </html>
