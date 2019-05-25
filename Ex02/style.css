@@ -3,11 +3,11 @@
 .header,.footer {
 	background-color: #997a00;
 	color: white;
-	padding: 15px;
+	padding: 5px;
 }
 .column {
 	float: left;
-	padding: 15px;
+	padding: 5px;
 }
 .clearfix::after {
 	content: "";
@@ -17,8 +17,6 @@
 .menu {width: 25%;}
 .content{width:75%}
 iframe{width:100%}
-.framehtml {height:200px;}
-.frametxt {height:200px;}
 .menu ul {
 	list-style-type: none;
 	margin: 0;
@@ -38,11 +36,30 @@ a:link{text-decoration:none;}
 
 /* numeros da megasena com circulos */
 .dot {
-  height:75px;
-  width: 75px;
-  background-color: green;
-  border-radius: 50%;
-  display: inline-block;
-  font-size:60px;
+	color:white;
+	font-size:60px;
+	font-weight:bold;
+	height:75px;
+	width: 75px;
+	background-color: #006600;
+	border-radius: 50%;
+	display: inline-block;
 }
 
+/* imagem na blank page inicial - tamanho e centralização */
+#imgshow{width:200px;}
+#javascript {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+}
+
+#mostragrupo{
+	background-color:#F0E68C;
+	font-size:30px;
+	padding:30px;
+	font-family: "Times New Roman";
+}
+h1{text-align:center;}
