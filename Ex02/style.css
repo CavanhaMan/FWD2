@@ -63,3 +63,9 @@ a:link{text-decoration:none;}
 	font-family: "Times New Roman";
 }
 h1{text-align:center;}
+#mostraex{
+	font-size:20px;
+	margin:0px;
+	color:white;
+	height:80px;
+}
