@@ -13,6 +13,13 @@ $(document).ready(function (){
 	});
 	//$('#ex1').mouseover(function(e){$("#frametxt").attr("src", "");});
 
+	//FUNÇÃO EXERCÍCIOS
+	$('#ex').click(function(e){
+		document.getElementById("imgshow").src=""; 
+		$("#frametxt").attr("src", "");
+		$("#framehtml").attr("src", "JavaScript_-_Lista_de_exercicios_02.pdf");
+	});
+
 	//FUNÇÃO MEGASENA
 	$('#ex1').click(function(e){
 		document.getElementById("imgshow").src="megasena.png"; 
