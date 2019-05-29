@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function calcular(operador){
+            //var valor1 = document.getElementById('txtValor1').value;
+            //var valor2 = document.getElementById('txtValor2').value;
+            //var result = eval(valor1+operador+valor2);
+            //document.getElementById('txtResultado').value = result;
+            document.getElementById('txtResultado').value = eval(document.getElementById('txtValor1').value + operador + document.getElementById('txtValor2').value);
+        }
+    </script>
+</head>
+<body>
+  <frameset>
+    <form>
+        <label for="txtValor1">Valor 1:</label>
+        <input type="text" id="txtValor1" />
+        <BR><BR>
+        <label for="txtValor1">Valor 2:</label>
+        <input type="text" id="txtValor2" />
+        <BR><BR>
+        <input type="button" value="+" onclick="calcular('+')">
+        <input type="button" value="-" onclick="calcular('-')">
+        <input type="button" value="*" onclick="calcular('*')">
+        <input type="button" value="/" onclick="calcular('/')">
+        <BR><BR>
+        <label for="txtResultado">Resultado:</label>
+        <input type="text" id="txtResultado" />
+    </form>
+  </frameset>
+</body>
+</html>
