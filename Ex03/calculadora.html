@@ -16,21 +16,53 @@
             margin-bottom:6px;
         }
         .display{
+            text-align: right;
             border-width:3px;  
             border-style:inset;
             width:206px;
         }
         .num{background-color: #ccffff;}
         .oper{background-color: #ff6666;}
-        .igual{background-color: #33ccff;}
+        .igual, .clean{background-color: #33ccff;}
     </style>
     <script>
+        var flag=1;
+        var result;
         function calcular(operador){
             //var valor1 = document.getElementById('txtValor1').value;
             //var valor2 = document.getElementById('txtValor2').value;
             //var result = eval(valor1+operador+valor2);
             //document.getElementById('txtResultado').value = result;
-            document.getElementById('txtResultado').value = eval(document.getElementById('txtValor1').value + operador + document.getElementById('txtValor2').value);
+            //document.getElementById('txtResultado').value = eval(document.getElementById('txtValor1').value + operador + document.getElementById('txtValor2').value);
+            if(operador=="C"){
+                flag=1;
+                document.getElementById("txtResultado").value="0";
+            }
+            else if(operador=="+" || operador=="-" || operador=="*" || operador=="/"){
+                if(flag==0){
+                    document.getElementById("txtResultado").value+=operador;
+                    flag=0;
+                }
+                else{
+                    flag=1;
+                }
+            }
+            else if (operador=="="){
+                flag=1;
+                result = document.getElementById("txtResultado").value;
+                document.getElementById("txtResultado").value=eval(result);
+            }
+            else{
+                if (flag==1){
+                    flag=0;
+                    document.getElementById("txtResultado").value="";
+                    document.getElementById("txtResultado").value+=operador;
+                }
+                else{
+                    flag=0;
+                    document.getElementById("txtResultado").value+=operador;
+                }
+            }
         }
     </script>
 </head>
@@ -38,9 +70,8 @@
   <fieldset>
     <legend>Calculadora</legend>
     <form>
-        <input type="text" id="txtResultado" class="display" />
+        <input type="text" id="txtResultado" class="display" value="0" />
         <BR>
-    
         <input type="button" value="7" onclick="calcular('7')" class="num">
         <input type="button" value="8" onclick="calcular('8')" class="num">
         <input type="button" value="9" onclick="calcular('9')" class="num">
@@ -56,7 +87,7 @@
         <input type="button" value="3" onclick="calcular('3')" class="num">
         <input type="button" value="-" onclick="calcular('-')" class="oper">
         <BR>
-        <input type="button" value="C" onclick="calcular('C')" class="igual">
+        <input type="button" value="C" onclick="calcular('C')" class="clean">
         <input type="button" value="0" onclick="calcular('0')" class="num">
         <input type="button" value="=" onclick="calcular('=')" class="igual">
         <input type="button" value="+" onclick="calcular('+')" class="oper">
