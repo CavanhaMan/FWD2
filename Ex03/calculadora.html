@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        fieldset{
+            background-color: #e6ffff;
+            width:212px;
+            border: 2px groove (internal value);
+        }
+        input{
+            font-size: 30px;
+            width:50px;
+            height:50px;
+            margin-bottom:6px;
+        }
+        .display{
+            border-width:3px;  
+            border-style:inset;
+            width:206px;
+        }
+        .num{background-color: #ccffff;}
+        .oper{background-color: #ff6666;}
+        .igual{background-color: #33ccff;}
+    </style>
+    <script>
+        function calcular(operador){
+            //var valor1 = document.getElementById('txtValor1').value;
+            //var valor2 = document.getElementById('txtValor2').value;
+            //var result = eval(valor1+operador+valor2);
+            //document.getElementById('txtResultado').value = result;
+            document.getElementById('txtResultado').value = eval(document.getElementById('txtValor1').value + operador + document.getElementById('txtValor2').value);
+        }
+    </script>
+</head>
+<body>
+  <fieldset>
+    <legend>Calculadora</legend>
+    <form>
+        <input type="text" id="txtResultado" class="display" />
+        <BR>
+    
+        <input type="button" value="7" onclick="calcular('7')" class="num">
+        <input type="button" value="8" onclick="calcular('8')" class="num">
+        <input type="button" value="9" onclick="calcular('9')" class="num">
+        <input type="button" value="/" onclick="calcular('/')" class="oper">
+        <BR>
+        <input type="button" value="4" onclick="calcular('4')" class="num">
+        <input type="button" value="5" onclick="calcular('5')" class="num">
+        <input type="button" value="6" onclick="calcular('6')" class="num">
+        <input type="button" value="*" onclick="calcular('*')" class="oper">
+        <BR>
+        <input type="button" value="1" onclick="calcular('1')" class="num">
+        <input type="button" value="2" onclick="calcular('2')" class="num">
+        <input type="button" value="3" onclick="calcular('3')" class="num">
+        <input type="button" value="-" onclick="calcular('-')" class="oper">
+        <BR>
+        <input type="button" value="C" onclick="calcular('C')" class="igual">
+        <input type="button" value="0" onclick="calcular('0')" class="num">
+        <input type="button" value="=" onclick="calcular('=')" class="igual">
+        <input type="button" value="+" onclick="calcular('+')" class="oper">
+    </form>
+  </fieldset>
+</body>
+</html>

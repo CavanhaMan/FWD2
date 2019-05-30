@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        fieldset{
+            width:300px;
+            border: 2px groove (internal value);
+        }
+    </style>
     <script>
         function calcular(operador){
             //var valor1 = document.getElementById('txtValor1').value;
@@ -14,7 +20,8 @@
     </script>
 </head>
 <body>
-  <frameset>
+  <fieldset>
+    <legend>Calculadora</legend>
     <form>
         <label for="txtValor1">Valor 1:</label>
         <input type="text" id="txtValor1" />
@@ -30,6 +37,6 @@
         <label for="txtResultado">Resultado:</label>
         <input type="text" id="txtResultado" />
     </form>
-  </frameset>
+  </fieldset>
 </body>
 </html>
