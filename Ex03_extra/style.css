@@ -1,21 +1,17 @@
 fieldset{
-	border: 10px solid #595959;
-	background: #bfbfbf;
+	border: 10px solid #008080;
+	background: #e6ffff;
 	width:700px;
 }
 .col2{
 	width:400px;
-}
-.cadastro{
-    background: gray;
-    width: 80%;
 }
 .colunas{
     float:left;
 	margin: 10px;
 }
 .cad{
-	background: #999999;
+	background: #00cccc;
 	width: 380px;
 }
 .campo{
@@ -27,11 +23,13 @@ fieldset{
 	text-align:right;
 }
 .button{
-	background-color: #262626;
+	background-color: #008080;
 	color:white;
 }
 .botao{
 	text-align: center;
+	float:none;
+	clear: both;
 }
 #txtObservacoes{
 	width:115%;

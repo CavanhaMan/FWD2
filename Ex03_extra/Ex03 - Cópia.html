@@ -7,7 +7,7 @@
 	<link href="style.css" rel="stylesheet">
 	<script src="jquery.min.js"></script>
 
-    <title>Formulário Biblioteca</title>
+    <title>Cadastro de Opinião</title>
     <script></script>
     <style></style>
 </head>
@@ -16,11 +16,7 @@
     <fieldset>
         <form>
             <div class="colunas col1">
-                <label for="dropLivro">Escolha seu livro:</label><br>
-                <label for="radioPagto">Forma de pagamento:</label><br>
-                <label for="checkComo">Como voce conheceu nosso site?</label><br>
-                <label for="enviarPara">Enviar para:</label><br>
-                <label for="txtObservacoes">Observações:</label>
+                <label for="dropLivro">Escolha seu livro:</label>
             </div>
             <div class="colunas col2">
                 <select name="dropLivro">
@@ -39,29 +35,51 @@
                     <option value="tolkien12">The Road Goes Ever On</option>
                     <option value="tolkien13">Smith of Wootton Major</option>
                 </select>
-                <br>
-                <input type="radio" name="radioPagto" value="credito">Cartão de crédito<br>
-                <input type="radio" name="radioPagto" value="boleto">Bolento bancário<br>
-                <br>
-                <input type="checkbox" name="checkComo" value="ferramenta">Ferramentas de busca<br>
-                <input type="checkbox" name="checkComo" value="panfleto">Panfletos<br>
-                <br>
-                <div class="cadastro">
-                    <label for="txtNome">Nome:</label>
-                    <input type="text" id="txtNome" /><br>
-                    <label for="txtEndereco">Endereco:</label>
-                    <input type="text" id="txtEndereco" /><br>
-                    <label for="txtCidade">Cidade:</label>
-                    <input type="text" id="txtCidade" /><br>
-                    <label for="txtEstado">Estado:</label>
-                    <input type="text" id="txtEstado" /><br>
-                    <label for="txtCep">CEP:</label>
-                    <input type="text" id="txtCep" /><br>
-                </div>
-                <br>
-                <input type="text" id="txtObservacoes" /><br>
             </div>
-    
+            <br>
+            <div class="colunas col1">
+                <label for="radioPagto">Forma de pagamento:</label>
+            </div>
+            <div class="colunas col2">
+                <input type="radio" name="radioPagto" value="credito">Cartão de crédito<br>
+                <input type="radio" name="radioPagto" value="boleto">Bolento bancário
+            </div>
+            <div class="colunas col1">
+                <label for="checkComo">Como voce conheceu nosso site?</label>
+            </div>
+            <div class="colunas col2">
+                <input type="checkbox" name="checkComo" value="ferramenta">Ferramentas de busca<br>
+                <input type="checkbox" name="checkComo" value="panfleto">Panfletos
+            </div>
+            <br>
+            <div class="colunas col1">
+                <label for="enviarPara">Enviar para:</label>
+            </div>
+            <div class="colunas cad col2">
+                <div class="colunas txtCad"><label class="texto" for="txtNome">Nome:</label></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtNome" /></div>
+                <div class="colunas txtCad"><label class="texto" for="txtEndereco">Endereco:</label></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtEndereco" /></div>
+                <div class="colunas txtCad"><label class="texto" for="txtCidade">Cidade:</label></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtCidade" /></div>
+                <div class="colunas txtCad"><label class="texto" for="txtEstado">Estado:</label></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtEstado" /></div>
+                <div class="colunas txtCad"><label class="texto" for="txtCep">CEP:</label></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtCep" /></div>
+            </div>
+            <div class="colunas col1">
+                <label for="txtObservacoes">Observações:</label>
+            </div>
+            <div class="colunas col2">
+                    <input type="text" id="txtObservacoes" /><br>
+            </div>
+			<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+			<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+			<BR><BR><BR>
+			
+			<div name="botao" class="botao">
+				<input type="button" class="button" value="Cadastrar" name="cadastrar" />
+			</div>
         </form>
     </fieldset>
 </body>

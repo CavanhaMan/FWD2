@@ -7,7 +7,7 @@
 	<link href="style.css" rel="stylesheet">
 	<script src="jquery.min.js"></script>
 
-    <title>Formulário Biblioteca</title>
+    <title>Cadastro de Opinião</title>
     <script></script>
     <style></style>
 </head>
@@ -21,19 +21,9 @@
             <div class="colunas col2">
                 <select name="dropLivro">
                     <option value="" selected disabled hidden>Selecione...</option>
-                    <option value="tolkien1">Songs for the Philologists</option>
-                    <option value="tolkien2">The Hobbit, or There and Back Again</option>
-                    <option value="tolkien3">Leaf by Niggle</option>
-                    <option value="tolkien4">Farmer Giles of Ham</option>
-                    <option value="tolkien5">The Fellowship of the Ring</option>
-                    <option value="tolkien6">The Two Towers</option>
-                    <option value="tolkien7">The Return of the King</option>
-                    <option value="tolkien8">The Adventures of Tom Bombadil</option>
-                    <option value="tolkien9">Tree and Leaf</option>
-                    <option value="tolkien10">Bilbo's Last Song</option>
-                    <option value="tolkien11">The Tolkien Reader</option>
-                    <option value="tolkien12">The Road Goes Ever On</option>
-                    <option value="tolkien13">Smith of Wootton Major</option>
+                    <option value="livro1">Java como programar</option>
+                    <option value="livro2">Google Android</option>
+                    <option value="livro3">Programação Orientada a Objetos</option>
                 </select>
             </div>
             <br>
@@ -57,13 +47,44 @@
             </div>
             <div class="colunas cad col2">
                 <div class="colunas txtCad"><label class="texto" for="txtNome">Nome:</label></div>
-                <div class="colunas campoCad"><input type="text" class="campo" id="txtNome" /></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtNome" maxlength="30" /></div>
                 <div class="colunas txtCad"><label class="texto" for="txtEndereco">Endereco:</label></div>
-                <div class="colunas campoCad"><input type="text" class="campo" id="txtEndereco" /></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtEndereco" maxlength="50" /></div>
                 <div class="colunas txtCad"><label class="texto" for="txtCidade">Cidade:</label></div>
-                <div class="colunas campoCad"><input type="text" class="campo" id="txtCidade" /></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtCidade" maxlength="20" /></div>
                 <div class="colunas txtCad"><label class="texto" for="txtEstado">Estado:</label></div>
-                <div class="colunas campoCad"><input type="text" class="campo" id="txtEstado" /></div>
+                <div class="colunas campoCad">
+					<select name="estado" class="campo" id="comboEstado">
+						<option value="" selected disabled hidden>Selecione...</option>
+						<option value="AC">Acre</option>
+						<option value="AL">Alagoas</option>
+						<option value="AP">Amapá</option>
+						<option value="AM">Amazonas</option>
+						<option value="BA">Bahia</option>
+						<option value="CE">Ceará</option>
+						<option value="DF">Distrito Federal</option>
+						<option value="ES">Espírito Santo</option>
+						<option value="GO">Goiás</option>
+						<option value="MA">Maranhão</option>
+						<option value="MT">Mato Grosso</option>
+						<option value="MS">Mato Grosso do Sul</option>
+						<option value="MG">Minas Gerais</option>
+						<option value="PA">Pará</option>
+						<option value="PB">Paraíba</option>
+						<option value="PR">Paraná</option>
+						<option value="PE">Pernambuco</option>
+						<option value="PI">Piauí</option>
+						<option value="RJ">Rio de Janeiro</option>
+						<option value="RN">Rio Grande do Norte</option>
+						<option value="RS">Rio Grande do Sul</option>
+						<option value="RO">Rondônia</option>
+						<option value="RR">Roraima</option>
+						<option value="SC">Santa Catarina</option>
+						<option value="SP">São Paulo</option>
+						<option value="SE">Sergipe</option>
+						<option value="TO">Tocantins</option>
+					</select>
+				</div>
                 <div class="colunas txtCad"><label class="texto" for="txtCep">CEP:</label></div>
                 <div class="colunas campoCad"><input type="text" class="campo" id="txtCep" /></div>
             </div>
@@ -71,19 +92,22 @@
                 <label for="txtObservacoes">Observações:</label>
             </div>
             <div class="colunas col2">
-                    <input type="text" id="txtObservacoes" /><br>
+                    <textarea id="txtObservacoes"></textarea>
             </div>
-			<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
-			<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
-			<BR><BR><BR>
-			
+
 			<div name="botao" class="botao">
 				<input type="button" class="button" value="Cadastrar" name="cadastrar" />
+				<input type="button" class="button" value="Limpar" name="limpar" onClick="document.location.reload(true)" />
 			</div>
         </form>
     </fieldset>
 </body>
 </html>
-	
-	
+<!--
+O usuário deverá ter selecionado um livro
+- Uma forma de pagamento deverá ter sido selecionada
+- Pelo menos uma opção deverá ter sido selecionada em “Como você conheceu o nosso site?”
+- O nome da pessoa não poderá estar em branco e deverá conter apenas letras
+-->	
+
 	
