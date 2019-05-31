@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- Rodrigo Cavanhaman -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+	<link href="style.css" rel="stylesheet">
+	<script src="jquery.min.js"></script>
+
+    <title>Formulário Biblioteca</title>
+    <script></script>
+    <style></style>
+</head>
+<body>
+    <script type="text/javascript" src="script.js"></script>
+    <fieldset>
+        <form>
+            <div class="colunas col1">
+                <label for="dropLivro">Escolha seu livro:</label><br>
+                <label for="radioPagto">Forma de pagamento:</label><br>
+                <label for="checkComo">Como voce conheceu nosso site?</label><br>
+                <label for="enviarPara">Enviar para:</label><br>
+                <label for="txtObservacoes">Observações:</label>
+            </div>
+            <div class="colunas col2">
+                <select name="dropLivro">
+                    <option value="" selected disabled hidden>Selecione...</option>
+                    <option value="tolkien1">Songs for the Philologists</option>
+                    <option value="tolkien2">The Hobbit, or There and Back Again</option>
+                    <option value="tolkien3">Leaf by Niggle</option>
+                    <option value="tolkien4">Farmer Giles of Ham</option>
+                    <option value="tolkien5">The Fellowship of the Ring</option>
+                    <option value="tolkien6">The Two Towers</option>
+                    <option value="tolkien7">The Return of the King</option>
+                    <option value="tolkien8">The Adventures of Tom Bombadil</option>
+                    <option value="tolkien9">Tree and Leaf</option>
+                    <option value="tolkien10">Bilbo's Last Song</option>
+                    <option value="tolkien11">The Tolkien Reader</option>
+                    <option value="tolkien12">The Road Goes Ever On</option>
+                    <option value="tolkien13">Smith of Wootton Major</option>
+                </select>
+                <br>
+                <input type="radio" name="radioPagto" value="credito">Cartão de crédito<br>
+                <input type="radio" name="radioPagto" value="boleto">Bolento bancário<br>
+                <br>
+                <input type="checkbox" name="checkComo" value="ferramenta">Ferramentas de busca<br>
+                <input type="checkbox" name="checkComo" value="panfleto">Panfletos<br>
+                <br>
+                <div class="cadastro">
+                    <label for="txtNome">Nome:</label>
+                    <input type="text" id="txtNome" /><br>
+                    <label for="txtEndereco">Endereco:</label>
+                    <input type="text" id="txtEndereco" /><br>
+                    <label for="txtCidade">Cidade:</label>
+                    <input type="text" id="txtCidade" /><br>
+                    <label for="txtEstado">Estado:</label>
+                    <input type="text" id="txtEstado" /><br>
+                    <label for="txtCep">CEP:</label>
+                    <input type="text" id="txtCep" /><br>
+                </div>
+                <br>
+                <input type="text" id="txtObservacoes" /><br>
+            </div>
+    
+        </form>
+    </fieldset>
+</body>
+</html>
+	
+	
+	

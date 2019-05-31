@@ -1,0 +1,14 @@
+.col1{
+    width:200px;
+    background: red;
+}
+.col2{
+    background: yellow;
+}
+.cadastro{
+    background: gray;
+    width: 80%;
+}
+.colunas{
+    float:left;
+}
