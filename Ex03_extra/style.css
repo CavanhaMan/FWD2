@@ -1,9 +1,10 @@
-.col1{
-    width:200px;
-    background: red;
+fieldset{
+	border: 10px solid #595959;
+	background: #bfbfbf;
+	width:700px;
 }
 .col2{
-    background: yellow;
+	width:400px;
 }
 .cadastro{
     background: gray;
@@ -11,4 +12,36 @@
 }
 .colunas{
     float:left;
+	margin: 10px;
+}
+.cad{
+	background: #999999;
+	width: 380px;
+}
+.campo{
+	width: 240px;
+}
+.texto{
+	width: 85px;
+	display:block;
+	text-align:right;
+}
+.button{
+	background-color: #262626;
+	color:white;
+}
+.botao{
+	text-align: center;
+}
+#txtObservacoes{
+	width:115%;
+	height:100px;
+	margin-right:0px;
+}
+/*margin: 10px 10px 10px 10px;
+		top right botton left*/
+.col1{
+    width:170px;
+	text-align:right;
+	margin-left:40px;
 }
