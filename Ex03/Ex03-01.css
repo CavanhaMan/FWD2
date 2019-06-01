@@ -1,0 +1,28 @@
+#cliqueaqui{
+	font-size: 30px;
+	width:250px;
+	height:50px;
+	margin-top:20px;
+	background-color: white;
+	cursor: pointer;
+	color: blue;
+	border: 1px solid blue;
+	border-radius: 8px;
+	text-decoration:none;
+	
+	position: fixed;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%);
+}
+#cliqueaqui:hover {
+	background-color: blue;
+	color: white;
+	border: 3px solid blue;
+	width:255px;
+	height:55px;
+}
+#cliqueaqui {
+  -webkit-transition-duration: 0.5s; /* Safari */
+  transition-duration: 0.5s;
+}
