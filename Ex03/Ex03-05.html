@@ -5,15 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Language" content="pt-br">
 	<link href="Ex03-05.css" rel="stylesheet">
-    <title>Exercicio 03-05</title>
-    <script></script>
-    <style></style>
+    <title>Calculadora</title>
+    <script>
+
+    </script>
 </head>
 <body>
-	
-    <script type="text/javascript" src="Ex03-05.js"></script>
+  <fieldset>
+    <legend>Calculadora</legend>
+    <form>
+        <label for="txtValor1">1º Valor:</label>
+        <input type="text" id="txtValor1" class="campo" />
+        <BR><BR>
+        <label for="txtValor1">2º Valor:</label>
+        <input type="text" id="txtValor2" class="campo" />
+        <BR><BR>
+        <input type="button" value="+" class="bts" onclick="calcular('+')">
+        <input type="button" value="-" class="bts" onclick="calcular('-')">
+        <input type="button" value="*" class="bts" onclick="calcular('*')">
+        <input type="button" value="/" class="bts" onclick="calcular('/')">
+        <BR><BR>
+        <label for="txtResultado">Resultado:</label>
+        <input type="text" id="txtResultado" class="campo" />
+    </form>
+  </fieldset>
+  <script type="text/javascript" src="Ex03-05.js"></script>
 </body>
 </html>
-	
-	
-	

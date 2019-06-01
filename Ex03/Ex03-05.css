@@ -1,0 +1,16 @@
+fieldset{
+	width:175px;
+	border: 2px groove (internal value);
+}
+.campo{
+	width:100px;
+}
+.bts{
+	width:30px;
+	height:30px;
+	margin-right:10px;
+	font-size:20px;
+}
+#txtResultado{
+	width:86px;
+}
