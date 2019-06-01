@@ -1,0 +1,7 @@
+.pointer {cursor: pointer;}
+#btResultado {margin:5px;}
+#txtNota1,#txtNota2{
+	width:120px;
+	text-align:right;
+	margin-bottom:6px;
+}
