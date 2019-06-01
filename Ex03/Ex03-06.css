@@ -1,0 +1,31 @@
+Como eu ainda não fiz o 6, vou te passar umas ideias....
+O Título vc coloca <h1> daí no CSS vc coloca algo como:
+h1{
+	font-size:um tamanho qq;
+	color: blue; (ou procura "html color" no google e escolhe uma)
+	text-align: center;
+}
+Coloca tudo dentro de uma DIV e coloca uma classe pra ela
+<div class="login"></div>
+Daí no CSS use:
+.login{
+	border: 1px solid black;
+	width: qq um
+	height: qq um
+}
+Pra alinhar os LABELS (login, senha e confirmar) voce deverá usar
+uma tabela como ele recomendou...
+Recomendo colocar no CSS uma borda só pra ver a tabela enquanto organiza
+(depois remove ou coloca "0px solid black")
+table, tr, td{
+	border: 1px solid black;
+}
+Para fazer os campos de senha menores, crie uma cass="senha" e depois 
+no CSS coloque um width menor pra eles.
+
+Para fazer as colunas da tabela com tamanhos diferente, também crie classe.
+Pode usar uma classe pra 1a coluna e 1 classe pra segunda e setar width diferentes
+
+Os botões já ficam lado a lado mas voce pode colocar no CSS uma margin pra dar 
+um espaço ao redor deles.
+(pode chamar só button no CSS)

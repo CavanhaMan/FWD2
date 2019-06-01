@@ -10,7 +10,24 @@
     <style></style>
 </head>
 <body>
-	
+	<h1>Acesso ao Sistema</h1>
+    <fieldset>
+      <form name="formCad" novalidate="novalidate">
+		<div class="acesso">
+			<div class="colunas col1"><label class="texto pointer" for="txtLogin" >Login</label></div>
+			<div class="colunas col2"><input type="text" class="campo" id="txtLogin" maxlength="30" min="1" placeholder="Digite seu nome de usuário aqui" required /></div>
+			<div class="colunas col1"><label class="texto pointer" for="txtSenha">Senha</label></div>
+			<div class="colunas col2"><input type="text" class="campo" id="txtSenha" maxlength="50" placeholder="Digite sua senha aqui" /></div>
+			<div class="colunas col1"><label class="texto pointer" for="txtConfirma">Confirmar senha</label></div>
+			<div class="colunas col2"><input type="text" class="campo" id="txtConfirma" maxlength="20" placeholder="Repita sua senha aqui" /></div>
+		</div>
+		<div name="botao" class="botao">
+			<input type="submit" class="button pointer" value="Cadastrar" name="cadastrar" />
+			<input type="button" class="button pointer" value="Limpar" name="limpar" onClick="document.location.reload(true)" />
+		</div>
+	  </form>
+    </fieldset>
+
     <script type="text/javascript" src="Ex03-06.js"></script>
 </body>
 </html>
