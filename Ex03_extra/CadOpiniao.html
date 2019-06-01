@@ -18,7 +18,7 @@
                 <label for="dropLivro">Escolha seu livro:</label>
             </div>
             <div class="colunas col2">
-                <select name="dropLivro" required>
+                <select name="dropLivro" class="pointer" required>
                     <option value="" selected disabled hidden>Selecione...</option>
                     <option value="livro1">Java como programar</option>
                     <option value="livro2">Google Android</option>
@@ -30,30 +30,34 @@
                 <label for="radioPagto">Forma de pagamento:</label>
             </div>
             <div class="colunas col2">
-                <input type="radio" name="radioPagto" value="credito" required>Cartão de crédito<br>
-                <input type="radio" name="radioPagto" value="boleto" required>Bolento bancário
+                <input type="radio" name="radioPagto" id="rd1" value="credito" required>
+				<label for="rd1" class="pointer">Cartão de crédito</label><br>
+                <input type="radio" name="radioPagto" id="rd2" value="boleto" required>
+				<label for="rd2" class="pointer">Bolento bancário</label>
             </div>
             <div class="colunas col1">
                 <label for="checkComo">Como voce conheceu nosso site?</label>
             </div>
             <div class="colunas col2">
-                <input type="checkbox" name="checkComo" value="ferramenta" required>Ferramentas de busca<br>
-                <input type="checkbox" name="checkComo" value="panfleto" required>Panfletos
+                <input type="checkbox" name="checkComo" id="ck1" value="ferramenta" required>
+				<label for="ck1" class="pointer">Ferramentas de busca</label><br>
+                <input type="checkbox" name="checkComo" id="ck2" value="panfleto" required>
+				<label for="ck2" class="pointer">Panfletos</label>
             </div>
             <br>
             <div class="colunas col1">
                 <label for="enviarPara">Enviar para:</label>
             </div>
             <div class="colunas cad col2">
-                <div class="colunas txtCad"><label class="texto" for="txtNome" >Nome:</label></div>
-                <div class="colunas campoCad"><input type="text" class="campo" id="txtNome" maxlength="30" min="1" placeholder="Digite seu nome aqui" required pattern="^[a-z]{1,}$" /></div>
-                <div class="colunas txtCad"><label class="texto" for="txtEndereco">Endereco:</label></div>
+                <div class="colunas txtCad"><label class="texto pointer" for="txtNome" >Nome:</label></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtNome" maxlength="30" min="1" placeholder="Digite seu nome aqui" required /></div>
+                <div class="colunas txtCad"><label class="texto pointer" for="txtEndereco">Endereco:</label></div>
                 <div class="colunas campoCad"><input type="text" class="campo" id="txtEndereco" maxlength="50" placeholder="Digite seu endereço aqui" /></div>
-                <div class="colunas txtCad"><label class="texto" for="txtCidade">Cidade:</label></div>
+                <div class="colunas txtCad"><label class="texto pointer" for="txtCidade">Cidade:</label></div>
                 <div class="colunas campoCad"><input type="text" class="campo" id="txtCidade" maxlength="20" placeholder="Digite sua cidade aqui" /></div>
                 <div class="colunas txtCad"><label class="texto" for="txtEstado">Estado:</label></div>
                 <div class="colunas campoCad">
-					<select name="estado" class="campo" id="comboEstado">
+					<select name="estado" class="campo pointer" id="comboEstado">
 						<option value="" selected disabled hidden>Selecione...</option>
 						<option value="AC">Acre</option>
 						<option value="AL">Alagoas</option>
@@ -84,19 +88,19 @@
 						<option value="TO">Tocantins</option>
 					</select>
 				</div>
-                <div class="colunas txtCad"><label class="texto" for="txtCep">CEP:</label></div>
+                <div class="colunas txtCad"><label class="texto pointer" for="txtCep">CEP:</label></div>
                 <div class="colunas campoCad"><input type="text" class="campo" id="txtCep" placeholder="XX.XXX-XXX" maxlength="10" /></div>
             </div>
             <div class="colunas col1">
-                <label for="txtObservacoes">Observações:</label>
+                <label for="txtObservacoes" class="pointer">Observações:</label>
             </div>
             <div class="colunas col2">
                     <textarea id="txtObservacoes" placeholder="Digite aqui uma observação"></textarea>
             </div>
 
 			<div name="botao" class="botao">
-				<input type="submit" class="button" value="Cadastrar" name="cadastrar" />
-				<input type="button" class="button" value="Limpar" name="limpar" onClick="document.location.reload(true)" />
+				<input type="submit" class="button pointer" value="Cadastrar" name="cadastrar" />
+				<input type="button" class="button pointer" value="Limpar" name="limpar" onClick="document.location.reload(true)" />
 			</div>
         </form>
     </fieldset>
