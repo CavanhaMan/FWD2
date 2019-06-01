@@ -5,3 +5,19 @@
 	text-align:right;
 	margin-bottom:6px;
 }
+
+
+/*CODIGO PARA A VERSÃO COM DIV:*/
+.col1,.col2 {
+	width:130px;
+    float:left;
+}
+.nt,.pointer{
+	float:none;
+	clear: both;
+	margin-top:0px;
+}
+
+
+/*CODIGO PARA A VERSÃO COM TABELA:*/
+table,tr,td{border: 0px solid black;}
