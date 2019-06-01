@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Language" content="pt-br">
 	<link href="style.css" rel="stylesheet">
-	<script src="jquery.min.js"></script>
 
     <title>Cadastro de Opinião</title>
-    <script></script>
-    <style></style>
 </head>
 <body>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+	<script src="jquery-3.1.0.js"></script>
+	<script src="jquery.mask.js"></script>
     <fieldset>
-        <form>
+        <form name="formCad" novalidate="novalidate">
             <div class="colunas col1">
                 <label for="dropLivro">Escolha seu livro:</label>
             </div>
@@ -31,27 +30,27 @@
                 <label for="radioPagto">Forma de pagamento:</label>
             </div>
             <div class="colunas col2">
-                <input type="radio" name="radioPagto" value="credito">Cartão de crédito<br>
-                <input type="radio" name="radioPagto" value="boleto">Bolento bancário
+                <input type="radio" name="radioPagto" value="credito" required>Cartão de crédito<br>
+                <input type="radio" name="radioPagto" value="boleto" required>Bolento bancário
             </div>
             <div class="colunas col1">
                 <label for="checkComo">Como voce conheceu nosso site?</label>
             </div>
             <div class="colunas col2">
-                <input type="checkbox" name="checkComo" value="ferramenta">Ferramentas de busca<br>
-                <input type="checkbox" name="checkComo" value="panfleto">Panfletos
+                <input type="checkbox" name="checkComo" value="ferramenta" required>Ferramentas de busca<br>
+                <input type="checkbox" name="checkComo" value="panfleto" required>Panfletos
             </div>
             <br>
             <div class="colunas col1">
                 <label for="enviarPara">Enviar para:</label>
             </div>
             <div class="colunas cad col2">
-                <div class="colunas txtCad"><label class="texto" for="txtNome">Nome:</label></div>
-                <div class="colunas campoCad"><input type="text" class="campo" id="txtNome" maxlength="30" /></div>
+                <div class="colunas txtCad"><label class="texto" for="txtNome" >Nome:</label></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtNome" maxlength="30" min="1" placeholder="Digite seu nome aqui" required pattern="^[a-z]{1,}$" /></div>
                 <div class="colunas txtCad"><label class="texto" for="txtEndereco">Endereco:</label></div>
-                <div class="colunas campoCad"><input type="text" class="campo" id="txtEndereco" maxlength="50" /></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtEndereco" maxlength="50" placeholder="Digite seu endereço aqui" /></div>
                 <div class="colunas txtCad"><label class="texto" for="txtCidade">Cidade:</label></div>
-                <div class="colunas campoCad"><input type="text" class="campo" id="txtCidade" maxlength="20" /></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtCidade" maxlength="20" placeholder="Digite sua cidade aqui" /></div>
                 <div class="colunas txtCad"><label class="texto" for="txtEstado">Estado:</label></div>
                 <div class="colunas campoCad">
 					<select name="estado" class="campo" id="comboEstado">
@@ -86,21 +85,23 @@
 					</select>
 				</div>
                 <div class="colunas txtCad"><label class="texto" for="txtCep">CEP:</label></div>
-                <div class="colunas campoCad"><input type="text" class="campo" id="txtCep" /></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtCep" placeholder="XX.XXX-XXX" maxlength="10" /></div>
             </div>
             <div class="colunas col1">
                 <label for="txtObservacoes">Observações:</label>
             </div>
             <div class="colunas col2">
-                    <textarea id="txtObservacoes"></textarea>
+                    <textarea id="txtObservacoes" placeholder="Digite aqui uma observação"></textarea>
             </div>
 
 			<div name="botao" class="botao">
-				<input type="button" class="button" value="Cadastrar" name="cadastrar" />
+				<input type="submit" class="button" value="Cadastrar" name="cadastrar" />
 				<input type="button" class="button" value="Limpar" name="limpar" onClick="document.location.reload(true)" />
 			</div>
         </form>
     </fieldset>
+    <script type="text/javascript" src="script.js"></script>
+
 </body>
 </html>
 <!--

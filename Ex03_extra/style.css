@@ -23,6 +23,7 @@ fieldset{
 	text-align:right;
 }
 .button{
+	width:80px;
 	background-color: #008080;
 	color:white;
 }
