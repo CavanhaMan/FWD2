@@ -6,29 +6,37 @@
     <meta http-equiv="Content-Language" content="pt-br">
 	<link href="Ex03-06.css" rel="stylesheet">
     <title>Exercicio 03-06</title>
-    <script></script>
-    <style></style>
+    <script type="text/javascript" src="jquery.min.js"></script>
 </head>
 <body>
-	<h1>Acesso ao Sistema</h1>
     <fieldset>
+	<h1>Acesso ao Sistema</h1>
       <form name="formCad" novalidate="novalidate">
 		<div class="acesso">
 			<div class="colunas col1"><label class="texto pointer" for="txtLogin" >Login</label></div>
-			<div class="colunas col2"><input type="text" class="campo" id="txtLogin" maxlength="30" min="1" placeholder="Digite seu nome de usuário aqui" required /></div>
+			<div class="colunas col2"><input type="text" class="campo" id="txtLogin" maxlength="30" min="1" placeholder="Digite seu nome de usuário" title="Digite seu nome de usuário" required /></div>
 			<div class="colunas col1"><label class="texto pointer" for="txtSenha">Senha</label></div>
-			<div class="colunas col2"><input type="text" class="campo" id="txtSenha" maxlength="50" placeholder="Digite sua senha aqui" /></div>
+			<div class="colunas col2">
+				<input type="password" class="campo pass" id="txtSenha" maxlength="50" placeholder="Digite sua senha" title="Digite sua senha com no máximo 8 caracteres" required />
+				<img src="eye.png" id="vesenha1" onmousedown="mostraPass1()" onmouseup="escondePass1()" title="Mostrar a senha">
+				<span class="aviso" id="aviso1">(max. 8 caracteres)</span>
+			</div>
 			<div class="colunas col1"><label class="texto pointer" for="txtConfirma">Confirmar senha</label></div>
-			<div class="colunas col2"><input type="text" class="campo" id="txtConfirma" maxlength="20" placeholder="Repita sua senha aqui" /></div>
+			<div class="colunas col2">
+				<input type="password" class="campo pass" id="txtConfirma" maxlength="20" placeholder="Repita sua senha" title="Repita a mesma senha fornecida acima" required />
+				<img src="eye.png" id="vesenha2" onmousedown="mostraPass2()" onmouseup="escondePass2()" title="Mostrar a senha confirmada">
+				<span class="aviso" id="aviso2">(max. 8 caracteres)</span>
+			</div>
+			
 		</div>
 		<div name="botao" class="botao">
-			<input type="submit" class="button pointer" value="Cadastrar" name="cadastrar" />
-			<input type="button" class="button pointer" value="Limpar" name="limpar" onClick="document.location.reload(true)" />
+			<input type="submit" class="button pointer" value="Cadastrar" name="cadastrar" title="Clique para cadastrar" />
+			<input type="button" class="button pointer" value="Limpar" name="limpar" onClick="document.location.reload(true)" title="Clique para limpar os campos" />
 		</div>
 	  </form>
     </fieldset>
-
     <script type="text/javascript" src="Ex03-06.js"></script>
+
 </body>
 </html>
 	
