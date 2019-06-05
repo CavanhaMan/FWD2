@@ -1,3 +1,9 @@
+.center{
+	position: fixed;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%);
+}
 fieldset{
 	border: 10px solid #008080;
 	background: #e6ffff;

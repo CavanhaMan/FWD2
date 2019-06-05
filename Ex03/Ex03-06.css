@@ -6,6 +6,11 @@ fieldset{
 	border-radius: 10px;
 	font-size:20px;
 	font-family: Verdana;
+
+	position: fixed;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%);
 }
 h1{
 	text-align:center;
