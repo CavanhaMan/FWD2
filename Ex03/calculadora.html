@@ -11,7 +11,7 @@
   <fieldset class="center">
     <legend>Calculadora</legend>
     <form>
-        <input type="text" id="txtResultado" class="display" value="0" />
+        <input type="text" id="txtResultado" class="display" value="0" disabled />
         <BR>
         <input type="button" value="7" onclick="calcular('7')" class="num">
         <input type="button" value="8" onclick="calcular('8')" class="num">
@@ -28,12 +28,15 @@
         <input type="button" value="3" onclick="calcular('3')" class="num">
         <input type="button" value="-" onclick="calcular('-')" class="oper">
         <BR>
-        <input type="button" value="C" onclick="calcular('C')" class="clean">
+        <input type="button" value="C" onclick="calcular('C')" class="clean" title="Limpa a tela">
         <input type="button" value="0" onclick="calcular('0')" class="num">
-        <input type="button" value="=" onclick="calcular('=')" class="igual">
+        <input type="button" value="=" onclick="calcular('=')" class="igual" title="Mostra o resultado da operacao">
         <input type="button" value="+" onclick="calcular('+')" class="oper">
     </form>
   </fieldset>
   <script type="text/javascript" src="calculadora.js"></script>
 </body>
 </html>
+<!--
+ title="aaa"
+-->

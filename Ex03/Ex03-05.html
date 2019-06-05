@@ -12,19 +12,19 @@
   <fieldset class="center">
     <legend>Calculadora</legend>
     <form>
-        <label for="txtValor1">1º Valor:</label>
-        <input type="text" id="txtValor1" class="campo" />
+        <label for="txtValor1" class="pointer">1º Valor:</label>
+        <input type="number" id="txtValor1" class="campo" placeholder="Digite o 1º valor" title="Digite aqui o primeiro valor" />
         <BR><BR>
-        <label for="txtValor1">2º Valor:</label>
-        <input type="text" id="txtValor2" class="campo" />
+        <label for="txtValor2" class="pointer">2º Valor:</label>
+        <input type="number" id="txtValor2" class="campo" placeholder="Digite o 2º valor" title="Digite aqui o segundo valor" />
         <BR><BR>
-        <input type="button" value="+" class="bts" onclick="calcular('+')">
-        <input type="button" value="-" class="bts" onclick="calcular('-')">
-        <input type="button" value="*" class="bts" onclick="calcular('*')">
-        <input type="button" value="/" class="bts" onclick="calcular('/')">
+        <input type="button" value="+" class="bts pointer" onclick="calcular('+')" title="Soma 1º + 2º">
+        <input type="button" value="-" class="bts pointer" onclick="calcular('-')" title="Subtrai 1º - 2º">
+        <input type="button" value="*" class="bts pointer" onclick="calcular('*')" title="Multiplica 1º x 2º">
+        <input type="button" value="/" class="bts pointer" onclick="calcular('/')" title="Divide 1º / 2º">
         <BR><BR>
         <label for="txtResultado">Resultado:</label>
-        <input type="text" id="txtResultado" class="campo" />
+        <input type="text" id="txtResultado" class="campo" disabled placeholder="Resultado" title="Mostra o resultado da operacao acima escolhida" />
     </form>
   </fieldset>
   <script type="text/javascript" src="Ex03-05.js"></script>

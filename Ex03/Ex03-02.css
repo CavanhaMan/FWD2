@@ -7,8 +7,15 @@
 .pointer {cursor: pointer;}
 #btDobro {margin:10px;}
 #txtValor {border: 1px solid orange;}
+#txtDobro {border: 1px solid gray;}
 #txtValor,#txtDobro{
 	width:107px;
 	height:20px;
 	text-align:right;
+	margin-left:1px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }

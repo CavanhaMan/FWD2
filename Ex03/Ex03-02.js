@@ -10,12 +10,12 @@ para inserção de valores.*/
 $(document).ready(function (){
 	document.getElementById("btDobro").onclick = function() {
 		var numm = document.getElementById("txtValor").value;
-		if(/[\a-zA-Z]/.test(numm)){
-			alert("O campo apenas aceita números!" );
+		if(numm == "" || numm == " "){
+			alert("Por favor preencha o campo!" );
 			document.dobrar.txtValor.focus();
 		}
-		else if(numm == "" || numm == " "){
-			alert("Por favor preencha o campo!" );
+		else if(/[\a-zA-Z]/.test(numm)){
+			alert("O campo apenas aceita números!" );
 			document.dobrar.txtValor.focus();
 		}
 		else

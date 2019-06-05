@@ -20,7 +20,9 @@ input{
 	border-width:3px;  
 	border-style:inset;
 	width:206px;
+	color:black;
 }
 .num{background-color: #ccffff;}
 .oper{background-color: #ff6666;}
 .igual, .clean{background-color: #33ccff;}
+input[type=button] {cursor: pointer;}

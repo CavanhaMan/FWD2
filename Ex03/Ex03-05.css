@@ -9,7 +9,9 @@ fieldset{
 	border: 2px groove (internal value);
 }
 .campo{
-	width:100px;
+	width:99px;
+	border: 1px solid gray;
+	text-align:right;
 }
 .bts{
 	width:30px;
@@ -19,4 +21,11 @@ fieldset{
 }
 #txtResultado{
 	width:86px;
+	margin-left:1px
+}
+.pointer {cursor: pointer;}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
