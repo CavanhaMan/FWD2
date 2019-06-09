@@ -180,6 +180,23 @@ document.getElementById("validaI").onclick = function() {
 /***LETRA J*******************************************************************/
 //O faturamento de uma empresa pode variar de R$0,00 até R$999.999.999.999,99 (999 bilhões de reais).
 //Exemplos: R$400,8; R$400,85; R$1.500,41; R$1.500,7; R$5.601.478,10; R$10.524.478.967,70
+document.getElementById("txtJ").onfocus = function() {
+    document.getElementById("validaJ").checked=false;
+    document.getElementById("mensagemJ").innerHTML="";
+}
+document.getElementById("validaJ").onclick = function() {
+    var dadoJ = document.getElementById("txtJ").value;
+    //var padraoJ = /^R\$\d{1,3}(\.\d{3})*,\d{2}$/; //qq valor
+    var padraoJ = /^R\$\d{1,3}(\.\d{3}){0,3},\d{2}$/;//até 999 bilhoes
+    if (padraoJ.test(dadoJ)){
+        document.getElementById("mensagemJ").innerHTML=" = Válido!";
+        document.getElementById("mensagemJ").style.backgroundColor = "#99ff99";
+    }
+    else{
+        document.getElementById("mensagemJ").innerHTML=" = Inválido!";
+        document.getElementById("mensagemJ").style.backgroundColor = "#ffb3b3";
+    }
+};
 /***LETRA K*******************************************************************/
 //HH:MM:SS:CC (HH: hora, MM: minuto, SS: segundo, CC: centésimo de segundo).
 //Valores permitidos para cada unidade de tempo: (HH>=00 && HH<=23), 
@@ -194,3 +211,19 @@ document.getElementById("validaI").onclick = function() {
 //V deverá ser 2 caracteres especiais e 
 //T qualquer caracter exceto 'a','b','0' e '1' (pelo menos 1)
 //Exemplo: 321a.&apMb.aei.Ab0-asf+_,/*.cq
+document.getElementById("txtK").onfocus = function() {
+    document.getElementById("validaK").checked=false;
+    document.getElementById("mensagemK").innerHTML="";
+}
+document.getElementById("validaK").onclick = function() {
+    var dadoK = document.getElementById("txtK").value;
+    var padraoK = /^R\$\d{1,3}(\.\d{3}){0,3},\d{2}$/;//até 999 bilhoes
+    if (padraoK.test(dadoK)){
+        document.getElementById("mensagemK").innerHTML=" = Válido!";
+        document.getElementById("mensagemK").style.backgroundColor = "#99ff99";
+    }
+    else{
+        document.getElementById("mensagemK").innerHTML=" = Inválido!";
+        document.getElementById("mensagemK").style.backgroundColor = "#ffb3b3";
+    }
+};
