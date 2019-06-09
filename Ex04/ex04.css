@@ -2,8 +2,9 @@
 .naovalida{background-color: red;}
 .pointer {cursor: pointer;}
 p{margin:0px;}
+.mensagem{display:inline;}
 fieldset{
-    width:45%;
+    width:46%;
     height:100px;
     border: 1px solid #bfbfbf;
     display: block;
@@ -12,10 +13,12 @@ fieldset{
 /*#letral{width:63%;}*/
 .titulo{text-align:center;}
 .center{
+    clear:both;
+    background:white;
     border: 2px solid black;
-    width:90%;
-    height:100%;
-	position: fixed;
+    width:900px;
+    height:750px;
+	position: relative;
 	left: 50%;
 	/* bring your own prefixes */
 	transform: translate(-50%);
@@ -32,3 +35,10 @@ fieldset{
 #fieldJ{background:#CCFFFF;}
 #fieldK{background:#EAADEA;}
 #fieldL{background:#FFCCCC;}
+legend{
+    border: 1px solid #bfbfbf;
+    background: white;
+    color: black;
+}
+
+body{background-image: url("fundo_uri2.jpg");}
