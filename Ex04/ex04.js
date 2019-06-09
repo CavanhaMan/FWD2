@@ -161,6 +161,22 @@ document.getElementById("validaH").onclick = function() {
 };
 /***LETRA I*******************************************************************/
 //Únicos formatos permitidos: (xx)xxxxx-xxxx ou (xxx)xxxxx-xxxx
+document.getElementById("txtI").onfocus = function() {
+    document.getElementById("validaI").checked=false;
+    document.getElementById("mensagemI").innerHTML="";
+}
+document.getElementById("validaI").onclick = function() {
+    var dadoI = document.getElementById("txtI").value;
+    var padraoI = /^\(\d{2,3}\)\d{5}-\d{4}$/;
+    if (padraoI.test(dadoI)){
+        document.getElementById("mensagemI").innerHTML=" = Válido!";
+        document.getElementById("mensagemI").style.backgroundColor = "#99ff99";
+    }
+    else{
+        document.getElementById("mensagemI").innerHTML=" = Inválido!";
+        document.getElementById("mensagemI").style.backgroundColor = "#ffb3b3";
+    }
+};
 /***LETRA J*******************************************************************/
 //O faturamento de uma empresa pode variar de R$0,00 até R$999.999.999.999,99 (999 bilhões de reais).
 //Exemplos: R$400,8; R$400,85; R$1.500,41; R$1.500,7; R$5.601.478,10; R$10.524.478.967,70
