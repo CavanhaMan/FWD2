@@ -12,7 +12,7 @@ document.getElementById("validaA").onclick = function() {
     var dadoA = document.getElementById("txtA").value;
     //var padrao5 = /^[2-4][0-9]|5[0-4]$/;
     //var padraoA = /^\d{2}\/\d{2}\/(\d{2}|\d{4})$/;
-    var padraoA = /^([0-2]?[0-9]|3[0-1])\/(0?[0-9]|1[0-2])\/((19|20)?[0-9][0-9])$/;
+    var padraoA = /^([0-2]?[0-9]|3[0-1])\/(0?[0-9]|1[0-2])\/((19[0-9][0-9]|20?(0|1)[0-9])|[0-9][0-9])$/;
     if (padraoA.test(dadoA)){
         document.getElementById("mensagemA").innerHTML=" = Válido!";
         document.getElementById("mensagemA").style.backgroundColor = "#99ff99";
