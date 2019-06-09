@@ -10,18 +10,18 @@
 	<script src="jquery-3.1.0.js"></script>
 	<script src="jquery.mask.js"></script>
 
-    <fieldset class="center">
+    <fieldset id="field" class="center">
       <legend class="titulo">JavaScript - Lista de Exercícios 04 - Expressões Regulares</legend>
       <form name="formulario" novalidate="novalidate">
-        <fieldset><legend>A</legend><!-- a. Data de nascimento: -->
+        <fieldset id="fieldA"><legend>A</legend><!-- a. Data de nascimento: -->
             <label class="pointer" for="txtA">Digite sua data de nascimento:</label><br>
             <input type="text" id="txtA" class="campo" placeholder="xx/xx/xxxx" title="Digite sua data de nascimento" />
             <input type="checkbox" class="pointer" id="validaA" title="Clique para validar o campo" />
             <label for="validaA" class="pointer" title="Clique para validar o campo">Validar</label>
             <spam id="mensagemA" class="mensagem"></spam>
-            <p>(xx/xx/xxxx)</p>
+            <p>(dd/mm/aaaa ou dd/mm/aa)</p>
         </fieldset>
-        <fieldset><legend>B</legend><!-- b. CPF (jwifi): -->
+        <fieldset id="fieldB"><legend>B</legend><!-- b. CPF (jwifi): -->
             <label class="pointer" for="txtB">Digite seu CPF::</label><br>
             <input type="text" id="txtB" class="campo" placeholder="xxx.xxx.xxx-xx" title="Digite seu CPF" />
             <input type="checkbox" class="pointer" id="validaB" title="Clique para validar o campo" />
@@ -29,45 +29,47 @@
             <spam class="mensagem" id="mensagemB"></spam>
             <p>(xxx.xxx.xxx-xx)</p>
         </fieldset>
-        <fieldset><legend>C</legend><!-- c. Número de matrícula de um aluno: -->
+        <fieldset id="fieldC"><legend>C</legend><!-- c. Número de matrícula de um aluno: -->
             <label class="pointer" for="txtC">Digite seu número de matrícula:</label><br>
             <input type="text" id="txtC" class="campo" placeholder="IFTM-xxx/xxx-aa" title="Digite seu número de matrícula" />
             <input type="checkbox" class="pointer" id="validaC" title="Clique para validar o campo" />
             <label for="validaC" class="pointer" title="Clique para validar o campo">Validar</label>
             <spam id="mensagemC" class="mensagem"></spam>
-            <p>(IFTM-xxx/xxx-aa)</p>
+            <p>(IFTM-xxx/xxx-yy ou iftm-xxx/xxx-yy)</p>
         </fieldset>
-        <fieldset><legend>D, E, F e G</legend>
-        <!-- d. Código de uma disciplina do IFTM: -->
-            <label>Digite o código da disciplina cursada no IFTM:</label><br><br>
-            <label class="pointer" for="txtD">Primeira versão:</label><br>
+        <fieldset id="fieldD"><legend>D</legend><!-- d. Código de uma disciplina do IFTM: -->
+            <label class="pointer" for="txtD">Digite o código da disciplina cursada no IFTM (1):</label><br>
             <input type="text" id="txtD" class="campo" placeholder="MT-xx.xxx-IFTM" title="Digite o código da disciplina" />
             <input type="checkbox" class="pointer" id="validaD" title="Clique para validar o campo" />
             <label for="validaD" class="pointer" title="Clique para validar o campo">Validar</label>
             <spam id="mensagemD" class="mensagem"></spam>
-            <p>(MT-xx.xxx-IFTM - todas maiúsculas)</p><br>
-            <label class="pointer" for="txtE">Segunda versão:</label><br>
+            <p>(MT-xx.xxx-IFTM - letras poderão ser maiúsculas ou minúsculas)</p>
+        </fieldset>
+        <fieldset id="fieldE"><legend>E</legend><!-- e. Código de uma disciplina do IFTM (versão 3):  -->
+            <label class="pointer" for="txtE">Digite o código da disciplina cursada no IFTM (2):</label><br>
             <input type="text" id="txtE" class="campo" placeholder="MT-xx.xxx-IFTM:" title="Digite o código da disciplina" />
             <input type="checkbox" class="pointer" id="validaE" title="Clique para validar o campo" />
             <label for="validaE" class="pointer" title="Clique para validar o campo">Validar</label>
             <spam class="mensagem" id="mensagemE"></spam>
-            <p>(MT-xx.xxx-IFTM - MT maiúscula)</p><br>
-        <!-- f. Código de uma disciplina do IFTM (versão 3):  -->
-            <label class="pointer" for="txtF">Terceira versão:</label><br>
+            <p>(MT-xx.xxx-IFTM - MT maiúscula)</p>
+        </fieldset>
+        <fieldset id="fieldF"><legend>F</legend><!-- f. Código de uma disciplina do IFTM (versão 3):  -->
+            <label class="pointer" for="txtF">Digite o código da disciplina cursada no IFTM (3):</label><br>
             <input type="text" id="txtF" class="campo" placeholder="MT-xx.xxx-IFTM:" title="Digite o código da disciplina" />
             <input type="checkbox" class="pointer" id="validaF" title="Clique para validar o campo" />
             <label for="validaF" class="pointer" title="Clique para validar o campo">Validar</label>
             <spam class="mensagem" id="mensagemF"></spam>
-            <p>(MT-xx.xxx-IFTM - maiúsculas e minúsculas com espaço ou não)</p><br>
-        <!-- g. Código de uma disciplina do IFTM (versão 4) (jwifi): -->
-            <label class="pointer" for="txtG">Quarta versão:</label><br>
+            <p>(MT-xx.xxx-IFTM - maiúsculas e minúsculas com espaço ou não entre letras)</p>
+        </fieldset>
+        <fieldset id="fieldG"><legend>G</legend><!-- g. Código de uma disciplina do IFTM (versão 4) (jwifi): -->
+            <label>Digite o código da disciplina cursada no IFTM (4):</label><br>
             <input type="text" id="txtG" class="campo" placeholder="MT-xx.xxx-IFTM" title="Digite o código da disciplina" />
             <input type="checkbox" class="pointer" id="validaG" title="Clique para validar o campo" />
             <label for="validaG" class="pointer" title="Clique para validar o campo">Validar</label>
             <spam class="mensagem" id="mensagemG"></spam>
             <p>(MT-xx.xxx-IFTM Y - maiúsculas e minúsculas com espaço ou não e nome dos campi)</p>
         </fieldset>
-        <fieldset><legend>H</legend><!-- h. Telefone: -->
+        <fieldset id="fieldH"><legend>H</legend><!-- h. Telefone: -->
             <label class="pointer" for="txtH">Digite seu celular:</label><br>
             <input type="text" id="txtH" class="campo" placeholder="+yy(xx)xxxxx-xxxx:" title="Digite o celular" />
             <input type="checkbox" class="pointer" id="validaH" title="Clique para validar o campo" />
@@ -75,7 +77,7 @@
             <spam class="mensagem" id="mensagemH"></spam>
             <p>+yy(xx)xxxxx-xxxx</p>
         </fieldset>
-        <fieldset><legend>I</legend><!-- i. Telefone (versão 2): -->
+        <fieldset id="fieldI"><legend>I</legend><!-- i. Telefone (versão 2): -->
             <label class="pointer" for="txtI">Digite seu telefone ou celular:</label><br>
             <input type="text" id="txtI" class="campo" placeholder="(xxx)xxxxx-xxxx" title="Digite seu telefone ou celular" />
             <input type="checkbox" class="pointer" id="validaI" title="Clique para validar o campo" />
@@ -83,7 +85,7 @@
             <spam class="mensagem" id="mensagemI"></spam>
             <p>(xxx)xxxxx-xxxx</p>
         </fieldset>
-        <fieldset><legend>J</legend><!-- j. Faturamento anual de uma empresa: -->
+        <fieldset id="fieldJ"><legend>J</legend><!-- j. Faturamento anual de uma empresa: -->
             <label class="pointer" for="txtJ">Informe o faturamento anual da empresa:</label><br>
             <input type="text" id="txtJ" class="campo" placeholder="R$x,xx:" title="Informe o faturamento anual da empresa" />
             <input type="checkbox" class="pointer" id="validaJ" title="Clique para validar o campo" />
@@ -91,7 +93,7 @@
             <spam class="mensagem" id="mensagemJ"></spam>
             <p>R$x,xx</p>
         </fieldset>
-        <fieldset><legend>K</legend><!-- k. Cronômetro (jwifi): -->
+        <fieldset id="fieldK"><legend>K</legend><!-- k. Cronômetro (jwifi): -->
             <label class="pointer" for="txtK">aaaaa:</label><br>
             <input type="text" id="txtK" class="campo" placeholder="aaaaa:" title="aaaaa" />
             <input type="checkbox" class="pointer" id="validaK" title="Clique para validar o campo" />
@@ -99,7 +101,7 @@
             <spam class="mensagem" id="mensagemK"></spam>
             <p></p>
         </fieldset>
-        <fieldset id="letral"><legend>L</legend><!-- l. Senha: -->
+        <fieldset id="fieldL" id="letral"><legend>L</legend><!-- l. Senha: -->
             <label class="pointer" for="txtL">Digite sua senha:</label><br>
             <input type="text" id="txtL" class="campo" placeholder="aaaaa:" title="Digite sua senha" />
             <input type="checkbox" class="pointer" id="validaL" title="Clique para validar o campo" />

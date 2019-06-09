@@ -48,7 +48,7 @@ document.getElementById("txtC").onfocus = function() {
 }
 document.getElementById("validaC").onclick = function() {
     var dadoC = document.getElementById("txtC").value;
-    var padraoC = /^IFTM-\d{3}\/\d{3}-\w{2}$/;
+    var padraoC = /^IFTM-\d{3}\/\d{3}-\w{2}$/i;
     if (padraoC.test(dadoC)){
         document.getElementById("mensagemC").innerHTML=" = Válido!";
         document.getElementById("mensagemC").style.backgroundColor = "#99ff99";
@@ -143,6 +143,22 @@ document.getElementById("validaG").onclick = function() {
 /***LETRA H*******************************************************************/
 //Único formato permitido: +yy(xx)xxxxx-xxxx. Onde x e y são dígitos. 
 //O y refere ao código internacional do país (DDI).
+document.getElementById("txtH").onfocus = function() {
+    document.getElementById("validaH").checked=false;
+    document.getElementById("mensagemH").innerHTML="";
+}
+document.getElementById("validaH").onclick = function() {
+    var dadoH = document.getElementById("txtH").value;
+    var padraoH = /^\+\d{1,3}\(\d{2}\)\d{5}-\d{4}$/;
+    if (padraoH.test(dadoH)){
+        document.getElementById("mensagemH").innerHTML=" = Válido!";
+        document.getElementById("mensagemH").style.backgroundColor = "#99ff99";
+    }
+    else{
+        document.getElementById("mensagemH").innerHTML=" = Inválido!";
+        document.getElementById("mensagemH").style.backgroundColor = "#ffb3b3";
+    }
+};
 /***LETRA I*******************************************************************/
 //Únicos formatos permitidos: (xx)xxxxx-xxxx ou (xxx)xxxxx-xxxx
 /***LETRA J*******************************************************************/

@@ -4,6 +4,7 @@
 p{margin:0px;}
 fieldset{
     width:45%;
+    height:100px;
     border: 1px solid #bfbfbf;
     display: block;
     float:left;
@@ -13,8 +14,21 @@ fieldset{
 .center{
     border: 2px solid black;
     width:90%;
+    height:100%;
 	position: fixed;
 	left: 50%;
 	/* bring your own prefixes */
 	transform: translate(-50%);
 }
+#fieldA{background:#FFFFCC;}
+#fieldB{background:#E6E8FA;}
+#fieldC{background:#FFCCFF;}
+#fieldD{background:#CCFFFF;}
+#fieldE{background:#EAEAAE;}
+#fieldF{background:#FFFF99;}
+#fieldG{background:#EBC79E;}
+#fieldH{background:#D8D8BF;}
+#fieldI{background:#D19275;}
+#fieldJ{background:#CCFFFF;}
+#fieldK{background:#EAADEA;}
+#fieldL{background:#FFCCCC;}
