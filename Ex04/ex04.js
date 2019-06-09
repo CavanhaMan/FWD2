@@ -48,7 +48,7 @@ document.getElementById("txtC").onfocus = function() {
 }
 document.getElementById("validaC").onclick = function() {
     var dadoC = document.getElementById("txtC").value;
-    var padraoC = /^IFTM-\d{3}\/\d{3}-\w{2}$/i;
+    var padraoC = /^IFTM-\d{3}\/\d{3}-\w{2}$/;
     if (padraoC.test(dadoC)){
         document.getElementById("mensagemC").innerHTML=" = Válido!";
         document.getElementById("mensagemC").style.backgroundColor = "#99ff99";
@@ -67,7 +67,7 @@ document.getElementById("txtD").onfocus = function() {
 }
 document.getElementById("validaD").onclick = function() {
     var dadoD = document.getElementById("txtD").value;
-    var padraoD = /^MT-\d{2}.\d{3}-IFTM$/i;
+    var padraoD = /^MT-\d{2}\.\d{3}-IFTM$/i;
     if (padraoD.test(dadoD)){
         document.getElementById("mensagemD").innerHTML=" = Válido!";
         document.getElementById("mensagemD").style.backgroundColor = "#99ff99";
@@ -79,19 +79,67 @@ document.getElementById("validaD").onclick = function() {
 };
 /***LETRA E*******************************************************************/
 //Único formato permitido: MT-xx.xxx-IFTM. Onde x deverá um dígito, 
-//as letras MT deverão ser maiúsculas e as letras IFTM poderão ser 
-//tanto maiúsculas quanto minúsculas.
+//as letras MT deverão ser maiúsculas e 
+//as letras IFTM poderão ser tanto maiúsculas quanto minúsculas.
+document.getElementById("txtE").onfocus = function() {
+    document.getElementById("validaE").checked=false;
+    document.getElementById("mensagemE").innerHTML="";
+}
+document.getElementById("validaE").onclick = function() {
+    var dadoE = document.getElementById("txtE").value;
+    var padraoE = /^MT-\d{2}\.\d{3}-(I|i)(F|f)(T|t)(M|m)$/;
+    if (padraoE.test(dadoE)){
+        document.getElementById("mensagemE").innerHTML=" = Válido!";
+        document.getElementById("mensagemE").style.backgroundColor = "#99ff99";
+    }
+    else{
+        document.getElementById("mensagemE").innerHTML=" = Inválido!";
+        document.getElementById("mensagemE").style.backgroundColor = "#ffb3b3";
+    }
+};
 /***LETRA F*******************************************************************/
 //Único formato permitido: MT-xx.xxx-IFTM. Onde x é um dígito e 
 //as letras do padrão poderão ser tanto maiúsculas quanto minúsculas
 //e entre as letras poderá haver no máximo um espaço em branco.
 //M ?T I ?F ?T ?M
+document.getElementById("txtF").onfocus = function() {
+    document.getElementById("validaF").checked=false;
+    document.getElementById("mensagemF").innerHTML="";
+}
+document.getElementById("validaF").onclick = function() {
+    var dadoF = document.getElementById("txtF").value;
+    var padraoF = /^M\s?T-\d{2}\.\d{3}-I\s?F\s?T\s?M$/i;
+    if (padraoF.test(dadoF)){
+        document.getElementById("mensagemF").innerHTML=" = Válido!";
+        document.getElementById("mensagemF").style.backgroundColor = "#99ff99";
+    }
+    else{
+        document.getElementById("mensagemF").innerHTML=" = Inválido!";
+        document.getElementById("mensagemF").style.backgroundColor = "#ffb3b3";
+    }
+};
 /***LETRA G*******************************************************************/
 //Único formato permitido: MT-xx.xxx-IFTM Y. Onde x é um dígito, 
 //as letras do padrão poderão ser tanto maiúsculas quanto minúsculas 
 //e entre as letras poderá haver no máximo um espaço em branco 
 //e Y é o nome de um dos seguintes campi UBERLÂNDIA CENTRO ou UBERLÂNDIA
 //(A primeira letra do nome/sobrenome de cada campus deve ser maiúscula e as demais minúsculas).
+document.getElementById("txtG").onfocus = function() {
+    document.getElementById("validaG").checked=false;
+    document.getElementById("mensagemG").innerHTML="";
+}
+document.getElementById("validaG").onclick = function() {
+    var dadoG = document.getElementById("txtG").value;
+    var padraoG = /^M\s?T-\d{2}\.\d{3}-I\s?F\s?T\s?M Uberlândia( Centro)?$/i;
+    if (padraoG.test(dadoG)){
+        document.getElementById("mensagemG").innerHTML=" = Válido!";
+        document.getElementById("mensagemG").style.backgroundColor = "#99ff99";
+    }
+    else{
+        document.getElementById("mensagemG").innerHTML=" = Inválido!";
+        document.getElementById("mensagemG").style.backgroundColor = "#ffb3b3";
+    }
+};
 /***LETRA H*******************************************************************/
 //Único formato permitido: +yy(xx)xxxxx-xxxx. Onde x e y são dígitos. 
 //O y refere ao código internacional do país (DDI).
