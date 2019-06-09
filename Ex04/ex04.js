@@ -187,7 +187,7 @@ document.getElementById("txtJ").onfocus = function() {
 document.getElementById("validaJ").onclick = function() {
     var dadoJ = document.getElementById("txtJ").value;
     //var padraoJ = /^R\$\d{1,3}(\.\d{3})*,\d{2}$/; //qq valor
-    var padraoJ = /^R\$\d{1,3}(\.\d{3}){0,3},\d{2}$/;//até 999 bilhoes
+    var padraoJ = /^R\$\d{0,3}(\.\d{3}){0,3},\d{1,2}$/;//até 999 bilhoes
     if (padraoJ.test(dadoJ)){
         document.getElementById("mensagemJ").innerHTML=" = Válido!";
         document.getElementById("mensagemJ").style.backgroundColor = "#99ff99";
@@ -201,6 +201,22 @@ document.getElementById("validaJ").onclick = function() {
 //HH:MM:SS:CC (HH: hora, MM: minuto, SS: segundo, CC: centésimo de segundo).
 //Valores permitidos para cada unidade de tempo: (HH>=00 && HH<=23), 
 //(MM>=00 && MM<=59), (SS>=00 && SS<=59) e (CC>=00 && CC<=99)
+document.getElementById("txtK").onfocus = function() {
+    document.getElementById("validaK").checked=false;
+    document.getElementById("mensagemK").innerHTML="";
+}
+document.getElementById("validaK").onclick = function() {
+    var dadoK = document.getElementById("txtK").value;
+    var padraoK = /^([0-1][0-9]|2[0-3])(:([0-5][0-9])){2}:([0-9][0-9])$/;
+    if (padraoK.test(dadoK)){
+        document.getElementById("mensagemK").innerHTML=" = Válido!";
+        document.getElementById("mensagemK").style.backgroundColor = "#99ff99";
+    }
+    else{
+        document.getElementById("mensagemK").innerHTML=" = Inválido!";
+        document.getElementById("mensagemK").style.backgroundColor = "#ffb3b3";
+    }
+};
 /***LETRA L*******************************************************************/
 //Únicos formatos permitidos: X&W.Y.Z-U,V.T ou X&W.Y-U,V.T Onde X deverá ser
 //no mínimo 5 (cinco) caracteres alfanuméricos, além de um dos seguintes símbolos (“.”, “-”,”_”), 
@@ -211,19 +227,29 @@ document.getElementById("validaJ").onclick = function() {
 //V deverá ser 2 caracteres especiais e 
 //T qualquer caracter exceto 'a','b','0' e '1' (pelo menos 1)
 //Exemplo: 321a.&apMb.aei.Ab0-asf+_,/*.cq
-document.getElementById("txtK").onfocus = function() {
-    document.getElementById("validaK").checked=false;
-    document.getElementById("mensagemK").innerHTML="";
+document.getElementById("txtL").onfocus = function() {
+    document.getElementById("validaL").checked=false;
+    document.getElementById("mensagemL").innerHTML="";
 }
-document.getElementById("validaK").onclick = function() {
-    var dadoK = document.getElementById("txtK").value;
-    var padraoK = /^R\$\d{1,3}(\.\d{3}){0,3},\d{2}$/;//até 999 bilhoes
-    if (padraoK.test(dadoK)){
-        document.getElementById("mensagemK").innerHTML=" = Válido!";
-        document.getElementById("mensagemK").style.backgroundColor = "#99ff99";
+document.getElementById("validaL").onclick = function() {
+    var dadoL = document.getElementById("txtL").value;
+    var padraoL = /^$/;
+    if (padraoL.test(dadoL)){
+        document.getElementById("mensagemL").innerHTML=" = Válido!";
+        document.getElementById("mensagemL").style.backgroundColor = "#99ff99";
     }
     else{
-        document.getElementById("mensagemK").innerHTML=" = Inválido!";
-        document.getElementById("mensagemK").style.backgroundColor = "#ffb3b3";
+        document.getElementById("mensagemL").innerHTML=" = Inválido!";
+        document.getElementById("mensagemL").style.backgroundColor = "#ffb3b3";
     }
 };
+/*
+X&W.Y.Z-U,V.T ou X&W.Y-U,V.T 
+X deverá ser no mínimo 5 (cinco) caracteres alfanuméricos, além de um dos seguintes símbolos (“.”, “-”,”_”)
+W deverá ser apenas letras maiúsculas ou minúsculas de "a" a "p" (pelo menos 1), 
+Y apenas vogais minúsculas (pelo menos 1),
+Z apenas letras maiúsculas ou minúsculas e/ou números de 0 a 5 (opcional),
+U deverá ser caracteres diferentes de números (pelo menos 1), 
+V deverá ser 2 caracteres especiais e 
+T qualquer caracter exceto 'a','b','0' e '1' (pelo menos 1)
+*/
