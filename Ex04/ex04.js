@@ -5,10 +5,10 @@ $('.campo').on('focus blur', function() {
 /***LETRA A*******************************************************************/
 //Únicos formatos permitidos: dd/mm/aaaa ou dd/mm/aa
 document.getElementById("txtA").onfocus = function() {
-    document.getElementById("ValidaA").checked=false;
+    document.getElementById("validaA").checked=false;
     document.getElementById("mensagemA").innerHTML="";
 }
-document.getElementById("ValidaA").onclick = function() {
+document.getElementById("validaA").onclick = function() {
     var dadoA = document.getElementById("txtA").value;
     var padraoA = /^\d{2}\/\d{2}\/(\d{2}|\d{4})$/;
     if (padraoA.test(dadoA)){
@@ -23,10 +23,10 @@ document.getElementById("ValidaA").onclick = function() {
 /***LETRA B*******************************************************************/
 //Únicos formatos permitidos: xxx.xxx.xxx-xx. Onde x é um dígito.
 document.getElementById("txtB").onfocus = function() {
-    document.getElementById("ValidaB").checked=false;
+    document.getElementById("validaB").checked=false;
     document.getElementById("mensagemB").innerHTML="";
 }
-document.getElementById("ValidaB").onclick = function() {
+document.getElementById("validaB").onclick = function() {
     var dadoB = document.getElementById("txtB").value;
     var padraoB = /^\d{3}.\d{3}.\d{3}-\d{2}$/;
     if (padraoB.test(dadoB)){
@@ -41,14 +41,13 @@ document.getElementById("ValidaB").onclick = function() {
 /***LETRA C*******************************************************************/
 //Únicos formatos permitidos: IFTM-xxx/xxx-yy ou iftm-xxx/xxx-yy. Onde x é um dígito e y um caracter alfanumérico.
 document.getElementById("txtC").onfocus = function() {
-    document.getElementById("ValidaC").checked=false;
+    document.getElementById("validaC").checked=false;
     document.getElementById("mensagemC").innerHTML="";
 }
-document.getElementById("ValidaC").onclick = function() {
-    var dadoB = document.getElementById("txtC").value;
-    //var padraoB = /^IFTM$/i;
-    var padraoB = /^IFTM-\d{3}\/\d{3}-[A-z]{2}$/i;
-    if (padraoB.test(dadoB)){
+document.getElementById("validaC").onclick = function() {
+    var dadoC = document.getElementById("txtC").value;
+    var padraoC = /^IFTM-\d{3}\/\d{3}-[A-z]{2}$/i;
+    if (padraoC.test(dadoC)){
         document.getElementById("mensagemC").innerHTML=" = Válido!";
         document.getElementById("mensagemC").style.backgroundColor = "#99ff99";
     }
@@ -60,6 +59,22 @@ document.getElementById("ValidaC").onclick = function() {
 /***LETRA D*******************************************************************/
 //Único formato permitido: MT-xx.xxx-IFTM. Onde x é um dígito e 
 //as letras do padrão poderão ser tanto maiúsculas quanto minúsculas.
+document.getElementById("txtD").onfocus = function() {
+    document.getElementById("validaD").checked=false;
+    document.getElementById("mensagemD").innerHTML="";
+}
+document.getElementById("validaD").onclick = function() {
+    var dadoD = document.getElementById("txtD").value;
+    var padraoD = /^MT-\d{2}.\d{3}-IFTM$/i;
+    if (padraoD.test(dadoD)){
+        document.getElementById("mensagemD").innerHTML=" = Válido!";
+        document.getElementById("mensagemD").style.backgroundColor = "#99ff99";
+    }
+    else{
+        document.getElementById("mensagemD").innerHTML=" = Inválido!";
+        document.getElementById("mensagemD").style.backgroundColor = "#ffb3b3";
+    }
+};
 /***LETRA E*******************************************************************/
 //Único formato permitido: MT-xx.xxx-IFTM. Onde x deverá um dígito, 
 //as letras MT deverão ser maiúsculas e as letras IFTM poderão ser 

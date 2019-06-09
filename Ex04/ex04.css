@@ -1,6 +1,3 @@
-.inputfocus {
-    background-color: #ffff99;
-}
-.naovalida{
-    background-color: red;
-}
+.inputfocus {background-color: #ffff99;}
+.naovalida{background-color: red;}
+.pointer {cursor: pointer;}
