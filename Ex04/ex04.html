@@ -2,21 +2,29 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+	<link href="ex04.css" rel="stylesheet">
     <title>JAVASCRIPT - LISTA DE EXERCÍCIOS 04</title>
 </head>
 <body>
         
-    <!-- Crie uma página HTML composta por um formulário contendo cada um dos campos abaixo.
-    Para cada campo associe um botão intitulado “Validar”. Cada botão deverá validar
-    individualmente cada um dos campos do formulário. Para isso, utilize o conceito de expressões
-    regulares. -->
-    
+    <fieldset class="center">
+        <form name="formulario" novalidate="novalidate">
     <!-- a. Data de nascimento:
     OBS: Únicos formatos permitidos: dd/mm/aaaa ou dd/mm/aa -->
-    
+    <label for="txtA">Digite sua data de nascimento:</label><br>
+    <input type="text" id="txtA" placeholder="Digite sua data de nascimento:" title="Digite sua data de nascimento" />
+    <input type="checkbox" id="ValidaA" title="Clique para validar sua data de nascimento" />Validar
+    <spam id="mensagemA"></spam>
+    <br>
     <!-- b. CPF (jwifi):
     OBS: Únicos formatos permitidos: xxx.xxx.xxx-xx. Onde x é um dígito. -->
+    <label for="txtB">Digite seu CPF:</label><br>
+    <input type="text" id="txtB" placeholder="Digite seu CPF:" title="Digite seu CPF" />
+    <input type="checkbox" id="ValidaB" title="Clique para validar seu CPF" />Validar
+    <spam id="mensagemB"></spam>
     
+
     <!-- c. Número de matrícula de um aluno:
     OBS: Únicos formatos permitidos: IFTM-xxx/xxx-yy ou iftm-xxx/xxx-yy. Onde x é um dígito e y um caracter alfanumérico. -->
     
@@ -61,6 +69,9 @@
     deverá ser 2 caracteres especiais e T qualquer caracter exceto 'a','b','0' e '1' (pelo menos 1)
      Exemplo: 321a.&apMb.aei.Ab0-asf+_,/*.cq -->
     
+        </form>
+    </fieldset>
+    <script type="text/javascript" src="ex04.js"></script>
 
 </body>
 </html>

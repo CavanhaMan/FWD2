@@ -33,9 +33,9 @@ document.getElementById("btClique4").onclick = function() {
     var padrao4 = /^\d{2}\/\d{2}\/(\d{2}|\d{4})$/;
     console.log(padrao4.test(dado4));
     if (padrao4.test(dado4))
-        alert("O telefone " + dado4 + " está dentro do padrão.");
+        alert("A data " + dado4 + " está dentro do padrão.");
     else
-        alert("O telefone " + dado4 + " está fora do padrão.");
+        alert("A data " + dado4 + " está fora do padrão.");
 };
 
 document.getElementById("btClique5").onclick = function() {
