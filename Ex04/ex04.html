@@ -11,118 +11,92 @@
 	<script src="jquery.mask.js"></script>
 
     <fieldset class="center">
-        <form name="formulario" novalidate="novalidate">
-    <!-- a. Data de nascimento:
-    OBS: Únicos formatos permitidos: dd/mm/aaaa ou dd/mm/aa -->
-    <label for="txtA">Digite sua data de nascimento:</label><br>
-    <input type="text" id="txtA" class="campo" placeholder="Digite sua data de nascimento:" title="Digite sua data de nascimento" />
-    <input type="checkbox" id="ValidaA" title="Clique para validar sua data de nascimento" />Validar
-    <spam id="mensagemA" class="mensagem"></spam>
+     <form name="formulario" novalidate="novalidate">
+        <!-- a. Data de nascimento: -->
+        <label for="txtA">Digite sua data de nascimento:</label><br>
+        <input type="text" id="txtA" class="campo" placeholder="xx/xx/xxxx" title="Digite sua data de nascimento" />
+        <input type="checkbox" id="ValidaA" title="Clique para validar sua data de nascimento" />Validar
+        <spam id="mensagemA" class="mensagem"></spam>
 
-    <br>
-    <!-- b. CPF (jwifi):
-    OBS: Únicos formatos permitidos: xxx.xxx.xxx-xx. Onde x é um dígito. -->
-    <label for="txtB">Digite seu CPF:</label><br>
-    <input type="text" id="txtB" class="campo" placeholder="Digite seu CPF:" title="Digite seu CPF" />
-    <input type="checkbox" id="ValidaB" title="Clique para validar seu CPF" />Validar
-    <spam id="mensagemB" class="mensagem"></spam>
-    
-    <br>
-    <!-- c. Número de matrícula de um aluno:
-    OBS: Únicos formatos permitidos: IFTM-xxx/xxx-yy ou iftm-xxx/xxx-yy. Onde x é um dígito e y um caracter alfanumérico. -->
-    <label for="txtB">Digite seu CPF:</label><br>
-    <input type="text" id="txtB" class="campo" placeholder="Digite seu CPF:" title="Digite seu CPF" />
-    <input type="checkbox" id="ValidaB" title="Clique para validar seu CPF" />Validar
-    <spam id="mensagemB" class="mensagem"></spam>
-    
-    <br>
-    <!-- d. Código de uma disciplina do IFTM:
-    OBS: Único formato permitido: MT-xx.xxx-IFTM. Onde x é um dígito e as letras do padrão poderão ser tanto maiúsculas quanto minúsculas. -->
-    <label for="txtB">Digite seu CPF:</label><br>
-    <input type="text" id="txtB" class="campo" placeholder="Digite seu CPF:" title="Digite seu CPF" />
-    <input type="checkbox" id="ValidaB" title="Clique para validar seu CPF" />Validar
-    <spam id="mensagemB" class="mensagem"></spam>
-    
-    <br>
-    <!-- e. Código de uma disciplina do IFTM (versão 2) (jwifi):
-    OBS: Único formato permitido: MT-xx.xxx-IFTM. Onde x deverá um dígito, as letras MT deverão ser maiúsculas e as letras IFTM poderão ser tanto maiúsculas quanto minúsculas. -->
-    <label for="txtB">Digite seu CPF:</label><br>
-    <input type="text" id="txtB" class="campo" placeholder="Digite seu CPF:" title="Digite seu CPF" />
-    <input type="checkbox" id="ValidaB" title="Clique para validar seu CPF" />Validar
-    <spam id="mensagemB" class="mensagem"></spam>
-    
-    <br>
-    <!-- f. Código de uma disciplina do IFTM (versão 3): 
-    OBS: Único formato permitido: MT-xx.xxx-IFTM. Onde x é um dígito e as letras do padrão poderão ser tanto maiúsculas quanto minúsculas e entre as letras poderá haver no máximo um espaço em branco. -->
-    <label for="txtB">Digite seu CPF:</label><br>
-    <input type="text" id="txtB" class="campo" placeholder="Digite seu CPF:" title="Digite seu CPF" />
-    <input type="checkbox" id="ValidaB" title="Clique para validar seu CPF" />Validar
-    <spam id="mensagemB" class="mensagem"></spam>
-    
-    <br>
-    <!-- g. Código de uma disciplina do IFTM (versão 4) (jwifi):
-    OBS: Único formato permitido: MT-xx.xxx-IFTM Y. Onde x é um dígito, as letras do padrão
-    poderão ser tanto maiúsculas quanto minúsculas e entre as letras poderá haver no máximo um
-    espaço em branco e Y é o nome de um dos seguintes campi UBERLÂNDIA CENTRO ou
-    UBERLÂNDIA (A primeira letra do nome/sobrenome de cada campus deve ser maiúscula e
-    as demais minúsculas). -->
-    <label for="txtB">Digite seu CPF:</label><br>
-    <input type="text" id="txtB" class="campo" placeholder="Digite seu CPF:" title="Digite seu CPF" />
-    <input type="checkbox" id="ValidaB" title="Clique para validar seu CPF" />Validar
-    <spam id="mensagemB" class="mensagem"></spam>
-    
-    <br>
-    <!-- h. Telefone:
-    OBS: Único formato permitido: +yy(xx)xxxxx-xxxx. Onde x e y são dígitos. O y refere ao código internacional do país (DDI). -->
-    <label for="txtB">Digite seu CPF:</label><br>
-    <input type="text" id="txtB" class="campo" placeholder="Digite seu CPF:" title="Digite seu CPF" />
-    <input type="checkbox" id="ValidaB" title="Clique para validar seu CPF" />Validar
-    <spam id="mensagemB" class="mensagem"></spam>
-    
-    <br>
-    <!-- i. Telefone (versão 2):
-    OBS: Únicos formatos permitidos: (xx)xxxxx-xxxx ou (xxx)xxxxx-xxxx -->
-    <label for="txtB">Digite seu CPF:</label><br>
-    <input type="text" id="txtB" class="campo" placeholder="Digite seu CPF:" title="Digite seu CPF" />
-    <input type="checkbox" id="ValidaB" title="Clique para validar seu CPF" />Validar
-    <spam id="mensagemB" class="mensagem"></spam>
-    
-    <br>
-    <!-- j. Faturamento anual de uma empresa:
-    OBS: O faturamento de uma empresa pode variar de R$0,00 até R$999.999.999.999,99 (999
-    bilhões de reais). Exemplos: R$400,8; R$400,85; R$1.500,41; R$1.500,7; R$5.601.478,10;
-    R$10.524.478.967,70 -->
-    <label for="txtB">Digite seu CPF:</label><br>
-    <input type="text" id="txtB" class="campo" placeholder="Digite seu CPF:" title="Digite seu CPF" />
-    <input type="checkbox" id="ValidaB" title="Clique para validar seu CPF" />Validar
-    <spam id="mensagemB" class="mensagem"></spam>
-    
-    <br>
-    <!-- k. Cronômetro (jwifi):
-    OBS: HH:MM:SS:CC (HH: hora, MM: minuto, SS: segundo, CC: centésimo de segundo).
-    Valores permitidos para cada unidade de tempo: (HH>=00 && HH<=23), (MM>=00 &&
-    MM<=59), (SS>=00 && SS<=59) e (CC>=00 && CC<=99) -->
-    <label for="txtB">Digite seu CPF:</label><br>
-    <input type="text" id="txtB" class="campo" placeholder="Digite seu CPF:" title="Digite seu CPF" />
-    <input type="checkbox" id="ValidaB" title="Clique para validar seu CPF" />Validar
-    <spam id="mensagemB" class="mensagem"></spam>
-    
-    <br>
-    <!-- l. Senha: 
-    OBS: Únicos formatos permitidos: X&W.Y.Z-U,V.T ou X&W.Y-U,V.T Onde X deverá ser
-    no mínimo 5 (cinco) caracteres alfanuméricos, além de um dos seguintes símbolos (“.”, “-
-    ”,”_”), W deverá ser apenas letras maiúsculas ou minúsculas de "a" a "p" (pelo menos 1), Y
-    apenas vogais minúsculas (pelo menos 1), Z apenas letras maiúsculas ou minúsculas e/ou
-    números de 0 a 5 (opcional), U deverá ser caracteres diferentes de números (pelo menos 1), V
-    deverá ser 2 caracteres especiais e T qualquer caracter exceto 'a','b','0' e '1' (pelo menos 1)
-     Exemplo: 321a.&apMb.aei.Ab0-asf+_,/*.cq -->
-     <label for="txtB">Digite seu CPF:</label><br>
-     <input type="text" id="txtB" class="campo" placeholder="Digite seu CPF:" title="Digite seu CPF" />
-     <input type="checkbox" id="ValidaB" title="Clique para validar seu CPF" />Validar
-     <spam id="mensagemB" class="mensagem"></spam>
+        <br>
+        <!-- b. CPF (jwifi): -->
+        <label for="txtB">Digite seu CPF::</label><br>
+        <input type="text" id="txtB" class="campo" placeholder="xxx.xxx.xxx-xx:" title="Digite seu CPF:" />
+        <input type="checkbox" id="ValidaB" title="Clique para validar seu CPF" />Validar
+        <spam class="mensagem" id="mensagemB"></spam>
+        
+        <br>
+        <!-- c. Número de matrícula de um aluno: -->
+        <label for="txtC">Digite o número da matrícula do aluno:</label><br>
+        <input type="text" id="txtC" class="campo" placeholder="IFTM-xxx/xxx-aa:" title="aaaaa" />
+        <input type="checkbox" id="ValidaC" title="Clique para validar seu CPF" />Validar
+        <spam id="mensagemC" class="mensagem"></spam>
+        
+        <br>
+        <!-- d. Código de uma disciplina do IFTM: -->
+        <label for="txtD">aaaa</label><br>
+        <input type="text" id="txtD" class="campo" placeholder="aaaa" title="aaaaa" />
+        <input type="checkbox" id="ValidaD" title="Clique para validar seu CPF" />Validar
+        <spam id="mensagemD" class="mensagem"></spam>
+        
+        <br>
+        <!-- e. Código de uma disciplina do IFTM (versão 2) (jwifi): -->
+        <label for="txtE">Digite o código da disciplina cursada no IFTM:</label><br>
+        <input type="text" id="txtE" class="campo" placeholder="aaaaa:" title="aaaaa" />
+        <input type="checkbox" id="ValidaE" title="Clique para validar seu CPF" />Validar
+        <spam class="mensagem" id="mensagemE"></spam>
+        
+        <br>
+        <!-- f. Código de uma disciplina do IFTM (versão 3):  -->
+        <label for="txtF">aaaaa:</label><br>
+        <input type="text" id="txtF" class="campo" placeholder="aaaaa:" title="aaaaa" />
+        <input type="checkbox" id="ValidaF" title="Clique para validar seu CPF" />Validar
+        <spam class="mensagem" id="mensagemF"></spam>
+        
+        <br>
+        <!-- g. Código de uma disciplina do IFTM (versão 4) (jwifi): -->
+        <label for="txtG">aaaaa:</label><br>
+        <input type="text" id="txtG" class="campo" placeholder="aaaaa:" title="aaaaa" />
+        <input type="checkbox" id="ValidaG" title="Clique para validar seu CPF" />Validar
+        <spam class="mensagem" id="mensagemG"></spam>
+        
+        <br>
+        <!-- h. Telefone: -->
+        <label for="txtH">aaaaa:</label><br>
+        <input type="text" id="txtH" class="campo" placeholder="aaaaa:" title="aaaaa" />
+        <input type="checkbox" id="ValidaH" title="Clique para validar seu CPF" />Validar
+        <spam class="mensagem" id="mensagemH"></spam>
+        
+        <br>
+        <!-- i. Telefone (versão 2): -->
+        <label for="txtI">Digite seu telefone:</label><br>
+        <input type="text" id="txtI" class="campo" placeholder="(xxx)xxxxx-xxxx" title="aaaaa" />
+        <input type="checkbox" id="ValidaI" title="Clique para validar seu CPF" />Validar
+        <spam class="mensagem" id="mensagemI"></spam>
+        
+        <br>
+        <!-- j. Faturamento anual de uma empresa: -->
+        <label for="txtJ">aaaaa:</label><br>
+        <input type="text" id="txtJ" class="campo" placeholder="aaaaa:" title="aaaaa" />
+        <input type="checkbox" id="ValidaJ" title="Clique para validar seu CPF" />Validar
+        <spam class="mensagem" id="mensagemJ"></spam>
+        
+        <br>
+        <!-- k. Cronômetro (jwifi): -->
+        <label for="txtK">aaaaa:</label><br>
+        <input type="text" id="txtK" class="campo" placeholder="aaaaa:" title="aaaaa" />
+        <input type="checkbox" id="ValidaK" title="Clique para validar seu CPF" />Validar
+        <spam class="mensagem" id="mensagemK"></spam>
+        
+        <br>
+        <!-- l. Senha: -->
+        <label for="txtL">aaaaa:</label><br>
+        <input type="text" id="txtL" class="campo" placeholder="aaaaa:" title="aaaaa" />
+        <input type="checkbox" id="ValidaL" title="Clique para validar seu CPF" />Validar
+        <spam cla'ss="mensagem" id="mensagemL"></spam>
      
      
-        </form>
+      </form>
     </fieldset>
     <script type="text/javascript" src="ex04.js"></script>
 
