@@ -1,8 +1,13 @@
+.valido{background-color: green;}
+.invalido{background-color: red;}
 .inputfocus {background-color: #ffff99;}
 .naovalida{background-color: red;}
 .pointer {cursor: pointer;}
 p{margin:0px;}
-.mensagem{display:inline;}
+.mensagem{
+	display:inline;
+	color: yellow;
+}
 fieldset{
     width:46%;
     height:100px;
