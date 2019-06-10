@@ -41,4 +41,7 @@ legend{
     color: black;
 }
 
-body{background-image: url("fundo_uri2.jpg");}
+body{
+    background-image: url("xadrez.jpg");
+    background-size: 300px 300px;
+}
