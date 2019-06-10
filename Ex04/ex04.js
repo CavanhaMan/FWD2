@@ -285,14 +285,23 @@ document.getElementById("validaK").onclick = function() {
 	}
 };
 /***LETRA L*******************************************************************/
-//Únicos formatos permitidos: X&W.Y.Z-U,V.T ou X&W.Y-U,V.T Onde X deverá ser
-//no mínimo 5 (cinco) caracteres alfanuméricos, além de um dos seguintes símbolos (“.”, “-”,”_”), 
+//Únicos formatos permitidos: X&W.Y.Z-U,V.T ou X&W.Y-U,V.T 
+//Onde X deverá ser no mínimo 5 (cinco) caracteres alfanuméricos,
+var x = "\w{5,}";
+//além de um dos seguintes símbolos (“.”, “-”,”_”), 
+var x1 = "\.\_\-";
 //W deverá ser apenas letras maiúsculas ou minúsculas de "a" a "p" (pelo menos 1), 
+var w = "[A-Pa-p]{1,}";
 //Y apenas vogais minúsculas (pelo menos 1), 
+var y = "[a,e,i,o,u]{1,}";
 //Z apenas letras maiúsculas ou minúsculas e/ou números de 0 a 5 (opcional), 
+var z = "[A-Za-z0-5]";
 //U deverá ser caracteres diferentes de números (pelo menos 1), 
+var u = "[A-Za-z]{1,}";
 //V deverá ser 2 caracteres especiais e 
+var v = "[áàãâäéèêëíìîïóòõôöúùûüç/_+/', '_']{2}";
 //T qualquer caracter exceto 'a','b','0' e '1' (pelo menos 1)
+var t = "[^a,b,0,1]{1,}";
 //Exemplo: 321a.&apMb.aei.Ab0-asf+_,/*.cq
 document.getElementById("txtL").onfocus = function() {
     document.getElementById("validaL").checked=false;
@@ -302,10 +311,11 @@ document.getElementById("validaL").onclick = function() {
 	if (document.getElementById("validaL").checked==false){
 		document.getElementById("validaL").checked=false;
 		document.getElementById("mensagemL").innerHTML="";
-	}
-	else{
+	}//^(?=.[0-9]{2,})(?=.[a-z]{2,})(?=.[A-Z])(?=.[@#$%^&+=])(?=\S+$).{8,}$
+	else{//Mínimo 4 caracteres, pelo menos 1 letra e 1 número
 		var dadoL = document.getElementById("txtL").value;
-		var padraoL = /^$/;
+		//var padraoL = /^[[A-Pa-p]{1,}\d\.\-\_]{5,}$/;
+		var padraoL = /^[[A-Pa-p]{1,}\d\.\-\_]{5,}$/;
 		if (padraoL.test(dadoL)){
 			document.getElementById("mensagemL").innerHTML=" = Válido!";
 			document.getElementById("mensagemL").style.backgroundColor = "green";
@@ -316,13 +326,3 @@ document.getElementById("validaL").onclick = function() {
 		}
 	}
 };
-/*
-X&W.Y.Z-U,V.T ou X&W.Y-U,V.T 
-X deverá ser no mínimo 5 (cinco) caracteres alfanuméricos, além de um dos seguintes símbolos (“.”, “-”,”_”)
-W deverá ser apenas letras maiúsculas ou minúsculas de "a" a "p" (pelo menos 1), 
-Y apenas vogais minúsculas (pelo menos 1),
-Z apenas letras maiúsculas ou minúsculas e/ou números de 0 a 5 (opcional),
-U deverá ser caracteres diferentes de números (pelo menos 1), 
-V deverá ser 2 caracteres especiais e 
-T qualquer caracter exceto 'a','b','0' e '1' (pelo menos 1)
-*/
