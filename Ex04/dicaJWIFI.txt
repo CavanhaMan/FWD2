@@ -1,0 +1,11 @@
+
+*Pra usar o jwifi*
+1) Coloque isso logo abaixo o body:
+*<script type="text/javascript" src="jwifi.js"></script>*
+
+2) Coloque isso dentro da sua *<input type="text">* (onde será digitado a hora):
+*onKeyPress="inserirMascara('txtTeste','xx:xx:xx:xx')"*
+( *_txtTeste_* será substituido pelo nome do seu campo texto)
+
+2) salva o arquivo *jwifi.js* dentro da pasta do exercício:
+https://drive.google.com/drive/folders/1C4vzQXjsN62S43A1f_o16qei0C-DOOOT
