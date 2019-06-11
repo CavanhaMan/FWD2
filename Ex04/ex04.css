@@ -45,8 +45,21 @@ legend{
     background: white;
     color: black;
 }
-
 body{
     background-image: url("xadrez.jpg");
     background-size: 300px 300px;
 }
+/**************************************************/
+/*              ESTILOS PARA A INDEX              */
+/**************************************************/
+.grandao{
+	font-family: "OCR A Std";
+	font-size: 120px;
+	margin-top:-30px;
+}
+.pequeno{
+	font-family: "Brush Script MT";
+	font-size: 30px;
+	margin-left:100px;
+}
+.grandao,.pequeno{float:left;}

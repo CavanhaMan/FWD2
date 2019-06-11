@@ -1,52 +1,70 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Utilização de máscaras com jwifi</title>
-<script type="text/javascript" src="jwifi.js"></script>
-<style type="text/css">
-	.sucesso {
-		background-color:yellow;
-		font-size:30px;
-		}
-	.erro {
-		background-color:black;
-		color:white;
-		font-size:20px;
-	}
-</style>
-</head>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+	<link href="ex04.css" rel="stylesheet">
+    <title>JAVASCRIPT - LISTA DE EXERCÍCIOS 04</title>
+  </head>
+  <body>
+	<script src="jquery-3.1.0.js"></script>
+	<script src="jquery.mask.js"></script>
+	<script type="text/javascript" src="jwifi.js"></script>
 
-<body>
-	<form>
-        <fieldset style="width:300px">
-        <legend style="font-weight:bold">Uso apenas da função inserirMascara(x,y)</legend>
-            <span style="color:red">Preencha os campos abaixo sem os símbolos de pontuação:</span>
-        
-            <br><br>
-            CEP: <br> <input type="text" id="txtCEP" onKeyPress="inserirMascara('txtCEP','xx.xxx-xxx')">
-            
-            <br><br>
-            Data de nascimento: <br> <input type="text" id="txtDataNasc" onKeyPress="inserirMascara('txtDataNasc','xx/xx/xxxx')"> (Ex: ddmmaaaa)
-            
-            <br><br>
-            CPF: <br> <input type="text" id="txtCPF" onKeyPress="inserirMascara('txtCPF','xxx.xxx.xxx-xx')">
-            
-            <br><br>
-            Telefone: <br> <input type="text" id="txtFone" onKeyPress="inserirMascara('txtFone','(xx)xxxx-xxxx')"> (Ex:3411112222)
-        </fieldset> 
-      
-        <fieldset style="width:300px">
-        <legend style="font-weight:bold">Uso das funções inserirMascara(a,b) e validarInformacao(a,b,c,d)</legend>
-            <span style="color:red">Preencha os campos abaixo sem os símbolos de pontuação:</span>
-        
-            <br><br>
-            CNPJ: <br> <input type="text" id="txtCNPJ" onKeyPress="inserirMascara('txtCNPJ','xx.xxx.xxx/xxxx-xx')">
-            <input type="button" value="Conferir" onclick="validarInformacao('txtCNPJ',/^\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}$/,'','')">
-            
-        </fieldset> 
-    </form>
+    <fieldset id="field" class="center">
+      <legend class="titulo">JavaScript - Lista de Exercícios 04 - Expressões Regulares</legend>
+      <form name="formulario" novalidate="novalidate">
+        <fieldset id="fieldA"><legend>A</legend><!-- a. Data de nascimento: -->
+			<!--p class="grandao">A</p-->
+			<img src="letraA.png" alt="A" class="grandao">
+			<p class="pequeno">Data de nascimento</p>
+        </fieldset>
+        <fieldset id="fieldB"><legend>B</legend><!-- b. CPF (jwifi): -->
+			<p class="grandao">B</p>
+			<p class="pequeno">Data de nascimento</p>
+        </fieldset>
+        <fieldset id="fieldC"><legend>C</legend><!-- c. Número de matrícula de um aluno: -->
+			<p class="grandao">C</p>
+			<p class="pequeno">Data de nascimento</p>
+        </fieldset>
+        <fieldset id="fieldD"><legend>D</legend><!-- d. Código de uma disciplina do IFTM: -->
+			<p class="grandao">D</p>
+			<p class="pequeno">Data de nascimento</p>
+        </fieldset>
+        <fieldset id="fieldE"><legend>E</legend><!-- e. Código de uma disciplina do IFTM (versão 3):  -->
+			<p class="grandao">E</p>
+			<p class="pequeno">Data de nascimento</p>
+        </fieldset>
+        <fieldset id="fieldF"><legend>F</legend><!-- f. Código de uma disciplina do IFTM (versão 3):  -->
+			<p class="grandao">F</p>
+			<p class="pequeno">Data de nascimento</p>
+        </fieldset>
+        <fieldset id="fieldG"><legend>G</legend><!-- g. Código de uma disciplina do IFTM (versão 4) (jwifi): -->
+			<p class="grandao">G</p>
+			<p class="pequeno">Data de nascimento</p>
+        </fieldset>
+        <fieldset id="fieldH"><legend>H</legend><!-- h. Telefone: -->
+			<p class="grandao">H</p>
+			<p class="pequeno">Data de nascimento</p>
+        </fieldset>
+        <fieldset id="fieldI"><legend>I</legend><!-- i. Telefone (versão 2): -->
+			<p class="grandao">I</p>
+			<p class="pequeno">Data de nascimento</p>
+        </fieldset>
+        <fieldset id="fieldJ"><legend>J</legend><!-- j. Faturamento anual de uma empresa: -->
+			<p class="grandao">J</p>
+			<p class="pequeno">Data de nascimento</p>
+        </fieldset>
+        <fieldset id="fieldK"><legend>K</legend><!-- k. Cronômetro (jwifi): -->
+			<p class="grandao">K</p>
+			<p class="pequeno">Data de nascimento</p>
+        </fieldset>
+        <fieldset id="fieldL"><legend>L</legend><!-- l. Senha: -->
+			<p class="grandao">L</p>
+			<p class="pequeno">Data de nascimento</p>
+        </fieldset>
 
-
-</body>
+      </form>
+    </fieldset>
+    <script src="ex04.js"></script>
+  </body>
 </html>

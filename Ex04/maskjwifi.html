@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Utilização de máscaras com jwifi</title>
+<script type="text/javascript" src="jwifi.js"></script>
+<style type="text/css">
+	.sucesso {
+		background-color:yellow;
+		font-size:30px;
+		}
+	.erro {
+		background-color:black;
+		color:white;
+		font-size:20px;
+	}
+</style>
+</head>
+
+<body>
+	<form>
+        <fieldset style="width:300px">
+        <legend style="font-weight:bold">Uso apenas da função inserirMascara(x,y)</legend>
+            <span style="color:red">Preencha os campos abaixo sem os símbolos de pontuação:</span>
+        
+            <br><br>
+            CEP: <br> <input type="text" id="txtCEP" onKeyPress="inserirMascara('txtCEP','xx.xxx-xxx')">
+            
+            <br><br>
+            Data de nascimento: <br> <input type="text" id="txtDataNasc" onKeyPress="inserirMascara('txtDataNasc','xx/xx/xxxx')"> (Ex: ddmmaaaa)
+            
+            <br><br>
+            CPF: <br> <input type="text" id="txtCPF" onKeyPress="inserirMascara('txtCPF','xxx.xxx.xxx-xx')">
+            
+            <br><br>
+            Telefone: <br> <input type="text" id="txtFone" onKeyPress="inserirMascara('txtFone','(xx)xxxx-xxxx')"> (Ex:3411112222)
+        </fieldset> 
+      
+        <fieldset style="width:300px">
+        <legend style="font-weight:bold">Uso das funções inserirMascara(a,b) e validarInformacao(a,b,c,d)</legend>
+            <span style="color:red">Preencha os campos abaixo sem os símbolos de pontuação:</span>
+        
+            <br><br>
+            CNPJ: <br> <input type="text" id="txtCNPJ" onKeyPress="inserirMascara('txtCNPJ','xx.xxx.xxx/xxxx-xx')">
+            <input type="button" value="Conferir" onclick="validarInformacao('txtCNPJ',/^\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}$/,'','')">
+            
+        </fieldset> 
+    </form>
+
+
+</body>
+</html>
