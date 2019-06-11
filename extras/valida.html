@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style>
+			span{
+				color: red
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Máscaras - jQuery Mask</h2>
+		
+		<h3>Data Teste</h3>
+		
+		<label for="datateste">Data:</label>
+		<input name="datateste" id="datateste" />
+		
+		<hr />
+		<h3>Números</h3>
+		
+		<label for="tempo">Tempo:</label>
+		<input name="tempo" id="tempo" />
+		
+		<hr />
+		<h3>Letras</h3>
+		
+		<label for="dominio">Domínio de topo:</label>
+		<input name="dominio" id="dominio" />
+		
+		<hr />
+		<h3>Caracteres alfanuméricos</h3>
+		
+		<label for="chassi">Chassi:</label>
+		<input name="chassi" id="chassi" />
+		
+		<hr />
+		<h3>Números Opcionais</h3>
+		
+		<label for="ip">Endereço IP:</label>
+		<input name="ip" id="ip" />
+		
+		<hr />
+		<h3>Limpar se não estiver de acordo</h3>
+		
+		<label for="hora">Horário:</label>
+		<input name="hora" id="hora" />
+		
+		<hr />
+		<h3>Selecionar o conteúdo quando o campo ganhar foco</h3>
+		
+		<label for="hora2">Horário 2:</label>
+		<input name="hora2" id="hora2" />
+		
+		<hr />
+		<h3>Preenchimento reverso</h3>
+		
+		<label for="cpf">CPF:</label>
+		<input name="cpf" id="cpf" />
+		
+		<hr />
+		<h3>Placeholder</h3>
+		
+		<label for="tel">Telefone:</label>
+		<input name="tel" id="tel" />
+		
+		<hr />
+		<h3>Dígitos recursivos</h3>
+		<label for="dinheiro">Dinheiro: R$</label>
+		<input name="dinheiro" id="dinheiro" />
+		
+		<hr />
+		<h3>Definindo caracteres especiais com Regex</h3>
+		
+		<label for="placa">Placa:</label>
+		<input name="placa" id="placa" />
+		
+		<hr />
+		<h3>Caracteres opcionais com Regex</h3>
+		
+		<label for="ip2">Endereço IP 2:</label>
+		<input name="ip2" id="ip2" />
+		
+		<hr />
+		<h3>Recursividade com Regex</h3>
+		
+		<label for="nome">Nome:</label>
+		<input name="nome" id="nome" />
+		
+		<hr />
+		<h3>Substituição de caractere com Regex</h3>
+		
+		<label for="data">Data:</label>
+		<input name="data" id="data" />
+		
+		<hr />
+		<h3>Adicionando e removendo Máscara</h3>
+		
+		<label for="num">Número:</label>
+		<input name="num" id="num" />
+		<span id="spannum">campo COM máscara</span><br />
+		<button id="btnumadd">Adicionar</button>
+		<button id="btnumrem">Remover</button>
+		
+		<hr />
+		<h3>Obtendo o valor do campo com Máscara</h3>
+		
+		<label for="cep">CEP:</label>
+		<input name="cep" id="cep" />
+		<button id="btgetmask">Receber Mascarado</button>
+		<button id="btgetclean">Receber Limpo</button>
+		
+		<hr />
+		<h3>Eventos de Callback</h3>
+		
+		<label for="cep2">CEP Comercial:</label>
+		<input name="cep2" id="cep2" />		
+		
+		<script src="jquery-3.1.0.js"></script>
+		<script src="jquery.mask.js"></script>
+		<script>
+			//=====================================================
+			//<input name="datateste" id="datateste" />
+			//CAMPO COM MÁSCARA - DATA teste
+			$("#datateste").mask("00/00/00");
+			
+			//=====================================================
+			//CAMPO COM MÁSCARA - NÚMEROS
+			$("#tempo").mask("00:00:00");
+			
+			//=====================================================
+			//CAMPO COM MÁSCARA - LETRAS
+			$("#dominio").mask(".SS");
+			
+			//=====================================================
+			//CAMPO COM MÁSCARA - CARACTERES ALFANUMÉRICOS
+			$("#chassi").mask("AAAAAAAAAA", {clearIfNotMatch: true});
+
+			//=====================================================
+			//CAMPO COM MÁSCARA - NÚMEROS OPCIONAIS
+			$("#ip").mask("099.099.099.099");	
+				
+			//=====================================================
+			//CAMPO COM MÁSCARA - LIMPAR SE NÃO ESTIVER DE ACORDO
+			$("#hora").mask("00:00", {clearIfNotMatch: true});
+			
+			//=====================================================
+			//CAMPO COM MÁSCARA - SELECIONAR QUANDO O CAMPO GANHAR FOCO
+			$("#hora2").mask("00:00", {selectOnFocus: true});
+			
+			//=====================================================
+			//CAMPO COM MÁSCARA - PREENCHIMENTO REVERSO
+			$("#cpf").mask("000.000.000-00", {reverse: true});
+
+			//=====================================================
+			//CAMPO COM MÁSCARA - PLACEHOLDER
+			$("#tel").mask("00009-0000", {placeholder: "_____-____"});
+			
+			//=====================================================
+			//CAMPO COM MÁSCARA - DÍGITOS RECURSIVOS
+			$("#dinheiro").mask("#.##0,00", {reverse: true});
+			
+			//=====================================================
+			//CAMPO COM MÁSCARA - DEFININDO SENTIDO DE SÍMBOLO COM REGEX
+			$("#placa").mask(
+				"LLL-DDDD", 
+				{
+					translation: {
+						L: {pattern: /[A-Z]/},
+						D: {pattern: /[0-9]/}
+					}
+				}
+			);
+			//=====================================================
+			//CAMPO COM MÁSCARA - DEFININDO CARACTERES OPCIONAIS
+			$("#ip2").mask(
+				"0ZZ.0ZZ.0ZZ.0ZZ", 
+				{
+					translation: {
+						Z: {pattern: /[0-9]/, optional: true},
+					}
+				}
+			);		
+			
+			//=====================================================
+			//CAMPO COM MÁSCARA - RECURSIVIDADE COM REGEX
+			$("#nome").mask(
+				"SSW",
+				{
+					translation: {
+						W: {pattern: /[\w\s]/, recursive: true}
+					}
+				}
+			);
+			//=====================================================
+			//CAMPO COM MÁSCARA - DEFININDO SÍMBOLO COM SUBSTITUIÇÃO DE CARACTERE
+			$("#data").mask(
+				"00r00r0000", 
+				{
+					translation: {
+						r: {pattern: /[\/]/, fallback: "/"}
+					}
+				}
+			);
+			//=====================================================
+			//ADICIONAR E REMOVER MÁSCARA	
+			$("#num").mask("#");
+			
+			$("#btnumadd").click(
+				function(){
+					$("#num").mask("#", {clearIfNotMatch: true});
+					$("#spannum").text("campo COM máscara");
+				}
+			);
+			
+			$("#btnumrem").click(
+				function(){
+					$("#num").unmask();
+					$("#spannum").text("campo SEM máscara");
+				}
+			);
+			//=====================================================
+			//RECEBENDO VALOR DE CAMPO COM MÁSCARA	
+			$("#cep").mask("00000-000");
+			
+			$("#btgetmask").click(
+				function(){
+					alert($("#cep").val());
+				}
+			);
+			
+			$("#btgetclean").click(
+				function(){
+					alert($("#cep").cleanVal());
+				}
+			);
+			//=====================================================
+			//RECEBENDO VALOR DE CAMPO COM MÁSCARA	
+			$("#cep2").mask(
+				"00000-000", 
+				{
+					onComplete: function(dados){
+						alert("CEP completo: " + dados)
+					},
+					onChange: function(dados){
+						console.log("CEP mudou: " + dados);
+					},
+					onInvalid: function(dados, event, field, invalid, options){
+						var error = invalid[0];
+						console.log ("Caractere: ", error.v, " é inválido para a posição ", error.p, ". É esperado algo no padrão ", error.e);
+					}
+				}
+			);
+		</script>
+		
+	</body>
+</html>

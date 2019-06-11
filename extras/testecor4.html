@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Manipulação de código HTML</title>
+		<style>
+			p{
+			font-weight:bold;
+			font-size:100px;
+			}
+
+			#animatebox { width: 120px; height: 110px; background-color: red; }
+		</style>
+		
+	</head>
+	<body>
+
+<div id="animatebox"><p>Flicker!</p></div>
+		
+		<script>
+			var cores = ['red', 'blue', 'yellow', 'green']
+			var myDiv = document.getElementById("animatebox");
+			var i = 0;    
+
+			function doAnimate() {
+				if (i++ % 2)
+					myDiv.style.backgroundColor = "blue";
+				else
+					myDiv.style.backgroundColor = "red";
+			  
+				setTimeout(doAnimate, 200);
+			};
+				
+			doAnimate();
+
+				
+
+		</script>
+	</body>
+</html>
+

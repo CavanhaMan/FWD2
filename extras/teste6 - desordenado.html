@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<style>
+			img{
+				max-width:20%;
+				margin-left:2%;
+				margin-right:2%;
+				padding:0px;
+				border:0px;
+			}
+			body{
+				background:gray;
+				background-image: url("fundinho.png");
+				background-repeat: repeat;
+				background-attachment: fixed;
+			}
+			p{
+				font-size:50px;
+				font-weight:bold;
+			}
+			button{
+				width:150px;
+				height:40px;
+				color: white;
+				background:black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<center>
+			<img src="logo1.jpg" name="buildingpic"/>
+			<img src="logo4.jpg" name="buildingpic"/>
+			<img src="logo5.jpg" name="buildingpic"/>
+			<img src="logo6.jpg" name="buildingpic"/>
+			<!--p><A href="javascript:changepic();">next</A></p--> 
+			<BR><BR><BR>
+			<button id="btlista13" onclick="changepic()">Alterna as Imagens</button>
+	
+		</center>
+
+		<script type="text/javascript">
+			var building = [];
+			building[0] = "logo1.jpg";
+			building[1] = "logo4.jpg";
+			building[2] = "logo5.jpg";
+			building[3] = "logo6.jpg";
+			var num = 0;
+
+			function changepic(){
+				for(var i=0 ; i<4 ; i++){
+					if (num>=building.length-1){
+						num=0;
+					}
+					num=num+1;
+					document.buildingpic[i].src=building[num];
+				}
+			}
+
+		</script>
+	</body>
+</html>
