@@ -310,11 +310,10 @@ document.getElementById("validaL").onclick = function() {
 	if (document.getElementById("validaL").checked==false){
 		document.getElementById("validaL").checked=false;
 		document.getElementById("mensagemL").innerHTML="";
-	}//^(?=.[0-9]{2,})(?=.[a-z]{2,})(?=.[A-Z])(?=.[@#$%^&+=])(?=\S+$).{8,}$
-	else{//Mínimo 4 caracteres, pelo menos 1 letra e 1 número
+	}
+	else{
 		var dadoL = document.getElementById("txtL").value;
-		//var padraoL = /^[[A-Pa-p]{1,}\d\.\-\_]{5,}$/;
-		var padraoL = /^[[A-Pa-p]{1,}\d\.\-\_]{5,}$/;
+		var padraoL = /^((?=.*[a-zA-Z0-9\.\_\-].{5,})(?=.*[A-Pa-p].{1,})(?=.*[a,e,i,o,u].{1,})(?=.*[A-Za-z0-5].{1,})(?=.*(^[0-9]).{1,})(?=.*\W.{2})(?=.*(^[a,b,0,1]).{1,}))$/;
 		if (padraoL.test(dadoL)){
 			document.getElementById("mensagemL").innerHTML=" = Válido!";
 			document.getElementById("mensagemL").style.backgroundColor = "green";
@@ -326,11 +325,26 @@ document.getElementById("validaL").onclick = function() {
 	}
 };
 /*
+([a-zA-Z0-9\.\_\-]{5,})
+([A-Pa-p]{1,})
+([a,e,i,o,u]{1,})
+([A-Za-z0-5]{1,})
+((^[0-9]){1,})
+(\W{2})
+((^[a,b,0,1]){1,})
+
+var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+var mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
+
+//^(?=.[0-9]{2,})(?=.[a-z]{2,})(?=.[A-Z])(?=.[@#$%^&+=])(?=\S+$).{8,}$
 function validarPass(input) {
  var errors = [];
  if (regra1) errors.push('erro1');
  if (regra2) errors.push('erro2');
  return errors;
+ 
+function vSenha(senha) {
+    return /^(((?=.*[a-z])(?=.*\d{2,}).{8,16})|(?=.*\d{2,})(?=.*[a-z]).{8,16})$/.test(senha);
 }
 */
 function limpaCampo(x){
