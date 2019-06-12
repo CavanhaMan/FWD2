@@ -313,7 +313,7 @@ document.getElementById("validaL").onclick = function() {
 	}
 	else{
 		var dadoL = document.getElementById("txtL").value;
-		var padraoL = /^((?=.*[a-zA-Z0-9\.\_\-].{5,})(?=.*[A-Pa-p].{1,})(?=.*[a,e,i,o,u].{1,})(?=.*[A-Za-z0-5].{1,})(?=.*(^[0-9]).{1,})(?=.*\W.{2})(?=.*(^[a,b,0,1]).{1,}))$/;
+		var padraoL = /^((?=.*[A-Pa-p]{1,})(?=.*[a,e,i,o,u]{1,})(?=.*[A-Za-z0-5]{1,})(?=.*(^[0-9]){1,})(?=.*\W{2})(?=.*(^[a,b,0,1]){1,})[a-zA-Z0-9\.\_\-]{5,})$/;
 		if (padraoL.test(dadoL)){
 			document.getElementById("mensagemL").innerHTML=" = Válido!";
 			document.getElementById("mensagemL").style.backgroundColor = "green";
@@ -332,6 +332,10 @@ document.getElementById("validaL").onclick = function() {
 ((^[0-9]){1,})
 (\W{2})
 ((^[a,b,0,1]){1,})
+
+Para unir condições diferentes na mesma expressão, precisa de um lookahead.
+O lookahead não casa caracteres na posição atual, mas dá uma espiada adiante.
+Se a asserção corresponde, retorna à posição atual, sem consumir caracteres.
 
 var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 var mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
