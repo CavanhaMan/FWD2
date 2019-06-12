@@ -294,7 +294,8 @@ var W = /^[A-Pa-p]{1,}$/;
 //Y apenas vogais minúsculas (pelo menos 1), 
 var Y = /^[a,e,i,o,u]{1,}$/;
 //Z apenas letras maiúsculas ou minúsculas e/ou números de 0 a 5 (opcional), 
-var Z = /^[A-Za-z0-5]{1,}$/;
+//var Z = /^[A-Za-z0-5]{1,}$/;
+var z = /^([A-z][0-5]|[A-z]|[0-5]?)$/;
 //U deverá ser caracteres diferentes de números (pelo menos 1), 
 var U = /^(^[0-9]){1,}$/;
 //V deverá ser 2 caracteres especiais e 
@@ -315,7 +316,7 @@ document.getElementById("validaL").onclick = function() {
 		var dadoL = document.getElementById("txtL").value;
 		//var padraoL = /^((?=.*[A-Pa-p]{1,})(?=.*[a,e,i,o,u]{1,})(?=.*[A-Za-z0-5]{1,})(?=.*(^[0-9]){1,})(?=.*\W{2})(?=.*(^[a,b,0,1]){1,})[a-zA-Z0-9\.\_\-]{5,})$/;
 		//var padraoL = (X&W.Y.Z-U,V.T|X&W.Y-U,V.T);
-		var padraoL = /^(([a-zA-Z0-9\.\_\-]{5,})&([A-Pa-p]{1,}).([a,e,i,o,u]{1,}).([A-Za-z0-5]{1,})-((^[0-9]){1,}),(\W{2}).((^[a,b,0,1]){1,}))|(([a-zA-Z0-9\.\_\-]{5,})&([A-Pa-p]{1,}).([a,e,i,o,u]{1,})-((^[0-9]){1,}),(\W{2}).((^[a,b,0,1]){1,}))$/;
+		var padraoL = /^(([a-zA-Z0-9\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})\.([A-z][0-5]|[A-z]|[0-5]?))\-((^[0-9]){1,})\,(\W{2})\.((^[a,b,0,1]){1,}))|(([a-zA-Z0-9\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})\-((^[0-9]){1,})\,(\W{2})\.((^[a,b,0,1]){1,}))$/;
 		if (padraoL.test(dadoL)){
 			document.getElementById("mensagemL").innerHTML=" = Válido!";
 			document.getElementById("mensagemL").style.backgroundColor = "green";

@@ -10,12 +10,13 @@
         <input type="text" id="txtTestar">
         <input type="button" value="testar" id="btTestar" onclick="funcaoTestar()">
         <BR><BR>
-        <span id="saida"></span>
+        <span id="saida">O resultado aparecerá aqui</span>
     </form>
     <script>
         function funcaoTestar(){
             var x = document.getElementById("txtTestar").value;
-            var padrao = /^\d[A-z]{1,4}\d\s?\d-((i|I)(f|F)|IFTM)$/;
+            //var padrao = /^\d[A-z]{1,4}\d\s?\d-((i|I)(f|F)|IFTM)$/;
+            var padrao = /^([A-z][0-5]|[A-z]|[0-5]?)$/;
             console.log(padrao.test(x));
             if(padrao.test(x))
                 document.getElementById("saida").innerHTML="ok";
@@ -26,8 +27,8 @@
 </body>
 </html>
 <!--
-no final IF obrigatorio
-         TM opcional
-se for IFTM = maiusulo
-se for if tanto fazS
+letras maiusculas ou minusculas
+/^[A-Za-z0-5]{1,}$/;
+
+
 -->
