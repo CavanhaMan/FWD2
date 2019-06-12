@@ -288,19 +288,19 @@ document.getElementById("validaK").onclick = function() {
 //Únicos formatos permitidos: X&W.Y.Z-U,V.T ou X&W.Y-U,V.T 
 //Onde X deverá ser no mínimo 5 (cinco) caracteres alfanuméricos,
 //além de um dos seguintes símbolos (“.”, “-”,”_”), 
-var regraX = /^[a-zA-Z0-9\.\_\-]{5,}$/;
+var X = /^[a-zA-Z0-9\.\_\-]{5,}$/;
 //W deverá ser apenas letras maiúsculas ou minúsculas de "a" a "p" (pelo menos 1), 
-var regraW = /^[A-Pa-p]{1,}$/;
+var W = /^[A-Pa-p]{1,}$/;
 //Y apenas vogais minúsculas (pelo menos 1), 
-var regraY = /^[a,e,i,o,u]{1,}$/;
+var Y = /^[a,e,i,o,u]{1,}$/;
 //Z apenas letras maiúsculas ou minúsculas e/ou números de 0 a 5 (opcional), 
-var regraZ = /^[A-Za-z0-5]{1,}$/;
+var Z = /^[A-Za-z0-5]{1,}$/;
 //U deverá ser caracteres diferentes de números (pelo menos 1), 
-var regraU = /^(^[0-9]){1,}$/;
+var U = /^(^[0-9]){1,}$/;
 //V deverá ser 2 caracteres especiais e 
-var regraV = /^\W{2}$/;
+var V = /^\W{2}$/;
 //T qualquer caracter exceto 'a','b','0' e '1' (pelo menos 1)
-var regraT = /^(^[a,b,0,1]){1,}$/;
+var T = /^(^[a,b,0,1]){1,}$/;
 //Exemplo: 321a.&apMb.aei.Ab0-asf+_,/*.cq
 document.getElementById("txtL").onfocus = function() {
     document.getElementById("validaL").checked=false;
@@ -313,7 +313,9 @@ document.getElementById("validaL").onclick = function() {
 	}
 	else{
 		var dadoL = document.getElementById("txtL").value;
-		var padraoL = /^((?=.*[A-Pa-p]{1,})(?=.*[a,e,i,o,u]{1,})(?=.*[A-Za-z0-5]{1,})(?=.*(^[0-9]){1,})(?=.*\W{2})(?=.*(^[a,b,0,1]){1,})[a-zA-Z0-9\.\_\-]{5,})$/;
+		//var padraoL = /^((?=.*[A-Pa-p]{1,})(?=.*[a,e,i,o,u]{1,})(?=.*[A-Za-z0-5]{1,})(?=.*(^[0-9]){1,})(?=.*\W{2})(?=.*(^[a,b,0,1]){1,})[a-zA-Z0-9\.\_\-]{5,})$/;
+		//var padraoL = (X&W.Y.Z-U,V.T|X&W.Y-U,V.T);
+		var padraoL = /^(([a-zA-Z0-9\.\_\-]{5,})&([A-Pa-p]{1,}).([a,e,i,o,u]{1,}).([A-Za-z0-5]{1,})-((^[0-9]){1,}),(\W{2}).((^[a,b,0,1]){1,}))|(([a-zA-Z0-9\.\_\-]{5,})&([A-Pa-p]{1,}).([a,e,i,o,u]{1,})-((^[0-9]){1,}),(\W{2}).((^[a,b,0,1]){1,}))$/;
 		if (padraoL.test(dadoL)){
 			document.getElementById("mensagemL").innerHTML=" = Válido!";
 			document.getElementById("mensagemL").style.backgroundColor = "green";
@@ -325,13 +327,19 @@ document.getElementById("validaL").onclick = function() {
 	}
 };
 /*
-([a-zA-Z0-9\.\_\-]{5,})
-([A-Pa-p]{1,})
-([a,e,i,o,u]{1,})
-([A-Za-z0-5]{1,})
-((^[0-9]){1,})
-(\W{2})
-((^[a,b,0,1]){1,})
+(([a-zA-Z0-9\.\_\-]{5,})&([A-Pa-p]{1,}).([a,e,i,o,u]{1,}).([A-Za-z0-5]{1,})-((^[0-9]){1,}),(\W{2}).((^[a,b,0,1]){1,}))|(([a-zA-Z0-9\.\_\-]{5,})&([A-Pa-p]{1,}).([a,e,i,o,u]{1,})-((^[0-9]){1,}),(\W{2}).((^[a,b,0,1]){1,}))
+Z ([A-Za-z0-5]{1,})
+
+
+T 
+
+X ([a-zA-Z0-9\.\_\-]{5,})
+W ([A-Pa-p]{1,})
+Y ([a,e,i,o,u]{1,})
+Z ([A-Za-z0-5]{1,})
+U ((^[0-9]){1,})
+V (\W{2})
+T ((^[a,b,0,1]){1,})
 
 Para unir condições diferentes na mesma expressão, precisa de um lookahead.
 O lookahead não casa caracteres na posição atual, mas dá uma espiada adiante.
