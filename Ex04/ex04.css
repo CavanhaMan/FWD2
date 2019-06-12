@@ -3,14 +3,19 @@
 .inputfocus {background-color: #ffff99;}
 .naovalida{background-color: red;}
 .pointer {cursor: pointer;}
+.campo{width:250px;}
 p{margin:0px;}
+.mostrapadrao{
+	color:brown;
+	font-size:12px;
+}
 .mensagem{
 	display:inline;
 	color: yellow;
 }
 fieldset{
     width:46%;
-    height:100px;
+    height:85px;
     border: 1px solid #bfbfbf;
     display: block;
     float:left;
@@ -22,7 +27,7 @@ fieldset{
     background:white;
     border: 2px solid black;
     width:900px;
-    height:750px;
+    height:650px;
 	position: relative;
 	left: 50%;
 	/* bring your own prefixes */
@@ -36,9 +41,9 @@ fieldset{
 #fieldF{background:#FFFF99;}
 #fieldG{background:#EBC79E;}
 #fieldH{background:#D8D8BF;}
-#fieldI{background:#D19275;}
+#fieldI{background:#EDE0B8;}
 #fieldJ{background:#CCFFFF;}
-#fieldK{background:#EAADEA;}
+#fieldK{background:#D4D2D2;}
 #fieldL{background:#FFCCCC;}
 legend{
     border: 1px solid #bfbfbf;
@@ -48,6 +53,19 @@ legend{
 body{
     background-image: url("xadrez.jpg");
     background-size: 300px 300px;
+}
+.clear{
+	border-radius: 50%;
+	background-color:red;
+	color: yellow;
+    font-weight: bold;
+	width:12px;
+	height:12px;
+	font-size:12px;
+    padding:0px;
+	border:0px;
+    margin: 0px 2px 0px -20px;
+    text-align:center;
 }
 /**************************************************/
 /*              ESTILOS PARA A INDEX              */

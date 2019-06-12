@@ -287,21 +287,20 @@ document.getElementById("validaK").onclick = function() {
 /***LETRA L*******************************************************************/
 //Únicos formatos permitidos: X&W.Y.Z-U,V.T ou X&W.Y-U,V.T 
 //Onde X deverá ser no mínimo 5 (cinco) caracteres alfanuméricos,
-var x = "\w{5,}";
 //além de um dos seguintes símbolos (“.”, “-”,”_”), 
-var x1 = "\.\_\-";
+var regraX = /^[a-zA-Z0-9\.\_\-]{5,}$/;
 //W deverá ser apenas letras maiúsculas ou minúsculas de "a" a "p" (pelo menos 1), 
-var w = "[A-Pa-p]{1,}";
+var regraW = /^[A-Pa-p]{1,}$/;
 //Y apenas vogais minúsculas (pelo menos 1), 
-var y = "[a,e,i,o,u]{1,}";
+var regraY = /^[a,e,i,o,u]{1,}$/;
 //Z apenas letras maiúsculas ou minúsculas e/ou números de 0 a 5 (opcional), 
-var z = "[A-Za-z0-5]";
+var regraZ = /^[A-Za-z0-5]{1,}$/;
 //U deverá ser caracteres diferentes de números (pelo menos 1), 
-var u = "[A-Za-z]{1,}";
+var regraU = /^(^[0-9]){1,}$/;
 //V deverá ser 2 caracteres especiais e 
-var v = "[áàãâäéèêëíìîïóòõôöúùûüç/_+/', '_']{2}";
+var regraV = /^\W{2}$/;
 //T qualquer caracter exceto 'a','b','0' e '1' (pelo menos 1)
-var t = "[^a,b,0,1]{1,}";
+var regraT = /^(^[a,b,0,1]){1,}$/;
 //Exemplo: 321a.&apMb.aei.Ab0-asf+_,/*.cq
 document.getElementById("txtL").onfocus = function() {
     document.getElementById("validaL").checked=false;
@@ -326,3 +325,25 @@ document.getElementById("validaL").onclick = function() {
 		}
 	}
 };
+/*
+function validarPass(input) {
+ var errors = [];
+ if (regra1) errors.push('erro1');
+ if (regra2) errors.push('erro2');
+ return errors;
+}
+*/
+function limpaCampo(x){
+	if(x==1) document.getElementById("txtA").value="";
+	if(x==2) document.getElementById("txtB").value="";
+	if(x==3) document.getElementById("txtC").value="";
+	if(x==4) document.getElementById("txtD").value="";
+	if(x==5) document.getElementById("txtE").value="";
+	if(x==6) document.getElementById("txtF").value="";
+	if(x==7) document.getElementById("txtG").value="";
+	if(x==8) document.getElementById("txtH").value="";
+	if(x==9) document.getElementById("txtI").value="";
+	if(x==10) document.getElementById("txtJ").value="";
+	if(x==11) document.getElementById("txtK").value="";
+	if(x==12) document.getElementById("txtL").value="";
+}
