@@ -288,21 +288,30 @@ document.getElementById("validaK").onclick = function() {
 //Únicos formatos permitidos: X&W.Y.Z-U,V.T ou X&W.Y-U,V.T 
 //Onde X deverá ser no mínimo 5 (cinco) caracteres alfanuméricos,
 //além de um dos seguintes símbolos (“.”, “-”,”_”), 
-var X = /^[a-zA-Z0-9\.\_\-]{5,}$/;
+var X = /^[\w\.\_\-]{5,}$/;
 //W deverá ser apenas letras maiúsculas ou minúsculas de "a" a "p" (pelo menos 1), 
 var W = /^[A-Pa-p]{1,}$/;
 //Y apenas vogais minúsculas (pelo menos 1), 
 var Y = /^[a,e,i,o,u]{1,}$/;
 //Z apenas letras maiúsculas ou minúsculas e/ou números de 0 a 5 (opcional), 
-//var Z = /^[A-Za-z0-5]{1,}$/;
 var z = /^([A-z][0-5]|[A-z]|[0-5]?)$/;
 //U deverá ser caracteres diferentes de números (pelo menos 1), 
-var U = /^(^[0-9]){1,}$/;
+var U = /^\D{1,}$/;
 //V deverá ser 2 caracteres especiais e 
-var V = /^\W{2}$/;
+var V = /^[^a-zA-Z0-9]{2}$/;
 //T qualquer caracter exceto 'a','b','0' e '1' (pelo menos 1)
 var T = /^(^[a,b,0,1]){1,}$/;
 //Exemplo: 321a.&apMb.aei.Ab0-asf+_,/*.cq
+
+var formatoL = /^X&W.Y(.Z)?-U,V.T$/;
+console.log(X);
+console.log(typeof(X));
+console.log(formatoL);
+console.log(typeof(formatoL));
+//var formatoL = /^(X&W.Y.Z-U,V.T|X&W.Y-U,V.T)$/;
+//var padraoL = new RegExp(formatoL);
+  var padraoL = /^[\w\.\_\-]{5,}\&[a-pA-P]{1,}\.(a|e|i|o|u){1,}(\.(([a-zA-Z]{1,})|([0-5]{0,})|([a-zA-Z0-5]{1,}))?)\-\D{1,}\,[^a-zA-Z0-9]{2}\.[^(a|b|0|1)]{1,}$/;
+//var padraoL = /^[\w\.\_\-]{5,}\&[A-Pa-p]{1,}\.[a,e,i,o,u]{1,}(\.([A-z][0-5]|[A-z]|[0-5]?))?                     \-\D{1,}\,[^a-zA-Z0-9]{2}\.(^[a,b,0,1]){1,}$/;
 document.getElementById("txtL").onfocus = function() {
     document.getElementById("validaL").checked=false;
     document.getElementById("mensagemL").innerHTML="";
@@ -313,10 +322,9 @@ document.getElementById("validaL").onclick = function() {
 		document.getElementById("mensagemL").innerHTML="";
 	}
 	else{
+		document.getElementById("txtL").value = "321a.&apMb.aei.Ab0-asf+_,/*.cq";
 		var dadoL = document.getElementById("txtL").value;
-		//var padraoL = /^((?=.*[A-Pa-p]{1,})(?=.*[a,e,i,o,u]{1,})(?=.*[A-Za-z0-5]{1,})(?=.*(^[0-9]){1,})(?=.*\W{2})(?=.*(^[a,b,0,1]){1,})[a-zA-Z0-9\.\_\-]{5,})$/;
-		//var padraoL = (X&W.Y.Z-U,V.T|X&W.Y-U,V.T);
-		var padraoL = /^(([a-zA-Z0-9\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})\.([A-z][0-5]|[A-z]|[0-5]?))\-((^[0-9]){1,})\,(\W{2})\.((^[a,b,0,1]){1,}))|(([a-zA-Z0-9\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})\-((^[0-9]){1,})\,(\W{2})\.((^[a,b,0,1]){1,}))$/;
+		//var padraoL = /^(([\w\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})\.(([A-z][0-5]|[A-z]|[0-5]?))\-((^[0-9]){1,})\,([^a-zA-Z0-9]{2})\.((^[a,b,0,1]){1,})|([\w\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})\-((^[0-9]){1,})\,([^a-zA-Z0-9]{2})\.((^[a,b,0,1]){1,}))$/;
 		if (padraoL.test(dadoL)){
 			document.getElementById("mensagemL").innerHTML=" = Válido!";
 			document.getElementById("mensagemL").style.backgroundColor = "green";
@@ -328,19 +336,43 @@ document.getElementById("validaL").onclick = function() {
 	}
 };
 /*
-(([a-zA-Z0-9\.\_\-]{5,})&([A-Pa-p]{1,}).([a,e,i,o,u]{1,}).([A-Za-z0-5]{1,})-((^[0-9]){1,}),(\W{2}).((^[a,b,0,1]){1,}))|(([a-zA-Z0-9\.\_\-]{5,})&([A-Pa-p]{1,}).([a,e,i,o,u]{1,})-((^[0-9]){1,}),(\W{2}).((^[a,b,0,1]){1,}))
-Z ([A-Za-z0-5]{1,})
+//var padraoL = /^((?=.*[A-Pa-p]{1,})(?=.*[a,e,i,o,u]{1,})(?=.*[A-Za-z0-5]{1,})(?=.*(^[0-9]){1,})(?=.*\W{2})(?=.*(^[a,b,0,1]){1,})[a-zA-Z0-9\.\_\-]{5,})$/;
+//var padraoL = (X&W.Y.Z-U,V.T|X&W.Y-U,V.T);
+//var padraoL = (X&W.Y(.Z)?-U,V.T);
+//var padraoL = [\w\.\_\-]{5,}\&[A-Pa-p]{1,}\.[a,e,i,o,u]{1,}(\.([A-z][0-5]|[A-z]|[0-5]?))?\-\D{1,}\,[^a-zA-Z0-9]{2}\.(^[a,b,0,1]){1,}
+
+X [\w\.\_\-]{5,}\&
+W [A-Pa-p]{1,}\.
+Y [a,e,i,o,u]{1,}\.
+Z ([A-z][0-5]|[A-z]|[0-5]?)\-
+U \D{1,}\,
+V [^a-zA-Z0-9]{2}\.
+T (^[a,b,0,1]){1,}
+X&W.Y.Z-U,V.T
+ou
+X&W.Y-U,V.T
+X [\w\.\_\-]{5,}\&
+W [A-Pa-p]{1,}\.
+Y [a,e,i,o,u]{1,}\-
+U \D{1,}\,
+V [^a-zA-Z0-9]{2}\.
+T (^[a,b,0,1]){1,}
+
+([\w\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})\.(([A-z][0-5]|[A-z]|[0-5]?))\-(\D{1,})\,([^a-zA-Z0-9]{2})\.((^[a,b,0,1]){1,})
+X&W.Y.Z-U,V.T
+ou
+X&W.Y-U,V.T
+([\w\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})\-(\D{1,})\,([^a-zA-Z0-9]{2})\.((^[a,b,0,1]){1,})
+
+teste versao reduzida:
+([\w\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})(\.(([A-z][0-5]|[A-z]|[0-5]?)))?\-(\D{1,})\,([^a-zA-Z0-9]{2})\.((^[a,b,0,1]){1,})
 
 
-T 
+X&W.Y.Z-U,V.T ou X&W.Y-U,V.T
+x&w.y.z-u,v.t 
 
-X ([a-zA-Z0-9\.\_\-]{5,})
-W ([A-Pa-p]{1,})
-Y ([a,e,i,o,u]{1,})
-Z ([A-Za-z0-5]{1,})
-U ((^[0-9]){1,})
-V (\W{2})
-T ((^[a,b,0,1]){1,})
+x\&w\.y(\.z)\-u\,v\.t 
+var padraoL = /^ x \& w \. y (\. z ) \- u \, v \. t $/;
 
 Para unir condições diferentes na mesma expressão, precisa de um lookahead.
 O lookahead não casa caracteres na posição atual, mas dá uma espiada adiante.

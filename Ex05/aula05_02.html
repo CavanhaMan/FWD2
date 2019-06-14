@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="txtTestar">Digite e teste:</label><BR>
+        <input type="text" id="txtTestar">
+        <input type="button" value="testar" id="btTestar" onclick="validarExp()">
+        <BR><BR>
+        <span id="saida">O resultado aparecerá aqui</span>
+    </form>
+    <script>
+        function validarExp(){
+            var x = document.getElementById("txtTestar").value;
+			var teste = /^IFTM$/;
+			console.log(teste);
+			console.log(typeof(teste));
+			var exA = new RegExp(teste,"i")
+			console.log(exA);
+			console.log(typeof(exA));
+			//console.log(padrao.test(x));
+			console.log(exA.test(x));
+			if(exA.test(x))
+                document.getElementById("saida").innerHTML="ok";
+            else
+                document.getElementById("saida").innerHTML="nao ok";
+
+        }
+    </script>
+</body>
+</html>
+<!--
+letras maiusculas ou minusculas
+/^[A-Za-z0-5]{1,}$/;
+
+
+-->
