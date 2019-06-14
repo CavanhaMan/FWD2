@@ -292,26 +292,25 @@ var X = /^[\w\.\_\-]{5,}$/;
 //W deverá ser apenas letras maiúsculas ou minúsculas de "a" a "p" (pelo menos 1), 
 var W = /^[A-Pa-p]{1,}$/;
 //Y apenas vogais minúsculas (pelo menos 1), 
-var Y = /^[a,e,i,o,u]{1,}$/;
+var Y = /^(a|e|i|o|u){1,}$/;
 //Z apenas letras maiúsculas ou minúsculas e/ou números de 0 a 5 (opcional), 
-var z = /^([A-z][0-5]|[A-z]|[0-5]?)$/;
+var z = /^(([A-z0-5]{1,})|([A-z]{1,})|([0-5]?))$/;
 //U deverá ser caracteres diferentes de números (pelo menos 1), 
 var U = /^\D{1,}$/;
 //V deverá ser 2 caracteres especiais e 
 var V = /^[^a-zA-Z0-9]{2}$/;
 //T qualquer caracter exceto 'a','b','0' e '1' (pelo menos 1)
-var T = /^(^[a,b,0,1]){1,}$/;
+var T = /^[^(a|b|0|1)]{1,}$/;
 //Exemplo: 321a.&apMb.aei.Ab0-asf+_,/*.cq
 
-var formatoL = /^X&W.Y(.Z)?-U,V.T$/;
 console.log(X);
 console.log(typeof(X));
-console.log(formatoL);
-console.log(typeof(formatoL));
-//var formatoL = /^(X&W.Y.Z-U,V.T|X&W.Y-U,V.T)$/;
-//var padraoL = new RegExp(formatoL);
-  var padraoL = /^[\w\.\_\-]{5,}\&[a-pA-P]{1,}\.(a|e|i|o|u){1,}(\.(([a-zA-Z]{1,})|([0-5]{0,})|([a-zA-Z0-5]{1,}))?)\-\D{1,}\,[^a-zA-Z0-9]{2}\.[^(a|b|0|1)]{1,}$/;
-//var padraoL = /^[\w\.\_\-]{5,}\&[A-Pa-p]{1,}\.[a,e,i,o,u]{1,}(\.([A-z][0-5]|[A-z]|[0-5]?))?                     \-\D{1,}\,[^a-zA-Z0-9]{2}\.(^[a,b,0,1]){1,}$/;
+//var padraoL = new RegExp(X\&W\.Y\.Z?\-U\,V\.T);
+//var padraoL = /^X\&W\.Y\.Z?\-U\,V\.T$/;
+var padraoL = /^[\w\.\_\-]{5,}\&[a-pA-P]{1,}\.(a|e|i|o|u){1,}\.(([A-z0-5]{1,})|([A-z]{1,})|([0-5]?))?\-\D{1,}\,[^a-zA-Z0-9]{2}\.[^(a|b|0|1)]{1,}$/;
+document.getElementById("txtL").value = "321a.&apMb.aei.Ab0-asf+_,/*.cq";
+console.log(padraoL);
+console.log(typeof(padraoL));
 document.getElementById("txtL").onfocus = function() {
     document.getElementById("validaL").checked=false;
     document.getElementById("mensagemL").innerHTML="";
@@ -322,9 +321,8 @@ document.getElementById("validaL").onclick = function() {
 		document.getElementById("mensagemL").innerHTML="";
 	}
 	else{
-		document.getElementById("txtL").value = "321a.&apMb.aei.Ab0-asf+_,/*.cq";
 		var dadoL = document.getElementById("txtL").value;
-		//var padraoL = /^(([\w\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})\.(([A-z][0-5]|[A-z]|[0-5]?))\-((^[0-9]){1,})\,([^a-zA-Z0-9]{2})\.((^[a,b,0,1]){1,})|([\w\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})\-((^[0-9]){1,})\,([^a-zA-Z0-9]{2})\.((^[a,b,0,1]){1,}))$/;
+		//var padraoL = /^[\w\.\_\-]{5,}\&[a-pA-P]{1,}\.(a|e|i|o|u){1,}\.(([A-z0-5]{1,})|([A-z]{1,})|([0-5]?))?\-\D{1,}\,[^a-zA-Z0-9]{2}\.[^(a|b|0|1)]{1,}$/;
 		if (padraoL.test(dadoL)){
 			document.getElementById("mensagemL").innerHTML=" = Válido!";
 			document.getElementById("mensagemL").style.backgroundColor = "green";
@@ -346,8 +344,8 @@ W [A-Pa-p]{1,}\.
 Y [a,e,i,o,u]{1,}\.
 Z ([A-z][0-5]|[A-z]|[0-5]?)\-
 U \D{1,}\,
-V [^a-zA-Z0-9]{2}\.
-T (^[a,b,0,1]){1,}
+V ([A-z0-5]{1,})|([A-z]{1,})|([0-5]?)\.
+T [^(a|b|0|1)]{1,}
 X&W.Y.Z-U,V.T
 ou
 X&W.Y-U,V.T
@@ -356,16 +354,16 @@ W [A-Pa-p]{1,}\.
 Y [a,e,i,o,u]{1,}\-
 U \D{1,}\,
 V [^a-zA-Z0-9]{2}\.
-T (^[a,b,0,1]){1,}
+T [^(a|b|0|1)]{1,}
 
-([\w\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})\.(([A-z][0-5]|[A-z]|[0-5]?))\-(\D{1,})\,([^a-zA-Z0-9]{2})\.((^[a,b,0,1]){1,})
+([\w\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})\.(([A-z0-5]{1,})|([A-z]{1,})|([0-5]?))\-(\D{1,})\,([^a-zA-Z0-9]{2})\.([^(a|b|0|1)]{1,})
 X&W.Y.Z-U,V.T
 ou
 X&W.Y-U,V.T
 ([\w\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})\-(\D{1,})\,([^a-zA-Z0-9]{2})\.((^[a,b,0,1]){1,})
 
 teste versao reduzida:
-([\w\.\_\-]{5,})\&([A-Pa-p]{1,})\.([a,e,i,o,u]{1,})(\.(([A-z][0-5]|[A-z]|[0-5]?)))?\-(\D{1,})\,([^a-zA-Z0-9]{2})\.((^[a,b,0,1]){1,})
+[\w\.\_\-]{5,}\&[a-pA-P]{1,}\.(a|e|i|o|u){1,}\.(([A-z0-5]{1,})|([A-z]{1,})|([0-5]?))?\-\D{1,}\,[^a-zA-Z0-9]{2}\.[^(a|b|0|1)]{1,}
 
 
 X&W.Y.Z-U,V.T ou X&W.Y-U,V.T
