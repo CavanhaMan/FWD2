@@ -50,3 +50,7 @@ button:focus { outline: none; }
 	transform: translate(-50%);
 
 }
+#hh{width:100px;text-align:right;}
+#mm{width:100px;text-align:right;}
+#ss{width:100px;text-align:right;}
+#ccc{width:100px;text-align:right;}

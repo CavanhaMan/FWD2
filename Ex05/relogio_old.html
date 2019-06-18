@@ -5,63 +5,17 @@
 		<title>Eventos temporais - Métodos setTimeout e setInterval</title>
 	</head>
 	<body>		
-		<h1>Eventos temporais - Métodos setTimeout e setInterval</h1>
-		
-		<h3>setTimeout: Disparo de um único evento quando o tempo acabar</h3>
-		<span id="cont1">Irei mudar em 7 segundos</span>
-		<button id="bt1">Clique para evitar a mudança</button>
-		
-		<h3>setInterval: Disparo do evento quando cada término do intervalo</h3>
-		<span id="cont2">0</span>
-		<button id="bt2">Clique para parar o contador</button>
-		
 		<h3>Relógio</h3>
 		<span id="hora"></span>:<span id="min"></span>:<span id="seg"></span>
 		
 		<script>
 			//=======================================================================
-			//TRATANDO EVENTO SETTIMEOUT EXEMPLO 1	
-			var time1 = setTimeout(
-				function(){
-					document.getElementById("cont1").innerHTML = "MUDEI!!!";
-					document.getElementById("bt1").onclick = null;
-					
-				},
-				7000
-			);
-			//=======================================================================
-			//TRATANDO CANCELAMENTO DE TIMEOUT EXEMPLO 1
-			document.getElementById("bt1").onclick = function(){
-				clearTimeout(time1);
-				document.getElementById("bt1").innerHTML = "Mudança evitada";
-			}
-			//=======================================================================
-			//TRATANDO EVENTO SETINTERVAL PARA FAZER UM CONTADOR
-			var time2 = setInterval(
-				function(){
-					var temp = document.getElementById("cont2").innerHTML;
-					document.getElementById("cont2").innerHTML = Number(temp) + 1;					
-				},
-				1000
-			);
-			
-			//=======================================================================
-			//TRATANDO CANCELAMENTO DE TIMEOUT EXEMPLO 1
-			document.getElementById("bt2").onclick = function(){
-				clearInterval(time2);
-				document.getElementById("bt2").innerHTML = "Contador parado";
-			}
-			//=======================================================================
 			//TRATANDO EVENTO SETINTERVAL PARA FAZER UM RELÓGIO
 			atualiza();
 			
 			function completa(t){
-				if(t < 10){
-					return "0" + String(t);
-				}
-				else{
-					return String(t);
-				}
+				if(t < 10) return "0" + String(t);
+				else return String(t);
 			}
 			
 			function atualiza(){

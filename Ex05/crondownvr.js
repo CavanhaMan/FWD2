@@ -17,11 +17,15 @@ var clean = document.getElementById("clean");
 
 var entrada = document.getElementById("entrada");
 var limpar = document.getElementById("limpaEntrada");
-var en
+
 
 function cronometro(){
     setInterval(function() {
         if(pausado==0){
+            if(h==0 && m==0 && s==0 && c==0){
+                crStop();
+                alert("Fim da contagem!");
+            }
             if (c == 0) c=999;
             if (cx == 0){ s--; cx=99; }
             if (s == 0)  { m--; s=59; }
@@ -34,14 +38,6 @@ function cronometro(){
             cx--;
         }
     },10);
-}
-
-function chegaFinal(){
-    if(h==0 && m==0 && s==0 && c==0){
-        crStop();
-        alert("Fim da contagem!");
-    }
-
 }
 
 function crPlay(){
@@ -71,7 +67,9 @@ function crPlay(){
         entrada.disabled = true;
     }
     else{
-        alert("Entrada de tempo Inválida!");
+        alert("Entrada de tempo Inválida!\n Por favor digite apenas números no padrão: HH:MM:SS:CCC");
+        entrada.value="";
+        entrada.focus();
     }
 
 
@@ -118,13 +116,14 @@ function crClean(){
     entrada.value="";
     limpar.disabled = false;
     entrada.disabled = false;
-
+    entrada.focus();
 }
 
 function limpaCampo(){
     entrada.value="";
 }
 
+window.onload=entrada.focus();
 /***VERIFICA PADRÃO DE ENTRADA*******************************************************************/
 //HH:MM:SS:CC (HH: hora, MM: minuto, SS: segundo, CC: centésimo de segundo).
 //Valores permitidos para cada unidade de tempo: 
@@ -132,14 +131,3 @@ function limpaCampo(){
 //(MM>=00 && MM<=59),
 //(SS>=00 && SS<=59) e
 //(CC>=00 && CC<=999)
-/*
-function validaEntrada() {
-		var dado = document.getElementById("entrada").value;
-		var padrao = /^([0-1][0-9]|2[0-3])(:([0-5][0-9])){2}:([0-9][0-9][0-9])$/;
-		if (padrao.test(dado)){
-		}
-		else{
-			alert("Entrada de tempo Inválida!");
-		}
-};
-*/

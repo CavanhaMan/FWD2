@@ -1,3 +1,7 @@
-.digit{color:black;}
+.digit{color:green;}
 .display{color:black;}
-.center{background:#ccffff;}
+.center{
+    background:#ccffff;
+    height:170px;
+}
+#ccc{color:#66ff66;}
