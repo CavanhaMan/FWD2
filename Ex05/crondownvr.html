@@ -7,15 +7,19 @@
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
     <link href="cronometro.css" rel="stylesheet">
     <link href="crondownvr.css" rel="stylesheet">
+    <script type="text/javascript" src="jwifi.js"></script>
 </head>
 <body>
     <fieldset id="field" class="center">
         <legend class="titulo"><h2><i class='far fa-clock'></i> CRONOMETRO REGRESSIVO</h2></legend>
-
+        <label class="pointer" for="entrada">Cronometrar a partir de:</label>
+        <input type="text" id="entrada" class="campo" placeholder="HH:MM:SS:CCC" title="Digite um valor para cronometrar" onKeyPress="inserirMascara('entrada','xx:xx:xx:xxx')" />
+        <input type="button" id="limpaEntrada" class="pointer clear" value="X" title="Limpar o campo" onclick="limpaCampo()"/>
+        <BR><BR><BR>
         <div class="display">
             <!--p class="digit">00:00:00:00</p-->
             <p class="digit">
-                <span id="hh" title="horas">59</span>:<span id="mm" title="minutos">59</span>:<span id="ss" title="segundos">59</span>:<span id="ccc" title="centésimos de segundo">999</span>
+                <span id="hh" title="horas">00</span>:<span id="mm" title="minutos">00</span>:<span id="ss" title="segundos">00</span>:<span id="ccc" title="centésimos de segundo">000</span>
             </p>
         </div>
         <BR>

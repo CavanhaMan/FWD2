@@ -15,6 +15,10 @@ var stop = document.getElementById("stop");
 var pause = document.getElementById("pause");
 var clean = document.getElementById("clean");
 
+var entrada = document.getElementById("entrada");
+var limpar = document.getElementById("limpaEntrada");
+var en
+
 function cronometro(){
     setInterval(function() {
         if(pausado==0){
@@ -32,14 +36,45 @@ function cronometro(){
     },10);
 }
 
-function crPlay(){
-    if (pausado==0) cronometro();
-    else pausado=0;
+function chegaFinal(){
+    if(h==0 && m==0 && s==0 && c==0){
+        crStop();
+        alert("Fim da contagem!");
+    }
 
-    play.disabled = true;
-    pause.disabled = false;
-    stop.disabled = false;
-    clean.disabled = true;
+}
+
+function crPlay(){
+    var dado = entrada.value;
+    var padrao = /^([0-5][0-9]):([0-5][0-9]):([0-5][0-9]):([0-9][0-9][0-9])$/;
+    if (padrao.test(dado)){
+        var tempo = dado.split(":");
+        h=tempo[0];
+        m=tempo[1];
+        s=tempo[2];
+        c=tempo[3];
+        
+        console.log("H:"+h+" M:"+m+" S:"+s+" C:"+c);
+        
+        dhor.innerHTML=tempo[0];
+        dmin.innerHTML=tempo[1];
+        dseg.innerHTML=tempo[2];
+        dcent.innerHTML=tempo[3];
+    
+        if (pausado==0) cronometro();
+        else pausado=0;
+        play.disabled = true;
+        pause.disabled = false;
+        stop.disabled = false;
+        clean.disabled = true;
+        limpar.disabled = true;
+        entrada.disabled = true;
+    }
+    else{
+        alert("Entrada de tempo Inválida!");
+    }
+
+
 }
 
 function crStop(){
@@ -49,6 +84,9 @@ function crStop(){
     pause.disabled = true;
     stop.disabled = true;
     clean.disabled = false;
+    limpaCampo.disabled=true;
+    limpar.disabled = true;
+    entrada.disabled = true;
 }
 
 function crPause(){
@@ -58,6 +96,8 @@ function crPause(){
     pause.disabled = true;
     stop.disabled = false;
     clean.disabled = true;
+    limpar.disabled = true;
+    entrada.disabled = true;
 }
 
 function crClean(){
@@ -66,15 +106,40 @@ function crClean(){
     stop.disabled = true;
     clean.disabled = true;
 
-    h=59;
-    m=59;
-    s=59;
-    c=999;
+    h=00;
+    m=00;
+    s=00;
+    c=000;
 
-    dhor.innerHTML="59";
-    dmin.innerHTML="59";
-    dseg.innerHTML="59";
-    dcent.innerHTML="999";
+    dhor.innerHTML="00";
+    dmin.innerHTML="00";
+    dseg.innerHTML="00";
+    dcent.innerHTML="000";
+    entrada.value="";
+    limpar.disabled = false;
+    entrada.disabled = false;
+
 }
 
-/*window.onload=cronometro;*/
+function limpaCampo(){
+    entrada.value="";
+}
+
+/***VERIFICA PADRÃO DE ENTRADA*******************************************************************/
+//HH:MM:SS:CC (HH: hora, MM: minuto, SS: segundo, CC: centésimo de segundo).
+//Valores permitidos para cada unidade de tempo: 
+//(HH>=00 && HH<=23), 
+//(MM>=00 && MM<=59),
+//(SS>=00 && SS<=59) e
+//(CC>=00 && CC<=999)
+/*
+function validaEntrada() {
+		var dado = document.getElementById("entrada").value;
+		var padrao = /^([0-1][0-9]|2[0-3])(:([0-5][0-9])){2}:([0-9][0-9][0-9])$/;
+		if (padrao.test(dado)){
+		}
+		else{
+			alert("Entrada de tempo Inválida!");
+		}
+};
+*/
