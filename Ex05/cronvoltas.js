@@ -14,6 +14,9 @@ var play = document.getElementById("play");
 var stop = document.getElementById("stop");
 var pause = document.getElementById("pause");
 var clean = document.getElementById("clean");
+var volta = document.getElementById("volta");
+
+var tabela = document.getElementById("tabVoltas");
 
 function cronometro(){
     setInterval(function() {
@@ -35,29 +38,29 @@ function cronometro(){
 function crPlay(){
     if (pausado==0) cronometro();
     else pausado=0;
-
     play.disabled = true;
     pause.disabled = false;
     stop.disabled = false;
     clean.disabled = true;
+    volta.disabled = false;
 }
 
 function crStop(){
     pausado=1;
-
     play.disabled = true;
     pause.disabled = true;
     stop.disabled = true;
     clean.disabled = false;
+    volta.disabled = true;
 }
 
 function crPause(){
     pausado=1;
-
     play.disabled = false;
     pause.disabled = true;
     stop.disabled = false;
     clean.disabled = true;
+    volta.disabled = true;
 }
 
 function crClean(){
@@ -65,6 +68,7 @@ function crClean(){
     pause.disabled = true;
     stop.disabled = true;
     clean.disabled = true;
+    volta.disabled = true;
 
     h=0;
     m=0;
@@ -75,6 +79,32 @@ function crClean(){
     dmin.innerHTML="00";
     dseg.innerHTML="00";
     dcent.innerHTML="000";
+
+    $("dbody").empty();
 }
 
-/*window.onload=cronometro;*/
+var contaVolta=0;
+var ha=0;
+var ma=0;
+var sa=0;
+var ca=0;
+function crVolta(){
+    contaVolta++;
+    var row = tabela.insertRow(contaVolta);
+    var cell0 = row.insertCell(0);
+    var cell1 = row.insertCell(1);
+    var cell2 = row.insertCell(2);
+    cell0.innerHTML = contaVolta;
+    cell1.innerHTML = mod(h,ha)+":"+mod(m,ma)+":"+mod(s,sa)+":"+mod(c,ca);
+    cell2.innerHTML = h+":"+m+":"+s+":"+c;
+    ha=h;
+    ma=m;
+    sa=s;
+    ca=c;
+}
+
+function mod(n,na){
+    if (n>na) return (n-na);
+    else if (n<na) return (na-n);
+    else return 0;
+}

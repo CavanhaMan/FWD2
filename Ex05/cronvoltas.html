@@ -7,6 +7,7 @@
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
     <link href="cronometro.css" rel="stylesheet">
     <link href="cronvoltas.css" rel="stylesheet">
+    <script src="jquery-3.1.0.js"></script>
 </head>
 <body>
     <fieldset id="field" class="center">
@@ -19,7 +20,7 @@
             </p>
         </div>
         <BR>
-        <button class="botao pequeno volta" id="volta" onclick="crVolta()" title="Salva a volta atual e lista os tempos abaixo"><i class='far fa-play-circle'></i> Volta</button>
+        <button class="botao pequeno volta" id="volta" onclick="crVolta()" disabled title="Salva a volta atual e lista os tempos abaixo"><i class='far fa-play-circle'></i> Volta</button>
         <BR><BR>
         <button class="botao pequeno" id="play" onclick="crPlay()" title="Inicia o cronômetro a partir do valor mostrado no display"><i class='far fa-play-circle'></i> Play</button>
         <button class="botao pequeno" id="pause" onclick="crPause()" disabled title="Pausa o cronômetro permitindo continuar depois"><i class='far fa-pause-circle'></i> Pause</button>
@@ -27,12 +28,16 @@
         <button class="botao pequeno" id="clean" onclick="crClean()" disabled title="Zera o cronômetro depois de parado"><i class='far fa-times-circle'></i> Clean</button>
     </div>
     <BR><BR><BR><BR>
-    <table align="center">
-        <tr>
-            <td>Volta</td>
-            <td>Tempo</td>
-            <td>Tempo Total</td>
-        </tr>
+    <table align="center" id="tabVoltas">
+        <thead>
+            <tr>
+                <th id="col1">Volta</th>
+                <th id="col2">Tempo</th>
+                <th id="col3">Tempo Total</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
     </table>
 
     <script src="cronvoltas.js"></script>
