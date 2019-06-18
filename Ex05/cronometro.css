@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "digit";
+    src: url("DS-DIGIT.TTF") format("truetype");
+    }
+.digit{
+    font-family: "digit";
+    font-size: 80px;
+    margin:0px;
+}
+h1{style='font-size:50px';}
+button:focus { outline: none; }
+.botao{
+    font-size:24px;
+    width:130px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.grande{
+    width:200px;
+}
+.pequeno{
+    font-size:20px;
+    width:100px;
+}
+.center{
+    text-align: center;
+    clear:both;
+    background:beige;
+    width:438px;
+    height:650px;
+	position: relative;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%);
+}
+.display{
+    background: gainsboro;
+    text-align: left;
+	border-width:3px;  
+	border-style:inset;
+    color:black;
+	width:430px;
+	height:80px;
+}
