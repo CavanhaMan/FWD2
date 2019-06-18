@@ -14,8 +14,6 @@ var play = document.getElementById("play");
 var stop = document.getElementById("stop");
 var pause = document.getElementById("pause");
 var clean = document.getElementById("clean");
-var cresce = document.getElementById("cresce");
-var decresce = document.getElementById("decresce");
 
 function cronometro(){
     setInterval(function() {
@@ -42,9 +40,6 @@ function crPlay(){
     pause.disabled = false;
     stop.disabled = false;
     clean.disabled = true;
-    cresce.disabled = true;
-    decresce.disabled = true;
-
 }
 
 function crStop(){
@@ -54,8 +49,6 @@ function crStop(){
     pause.disabled = true;
     stop.disabled = true;
     clean.disabled = false;
-    cresce.disabled = false;
-    decresce.disabled = false;
 }
 
 function crPause(){
@@ -65,8 +58,6 @@ function crPause(){
     pause.disabled = true;
     stop.disabled = false;
     clean.disabled = true;
-    cresce.disabled = true;
-    decresce.disabled = true;
 }
 
 function crClean(){
@@ -74,8 +65,6 @@ function crClean(){
     pause.disabled = true;
     stop.disabled = true;
     clean.disabled = true;
-    cresce.disabled = false;
-    decresce.disabled = false;
 
     h=0;
     m=0;
@@ -86,14 +75,6 @@ function crClean(){
     dmin.innerHTML="00";
     dseg.innerHTML="00";
     dcent.innerHTML="000";
-}
-
-function crCrescente(){
-
-}
-
-function crDescrescente(){
-
 }
 
 /*window.onload=cronometro;*/

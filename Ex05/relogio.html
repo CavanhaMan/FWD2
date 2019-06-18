@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Rodrigo CavanhaMan -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link href="cronometro.css" rel="stylesheet">
+    <link href="relogio.css" rel="stylesheet">
+</head>
+<body>
+    <fieldset id="field" class="center">
+        <legend class="titulo"><h2><i class='far fa-clock'></i> RELÓGIO</h2></legend>
+
+        <div class="display">
+            <!--p class="digit">00:00:00:00</p-->
+            <p class="digit">
+                    <span id="hh" title="horas">00</span>:<span id="mm" title="minutos">00</span>:<span id="ss" title="segundos">00</span>:<span id="ccc" title="centésimos de segundo">000</span>
+            </p>
+        </div>
+        <BR>
+        <button class="botao pequeno" id="play" onclick="crPlay()" disabled title="Inicia o cronômetro a partir do valor mostrado no display"><i class='far fa-play-circle'></i> Play</button>
+        <button class="botao pequeno" id="pause" onclick="crPause()" disabled title="Pausa o cronômetro permitindo continuar depois"><i class='far fa-pause-circle'></i> Pause</button>
+        <button class="botao pequeno" id="stop" onclick="crStop()" disabled title="Para o cronômetro (impossível continuar depois)"><i class='far fa-stop-circle'></i> Stop</button>
+        <button class="botao pequeno" id="clean" onclick="crClean()" disabled title="Zera o cronômetro depois de parado"><i class='far fa-times-circle'></i> Clean</button>
+    </div>
+    
+    <script src="relogio.js"></script>
+</body>
+</html>
+
+<!-- 
+Para pegar novos ícones:
+https://www.w3schools.com/icons/icons_reference.asp
+-->
