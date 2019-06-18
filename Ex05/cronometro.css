@@ -7,7 +7,6 @@
     font-size: 80px;
     margin:0px;
 }
-h1{style='font-size:50px';}
 button:focus { outline: none; }
 .botao{
     font-size:24px;
@@ -27,8 +26,8 @@ button:focus { outline: none; }
     text-align: center;
     clear:both;
     background:beige;
-    width:438px;
-    height:650px;
+    width:450px;
+    height:230px;
 	position: relative;
 	left: 50%;
 	/* bring your own prefixes */
@@ -41,5 +40,10 @@ button:focus { outline: none; }
 	border-style:inset;
     color:black;
 	width:430px;
-	height:80px;
+    height:80px;
+    position: relative;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%);
+
 }
