@@ -22,20 +22,23 @@ var limpar = document.getElementById("limpaEntrada");
 function cronometro(){
     setInterval(function() {
         if(pausado==0){
-            if(h==0 && m==0 && s==0 && c==0){
+            if(h>0 || m>0 || s>0 || c>-1){
+                if (c==0 && s>0) c=999;
+                if (cx==0 && s>0){ s--; cx=99; }
+                if (s==0 && m>0)  { m--; s=59; }
+                if (m==0 && h>0)  { h--; s=59; m=59; }
+                if (h < 10) dhor.innerHTML = "0"+h; else dhor.innerHTML = h;
+                if (s < 10) dseg.innerHTML = "0"+s; else dseg.innerHTML = s;
+                if (m < 10) dmin.innerHTML = "0"+m; else dmin.innerHTML = m;
+                if (c < 10) dcent.innerHTML = "00"+c; else if (c < 100) dcent.innerHTML = "0"+c; else dcent.innerHTML = c;
+                c--;
+                cx--;
+            }
+            else{
+                console.log("H:"+h+" M:"+m+" S:"+s+" C:"+c);
                 crStop();
                 alert("Fim da contagem!");
             }
-            if (c == 0) c=999;
-            if (cx == 0){ s--; cx=99; }
-            if (s == 0)  { m--; s=59; }
-            if (m == 0)  { h--; s=59; m=59; }
-            if (h < 10) dhor.innerHTML = "0"+h; else dhor.innerHTML = h;
-            if (s < 10) dseg.innerHTML = "0"+s; else dseg.innerHTML = s;
-            if (m < 10) dmin.innerHTML = "0"+m; else dmin.innerHTML = m;
-            if (c < 10) dcent.innerHTML = "00"+c; else if (c < 100) dcent.innerHTML = "0"+c; else dcent.innerHTML = c;
-            c--;
-            cx--;
         }
     },10);
 }
@@ -45,10 +48,10 @@ function crPlay(){
     var padrao = /^([0-5][0-9]):([0-5][0-9]):([0-5][0-9]):([0-9][0-9][0-9])$/;
     if (padrao.test(dado)){
         var tempo = dado.split(":");
-        h=tempo[0];
-        m=tempo[1];
-        s=tempo[2];
-        c=tempo[3];
+        h=parseInt(tempo[0]);
+        m=parseInt(tempo[1]);
+        s=parseInt(tempo[2]);
+        c=parseInt(tempo[3]);
         
         console.log("H:"+h+" M:"+m+" S:"+s+" C:"+c);
         
