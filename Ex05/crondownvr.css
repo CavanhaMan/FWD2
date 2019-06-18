@@ -1,6 +1,9 @@
 .digit{color:blue;}
 .display{color:black;}
-.center{background:#ffccff;}
+.center{
+    background:#ffccff;
+    height:280px;
+}
 .pointer {cursor: pointer;}
 #entrada{
     font-size: 20px;
