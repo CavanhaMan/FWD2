@@ -17,6 +17,7 @@ var clean = document.getElementById("clean");
 var volta = document.getElementById("volta");
 
 var tabela = document.getElementById("tabVoltas");
+var tabCorpo = document.getElementById("tabCorpo");
 
 function cronometro(){
     setInterval(function() {
@@ -80,7 +81,8 @@ function crClean(){
     dseg.innerHTML="00";
     dcent.innerHTML="000";
 
-    $("dbody").empty();
+    $("#tabCorpo").empty();
+    contaVolta=0;
 }
 
 var contaVolta=0;
@@ -90,7 +92,7 @@ var sa=0;
 var ca=0;
 function crVolta(){
     contaVolta++;
-    var row = tabela.insertRow(contaVolta);
+    var row = tabCorpo.insertRow(contaVolta-1);
     var cell0 = row.insertCell(0);
     var cell1 = row.insertCell(1);
     var cell2 = row.insertCell(2);
