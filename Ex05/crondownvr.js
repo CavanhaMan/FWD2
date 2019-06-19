@@ -45,20 +45,18 @@ function cronometro(){
 
 function crPlay(){
     var dado = entrada.value;
-    var padrao = /^([0-5][0-9]):([0-5][0-9]):([0-5][0-9]):([0-9][0-9][0-9])$/;
+    var padrao = /^([0-5][0-9]):([0-5][0-9]):([0-5][0-9])$/;
     if (padrao.test(dado)){
         var tempo = dado.split(":");
         h=parseInt(tempo[0]);
         m=parseInt(tempo[1]);
         s=parseInt(tempo[2]);
-        c=parseInt(tempo[3]);
         
-        console.log("H:"+h+" M:"+m+" S:"+s+" C:"+c);
+        console.log("H:"+h+" M:"+m+" S:"+s);
         
         dhor.innerHTML=tempo[0];
         dmin.innerHTML=tempo[1];
         dseg.innerHTML=tempo[2];
-        dcent.innerHTML=tempo[3];
     
         if (pausado==0) cronometro();
         else pausado=0;
