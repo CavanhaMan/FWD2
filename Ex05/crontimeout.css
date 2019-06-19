@@ -12,7 +12,7 @@
 .center{
     text-align: center;
     background:beige;
-    width:290px;
+    width:310px;
     height:280px;
 	position: relative;
 	left: 50%;
@@ -25,7 +25,7 @@
 	border-width:3px;  
 	border-style:inset;
     color:black;
-	width:290px;
+	width:310px;
     height:80px;
     position: relative;
 	left: 50%;

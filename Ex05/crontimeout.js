@@ -11,7 +11,6 @@ var dseg = document.getElementById("ss");
 var play = document.getElementById("play");
 var stop = document.getElementById("stop");
 var pause = document.getElementById("pause");
-var clean = document.getElementById("clean");
 
 function cronometro(){
     setTimeout(function() {
@@ -35,16 +34,6 @@ function crPlay(){
     play.disabled = true;
     pause.disabled = false;
     stop.disabled = false;
-    clean.disabled = true;
-}
-
-function crStop(){
-    pausado=1;
-
-    play.disabled = true;
-    pause.disabled = true;
-    stop.disabled = true;
-    clean.disabled = false;
 }
 
 function crPause(){
@@ -53,14 +42,14 @@ function crPause(){
     play.disabled = false;
     pause.disabled = true;
     stop.disabled = false;
-    clean.disabled = true;
 }
 
-function crClean(){
+function crStop(){
+    pausado=1;
+
     play.disabled = false;
     pause.disabled = true;
     stop.disabled = true;
-    clean.disabled = true;
 
     h=0;
     m=0;
