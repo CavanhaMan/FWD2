@@ -19,6 +19,10 @@ button:focus { outline: none; }
     border-radius: 20px;
     cursor: pointer;
 }
+.botao:hover:enabled {
+	background-color: gray;
+	color: white;
+}
 .grande{
     width:200px;
 }
