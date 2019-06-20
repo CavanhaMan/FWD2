@@ -21,7 +21,7 @@ function contaTempo() {
 	s=dseg.value;
 
 	s++;
-	if (s>=60 || m>=60 || h>=24){s=0; m=0; h=0;}
+	if (s>60 || m>60 || h>24 || s=="" || m=="" || h==""){s=0; m=0; h=0;}
 	if (s == 60)  { m++; s=0; }
 	if (m == 60)  { h++; s=0; m=0; }
 	if (h < 10) dhor.value = "0"+h; else dhor.value = h;
