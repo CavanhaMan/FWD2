@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="funcoes.js"></script>
+    <title>CSS dinâmico + JavaScript</title>
+    <script>
+        function trocarImg(nroImg, novaLegenda, nomeClasse) {
+            document.getElementById("imgEstrela").src = "img/estrela0"+nroImg+".png"; 
+            document.getElementById("legenda").innerHTML = "Estrela " + novaLegenda;
+            document.getElementById("legenda").className = nomeClasse;
+
+        }
+    
+    </script>
+</head>
+<body>
+    <!-- <div>
+        <h1>Título</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, assumenda ex. Maxime voluptatum ipsum obcaecati maiores amet at debitis molestias autem harum blanditiis, excepturi provident laborum tenetur. Dolorem, eum. Necessitatibus.</p>
+    </div> -->
+
+    <!-- ul>(li>a)*5 -->
+    <ul>
+        <li><a href="#" onmouseover="trocarImg(1, 'amarela', 'amarelo')">Lógica de Programação</a></li>
+        <li><a href="#" onmouseover="trocarImg(2, 'azul', 'azul')">Inglês Instrumental</a></li>
+        <li><a href="#" onmouseover="trocarImg(3)">Fundamentos de Web Design 1</a></li>
+        <li><a href="#" onmouseover="trocarImg(4)">Metodologia Científica</a></li>
+        <li><a href="#" onmouseover="trocarImg(5)">Sistemas Operacionais</a></li>
+    </ul>
+
+    <img src="img/estrela01.png" id="imgEstrela" alt="">
+    <p id="legenda">Estrela amarela</p>
+
+</body>
+</html>

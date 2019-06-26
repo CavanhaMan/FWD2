@@ -12,6 +12,7 @@ h1{
     background-color: #ffffcc;
     padding: 20px;
     width: 600px;
+    /*codigo para centralizar:*/
     position: relative;
     left: 50%;
     transform: translate(-50%);
@@ -57,13 +58,24 @@ li :hover{
     margin: 0px;
     font-size: 40px;
     text-align: center;
+    width:300px;
 }
-#menu,#estrela {
+#dMenu, #dEstrela, #dLegenda {
     float:left;
 }
 #imgStar{
     width: 200px;
+    /*codigo para centralizar:*/
     position: relative;
     left: 50%;
     transform: translate(-50%);
+}
+#dMenu{
+    width:300px;
+}
+#dLegenda{
+    height: 450px;
+    /*codigo para centralizar:*/
+    position: relative;
+    top: 80px;
 }
