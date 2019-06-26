@@ -1,1 +1,59 @@
 /*Rodrigo Cavanhaman*/
+body{
+    margin:0px;
+}
+h1{
+    color: red;
+    text-align: center;
+    text-shadow: 2px 2px 4px black;
+    border-bottom: 1px solid black;
+}
+/*
+div{
+    background-color: #ffffcc;
+    padding: 20px;
+    width: 600px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all 1s;
+}
+div:hover{
+    background-color: #ffcccc;
+    box-shadow: 2px 2px 6px black;
+}*/
+div{
+    width: 400px;
+}
+ul{
+    list-style: none;
+    border: 1 px solid black;
+    padding: 0px;
+    width: 270px;
+}
+ul, li{
+    margin: 5px 5px 5px 0px;
+}
+li a{
+    text-align: right;
+    color: black;
+    text-decoration: none;
+    color: black;
+    background-color:rgb(189,191,9);
+    border-radius: 0px 15px 15px 0px;
+    font-weight: bold;
+    font-family: Arial;
+    padding: 10px;
+    display: block;
+    transition: all 0.1s;
+}
+li :hover{
+    background-color: black;
+    color: rgb(189,191,9);
+    border-radius: 0px 15px 15px 0px;
+    transform: scaleX(1.1);
+}
+p{
+    font-size: 40px;
+    text-align: center;
+}
