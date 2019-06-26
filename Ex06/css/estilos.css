@@ -8,8 +8,7 @@ h1{
     text-shadow: 2px 2px 4px black;
     border-bottom: 1px solid black;
 }
-/*
-div{
+#teste{
     background-color: #ffffcc;
     padding: 20px;
     width: 600px;
@@ -18,11 +17,11 @@ div{
     transform: translate(-50%);
     transition: all 1s;
 }
-div:hover{
+#teste:hover{
     background-color: #ffcccc;
     box-shadow: 2px 2px 6px black;
-}*/
-div{
+}
+#estrela{
     width: 400px;
 }
 ul{
@@ -51,9 +50,20 @@ li :hover{
     background-color: black;
     color: rgb(189,191,9);
     border-radius: 0px 15px 15px 0px;
+    transform-origin: top left;
     transform: scaleX(1.1);
 }
-p{
+#legenda{
+    margin: 0px;
     font-size: 40px;
     text-align: center;
+}
+#menu,#estrela {
+    float:left;
+}
+#imgStar{
+    width: 200px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
 }
