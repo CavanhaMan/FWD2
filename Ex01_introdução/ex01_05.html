@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- Rodrigo CavanhaMan -->
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Exercicio 01</title>
+  </head>
+  <body>
+	<p>5. Construa uma página web capaz de solicitar o nome completo do usuário e, em seguida, exiba, através de uma mensagem de alerta, o primeiro nome dele contendo letras maiúsculas e o restante composto apenas por letras minúsculas.</p>
+    <script>
+        var nomeC = prompt("Digite seu nome completo: ");
+		nomeC = nomeC.toLowerCase();
+		nomeC = nomeC.split(" ");
+		nomeC[0] = nomeC[0].toUpperCase();
+		nomeC[nomeC.length-1] = nomeC[nomeC.length-1].toUpperCase();
+		nomeC = nomeC.join(" ");
+		alert(nomeC);
+		
+        //var nomeSplit = nomeC.split(" ");
+        //alert(nomeSplit[0].toUpperCase() + " " + nomeSplit[1].toLowerCase());
+		
+    </script>
+  </body>
+</html>

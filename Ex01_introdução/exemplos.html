@@ -1,0 +1,390 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<meta name="author" content="Rodrigo CavanhaMan">
+	<link rel="stylesheet" type="text/css" href="Lista1-6.css">
+	<!--script src="Lista1-6.js"></script-->
+	<title>Lista de Exercícios 1-6</title>
+	<style>
+		button{width:90px;}
+		fieldset{width:300px;}
+		[id*="fcor"]{width:260px;}
+		table,td{border:1px solid black;}
+		input{margin:5px;}
+		h2,table{text-align:center;}
+		h1,h2,h4{margin:0px;}
+		textarea{margin-bottom:5px;}
+		div{padding:5px;}
+		#btreload{
+			position:fixed;
+			margin-top:50px;
+			margin-left:400px;
+		}
+		/* 7a questao: */
+		.comdestaque {
+			background-color: Bisque;
+			border: 1px solid Blue;
+		}
+		.semdestaque {
+			background-color: Beige;
+			border: 1px solid DarkGreen;
+		}
+	</style>
+  </head>
+  <body>
+	<button id="btreload" type="button" value="Reload Page" onClick="document.location.reload(true)">Reload</button>
+
+	<h1>Lista de Exercícios 1-6</h1>
+	<fieldset>
+	<legend>1ª Questão</legend>
+		<h2>Lista Ordenada</h2>
+		<ol id="lista1">
+			<li>Índice 0</li>
+			<li>Índice 1</li>
+			<li>Índice 2</li>
+			<li>Índice 3</li>
+			<li>Índice 4</li>
+		</ol>
+	</fieldset>
+	
+	<fieldset>
+	<legend>1ª Questão Roberto</legend>
+		<h2>Lista Ordenada</h2>
+		<ul name="redi" id="redi">
+			<li>Índice 0</li>
+			<li>Índice 1</li>
+			<li>Índice 2</li>
+			<li>Índice 3</li>
+			<li>Índice 4</li>
+		</ul>
+	</fieldset>
+	
+
+
+	<BR><BR>
+
+	<fieldset>
+	<legend>2ª Questão</legend>
+		<BR>
+		<button id="btqt2" type="button" value="Questão 2">Questão 2</button>
+	</fieldset>
+
+	<BR><BR>
+
+	<fieldset>
+	<legend>3ª Questão</legend>
+		<p id="para1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p id="para2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p id="para3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	</fieldset>
+	
+	<BR><BR>
+
+	<fieldset>
+	<legend>4ª Questão</legend>
+		<table id="tbl4">
+		  <tr>
+			<td>Nota1</td>
+			<td>Nota2</td>
+		  </tr>
+			<td>39</td>
+			<td>38</td>
+		  <tr>
+			<td>32</td>
+			<td>18</td>
+		  </tr>
+		  <tr>
+			<td>31</td>
+			<td>25</td>
+		  </tr>
+		  <tr>
+			<td>31</td>
+			<td>38</td>
+		  </tr>
+		</table>
+		<BR>
+		<button id="btqt4" type="button" value="Questão 4">Questão 4</button>
+	</fieldset>
+	
+	<BR><BR>
+
+	<fieldset>
+	<legend>5ª Questão</legend>
+		<p>Valor da variável: <span id="valor">0</span></p>
+		<BR>
+		<button id="btaumentar" type="button" value="Questão 5a">Aumentar</button>
+		<button id="btdiminuir" type="button" value="Questão 5d">Diminuir</button>
+	</fieldset>
+	
+	<BR><BR>
+
+	<fieldset>
+	<legend>6ª Questão</legend>
+		<h1 id="titulocad">Cadastro de Usuário</h1>
+		<fieldset id="fcor1">
+		<legend>Escolha uma cor para o título:</legend>
+			<form id="corh1">
+				<input type="radio" name="formcor" value="red">Vermelho
+				<input type="radio" name="formcor" value="blue">Azul<br>
+				<input type="radio" name="formcor" value="yellow">Amarelo
+				<input type="radio" name="formcor" value="green">Verde<br>
+				<input type="radio" name="formcor" value="black">Preto
+		</fieldset>
+		<BR>
+		<fieldset id="fcor2">
+		<legend>Digite uma cor para o título:</legend>
+			<input type="text" id="campocor" size="30" placeholder="Digite uma cor..."> 
+			<p>Exemplos:<BR>blue, yellow, red, cyan, brown, purple...</p>
+		</fieldset>
+		<BR>
+		<fieldset id="fcor3">
+		<legend>Digite uma cor para o título:</legend>
+			<input type="password" id="campopwd" size="30" onkeydown="letecla()" placeholder="Digite uma das cores abaixo">
+			<p>Senha digitada: <span id="res1"></span></p>
+			<p>Opções:<BR>blue, yellow, red, cyan, brown, purple.</p>
+		</fieldset>
+		<BR>
+		<fieldset id="fcor4">
+		<legend>Escolha uma cor para o título:</legend>
+			<input type="checkbox" class="chbcor" value="red" onclick="funcCor();">Vermelho
+			<input type="checkbox" class="chbcor" value="blue" onclick="funcCor();">Azul<br>
+			<input type="checkbox" class="chbcor" value="yellow" onclick="funcCor();">Amarelo
+			<input type="checkbox" class="chbcor" value="green" onclick="funcCor();">Verde<br>
+			<input type="checkbox" class="chbcor" value="black" onclick="funcCor();">Preto
+		</fieldset>
+		<BR>
+		<fieldset id="fcor5">
+		<legend>Escolha uma cor para o título:</legend>
+			<select id="escolhecor">
+				<option value="black">Preto</option>
+				<option value="red">Vermelho</option>
+				<option value="blue">Azul</option>
+				<option value="yellow">Amarelo</option>
+				<option value="green">Verde</option>
+				<option value="cyan">Ciano</option>
+				<option value="brown">Marron</option>
+				<option value="beige">Bege</option>
+				<option value="BlueViolet">Violeta</option>
+				<option value="DarkOrange">Laranja</option>
+				<option value="Magenta">Rosa</option>
+			</select>
+		</fieldset>
+	</fieldset>
+	
+	<BR><BR>
+
+	<fieldset>
+	<legend>7ª Questão</legend>
+		<h2 id="tituloqt7">Este é um título H2 para a minha página web</h2>
+		<div id="div7a">
+			<h4 id="div7h">DIV A</h4>
+			<textarea id="campo7" rows="1" cols="38" placeholder="Digite algo..."></textarea>
+			<textarea id="campo7" rows="1" cols="38" placeholder="Digite algo..."></textarea> 
+			<textarea id="campo7" rows="1" cols="38" placeholder="Digite algo..."></textarea> 
+		</div>
+		<BR>
+		<div id="div7b">
+			<h4 id="div7h">DIV B</h4>
+			<textarea id="campo7" rows="1" cols="38" placeholder="Digite algo..."></textarea>
+			<textarea id="campo7" rows="1" cols="38" placeholder="Digite algo..."></textarea>
+			<textarea id="campo7" rows="1" cols="38" placeholder="Digite algo..."></textarea>
+		</div>
+		<BR>
+	</fieldset>
+	
+	<BR><BR>
+
+	<script>
+		var mudacor = document.getElementById("redi");
+		for(var i =0; i< mudacor.length;i++){
+			mudacor[i].onclick = function(){
+				this.style.color = "red";	}	}
+				
+	//*********** QUESTÃO 1 *********************************************
+		document.getElementById("lista1").onclick = function() {q1segundoemdiante()};
+		function q1segundoemdiante() {
+			var q1a = document.querySelectorAll("ol[id] > li");
+			for (var i=1 ; i<q1a.length ; i++){
+					q1a[i].style.color = "red";
+			}
+		}
+		document.getElementById("lista1").firstElementChild.ondblclick = function() {q1primeiro()};
+		function q1primeiro() {
+			var q1b = document.querySelectorAll("ol[id] > li");
+			for (var i=0 ; i<q1b.length ; i++){
+					q1b[i].style.color = "black";
+			}
+		}
+	//*********** QUESTÃO 2 *********************************************
+		var botao1 = document.getElementById("btqt2");
+		//botao1.clicado = false;
+		botao1.onclick = function(){
+			if (this.clicado == false){
+				this.clicado = true;
+				this.style.color="yellow";
+				this.style.background="black";
+			}
+			else{
+				this.clicado = false;
+				this.style.color="red";
+				this.style.background="cyan";
+			}
+		}
+	//*********** QUESTÃO 3 *********************************************
+		var p1 = document.getElementById("para1");
+		p1.clicado = false;
+		p1.onclick = function(){
+			if (this.clicado == false){
+				this.clicado = true;
+				this.style.background="cyan";
+			}
+			else{
+				this.clicado = false;
+				this.style.background="white";
+			}
+		}
+		var p2 = document.getElementById("para2");
+		p2.clicado = false;
+		p2.onclick = function(){
+			if (this.clicado == false){
+				this.clicado = true;
+				this.style.background="red";
+			}
+			else{
+				this.clicado = false;
+				this.style.background="white";
+			}
+		}
+		var p3 = document.getElementById("para3");
+		p3.clicado = false;
+		p3.onclick = function(){
+			if (this.clicado == false){
+				this.clicado = true;
+				this.style.background="yellow";
+			}
+			else{
+				this.clicado = false;
+				this.style.background="white";
+			}
+		}
+	//*********** QUESTÃO 4 *********************************************
+		var qt4 = document.querySelectorAll("tr");
+		for(var i=0 ; i<qt4.length ; i++){
+			qt4[i].onmouseenter = function(){
+				this.style.borderColor="purple";
+				this.style.background="#ffccff";
+			}
+			if (i%2!=0){
+				qt4[i].onmouseleave = function(){
+					this.style.borderColor="black";
+					this.style.background="white";
+				}
+			}
+		}
+	//QUESTÃO 4 botao ***************************************
+		var botao4 = document.getElementById("btqt4");
+		var tb4 = document.getElementById("tbl4");
+		
+		botao4.onmouseenter = function(){
+			botao4.style.color="red";
+			botao4.style.fontWeight="bold";
+			tb4.style.color="red";
+			tb4.style.fontWeight="bold";
+		}
+		botao4.onmouseleave = function(){
+			botao4.style.color="black";
+			botao4.style.fontWeight="normal";
+			tb4.style.color="black";
+			tb4.style.fontWeight="normal";
+		}
+
+	//*********** QUESTÃO 5 *********************************************
+		var tamanho = 0;
+		var btmais = document.getElementById("btaumentar");
+		var btmenos= document.getElementById("btdiminuir");
+
+		btmais.onmouseenter = function() {
+			tamanho++;
+			document.getElementById("valor").innerHTML=tamanho;
+			console.log(tamanho);
+		}
+		btmais.onmouseleave = function(){
+			window.alert("Valor da variável: " + tamanho + " Botão: " + btaumentar.id);
+		}
+		btmenos.onmouseover = function(){
+			tamanho--;
+			document.getElementById("valor").innerHTML=tamanho;
+			console.log(tamanho);
+			
+		}
+	//*********** QUESTÃO 6 *********************************************
+		var titulocadastro = document.getElementById("titulocad");
+
+				//QUESTÃO 6 radiobutton *********************************
+		var cores = document.getElementsByName("formcor");
+		document.getElementById("corh1").onclick = function(){
+			for (var i = 0; i < cores.length; i++) {
+				if (cores[i].checked) {
+					titulocadastro.style.color = cores[i].value;
+				}
+			}
+		}
+				//QUESTÃO 6 campo ***************************************
+		document.getElementById("campocor").oninput = function(){
+			titulocadastro.style.color = this.value;
+		}
+				//QUESTÃO 6 password ************************************
+		var senha = document.getElementById("campopwd");
+		var resultado = document.getElementById("res1");
+		function letecla(){
+			if(event.keyCode == 13) {
+				titulocadastro.style.color = senha.value;
+				if (senha.value == "red" ||
+					senha.value == "yellow" ||
+					senha.value == "blue" || 
+					senha.value == "brown" || 
+					senha.value == "purple" || 
+					senha.value == "black" || 
+					senha.value == "cyan") { resultado.innerHTML = senha.value;}
+				else {
+					resultado.innerHTML = "Senha incorreta";
+					titulocadastro.style.color = "black";
+				}
+				senha.value="";
+			}
+		}
+				//QUESTÃO 6 checkbox ************************************
+		function funcCor(){
+			var chbcor = document.getElementsByClassName('chbcor');
+			if( chbcor[0].checked){ titulocadastro.style.color = 'red';}
+			else if( chbcor[1].checked){ titulocadastro.style.color = 'blue';}
+			else if( chbcor[2].checked){ titulocadastro.style.color = 'yellow';}
+			else if( chbcor[3].checked){ titulocadastro.style.color = 'green';}
+			else if( chbcor[4].checked){ titulocadastro.style.color = 'gray';}
+			else { titulocadastro.style.color = 'black';}
+		}
+				//QUESTÃO 6 ckecklist ***********************************
+		document.getElementById("escolhecor").onchange = function(){
+			titulocadastro.style.color = this.value;
+		}
+	//*********** QUESTÃO 7 *********************************************
+		window.onload=function(){
+		var titulo7 = document.getElementById("tituloqt7");
+		var cxtxt = document.getElementsByTagName("textarea");
+			for( var i=0; i<cxtxt.length; i++ ) {
+				cxtxt[i].onfocus= function() {
+					titulo7.style.color="purple";
+					mudarClass('comdestaque',this);
+				}
+				cxtxt[i].onblur= function() {
+					titulo7.style.color="red";
+					mudarClass('semdestaque',this);
+				}
+			}
+			function mudarClass(nomeClasse,ids){
+				ids.className = nomeClasse;
+			}
+		}
+	</script>
+  </body>
+</html>

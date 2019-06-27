@@ -1,0 +1,2 @@
+Exercício 6
+Construa uma página web capaz de solicitar ao usuário um texto qualquer e, em seguida, informe-o, através de uma mensagem de alerta, a quantidade de palavras contidas no texto.

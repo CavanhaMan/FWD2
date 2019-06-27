@@ -1,2 +1,0 @@
-Exercício 10
-Construa uma página web capaz de solicitar ao usuário um valor inteiro positivo maior ou igual 2 e, em seguida, a partir do número lido, exiba uma tabela no corpo do documento da página, conforme mostrado no exemplo a seguir, contendo os valores de 0 (zero) até o número informado pelo usuário nos seguintes sistemas de numeração: decimal, binário e hexadecimal.

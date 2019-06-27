@@ -1,0 +1,2 @@
+Exercício 4
+Construa uma página web capaz de solicitar o nome completo do usuário e, em seguida, exiba, através de uma mensagem de alerta, o seu nome completo contendo apenas letras maiúsculas.

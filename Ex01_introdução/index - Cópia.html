@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- Rodrigo CavanhaMan -->
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Exercicios 01</title>
+    <style>
+		iframe{width:100%;}
+		.frametxt{}
+		* {box-sizing: border-box;}
+		.header,.footer {
+			background-color: grey;
+			color: white;
+			padding: 15px;
+		}
+		.column {
+			float: left;
+			padding: 15px;
+		}
+		.clearfix::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+		.menu {width: 25%;}
+		.content {width: 75%;}
+		.menu ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		.menu li {
+			padding: 8px;
+			margin-bottom: 8px;
+			background-color: #33b5e5;
+			color: #ffffff;
+		}
+		a:link{text-decoration:none;}
+		.menu li:hover {background-color: #0099cc;}
+    </style>
+  </head>
+  <body>
+	<div class="header">
+		<h1>JAVASCRIPT - LISTA DE EXERCÍCIOS 01</H1>
+		<p>Utilize o conceito de JavaScript para resolver cada uma dos problemas a seguir.</p>
+		<p>Como entrada, confirmação e exibição de informações ao usuário utilize apenas um destes comandos JavaScript: document.write, alert, confirm e prompt.<BR>Não é permitido a utilização de elementos de formulário.</p>
+	</div>
+	<div class="clearfix">
+		<div class="column menu">
+			<ul>
+				<li><a href="lembrar.html" target="frame">Relembrando... - Relembrando matéria</a></li>
+				<li><a href="ex01_01.html" target="frame">Ex 1 - Somando valores</a></li>
+				<li><a href="ex01_02.html" target="frame">Ex 2 - Concatena texto</a></li>
+				<li><a href="ex01_03.html" target="frame">Ex 3 - Conta caracteres</a></li>
+				<li><a href="ex01_04.html" target="frame">Ex 4 - Uppercase</a></li>
+				<li><a href="ex01_05.html" target="frame">Ex 5 - Uppercase/Lowercase</a></li>
+				<li><a href="ex01_06.html" target="frame">Ex 6 - Conta palavras</a></li>
+				<li><a href="ex01_07.html" target="frame">Ex 7 - Substintuindo texto</a></li>
+				<li><a href="ex01_08.html" target="frame">Ex 8 - Resolvendo expressão</a></li>
+				<li><a href="ex01_09.html" target="frame">Ex 9 - Repetindo texto</a></li>
+				<li><a href="ex01_10.html" target="frame">Ex 10 - Construindo tabela</a></li>
+			</ul>
+		</div>
+		<div class="column content">
+			<iframe name="framehtml" src="exemplos.html" name="content" height="450px"> </iframe>
+		</div>
+	</div>
+	<div class="footer">
+		<iframe name="frametxt" src="ex01_01.txt" name="content" height="80px"> </iframe>
+	</div>
+	<script>
+/*****************************************************************************************************/
+/* RELEMBRANDO....*/
+/*
+        alert("alerta");
+        x=confirm("hoje eh quinta?");
+        if (x) alert("confirmou");
+        else alert("cancelou");
+        var nome = prompt("qual o seu nome?");
+        document.write("O nome digitado eh "+nome);
+        var nome = prompt("qual o seu nome?");
+        var quant = prompt("quantas repetições?");
+        for (i=0 ; i<quant ; i++)
+            document.write("O nome digitado eh " + nome + "<BR>");
+*/
+/*****************************************************************************************************/
+
+	</script>
+  </body>
+</html>
+<!-- 
+width="100%" marginwidth="0" height="260" marginheight="0" align="top" frameborder="0" hspace="0" vspace="0" 
+ -->

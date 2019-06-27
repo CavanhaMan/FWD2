@@ -1,2 +1,0 @@
-Exercício 7
-Construa uma página web capaz de solicitar ao usuário um texto qualquer, em seguida duas palavras (uma de cada vez) e, por último, mostre o texto inicial ao usuário alterado, onde toda palavra contida no texto original idêntica à primeira palavra informada pelo usuário deverá ser substituída pela segunda palavra.
