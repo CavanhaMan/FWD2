@@ -1,7 +1,5 @@
 /*Rodrigo Cavanhaman*/
-body{
-    margin:0px;
-}
+body{margin:0px;}
 h1{
     color: red;
     text-align: center;
@@ -22,9 +20,7 @@ h1{
     background-color: #ffcccc;
     box-shadow: 2px 2px 6px black;
 }
-#estrela{
-    width: 400px;
-}
+
 ul{
     list-style: none;
     border: 1 px solid black;
@@ -60,8 +56,9 @@ li :hover{
     text-align: center;
     width:300px;
 }
-#dMenu, #dEstrela, #dLegenda {
+#dMenu, #dImagem, #dLegenda {
     float:left;
+    width: 30%;
 }
 #imgStar{
     width: 240px;
@@ -81,10 +78,6 @@ li :hover{
 .header, .footer {
     background-color: grey;
     color: white;
-    padding: 15px;
-}
-.column {
-    float: left;
     padding: 15px;
 }
 .clearfix::after {
