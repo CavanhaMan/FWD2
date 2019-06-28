@@ -70,12 +70,28 @@ li :hover{
     left: 50%;
     transform: translate(-50%);
 }
-#dMenu{
-    width:320px;
-}
 #dLegenda{
     height: 450px;
     /*codigo para centralizar:*/
     position: relative;
     top: 80px;
 }
+/*********************************************/
+* {box-sizing: border-box;}
+.header, .footer {
+    background-color: grey;
+    color: white;
+    padding: 15px;
+}
+.column {
+    float: left;
+    padding: 15px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.menu {width: 25%;}
+.content {width: 75%;}
+

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Exercício 1 - Aula 06</title>
+		 <!-- <link rel="stylesheet" href="aula6.css">-->
+		 <meta name="author" content="Rodrigo C. Baltazar">
+		 
+		 <style>
+			body {	background-color: #d9d9d9;
+			}
+			h4{		width: 530px;
+					text-align: center;
+					border-style: solid;
+					border-color: grey;
+					background-color: #bfbfbf;
+			}
+			fieldset { 
+				display: block;
+				margin-left: 2px;
+				margin-right: 2px;
+				padding-top: 0.35em;
+				padding-bottom: 0.625em;
+				padding-left: 0.75em;
+				padding-right: 0.75em;
+				width: 400px;
+				border: 2px groove (internal value);
+			}
+			select {
+				width: 100px;
+			}
+			input[id=grande]{
+				width: 410px;
+			}
+		</style>
+	</head>
+	<body>
+	
+	<h4>Questão 03.</h4>
+
+	<form>
+		<fieldset>
+		    <legend><b>SISTEMA DE GESTÃO ACADÊMICA</b></legend>
+			<h5>MANUTENÇÃO DE USUÁRIOS DO SISTEMA INTERNO</H5>
+			<table>
+				<tr>
+					<td>Nome:</td>
+					<td colspan=3><input type="text" id="grande"></td>
+				</tr>
+				<tr>
+					<td>Nome Completo:</td>
+					<td colspan=3><input type="text" id="grande"></td>
+				</tr>
+				<tr>
+					<td>CPF:</td>
+					<td colspan=3><input type="text" id="grande"></td>
+				</tr>
+				<tr>
+					<td>E-mail:</td>
+					<td colspan=3><input type="email" id="grande"></td>
+				</tr>
+				<tr>
+					<td>Website:</td>
+					<td colspan=3><input type="url" id="grande"></td>
+				</tr>
+				<tr>
+					<td>Endereço:</td>
+					<td colspan=3><input type="text" id="grande"></td>
+				</tr>
+				<tr>
+					<td>Bairro:</td>
+					<td><input type="text"></td>
+					<td>Cidade:</td>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<td>CEP:</td>
+					<td><input type="text"></td>
+					<td>UF:</td>
+					<td><select name="uf">
+						<option>AC</option>
+						<option>AC</option>
+						<option>AL</option>
+						<option>AP</option>
+						<option>AM</option>
+						<option>BA</option>
+						<option>CE</option>
+						<option>DF</option>
+						<option>ES</option>
+						<option>GO</option>
+						<option>MA</option>
+						<option>MT</option>
+						<option>MS</option>
+						<option>MG</option>
+						<option>PA</option>
+						<option>PB</option>
+						<option>PR</option>
+						<option>PE</option>
+						<option>PI</option>
+						<option>RJ</option>
+						<option>RN</option>
+						<option>RS</option>
+						<option>RO</option>
+						<option>RR</option>
+						<option>SC</option>
+						<option>SP</option>
+						<option>SE</option>
+						<option>TO</option>
+					</td>
+				</tr>
+				<tr>
+					<td>Telefone:</td>
+					<td><input type="text"></td>
+					<td>Fax:</td>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<td>Data Nascimento:</td>
+					<td><input type="date"></td>
+					<td>Sexo:</td>
+					<td>
+						<input type="radio" name="sexo" value="m"> M 
+						<input type="radio" name="sexo" value="f"> F
+					</td>
+				</tr>
+				<tr>
+					<td>Celular:</td>
+					<td><input type="text"></td>
+					<td>Est.Civil:</td>
+					<td><select name="estcivil">
+						<option>Solteiro</option>
+						<option>Casado</option>
+				</tr>
+				<tr>
+					<td>Login:</td>
+					<td><input type="text"></td>
+					<td>Senha:</td>
+					<td><input type="password"></td>
+				</tr>
+			</table>
+			<p>Deseja receber informações sobre os seguinte assuntos abaixo:</p>
+			<input name="assuntos" value="tecnologia" type="checkbox">Tecnologia
+			<input name="assuntos" value="esportes" type="checkbox">Esportes 
+			<input name="assuntos" value="automoveis" type="checkbox">Automóveis 
+			<input name="assuntos" value="culinaria" type="checkbox">Culinária 
+			<input name="assuntos" value="politica" type="checkbox">Política 
+			<input name="assuntos" value="policial" type="checkbox">Policial<BR>
+			<input name="assuntos" value="tempo" type="checkbox">Tempo
+			<input name="assuntos" value="cultura" type="checkbox">Cultura
+			<input name="assuntos" value="economia" type="checkbox">Economia 
+			<input name="assuntos" value="jogos" type="checkbox">Jogos 
+			<input name="assuntos" value="educacao" type="checkbox">Educação 
+			<input name="assuntos" value="viagem" type="checkbox">Viagem <BR>
+			<input name="assuntos" value="empregos" type="checkbox">Empregos
+			<input name="assuntos" value="moda" type="checkbox">Moda e Estilo<br>
+<br>
+			<input name="assuntos" value="autorizo" type="checkbox">Li as regras e cadastro e eutorizo a criação do usuário<br>
+	<br>		
+			<input type="submit" value="Confirmar">
+			<input type="reset" value="Retornar">
+		</fieldset>
+	</form>
+
+	
+
+		</body>
+</html>
+

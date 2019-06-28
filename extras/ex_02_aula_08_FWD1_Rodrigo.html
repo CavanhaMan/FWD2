@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Exercício 2 - Aula 08</title>
+		 <!-- <link rel="stylesheet" href="aula6.css">-->
+		 <meta name="author" content="Rodrigo C. Baltazar">
+		 
+		 <style>
+			body {	background-color: #d9d9d9;
+			}
+			h4{		width: 405px;
+					text-align: center;
+					border-style: solid;
+					border-color: grey;
+					background-color: #bfbfbf;
+			}
+			fieldset { 
+				display: block;
+				margin-left: 2px;
+				margin-right: 2px;
+				padding-top: 0.35em;
+				padding-bottom: 0.625em;
+				padding-left: 0.75em;
+				padding-right: 0.75em;
+				width: 380px;
+				border: 2px groove (internal value);
+			}
+			input {
+				width: 270px;
+			}
+			select {
+				width: 270px;
+			}
+			input[type=radio]{
+				width: 10px;
+			}
+			input[type=checkbox]{
+				width: 10px;
+			}
+			input[type=submit]{
+				width: 90px;
+			}
+			input[type=reset]{
+				width: 90px;
+			}
+
+		</style>
+	</head>
+	<body>
+	
+
+	<h4>Questão 02.</h4>
+
+	<form>
+		<fieldset>
+		    <legend><b>SISTEMA DE GESTÃO ACADÊMICA</b></legend>
+			<h5>MANUTENÇÃO DE USUÁRIOS DO SISTEMA INTERNO</H5>
+			<table>
+				<tr>
+					<td>Login:</td>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<td>Senha:</td>
+					<td><input type="password"></td>
+				</tr>
+				<tr>
+					<td>Status:</td>
+					<td><select name="status">
+						<option>Inativo</option>
+						<option>Ativo</option>
+					</td>
+				</tr>
+				<tr>
+					<td>Tipo:</td>
+					<td><input type="radio" name="tipo" value="tecnico"> Técnico 
+					<input type="radio" name="tipo" value="professor"> Professor 
+					<input type="radio" name="tipo" value="aluno"> Aluno</td>
+				</tr>
+				<tr>
+					<td>Data Criação:</td>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<td>Perfil:</td>
+					<td><input type="radio" name="perfil" value="convidado"> Convidado
+					<input type="radio" name="perfil" value="administrador"> Administrador
+				</tr>
+				</tr>
+				<tr>
+					<td>Observações:</td>
+					<td><textarea rows="5" cols="36" name="comentario" id="comentario"></textarea></td>
+				</tr>
+				<tr>
+					<td>Módulos:</td>
+					<td><input type="checkbox" name="modulos" value="compras"> Compras
+					<input type="checkbox" name="modulos" value="bibliioteca"> Biblioteca
+					<input type="checkbox" name="modulos" value="academico"> Acadêmico<BR>
+					<input type="checkbox" name="modulos" value="documentacao"> Documentação
+					<input type="checkbox" name="modulos" value="recursosHumanos"> Recursos Humanos
+					</td>
+				</tr>
+				</tr>
+			</table>
+			<BR>
+			<input type="submit" value="Cadastrar">
+			<input type="reset" value="Excluir">
+		</fieldset>
+	</form>
+
+		</body>
+</html>
+
