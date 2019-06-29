@@ -4,75 +4,62 @@ h1{
     color: red;
     text-align: center;
     text-shadow: 2px 2px 4px black;
-    border-bottom: 1px solid black;
 }
-#teste{
-    background-color: #ffffcc;
-    padding: 20px;
-    width: 600px;
-    /*codigo para centralizar:*/
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    transition: all 1s;
-}
-#teste:hover{
-    background-color: #ffcccc;
-    box-shadow: 2px 2px 6px black;
-}
-
 ul{
     list-style: none;
     border: 1 px solid black;
     padding: 0px;
     width: 290px;
 }
-ul, li{
-    margin: 5px 5px 5px 0px;
-}
+ul, li{margin: 10px 0px 10px 0px;}
 li a{
     text-align: right;
     color: black;
     text-decoration: none;
-    color: black;
     background-color:rgb(189,191,9);
-    border-radius: 0px 15px 15px 0px;
+    border-radius: 0px 20px 20px 0px;
     font-weight: bold;
     font-family: Arial;
-    padding: 10px;
+    padding: 15px;
     display: block;
     transition: all 0.1s;
 }
 li :hover{
     background-color: black;
     color: rgb(189,191,9);
-    border-radius: 0px 15px 15px 0px;
+    border-radius: 0px 20px 20px 0px;
     transform-origin: top left;
     transform: scaleX(1.1);
+}
+#dMenu, #dImagem, #dLegenda {
+    float:left;
+    width: 33%;
+    position: relative;
+    height: 600px;
+    border: 1px solid black;
+}
+#dMenu{width:322px;}
+#menu{
+    /*codigo para centralizar verticalmente:*/
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#imagem, #legenda{
+    /*codigo para centralizar horizontal e horizontalmente:*/
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 #legenda{
     margin: 0px;
     font-size: 40px;
     text-align: center;
-    width:300px;
 }
-#dMenu, #dImagem, #dLegenda {
-    float:left;
-    width: 30%;
-}
-#imgStar{
-    width: 240px;
-    /*codigo para centralizar:*/
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-}
-#dLegenda{
-    height: 450px;
-    /*codigo para centralizar:*/
-    position: relative;
-    top: 80px;
-}
+
 /*********************************************/
 * {box-sizing: border-box;}
 .header, .footer {
@@ -85,6 +72,5 @@ li :hover{
     clear: both;
     display: table;
 }
-.menu {width: 25%;}
-.content {width: 75%;}
+
 
