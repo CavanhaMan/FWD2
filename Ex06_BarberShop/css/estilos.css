@@ -1,8 +1,17 @@
 /*Rodrigo Cavanhaman*/
+@font-face {
+    font-family: "texto";
+    src: url("../fonts/TheDelicate.ttf");
+    }
+.texto{
+    font-family: "texto";
+    font-size: 80px;
+    margin:0px;
+}
 body{
     margin:0px;
-    background-image: url("../img/fundos/azul1.jpg");
-    background-size: 400px;
+    background-image: url("../img/fundos/woodg2.jpg");
+    background-size: 100%;
     background-repeat: repeat;
 }
 ul{
@@ -64,7 +73,7 @@ li :hover{
 .header, .footer {
     background-color:rgb(0, 6, 83);
     color: rgb(199, 255, 252);
-    height: 80px;
+    height: 150px;
     padding: 15px;
     opacity: 0.7; /* Transparencia */
     filter: alpha(opacity=70); /* For IE8 and earlier */
@@ -93,8 +102,6 @@ li :hover{
     width: 60px;
 }
 #legenda {
-    width: 80%;
-    text-align: center;
     color: white;
     text-shadow: 2px 2px 4px black;
     /*codigo para centralizar horizontalmente:*/
@@ -103,6 +110,7 @@ li :hover{
     bottom: 20px;
     left: 50%;
     transform: translate(-50%);
+
 }
 
 
