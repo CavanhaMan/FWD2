@@ -1,7 +1,7 @@
 /*Rodrigo Cavanhaman*/
 body{
     margin:0px;
-    background-image: url("../img/fundos/wood2.jpg");
+    background-image: url("../img/fundos/azul1.jpg");
     background-size: 400px;
     background-repeat: repeat;
 }
@@ -98,7 +98,7 @@ li :hover{
     /*codigo para centralizar horizontalmente:*/
     margin: 0;
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     left: 50%;
     transform: translate(-50%);
 
