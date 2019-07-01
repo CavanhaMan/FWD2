@@ -129,6 +129,6 @@ li :hover{
     transform: translate(-50%);
 }
 #icones{
-    width: 90px;
+    width: 100px;
 }
 .none{visibility: collapse;}
