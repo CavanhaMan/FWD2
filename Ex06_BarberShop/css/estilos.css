@@ -44,7 +44,7 @@ li :hover{
 }
 #dMenu {width: 300px;}
 #dImagem {width: 900px;}
-#imgCurso{
+#barber{
     /*codigo para centralizar horizontal e verticalmente:*/
     margin: 0;
     position: absolute;
@@ -89,14 +89,15 @@ li :hover{
 #hTitulo {
     position: absolute;
     top: 20px;
+    left: 100px;
     color: white;
     text-shadow: 2px 2px 4px black;
     font-size: 80px;
     margin:0px;
     width: 800px;
     /*codigo para centralizar horizontalmente:*/
-    left: 50%;
-    transform: translate(-50%);
+    /* left: 50%;
+    transform: translate(-50%); */
 }
 #imgLogo {
     position: absolute;
@@ -114,8 +115,8 @@ li :hover{
     transform: translate(-50%);
 }
 #legenda {
-    color: rgb(225, 226, 156);;
-    width:600px;
+    color: white;
+    width:100%;
     text-align: center;
     text-shadow: 2px 2px 4px black;
     /*codigo para centralizar horizontalmente:*/
@@ -130,4 +131,7 @@ li :hover{
     top: 10px;
     right: 10px;
     width: 90px;
+}
+.none{
+    visibility: collapse; 
 }
