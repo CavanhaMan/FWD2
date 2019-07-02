@@ -1,0 +1,137 @@
+/*Rodrigo Cavanhaman*/
+@font-face {
+    font-family: "texto";
+    src: url("../fonts/Thisay_Font.otf");
+    }
+.texto{font-family: "texto";}
+body{
+    margin:0px;
+    background-image: url("../img/fundos/woodg6.jpg");
+    background-size: 100%;
+    background-repeat: repeat;
+}
+ul{
+    list-style: none;
+    padding: 0px;
+    width: 270px;
+}
+ul, li{margin: 10px 0px 10px 0px;}
+li a{
+    text-align: right;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    background-color:rgb(0, 0, 0);
+    border-radius: 0px 40px 40px 0px;
+    font-weight: bold;
+    font-family: Arial;
+    padding: 10px;
+    display: block;
+    transition: all 0.1s;
+}
+li :hover{
+    background-color: rgb(31, 31, 31);
+    color: rgb(225, 226, 156);
+    border-radius: 0px 40px 40px 0px;
+    transform-origin: top left;
+    transform: scaleX(1.1);
+}
+#dMenu, #dImagem {
+    float:left;
+    position: relative;
+    height: 600px;
+    /*border: 1px solid black;*/
+}
+#dMenu {width: 300px;}
+#dImagem {width: 900px;}
+#barber{
+    /*codigo para centralizar horizontal e verticalmente:*/
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#menu{
+    /*codigo para centralizar verticalmente:*/
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#a{
+    margin: 0px;
+    font-size: 40px;
+    text-align: center;
+}
+
+/*********************************************/
+* {box-sizing: border-box;}
+.header, .footer {
+    background-color:rgb(0, 0, 0);
+    color: rgb(225, 226, 156);
+    height: 150px;
+    padding: 15px;
+    opacity: 0.7; /* Transparencia */
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+#hTitulo {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    font-size: 80px;
+    margin:0px;
+    width: 800px;
+    /*codigo para centralizar horizontalmente:*/
+    /* left: 50%;
+    transform: translate(-50%); */
+}
+#imgLogo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 70px;
+}
+#botoes{
+    width:300px;
+    /*codigo para centralizar horizontalmente:*/
+    margin: 0;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translate(-50%);
+}
+#legenda {
+    color: white;
+    width:100%;
+    text-align: center;
+    text-shadow: 2px 2px 4px black;
+    /*codigo para centralizar horizontalmente:*/
+    margin: 0;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+}
+#tesoura{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 90px;
+}
+.none{
+    visibility: collapse; 
+}

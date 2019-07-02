@@ -1,0 +1,16 @@
+- Trabalho individual
+- Data de apresentação: 03/07/19
+
+Construir uma página web contendo um menu (localizado no lado esquerdo da página),
+uma imagem (localizada no centro da página) e algumas informações localizadas no 
+lado direito da página, semelhante ao exemplo mostrado abaixo (layoutIndex.pptx). 
+Ao passar o mouse sobre cada uma das opções do menu as informações do centro (imagem) 
+e do lado direito (informações) deverão ser alterados (abra o arquivo abaixo para 
+entender melhor). Crie um tema específico para a sua página (utilize a sua criatividade).
+
+O menu deverá conter pelo menos 5 opções (capriche no formato e efeito do menu). 
+As imagens e as informações deverão ser coerentes com as opções do menu. 
+Utilize CSS dinâmico para alterar a formatação das informações contidas no lado 
+direito da página. 
+
+Bom trabalho!
