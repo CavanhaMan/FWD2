@@ -18,7 +18,7 @@ body{
     display: table;
 }
 /***************************************************************/
-/*  INICIO MENU                                                */
+/*  MENU                                                       */
 /***************************************************************/
 ul{
     list-style: none;
@@ -71,7 +71,7 @@ li :hover{
 #dLegenda{width: 300px;}
     /*background-color:green;}*/
 /***************************************************************/
-/*  INICIO LEGENDA                                             */
+/*  LEGENDA                                                    */
 /***************************************************************/
 #textoleg{
     color: white;
@@ -91,6 +91,9 @@ li :hover{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+/***************************************************************/
+/*  IMAGEM PRINCIPAL                                           */
+/***************************************************************/
 #barber{
     /*codigo para centralizar horizontal e verticalmente:*/
     margin: 0;
@@ -98,9 +101,10 @@ li :hover{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* imagem no tamanho real: 800 x 533 */
 }
 /***************************************************************/
-/*  INICIO CABEÇALHO                                           */
+/*  CABEÇALHO                                                  */
 /***************************************************************/
 * {box-sizing: border-box;}
 .header {
@@ -131,7 +135,7 @@ li :hover{
     width: 70px;
 }
 /***************************************************************/
-/*  INICIO BOLINHAS                                            */
+/*  BOLINHAS                                                   */
 /***************************************************************/
 #botoes{
     width:300px;
@@ -148,23 +152,44 @@ li :hover{
 }
 .none{visibility: collapse;}
 /***************************************************************/
-/*  INICIO RESPONSIVIDADE - MEDIA QUERIES                      */
+/*  RESPONSIVIDADE - MEDIA QUERIES           1500              */
 /***************************************************************/
 @media all and (max-width : 1500px) {
-/*** CABEÇALHO *************************************************/
+    /*** CABEÇALHO *********************************************/
     .header {height: 100px;}
-    #hTitulo {
-        top: 10px;
-        left: 80px;
-        font-size: 60px;
-    }
-    #imgLogo {
-        top: 5px;
-        width: 50px;
-    }
+    #hTitulo {top:10px;left:80px;font-size:60px;}
+    #imgLogo {top:5px;width:50px;}
+    /*** MENU *************************************************/
+    li a{padding:5px;}
+    #dMenu {width:285px;}
+    /*** IMAGEM PRINCIPAL *************************************/
+    #barber{width:700px;}
+    #dImagem {width:720px;}
+    /*** LEGENDA **********************************************/
+    #dLegenda{width:250px;height:600px;}
+    #legenda {width:250px;}
+    /*** BOLINHAS *********************************************/
+    #botoes{bottom: -30px;}
+}
+/***************************************************************/
+/*  RESPONSIVIDADE - MEDIA QUERIES           900               */
+/***************************************************************/
+@media all and (max-width : 1260px) {
+    /*** CABEÇALHO *********************************************/
+    .header {height: 80px;}
+    #hTitulo {top:2px;left:70px;}
+    #imgLogo {top:2px;left:20px;width:40px;}
+    /*** MENU *************************************************/
+    li a{padding:5px;}
+    #dMenu {width:285px;height:500px;}
+    /*** IMAGEM PRINCIPAL *************************************/
+    #dImagem {width:720px;height:500px;}
+    /*** LEGENDA **********************************************/
+    #dLegenda{
+        clear: both;
+        width:100%;height:600px;}
+    #legenda {width:90%;}
+    /*** BOLINHAS *********************************************/
+    #botoes{bottom: -50px;}
+}
     
-}
-@media all and (max-width : 440px) {
-    #dMenu, #dImagem, #dLegenda {height: 300px;background-color: red;}
-
-}
