@@ -151,6 +151,7 @@ li :hover{
 	height: 200px;
 }
 .none{visibility: collapse;}
+
 /***************************************************************/
 /*  RESPONSIVIDADE - MEDIA QUERIES           1500              */
 /***************************************************************/
@@ -171,8 +172,9 @@ li :hover{
     /*** BOLINHAS *********************************************/
     #botoes{bottom: -30px;}
 }
+
 /***************************************************************/
-/*  RESPONSIVIDADE - MEDIA QUERIES           900               */
+/*  RESPONSIVIDADE - MEDIA QUERIES           1260              */
 /***************************************************************/
 @media all and (max-width : 1260px) {
     /*** CABEÇALHO *********************************************/
@@ -185,11 +187,26 @@ li :hover{
     /*** IMAGEM PRINCIPAL *************************************/
     #dImagem {width:720px;height:500px;}
     /*** LEGENDA **********************************************/
-    #dLegenda{
-        clear: both;
-        width:100%;height:600px;}
-    #legenda {width:90%;}
+    #dLegenda{clear: both;width:100%;height:150px;margin-top:60px;}
+    #legenda {width:100%;font-size:15px;height:150px;}
+    #textoleg{text-align:left;position: absolute;top: 2px;left: 300px;}
+    #icones {width:100px;height:100px;position: absolute;top: 10px;left: 60px;}
     /*** BOLINHAS *********************************************/
     #botoes{bottom: -50px;}
 }
-    
+
+/***************************************************************/
+/*  RESPONSIVIDADE - MEDIA QUERIES           1020              */
+/***************************************************************/
+@media all and (max-width : 1020px) {
+    /*** IMAGEM PRINCIPAL *************************************/
+    #dImagem {width:500px;height:350px;}
+    #barber{width:500px;}
+    /*** BOLINHAS *********************************************/
+    #botoes{bottom: -60px;}
+    /*** MENU *************************************************/
+    li a{padding:5px;font-size:28px;width:220px;}
+    #dMenu {height:400px;width:250px;}
+    /*** LEGENDA **********************************************/
+    #textoleg{top:-10px;left:200px;font-size:25px;}
+}
