@@ -4,44 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <link href="css\estilos.css" rel="stylesheet">
-    <script src="js\funcoes.js"></script>
     <title>Reagindo com o Joaozinho</title>
 </head>
 <body>
-<!-- Inicialmente apenas a imagem do garoto “Pensativo” deverá estar visível ao usuário. Ela permanecerá visível
-até o momento em que o usuário interagir com ela pela primeira vez;-->
+    <div class="carinha">
+        <img src="Imagens/Pensativo.png" id="joaozinho" onmouseover="over()" onclick="click()" onmouseleave="leave()">
+        <BR>
+        <p id="mensagem"></p>
+    </div>
+    <script src="js\funcoes.js"></script>
 
-<!-- Ao posicionar o cursor do mouse sobre a imagem do garoto “Pensativo”, ela deverá ser substituída pela
-imagem do garoto “Assustado”.-->onmouseenter="assustado(this)"
-
-<!--Se o usuário apenas movimentar o cursor do mouse sobre a imagem e não clicar sobre ela,
-a imagem deverá ser alterada novamente para “Pensativo”.--> aguarda 1 segundo e volta pra pensativo
-
-<!-- Porém, se o usuário clicar sobre ela, a mesma deverá ser substituída pela imagem do garoto “Alegre” e,
-em seguida, deverá ser exibida a mensagem “Gosto quando você interage comigo”, localizada logo abaixo da imagem
-(este texto deverá permanecer visível na janela do navegador durante o período de 4 segundos);--> onclick="alegre(this)" + mensagem 4segundos
-
-<!-- Ao posicionar o cursor do mouse sobre a imagem e caso ela seja a do garoto “Alegre”,(PARAMETRO??) a seguinte
-mensagem “Que bom que você voltou. Vamos brincar?” deverá ser exibida logo abaixo da imagem. Neste
-cenário, a imagem não deverá ser alterada.-->
-
-<!-- Se o usuário não passar o cursor do mouse sobre a imagem do garoto “Alegre”, após um intervalo de tempo que
-pode variar entre 5 e 15 segundos, ela deverá ser alterada para a imagem do garoto “Nervoso” e a mensagem
-“Onde está você? Brinque comigo!!!” deverá ser exibida logo abaixo da imagem;-->
-<!-- Ao posicionar o cursor do mouse sobre a imagem e caso ela seja a do garoto “Nervoso”, a seguinte
-mensagem “Não suma mais. Gosto quando você interage comigo” deverá ser exibida logo abaixo da imagem.
-Em seguida, a imagem deverá ser alterada para a do garoto “Alegre”-->
-
-        <img onmouseenter="assustado(this)"
-			 onmouseleave="n(this)"
-			 
-		src="Imagens/Pensativo.png" id="joaozinho" alt="Joaozinho">
-</body>
+    </body>
 </html>
 <!--
-    fazer uma lista automaticamente
-    ul>(li>a)*5 
-
-
     control + ; = comenta
+
+    flexbox*
 -->
