@@ -1,4 +1,6 @@
-/*Rodrigo Cavanhaman*/
+/***************************************************************/
+/*                      Rodrigo Cavanhaman                     */
+/***************************************************************/
 @font-face {
     font-family: "texto";
     src: url("../fonts/Thisay_Font.otf");
@@ -10,6 +12,14 @@ body{
     background-size: 100%;
     background-repeat: repeat;
 }
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/***************************************************************/
+/*  INICIO MENU                                                */
+/***************************************************************/
 ul{
     list-style: none;
     padding: 0px;
@@ -40,6 +50,16 @@ li :hover{
     transform-origin: top left;
     transform: scaleX(1.1);
 }
+#menu{
+    /*codigo para centralizar verticalmente:*/
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/***************************************************************/
+/*  POSIÇÃO E TAMANHO DE MENU/IMAGEM/LEGENDA                   */
+/***************************************************************/
 #dMenu, #dImagem, #dLegenda {
     float:left;
     position: relative;
@@ -49,7 +69,10 @@ li :hover{
 #dMenu {width: 300px;}
 #dImagem {width: 900px;}
 #dLegenda{width: 300px;}
-	/*background-color:green;}*/
+    /*background-color:green;}*/
+/***************************************************************/
+/*  INICIO LEGENDA                                             */
+/***************************************************************/
 #textoleg{
     color: white;
     text-shadow: 2px 2px 4px black;
@@ -76,20 +99,9 @@ li :hover{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#menu{
-    /*codigo para centralizar verticalmente:*/
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-#a{
-    margin: 0px;
-    font-size: 40px;
-    text-align: center;
-}
-
-/*********************************************/
+/***************************************************************/
+/*  INICIO CABEÇALHO                                           */
+/***************************************************************/
 * {box-sizing: border-box;}
 .header {
     background-color:rgb(0, 0, 0);
@@ -98,11 +110,6 @@ li :hover{
     padding: 15px;
     opacity: 0.7; /* Transparencia */
     filter: alpha(opacity=70); /* For IE8 and earlier */
-}
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
 }
 #hTitulo {
     position: absolute;
@@ -123,6 +130,9 @@ li :hover{
     left: 10px;
     width: 70px;
 }
+/***************************************************************/
+/*  INICIO BOLINHAS                                            */
+/***************************************************************/
 #botoes{
     width:300px;
     /*codigo para centralizar horizontalmente:*/
@@ -137,3 +147,24 @@ li :hover{
 	height: 200px;
 }
 .none{visibility: collapse;}
+/***************************************************************/
+/*  INICIO RESPONSIVIDADE - MEDIA QUERIES                      */
+/***************************************************************/
+@media all and (max-width : 1500px) {
+/*** CABEÇALHO *************************************************/
+    .header {height: 100px;}
+    #hTitulo {
+        top: 10px;
+        left: 80px;
+        font-size: 60px;
+    }
+    #imgLogo {
+        top: 5px;
+        width: 50px;
+    }
+    
+}
+@media all and (max-width : 440px) {
+    #dMenu, #dImagem, #dLegenda {height: 300px;background-color: red;}
+
+}
