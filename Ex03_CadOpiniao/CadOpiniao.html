@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- Rodrigo Cavanhaman -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+	<link href="CadOpiniao.css" rel="stylesheet">
+    <title>Cadastro de Opinião</title>
+</head>
+<body>
+    <script type="text/javascript" src="jquery.min.js"></script>
+	<script src="jquery-3.1.0.js"></script>
+	<script src="jquery.mask.js"></script>
+    <fieldset class="center">
+        <form name="formCad" novalidate="novalidate">
+            <div class="colunas col1">
+                <label for="dropLivro">Escolha seu livro:</label>
+            </div>
+            <div class="colunas col2">
+                <select name="dropLivro" class="pointer" required title="Selecione o livro que você deseja">
+                    <option value="" selected disabled hidden>Selecione...</option>
+                    <option value="livro1">Java como programar</option>
+                    <option value="livro2">Google Android</option>
+                    <option value="livro3">Programação Orientada a Objetos</option>
+                </select>
+            </div>
+            <br>
+            <div class="colunas col1">
+                <label for="radioPagto">Forma de pagamento:</label>
+            </div>
+            <div class="colunas col2">
+                <input type="radio" name="radioPagto" id="rd1" value="credito" required>
+				<label for="rd1" class="pointer" title="Clique aqui para marcar o método de pagamento 'Cartão de Crédito'">Cartão de crédito</label><br>
+                <input type="radio" name="radioPagto" id="rd2" value="boleto" required>
+				<label for="rd2" class="pointer" title="Clique aqui para marcar o método de pagamento 'Boleto Bancário'">Bolento bancário</label>
+            </div>
+            <div class="colunas col1">
+                <label for="checkComo">Como voce conheceu nosso site?</label>
+            </div>
+            <div class="colunas col2">
+                <input type="checkbox" name="checkComo" id="ck1" value="ferramenta" required>
+				<label for="ck1" class="pointer" title="Clique aqui para escolher como conheceu o site">Ferramentas de busca</label><br>
+                <input type="checkbox" name="checkComo" id="ck2" value="panfleto" required>
+				<label for="ck2" class="pointer" title="Clique aqui para escolher como conheceu o site">Panfletos</label>
+            </div>
+            <br>
+            <div class="colunas col1">
+                <label for="enviarPara">Enviar para:</label>
+            </div>
+            <div class="colunas cad col2">
+                <div class="colunas txtCad"><label class="texto pointer" for="txtNome" >Nome:</label></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtNome" maxlength="30" min="1" placeholder="Digite seu nome aqui" required title="Digite seu nome aqui" /></div>
+                <div class="colunas txtCad"><label class="texto pointer" for="txtEndereco">Endereco:</label></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtEndereco" maxlength="50" placeholder="Digite seu endereço aqui" title="Digite seu endereço aqui" /></div>
+                <div class="colunas txtCad"><label class="texto pointer" for="txtCidade">Cidade:</label></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtCidade" maxlength="20" placeholder="Digite sua cidade aqui" title="Digite sua cidade aqui" /></div>
+                <div class="colunas txtCad"><label class="texto" for="txtEstado">Estado:</label></div>
+                <div class="colunas campoCad">
+					<select name="estado" class="campo pointer" id="comboEstado" title="Escolha aqui o seu estado">
+						<option value="" selected disabled hidden>Selecione...</option>
+						<option value="AC">Acre</option>
+						<option value="AL">Alagoas</option>
+						<option value="AP">Amapá</option>
+						<option value="AM">Amazonas</option>
+						<option value="BA">Bahia</option>
+						<option value="CE">Ceará</option>
+						<option value="DF">Distrito Federal</option>
+						<option value="ES">Espírito Santo</option>
+						<option value="GO">Goiás</option>
+						<option value="MA">Maranhão</option>
+						<option value="MT">Mato Grosso</option>
+						<option value="MS">Mato Grosso do Sul</option>
+						<option value="MG">Minas Gerais</option>
+						<option value="PA">Pará</option>
+						<option value="PB">Paraíba</option>
+						<option value="PR">Paraná</option>
+						<option value="PE">Pernambuco</option>
+						<option value="PI">Piauí</option>
+						<option value="RJ">Rio de Janeiro</option>
+						<option value="RN">Rio Grande do Norte</option>
+						<option value="RS">Rio Grande do Sul</option>
+						<option value="RO">Rondônia</option>
+						<option value="RR">Roraima</option>
+						<option value="SC">Santa Catarina</option>
+						<option value="SP">São Paulo</option>
+						<option value="SE">Sergipe</option>
+						<option value="TO">Tocantins</option>
+					</select>
+				</div>
+                <div class="colunas txtCad"><label class="texto pointer" for="txtCep">CEP:</label></div>
+                <div class="colunas campoCad"><input type="text" class="campo" id="txtCep" placeholder="XX.XXX-XXX" maxlength="10" title="Digite aqui os números do seu CEP" /></div>
+            </div>
+            <div class="colunas col1">
+                <label for="txtObservacoes" class="pointer">Observações:</label>
+            </div>
+            <div class="colunas col2">
+                    <textarea id="txtObservacoes" placeholder="Digite aqui uma observação" title="Escreva aqui quaisquer observações que achar importante."></textarea>
+            </div>
+
+			<div name="botao" class="botao">
+				<input type="submit" class="button pointer" value="Cadastrar" name="cadastrar" title="Clique aqui para efetuar o cadastro" />
+				<input type="button" class="button pointer" value="Limpar" name="limpar" onClick="document.location.reload(true)" title="Clique aqui para limpar todos os campos" />
+			</div>
+        </form>
+    </fieldset>
+    <script type="text/javascript" src="CadOpiniao.js"></script>
+
+</body>
+</html>
+<!--
+-->	
+
+	

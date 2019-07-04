@@ -1,0 +1,58 @@
+.center{
+	position: fixed;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%);
+}
+fieldset{
+	border: 10px solid #008080;
+	background: #e6ffff;
+	width:700px;
+}
+.col2{
+	width:400px;
+}
+.colunas{
+    float:left;
+	margin: 10px;
+}
+.cad{
+	background: #00cccc;
+	width: 380px;
+}
+.campo{
+	width: 240px;
+}
+.texto{
+	width: 85px;
+	display:block;
+	text-align:right;
+}
+.button{
+	width:80px;
+	background-color: #008080;
+	color:white;
+}
+.botao{
+	text-align: center;
+	float:none;
+	clear: both;
+}
+#txtObservacoes{
+	width:115%;
+	height:100px;
+	margin-right:0px;
+}
+/*margin: 10px 10px 10px 10px;
+		top right botton left*/
+.col1{
+    width:170px;
+	text-align:right;
+	margin-left:40px;
+}
+.pointer {cursor: pointer;}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
