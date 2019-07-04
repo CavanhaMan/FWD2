@@ -8,47 +8,70 @@ var control=0;
 
 /* Inicialmente garoto “Pensativo”*/
 var dude="pensativo";
-
+//pensativo     assustado       alegre      nervoso
+console.log(dude=="pensativo");
 
 function over(){
-    joao.src="Imagens/Assustado.png";
-    if(dude=="assustado")
-        setTimeout(function(){ joao.src="Imagens/Pensativo.png"; }, 4000);
-
-    else if(dude=="alegre")
-        clearTimeout();
-    else
-        dude="asustado";
-}
-
-function click(){
-    if(dude=="assustado")
-    if(dude=="alegre"){
-        msg.innerHTML="Que bom que você voltou.<BR>Vamos brincar?";
-        dude="alegre";
+    //- mouse over PENSATIVO => deverá virar ASSUSTADO
+    if (dude=="pensativo"){
+        joao.src="Imagens/Assustado.png";
+        dude="assustado";
+        console.log(dude);
     }
-    else{
+    //- mouse over ASSUSTADO e não clicar => deverá virar PENSATIVO
+    else if(dude=="assustado"){
+        joao.src="Imagens/Pensativo.png";
+        dude="pensativo";
+        console.log(dude);
+    }
+    //- mouse over ALEGRE => mensagem "Que bom que você voltou. Vamos brincar?" (IMAGEM NAO MUDA)
+    else if(dude=="alegre"){
+        msg.innerHTML="Que bom que você voltou.<BR>Vamos brincar?";
+        timer();
+        console.log(dude);
+    }
+    //- mouse over NERVOSO => mensagem "Não suma mais. Gosto quando você interage comigo" =>
+    //                     => depois deverá virar ALEGRE
+    else if(dude=="nervoso"){
+        msg.innerHTML="Não suma mais. Gosto quando você interage comigo";
         joao.src="Imagens/Alegre.png";
         dude="alegre";
-        msg.innerHTML="Gosto quando você<BR>interage comigo";
-        setTimeout(function(){ msg.innerHTML=""; }, 4000);
+        console.log(dude);
     }
 }
+function click(){
+    //- clicar na ASSUSTADO => deverá virar ALEGRE + mensagem "Gosto quando você interage comigo" (4 segundos)
+    if(dude=="assustado"){
+        joao.src="Imagens/Alegre.png";
+        dude="alegre";
+        setTimeout(function(){ msg.innerHTML="Gosto quando você interage comigo"; }, 4000);
+        console.log(dude);
+    }
+}
+function timer(){
+    //- ALEGRE sem clicar nem passar num intervalo de 5 e 15 segundos => NERVOSO + mensagem "Onde está você? Brinque comigo!!!"
+    var x =(Math.floor(Math.random()*15)+5);
+    var tempo = setTimeout(function(){ msg.innerHTML="Onde está você? Brinque comigo!!!"; }, x);
+}
+
+
+
+
+/******************************************* */
+//        setTimeout(function(){ joao.src="Imagens/Pensativo.png"; }, 4000);
+//        clearTimeout();
+
+
 
 function leave(){
     control=1;
 }
-
-// setTimeout(function(){ alert("Hello"); }, 3000);
-
-
-
 /**********************************************************************/
-/*
-- mouse over PENSATIVO => deverá virar ASSUSTADO
-- movimentar mouse sobre a ASSUSTADO e não clicar => deverá virar PENSATIVO
-- clicar na ASSUSTADO => deverá virar ALEGRE + mensagem "Gosto quando você interage comigo" (4 segundos)
-- mouse sobre ALEGRE => mensagem "Que bom que você voltou. Vamos brincar?" (IMAGEM NAO MUDA)
-- ALEGRE sem clicar nem passar num intervalo de 5 e 15 segundos => NERVOSO + mensagem "Onde está você? Brinque comigo!!!"
-- mouse sobre NERVOSO => mensagem "Não suma mais. Gosto quando você interage comigo" => depois deverá virar ALEGRE
-*/
+
+//- mouse over PENSATIVO => deverá virar ASSUSTADO
+//- mouse over ASSUSTADO e não clicar => deverá virar PENSATIVO
+//- mouse over ALEGRE => mensagem "Que bom que você voltou. Vamos brincar?" (IMAGEM NAO MUDA)
+//- mouse over NERVOSO => mensagem "Não suma mais. Gosto quando você interage comigo" => depois deverá virar ALEGRE
+//- clicar na ASSUSTADO => deverá virar ALEGRE + mensagem "Gosto quando você interage comigo" (4 segundos)
+//- ALEGRE sem clicar nem over num intervalo de 5 e 15 segundos => NERVOSO + mensagem "Onde está você? Brinque comigo!!!"
+
