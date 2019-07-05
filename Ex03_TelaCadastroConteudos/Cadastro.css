@@ -1,7 +1,7 @@
 fieldset{
 	border: 7px ridge #ccc;
 	background: #e6ffff;
-	width:500px;
+	width:370px;
 	border-radius: 0px 0px 20px 20px;
 }
 .titulo{
@@ -10,7 +10,7 @@ fieldset{
 	border-radius: 20px 20px 0px 0px;
 }
 h2{	margin: 5px 0px 0px 0px;}
-.col2{width:200px;}
+.col2{width:180px;}
 .colunas{
     float:left;
 	margin: 10px;
@@ -25,7 +25,7 @@ h2{	margin: 5px 0px 0px 0px;}
 /*margin: 10px 10px 10px 10px;
 		top right botton left*/
 .col1{
-    width:150px;
+    width:100px;
 	text-align:right;
 }
 .pointer {cursor: pointer;}

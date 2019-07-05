@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Rodrigo Cavanhaman -->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <title>Cadastro de Opinião</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="jquery-3.1.0.js"></script>
+    <script src="jquery.mask.js"></script>
+
+    <form name="formCad" novalidate="novalidate">
+        <label for="disciplinas">Escolha das Disciplinas:</label>
+        <select name="disciplinas" class="campo pointer" id="comboDisciplinas" title="Escolha aqui as disciplinas">
+            <option value="" selected disabled hidden>Selecione...</option>
+            <option value="filo">Filosofia</option>
+            <option value="geo">Geografia</option>
+            <option value="hist">História</option>
+            <option value="soc">Sociologia</option>
+            <option value="bio">Biologia</option>
+            <option value="fis">Física</option>
+            <option value="qui">Química</option>
+            <option value="por">Português</option>
+            <option value="art">Artes</option>
+            <option value="ef">Educação Física</option>
+            <option value="ling">Lingua Estrangeira</option>
+            <label for="conteudos">Escolha dos Conteúdos:</label>
+        </select>
+<BR>
+    <label for="disciplinas">Escolha dos Conteudos:</label>
+    <select name="conteudos" class="campo pointer" id="comboConteudos" title="Escolha aqui os conteudos">
+            <option value="" selected disabled hidden>Selecione...</option>
+            <option value="aa">aa</option>
+            <option value="bb">aa</option>
+            <option value="cc">aa</option>
+            <option value="dd">aa</option>
+            <option value="ee">aa</option>
+            <option value="ff">aa</option>
+            <option value="gg">aa</option>
+            <option value="hh">aa</option>
+            <option value="jj">aa</option>
+            <option value="kk">aa</option>
+            <option value="ll">aa</option>
+        </select>
+<BR>
+        <input type="submit" class="button pointer" value="Cadastrar" name="cadastrar"
+            title="Clique aqui para efetuar o cadastro do conteúdo" />
+        <input type="button" class="button pointer" value="Limpar" name="limpar"
+            onClick="document.location.reload(true)" title="Clique aqui para limpar todos os campos" />
+    </form>
+    <script type="text/javascript" src="Cadastro.js"></script>
+
+</body>
+
+</html>
+<!--
+-->

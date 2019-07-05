@@ -18,7 +18,7 @@
     <fieldset class="center">
         <form name="formCad" novalidate="novalidate">
             <div class="colunas col1">
-                <label for="radioArea">Escolha a Área de Conhecimento:</label>
+                <label for="radioArea">Área de Conhecimento:</label>
             </div>
             <div class="colunas col2">
                 <input type="radio" name="radioArea" id="rd1" value="Humanidades" required>
@@ -34,7 +34,8 @@
 				<label for="rd2" class="pointer" title="Clique aqui para marcar 'Linguagens'">Linguagens</label>
             </div>
             <div class="colunas col1">
-                <label for="disciplinas">Escolha das Disciplinas:</label>
+                <label for="disciplinas">Disciplinas:</label>
+                <label for="conteudos">Conteúdos:</label>
             </div>
             <div class="colunas col2">
                 <select name="disciplinas" class="campo pointer" id="comboDisciplinas" title="Escolha aqui as disciplinas">
@@ -49,12 +50,8 @@
 					<option value="por">Português</option>
 					<option value="art">Artes</option>
 					<option value="ef">Educação Física</option>
-					<option value="ling">Lingua Estrangeira</option>
-			</div>
-            <div class="colunas col1">
-                <label for="conteudos">Escolha dos Conteúdos:</label>
-            </div>
-            <div class="colunas col2">
+                    <option value="ling">Lingua Estrangeira</option>
+                </select>
                 <select name="conteudos" class="campo pointer" id="comboConteudos" title="Escolha aqui os conteudos">
 					<option value="" selected disabled hidden>Selecione...</option>
 					<option value="aa">aa</option>
@@ -68,6 +65,7 @@
 					<option value="jj">aa</option>
 					<option value="kk">aa</option>
 					<option value="ll">aa</option>
+                </select>
 			</div>
 			<div name="botao" class="botao">
 				<input type="submit" class="button pointer" value="Cadastrar" name="cadastrar" title="Clique aqui para efetuar o cadastro do conteúdo" />
