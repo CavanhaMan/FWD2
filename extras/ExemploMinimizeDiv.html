@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .widget-content {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .btn-minimize {
+            width: 50px;
+            height: 50px;
+            background-color: #F00;
+        }
+        .btn-minimize.btn-plus {
+            background-color: #0F0;
+        }
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="jquery-3.1.0.js"></script>
+</head>
+<body>
+    <button class="btn-minimize"></button>
+    <div class="widget-content">Some content!</div>
+
+    <script>
+        $(".btn-minimize").click(function(){
+            $(this).toggleClass('btn-plus');
+            $(".widget-content").slideToggle();
+        });
+    </script>
+</body>
+</html>

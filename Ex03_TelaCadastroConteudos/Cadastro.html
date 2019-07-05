@@ -13,83 +13,64 @@
     <script src="jquery.mask.js"></script>
     
     <fieldset class="center titulo">
-        <h1 id="titu">Cadastro de Disciplinas</h1>
+        <h2 id="titu">Cadastro de Disciplinas</h2>
     </fieldset>
-
     <fieldset class="center">
         <form name="formCad" novalidate="novalidate">
             <div class="colunas col1">
-                <label for="radioPagto">Escolha a Área de Conhecimento:</label>
+                <label for="radioArea">Escolha a Área de Conhecimento:</label>
             </div>
             <div class="colunas col2">
-                <input type="radio" name="radioPagto" id="rd1" value="credito" required>
+                <input type="radio" name="radioArea" id="rd1" value="Humanidades" required>
                 <label for="rd1" class="pointer" title="Clique aqui para marcar 'Humanidades'">Humanidades</label>
                 <br>
-                <input type="radio" name="radioPagto" id="rd2" value="boleto" required>
+                <input type="radio" name="radioArea" id="rd2" value="matematica" required>
 				<label for="rd2" class="pointer" title="Clique aqui para marcar 'Matemática'">Matemática</label>
                 <br>
-                <input type="radio" name="radioPagto" id="rd2" value="boleto" required>
+                <input type="radio" name="radioArea" id="rd2" value="ciencias" required>
 				<label for="rd2" class="pointer" title="Clique aqui para marcar 'Ciências da Natureza'">Ciências da Natureza</label>
                 <br>
-                <input type="radio" name="radioPagto" id="rd2" value="boleto" required>
+                <input type="radio" name="radioArea" id="rd2" value="linguagens" required>
 				<label for="rd2" class="pointer" title="Clique aqui para marcar 'Linguagens'">Linguagens</label>
             </div>
-            <br>
             <div class="colunas col1">
-                <label for="enviarPara">Enviar para:</label>
-            </div>
-            <div class="colunas cad col2">
-                <div class="colunas txtCad"><label class="texto pointer" for="txtNome" >Nome:</label></div>
-                <div class="colunas campoCad"><input type="text" class="campo" id="txtNome" maxlength="30" min="1" placeholder="Digite seu nome aqui" required title="Digite seu nome aqui" /></div>
-                <div class="colunas txtCad"><label class="texto pointer" for="txtEndereco">Endereco:</label></div>
-                <div class="colunas campoCad"><input type="text" class="campo" id="txtEndereco" maxlength="50" placeholder="Digite seu endereço aqui" title="Digite seu endereço aqui" /></div>
-                <div class="colunas txtCad"><label class="texto pointer" for="txtCidade">Cidade:</label></div>
-                <div class="colunas campoCad"><input type="text" class="campo" id="txtCidade" maxlength="20" placeholder="Digite sua cidade aqui" title="Digite sua cidade aqui" /></div>
-                <div class="colunas txtCad"><label class="texto" for="txtEstado">Estado:</label></div>
-                <div class="colunas campoCad">
-					<select name="estado" class="campo pointer" id="comboEstado" title="Escolha aqui o seu estado">
-						<option value="" selected disabled hidden>Selecione...</option>
-						<option value="AC">Acre</option>
-						<option value="AL">Alagoas</option>
-						<option value="AP">Amapá</option>
-						<option value="AM">Amazonas</option>
-						<option value="BA">Bahia</option>
-						<option value="CE">Ceará</option>
-						<option value="DF">Distrito Federal</option>
-						<option value="ES">Espírito Santo</option>
-						<option value="GO">Goiás</option>
-						<option value="MA">Maranhão</option>
-						<option value="MT">Mato Grosso</option>
-						<option value="MS">Mato Grosso do Sul</option>
-						<option value="MG">Minas Gerais</option>
-						<option value="PA">Pará</option>
-						<option value="PB">Paraíba</option>
-						<option value="PR">Paraná</option>
-						<option value="PE">Pernambuco</option>
-						<option value="PI">Piauí</option>
-						<option value="RJ">Rio de Janeiro</option>
-						<option value="RN">Rio Grande do Norte</option>
-						<option value="RS">Rio Grande do Sul</option>
-						<option value="RO">Rondônia</option>
-						<option value="RR">Roraima</option>
-						<option value="SC">Santa Catarina</option>
-						<option value="SP">São Paulo</option>
-						<option value="SE">Sergipe</option>
-						<option value="TO">Tocantins</option>
-					</select>
-				</div>
-                <div class="colunas txtCad"><label class="texto pointer" for="txtCep">CEP:</label></div>
-                <div class="colunas campoCad"><input type="text" class="campo" id="txtCep" placeholder="XX.XXX-XXX" maxlength="10" title="Digite aqui os números do seu CEP" /></div>
-            </div>
-            <div class="colunas col1">
-                <label for="txtObservacoes" class="pointer">Observações:</label>
+                <label for="disciplinas">Escolha das Disciplinas:</label>
             </div>
             <div class="colunas col2">
-                    <textarea id="txtObservacoes" placeholder="Digite aqui uma observação" title="Escreva aqui quaisquer observações que achar importante."></textarea>
+                <select name="disciplinas" class="campo pointer" id="comboDisciplinas" title="Escolha aqui as disciplinas">
+					<option value="" selected disabled hidden>Selecione...</option>
+					<option value="filo">Filosofia</option>
+					<option value="geo">Geografia</option>
+					<option value="hist">História</option>
+					<option value="soc">Sociologia</option>
+					<option value="bio">Biologia</option>
+					<option value="fis">Física</option>
+					<option value="qui">Química</option>
+					<option value="por">Português</option>
+					<option value="art">Artes</option>
+					<option value="ef">Educação Física</option>
+					<option value="ling">Lingua Estrangeira</option>
+			</div>
+            <div class="colunas col1">
+                <label for="conteudos">Escolha dos Conteúdos:</label>
             </div>
-
+            <div class="colunas col2">
+                <select name="conteudos" class="campo pointer" id="comboConteudos" title="Escolha aqui os conteudos">
+					<option value="" selected disabled hidden>Selecione...</option>
+					<option value="aa">aa</option>
+					<option value="bb">aa</option>
+					<option value="cc">aa</option>
+					<option value="dd">aa</option>
+					<option value="ee">aa</option>
+					<option value="ff">aa</option>
+					<option value="gg">aa</option>
+					<option value="hh">aa</option>
+					<option value="jj">aa</option>
+					<option value="kk">aa</option>
+					<option value="ll">aa</option>
+			</div>
 			<div name="botao" class="botao">
-				<input type="submit" class="button pointer" value="Cadastrar" name="cadastrar" title="Clique aqui para efetuar o cadastro" />
+				<input type="submit" class="button pointer" value="Cadastrar" name="cadastrar" title="Clique aqui para efetuar o cadastro do conteúdo" />
 				<input type="button" class="button pointer" value="Limpar" name="limpar" onClick="document.location.reload(true)" title="Clique aqui para limpar todos os campos" />
 			</div>
         </form>
