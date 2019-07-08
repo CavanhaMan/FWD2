@@ -16,7 +16,7 @@ function over(){
     if (dude=="pensativo"){
         joao.src="Imagens/Assustado.png";
         dude="assustado";
-        console.log("dude_over_pensativo: ",dude);
+        console.log("dude_over_pensativo => ",dude);
     }
     //- mouse over ALEGRE => mensagem "Que bom que você voltou. Vamos brincar?" (IMAGEM NAO MUDA)
     else if(dude=="alegre"){
@@ -33,16 +33,18 @@ function over(){
         console.log("dude_over_nervoso: ",dude);
     }
     //- mouse over ASSUSTADO e não clicar => deverá virar PENSATIVO
-    else if(dude=="assustado"){
+/*    else if(dude=="assustado"){
         joao.src="Imagens/Pensativo.png";
         dude="pensativo";
         console.log("dude_over_assustado: ",dude);
-    }
+    }*/
 }
 
 function click(){
+    console.log("dude_clique ok: ",dude);
     //- clicar na ASSUSTADO => deverá virar ALEGRE + mensagem "Gosto quando você interage comigo" (4 segundos)
     if(dude=="assustado"){
+        console.log("dude_clique_assustado => ",dude);
         joao.src="Imagens/Alegre.png";
         dude="alegre";
         setTimeout(function(){ msg.innerHTML="Gosto quando você interage comigo"; }, 4000);
