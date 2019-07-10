@@ -1,12 +1,12 @@
 /* Rodrigo Cavanhaman */
-
 .center{
     border: 2px solid black;
-    width:600px;
-    height:600px;
+    width:300px;
+    height:120px;
 	position: relative;
 	left: 50%;
-	transform: translate(-50%);
+    transform: translate(-50%);
+    text-align: center;
 }
 .pointer {cursor: pointer;}
 
