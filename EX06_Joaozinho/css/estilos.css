@@ -11,13 +11,13 @@
     padding: 10px;
 }
 #rosto{
-    background-color: gray;
+    /* background-color: gray; */
     padding: 10px;
 }
-#texto{
+/* #texto{
     background-color: yellow;
     padding: 10px;
-}
+} */
 #aviso{
     margin: 10px;
     padding: 10px;
@@ -27,4 +27,11 @@
     color:red;
     font-weight: bold;
     background-color: rgb(255, 255, 136);
+}
+#chat{
+    width: 250px;
+    position: absolute;
+    top:-25px;
+    left:125px;
+
 }

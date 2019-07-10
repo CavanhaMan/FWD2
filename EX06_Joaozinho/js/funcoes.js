@@ -1,9 +1,8 @@
 //Rodrigo Cavanhaman
 var joao = document.getElementById("joaozinho");
-console.log(joao);
 var msg = document.getElementById("mensagem");
-console.log(msg);
 var aviso = document.getElementById("aviso");
+var chat = document.getElementById("chat");
 var timer;
 var aux; 
 var brabo;
@@ -24,16 +23,17 @@ function dudeOver(){
     }
     //- mouse over Alegre => mensagem "Que bom que você voltou. Vamos brincar?" (IMAGEM NAO MUDA)
     else if(dude=="Alegre"){
-        msg.innerHTML="Que bom que você voltou.<BR>Vamos brincar?";
+        chat.src="Imagens/f_quebom.png";
         clearTimeout(timer);
-        timer = setTimeout(function(){ msg.innerHTML=""; }, 4000);
+        timer = setTimeout(function(){ chat.src="Imagens/f_quebom.png"; }, 4000);
     //     console.log("dude_over_Alegre: ",dude);
     }
     //- mouse over Nervoso => mensagem "Não suma mais. Gosto quando você interage comigo" =>
     //                     => depois deverá virar Alegre
     else if(dude=="Nervoso"){
         clearTimeout(timer);
-        msg.innerHTML="Não suma mais! Gosto quando você interage comigo";
+        chat.src="Imagens/f_naosuma.png";
+        timer = setTimeout(function(){ chat.src=""; }, 4000);
         joao.src="Imagens/Alegre.png";
         dude="Alegre";
          console.log("dude_over_Nervoso: ",dude);
@@ -53,8 +53,8 @@ function dudeClick(){
         console.log("dude_clique_Assustado => ",dude);
         joao.src="Imagens/Alegre.png";
         dude="Alegre";
-        msg.innerHTML="Gosto quando você interage comigo!";
-        timer = setTimeout(function(){ msg.innerHTML=""; }, 4000);
+        chat.src="Imagens/f_gosto.png";
+        timer = setTimeout(function(){ chat.src=""; }, 4000);
         console.log("dude_clicado_Assustado: ",dude);
     }
 }
@@ -77,7 +77,8 @@ function dudeOut(){
             clearTimeout(brabo);
             dude="Nervoso";
             joao.src="Imagens/Nervoso.png";
-            msg.innerHTML="Onde está você?<BR>Brinque comigo!!!"; 
+            chat.src="Imagens/f_ondeestaaaa.png";
+            timer = setTimeout(function(){ chat.src=""; }, 4000);
         }, x*1000);
     }
 }
