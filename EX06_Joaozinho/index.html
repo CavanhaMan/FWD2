@@ -8,17 +8,24 @@
 </head>
 <body>
     <div class="carinha">
-        <img src="Imagens/Pensativo.png" id="joaozinho"
-            onclick="click()"
-            onmouseout="leave()"
-            onmouseover="over()"
-		/>
+        <div id="rosto">
+            <img src="Imagens/Pensativo.png" id="joaozinho"
+                onclick="dudeClick()"
+                onmouseout="dudeOut()"
+                onmouseover="dudeOver()"
+            />
+        </div>
         <BR>
-        <p id="mensagem"></p>
+        <div id="texto">
+            <p id="mensagem"></p>
+        </div>
     </div>
+
+    <span id="aviso"></span>
+
     <script src="js\funcoes.js"></script>
 
-    </body>
+</body>
 </html>
 <!--
     control + ; = comenta

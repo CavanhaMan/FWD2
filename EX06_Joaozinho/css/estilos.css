@@ -8,5 +8,23 @@
 }
 #mensagem{
     text-align: center;
-    background-color: bisque;
+    padding: 10px;
+}
+#rosto{
+    background-color: gray;
+    padding: 10px;
+}
+#texto{
+    background-color: yellow;
+    padding: 10px;
+}
+#aviso{
+    margin: 10px;
+    padding: 10px;
+    position: absolute;
+    right: 0px;
+    top:0px;
+    color:red;
+    font-weight: bold;
+    background-color: rgb(255, 255, 136);
 }
