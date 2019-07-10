@@ -5,7 +5,6 @@ var msg = document.getElementById("mensagem");
 console.log(msg);
 var aviso = document.getElementById("aviso");
 var timer;
-var control=0;
 var aux; 
 var brabo;
 
@@ -81,33 +80,8 @@ function dudeOut(){
             msg.innerHTML="Onde está você?<BR>Brinque comigo!!!"; 
         }, x*1000);
     }
-    // if(dude=="Alegre"){
-    //     timer = setTimeout(function(){
-	// 		setTimeout(msg.innerHTML="",4000);
-	// 		joao.src="Imagens/Nervoso.png";
-	// 		dude="Nervoso";
-	// 		console.log("dude_over_Alegre: ",dude);
-	// 	}, 5000);
-    // }
-    // else if(dude=="Assustado"){
-	// 	g_personagem = "Pensativo";
-    //     joao.src="Imagens/Pensativo.png";
-    //     dude="Pensativo";
-    // }
 }
 
-
-
-
-/******************************************* */
-//        setTimeout(function(){ joao.src="Imagens/Pensativo.png"; }, 4000);
-//        clearTimeout();
-
-
-
-function leave(){
-    control=1;
-}
 /**********************************************************************/
 
 //- mouse over Pensativo => deverá virar Assustado
