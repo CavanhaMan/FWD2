@@ -14,7 +14,7 @@ console.log(dude=="Pensativo");
 
 function dudeOver(){
     clearTimeout(brabo);
-
+    joao.className = "normal";
     //- mouse over Pensativo => deverá virar Assustado
     if (dude=="Pensativo"){
         joao.src="Imagens/Assustado.png";
@@ -26,7 +26,7 @@ function dudeOver(){
         chat.src="Imagens/f_quebom.png";
         clearTimeout(timer);
         timer = setTimeout(function(){ chat.src="Imagens/f_quebom.png"; }, 4000);
-    //     console.log("dude_over_Alegre: ",dude);
+         console.log("dude_over_Alegre: ",dude);
     }
     //- mouse over Nervoso => mensagem "Não suma mais. Gosto quando você interage comigo" =>
     //                     => depois deverá virar Alegre
@@ -38,12 +38,6 @@ function dudeOver(){
         dude="Alegre";
          console.log("dude_over_Nervoso: ",dude);
     }
-    //- mouse over Assustado e não clicar => deverá virar Pensativo
-/*    else if(dude=="Assustado"){
-        joao.src="Imagens/Pensativo.png";
-        dude="Pensativo";
-        console.log("dude_over_Assustado: ",dude);
-    }*/
 }
 
 function dudeClick(){
@@ -67,21 +61,29 @@ function dudeOut(){
     }
     //- Alegre sem clicar nem passar num intervalo de 5 e 15 segundos => Nervoso + mensagem "Onde está você? Brinque comigo!!!"
     if (dude=="Alegre"){
+        clearTimeout(y);
+        clearTimeout(z);
         var x =(Math.floor(Math.random()*15)+5);
         aux=x-1;
         console.log("tempo para ficar nervoso: "+x)
-        brabo = setInterval(function(){
-            aviso.innerHTML=("CUIDADO! Ficando nervoso em... "+aux--);
-        },1000);
+        brabo = setInterval(function(){aviso.innerHTML=("CUIDADO! Ficando nervoso em... "+aux--);},1000);
+        aviso.style.visibility = "visible";
         timer = setTimeout(function(){ 
             clearTimeout(brabo);
             dude="Nervoso";
             joao.src="Imagens/Nervoso.png";
-            chat.src="Imagens/f_ondeestaaaa.png";
+            chat.src="Imagens/f_ondeesta.png";
             timer = setTimeout(function(){ chat.src=""; }, 4000);
         }, x*1000);
+        var y = setTimeout(function(){ aviso.style.visibility = "hidden"; }, x*1000);
+        var z = setTimeout(function(){ 
+            joao.src="Imagens/Irado.png";
+            chat.src="Imagens/f_gr.png";
+            joao.className = "irado";
+        }, x*2000);
     }
 }
+
 
 /**********************************************************************/
 

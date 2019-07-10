@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://output.jsbin.com/sujinas -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" async="" src="./JS Bin_files/linkid.js.download"></script><script async="" src="./JS Bin_files/analytics.js.download"></script><script src="./JS Bin_files/jquery-2.1.4.js.download"></script>
+<script src="./JS Bin_files/velocity.min.js.download"></script>
+  <script src="./JS Bin_files/velocity.ui.min.js.download"></script>
+
+  
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2019 by aldoromo88 (http://jsbin.com/sujinas/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  
+  
+
+<style id="jsbin-css">
+.rect{
+  position: absolute;
+  width:50px;
+  height:50px;
+  background-color:green;
+  top: 30px;
+  left:30px;
+}
+</style>
+</head>
+<body>
+
+  <div class="rect" style="transform: translateX(0px) translateY(0px) rotateZ(0deg);"></div>
+  
+  <div>
+    <button id="horizontal">Horizontal</button>
+    <button id="vertical">Vertical</button>
+    <button id="angular">Angular</button>
+  </div>
+<script>
+$('#vertical').click(function(){
+  shakeVertical($('.rect'),50,800);
+});
+
+$('#horizontal').click(function(){
+  shakeHorizontal($('.rect'),50,800);
+});
+
+$('#angular').click(function(){
+  shakeAngular($('.rect'),45,800);
+});
+
+
+
+
+
+function shakeVertical(element, magnitude, duration){
+  
+  var sequence = [];
+  
+  var currentMagnitude = magnitude;
+    
+  sequence.push({ e: element, p: { translateY: '+='+magnitude }, o: { duration: duration/3 } });
+  sequence.push({ e: element, p: { translateY: '-='+2* magnitude }, o: { duration: duration/3 } });
+  sequence.push({ e: element, p: { translateY: '+='+magnitude  }, o: { duration: duration, easing:[600,10] } });
+  
+  $.Velocity.RunSequence(sequence);
+  
+}
+
+function shakeHorizontal(element, magnitude, duration){
+  
+  var sequence = [];
+  
+  var currentMagnitude = magnitude;
+    
+  sequence.push({ e: element, p: { translateX: '+='+magnitude }, o: { duration: duration/3 } });
+  sequence.push({ e: element, p: { translateX: '-='+2* magnitude }, o: { duration: duration/3 } });
+  sequence.push({ e: element, p: { translateX: '+='+magnitude }, o: { duration: duration, easing:[600,10] } });
+  
+  $.Velocity.RunSequence(sequence);
+  
+}
+
+
+function shakeAngular(element, magnitude, duration){
+  
+  var sequence = [];
+  
+  var currentMagnitude = magnitude;
+    
+  sequence.push({ e: element, p: { rotateZ: '+='+magnitude }, o: { duration: duration/3 } });
+  sequence.push({ e: element, p: { rotateZ: '-='+2* magnitude }, o: { duration: duration/3 } });
+  sequence.push({ e: element, p: { rotateZ: '+='+magnitude }, o: { duration: duration, easing:[600,10] } });
+  
+  $.Velocity.RunSequence(sequence);
+  
+}
+</script>
+<script src="./JS Bin_files/edit.js.download"></script>
+<script>jsbinShowEdit && jsbinShowEdit({"static":"https://static.jsbin.com","root":"https://jsbin.com"});</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-1656750-34', 'auto');
+ga('require', 'linkid', 'linkid.js');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+
+</script>
+
+
+</body><a id="edit-with-js-bin" href="https://jsbin.com/sujinas/edit" style="top: 0px;">Edit in JS Bin <img src="./JS Bin_files/favicon.png" width="16" height="16"></a><link rel="stylesheet" href="./JS Bin_files/edit.css"></html>
