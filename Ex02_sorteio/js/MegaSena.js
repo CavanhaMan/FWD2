@@ -15,3 +15,6 @@
 	$("#dot5").text(jogo[5]);
 	$("#dot6").text(jogo[6]);
 });
+//https://www.w3schools.com/jsref/jsref_random.asp
+//https://www.w3schools.com/jsref/jsref_sort.asp
+//https://www.w3schools.com/jquery/misc_each.asp

@@ -19,3 +19,6 @@ $(document).ready(function () {
     for (var i = 0; i < 12; i++) //monta o baralho na tela
         document.getElementById("carta" + i).src = "cartas/" + baralhosorteado[i] + ".png";
 });
+//https://www.w3schools.com/jsref/jsref_random.asp
+//https://www.w3schools.com/jsref/jsref_sort.asp
+//https://www.w3schools.com/jquery/misc_each.asp

@@ -17,3 +17,6 @@
     }
     document.write(gruposorteado);
 });
+//https://www.w3schools.com/jsref/jsref_random.asp
+//https://www.w3schools.com/jsref/jsref_sort.asp
+//https://www.w3schools.com/jquery/misc_each.asp

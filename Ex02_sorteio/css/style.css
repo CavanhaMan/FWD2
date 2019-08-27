@@ -56,7 +56,7 @@ a:link{text-decoration:none;}
 	transform: translate(-50%, -50%);
 }
 
-#mostragrupo{
+.mostragrupo{
 	background-color:#F0E68C;
 	font-size:30px;
 	padding:30px;

@@ -8,27 +8,11 @@
 	<script src="js/jquery.min.js"></script>
     <title>Exerccio 2</title>
 </head>
-<script>
-    $(document).ready(function(){
-        var grupo = ['Joao','Matheus','Gabriel','Maclopes','Breno','Keylane','Jordana','Cavanha','Cavanha','Eloah','Roberto'];
-        //var n = prompt("Quantas pessoas serão?");
-		//var grupo = new Array(n);
-		//for (var i=0 ; i<n ; i++)
-		//	grupo[i] = prompt("Nome da pessoa "+ (i+1) + ": ");
-        $.each(grupo, function(index, value){
-            $("#mostragrupo").append((index+1) + "º) " + value + '<br><hr>');
-        });
-    });
-</script>
 <body>
-	<h1>Ordem de apresentação dos grupos</h1>
-    <p id="mostragrupo"></p>
+    <h1>Ordem de apresentação dos grupos</h1>
+    <br>
+    <div class="mostragrupo"></div>
     
     <script type="text/javascript" src="js/Sorteio.js"></script>
 </body>
 </html>
-<!-- 
-https://www.w3schools.com/jsref/jsref_random.asp
-https://www.w3schools.com/jsref/jsref_sort.asp
-https://www.w3schools.com/jquery/misc_each.asp
--->
