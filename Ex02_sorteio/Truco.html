@@ -12,7 +12,7 @@
     // sortear 12 cartas - 3 para cada jogador, com 4 jogadores
     // não pode repetir cartas
     $(document).ready(function(){
-        var baralho = ['copas01','copas02','copas03','copas04','copas05','copas06','copas07','copas08','copas09','copas10','copasj','copask','copasq','espadas01','espadas02','espadas03','espadas04','espadas05','espadas06','espadas07','espadas08','espadas09','espadas10','espadasj','espadask','espadasq','ouros01','ouros02','ouros03','ouros04','ouros05','ouros06','ouros07','ouros08','ouros09','ouros10','ourosj','ourosk','ourosq','paus01','paus02','paus03','paus04','paus05','paus06','paus07','paus08','paus09','paus10','pausj','pausk','pausq'];
+        var baralho = ['copas1','copas2','copas3','copas4','copas5','copas6','copas7','copas8','copas9','copas10','copas11','copas12','copas13','espadas1','espadas2','espadas3','espadas4','espadas5','espadas6','espadas7','espadas8','espadas9','espadas10','espadas11','espadas12','espadas13','ouros1','ouros2','ouros3','ouros4','ouros5','ouros6','ouros7','ouros8','ouros9','ouros10','ouros11','ouros12','ouros13','paus1','paus2','paus3','paus4','paus5','paus6','paus7','paus8','paus9','paus10','paus11','paus12','paus13'];
         var baralhosorteado = [];
         var sorteado;
         var x = baralho.length; //qual o tamanho do baralho
@@ -27,10 +27,8 @@
             console.log('baralho velho= ',baralho);
             console.log('----------------------------------------------------');
         }
-        for(var i=0 ; i<12 ; i++){ //monta o baralho na tela
-            
-        }
-
+        for(var i=0 ; i<12 ; i++) //monta o baralho na tela
+            document.getElementById("carta"+i).src="cartas/"+baralhosorteado[i]+".svg";
     });
 </script>
 <body>
@@ -39,27 +37,27 @@
     <table align="center">
         <tr>
             <td><h1>Cartas do Jogador 1:</h1></td>
-            <td><img id="carta00" class="cartas" src="cartas\copas01.svg"></td>
-            <td><img id="carta01" class="cartas" src="cartas\copas01.svg"></td>
-            <td><img id="carta02" class="cartas" src="cartas\copas01.svg"></td>
+            <td><img id="carta0" class="cartas" src="cartas/outors1.svg"></td>
+            <td><img id="carta1" class="cartas" src="cartas/copas1.svg"></td>
+            <td><img id="carta2" class="cartas" src="cartas/copas1.svg"></td>
         </tr>
         <tr>
             <td><h1>Cartas do Jogador 2:</h1></td>
-            <td><img id="carta03" class="cartas" src="cartas\copas01.svg"></td>
-            <td><img id="carta04" class="cartas" src="cartas\copas01.svg"></td>
-            <td><img id="carta05" class="cartas" src="cartas\copas01.svg"></td>
+            <td><img id="carta3" class="cartas" src="cartas/copas1.svg"></td>
+            <td><img id="carta4" class="cartas" src="cartas/copas1.svg"></td>
+            <td><img id="carta5" class="cartas" src="cartas/copas1.svg"></td>
         </tr>
         <tr>
             <td><h1>Cartas do Jogador 3:</h1></td>
-            <td><img id="carta06" class="cartas" src="cartas\copas01.svg"></td>
-            <td><img id="carta07" class="cartas" src="cartas\copas01.svg"></td>
-            <td><img id="carta08" class="cartas" src="cartas\copas01.svg"></td>
+            <td><img id="carta6" class="cartas" src="cartas/copas1.svg"></td>
+            <td><img id="carta7" class="cartas" src="cartas/copas1.svg"></td>
+            <td><img id="carta8" class="cartas" src="cartas/copas1.svg"></td>
         </tr>
         <tr>
             <td><h1>Cartas do Jogador 4:</h1></td>
-            <td><img id="carta09" class="cartas" src="cartas\copas01.svg"></td>
-            <td><img id="carta10" class="cartas" src="cartas\copas01.svg"></td>
-            <td><img id="carta11" class="cartas" src="cartas\copas01.svg"></td>
+            <td><img id="carta9" class="cartas" src="cartas/copas1.svg"></td>
+            <td><img id="carta10" class="cartas" src="cartas/copas1.svg"></td>
+            <td><img id="carta11" class="cartas" src="cartas/copas1.svg"></td>
         </tr>
     </table>
   </body>
