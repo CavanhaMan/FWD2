@@ -33,7 +33,7 @@ $(document).ready(function (){
 
 	//FUNÇÃO MEGASENA
 	$('#ex1').click(function(e){
-		document.getElementById("imgshow").src="megasena.png"; 
+		document.getElementById("imgshow").src="img/megasena.png"; 
 		$("#mostraex").text(mostraex1);
 		$("#framehtml").attr("src", "MegaSena.html");
 		clicado=1;
@@ -42,7 +42,7 @@ $(document).ready(function (){
 
 	//FUNÇÃO SORTEIO
 	$('#ex2').click(function(e){
-		document.getElementById("imgshow").src="sorteio.png"; 
+		document.getElementById("imgshow").src="img/sorteio.png"; 
 		//document.getElementById("imgmega").style.visibility = "hidden"; 
 		$("#mostraex").text(mostraex2);
 		$("#framehtml").attr("src", "Sorteio.html");
@@ -52,7 +52,7 @@ $(document).ready(function (){
 
 	//FUNÇÃO SORTEIO SIMPLIFICADA
 	$('#ex2a').click(function(e){
-		document.getElementById("imgshow").src="sorteio.png"; 
+		document.getElementById("imgshow").src="img/sorteio.png"; 
 		//document.getElementById("imgmega").style.visibility = "hidden"; 
 		$("#mostraex").text(mostraex2);
 		$("#framehtml").attr("src", "SorteioEasy.html");
@@ -61,7 +61,7 @@ $(document).ready(function (){
 
 	//FUNÇÃO BARALHO TRUCO
 	$('#ex3').click(function(e){
-		document.getElementById("imgshow").src="truco.png"; 
+		document.getElementById("imgshow").src="img/truco.png"; 
 		//document.getElementById("imgmega").style.visibility = "hidden"; 
 		$("#mostraex").text(mostraex3);
 		$("#framehtml").attr("src", "Truco.html");
