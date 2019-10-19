@@ -1,0 +1,25 @@
+.box {
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+}
+p {
+    font-weight: bold;
+    color:darkblue;
+}
+input, select, textarea {
+    width: 100%;
+}
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+}
+.aviso {
+    color:red;
+    font-size: 14px;
+}
+.invisivel {
+    display: none;
+}
+.visivel {
+    display: block;
+}

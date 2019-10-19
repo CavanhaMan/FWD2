@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+	<link href="Estoque.css" rel="stylesheet">
+    <title>Estoque</title>
+</head>
+<body>
+    <form name="novoProduto" id="novoProduto" novalidate="novalidate" class="center" action="" method="post">
+        <h2>Cadastro de novos produtos</h2>    
+        <div class="vermelho">
+            <label for="nome" class="lbcampo">Nome do produto:</label>
+            <input id="nome" class="campo" type="text" placeholder="Nome do produto" title="Insira o nome do produto" />
+            <label for="codigo" class="lbcampo">Código do produto:</label>
+            <input id="codigo" class="campo" type="text" placeholder="Código do produto" title="Insira o código do produto" />
+            <label for="quant" class="lbcampo">Quantidade do produto:</label>
+            <select id="quant" class="campo qt" title="Insira a quantidade a ser cadastrada" />
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            </div>
+            <div class="center2">
+                <input type="button" class="botao" value="Cadastrar" name="cadastrar" onclick="cadastrarProduto()" title="Clique aqui para cadastrar o produto" />
+                <input type="button" class="botao" value="Ver estoque" name="verestoque" onClick="verEstoque()" title="Clique aqui para ver o estoque de produtos" />
+                <input type="button" class="botao" value="Limpar" name="limpar" onClick="limparFormulario()" title="Clique aqui para limpar os campos acima" />
+            </div>
+    </form>
+
+    <div class="carrinho">
+        <img src="carrinho.jpg" alt="Carrinho:" width=60 />
+        Itens no estoque: <spam id="qtdCarrinho">0</spam>
+    </div>
+
+    <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+    <hr>
+    <h1>Estoque:</h1>
+    <ul id="lista"></ul>
+
+
+    <script type="text/javascript" src="Estoque.js"></script>
+    <!--input type="button" value="Testa aumentar estoque" name="teste" onClick="testar()" /-->
+
+</body>
+</html>

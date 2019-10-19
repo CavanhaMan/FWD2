@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/restom.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <script src="js/funcoes.js"></script>
+</head>
+<body>
+    <div class="box">
+        <p class="aviso">OBS: Todas as informações são de preenchimento obrigatório</p>
+        <form id="formDadosPessoais">
+            <div class="linha">
+                <div class="col-dg-12 col-dm-12">
+                    <label for="">Nome</label>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="col-dm-4 col-dg-4">
+                    <label for="">Idade</label>
+                    <input type="number" min="1" max="130">
+                </div>
+                <div class="col-dm-8 col-dg-8">
+                    <label for="">Estado civil</label>
+                    <select>
+                        <option value="selecione">Selecione</option>
+                        <option value="Solteiro">Solteiro</option>
+                        <option value="Casado">Casado</option>
+                        <option value="Divorciado">Divorciado</option>
+                        <option value="Viúvo">Viúvo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="linha">
+                <p class="col-dg-12 col-dm-12" for="">Sexo</p>
+                <div class="col-dg-12 col-dm-12">
+                    <input type="radio" name="rdSexo" id="sexo1" value="Masculino"><label for="sexo1">Masculino</label>
+                    <input type="radio" name="rdSexo" id="sexo2" value="Feminino"><label for="sexo2">Feminino</label>
+                    <input type="radio" name="rdSexo" id="sexo3" value="Não informado"><label for="sexo3">Não quero informar</label>
+                </div>
+            </div>
+            <div class="linha">
+                <p class="col-dg-12 col-dm-12">Como você conheceu o nosso site?</p>
+                <div class="col-dg-6 col-dm-6">
+                    <input type="checkbox" name="cbNossoSite" value="Internet" id="siteOpcao1"><label for="siteOpcao1">Internet</label><br>
+                    <input type="checkbox" name="cbNossoSite" value="Amigos" id="siteOpcao2"><label for="siteOpcao2">Amigos</label><br>
+                    <input type="checkbox" name="cbNossoSite" value="Redes Sociais" id="siteOpcao3"><label for="siteOpcao3">Redes Sociais</label>
+                </div>
+                <div class="col-dg-6 col-dm-6">
+                    <input type="checkbox" name="cbNossoSite" value="Convite de amigos" id="siteOpcao4"><label for="siteOpcao4">Convite de amigos</label><br>
+                    <input type="checkbox" name="cbNossoSite" value="Spam" id="siteOpcao5"><label for="siteOpcao5">Spam</label><br>
+                    <input type="checkbox" name="cbNossoSite" value="Email" id="siteOpcao6"><label for="siteOpcao6">Email</label>
+                </div>
+            </div>
+            <div class="linha">
+                <p class="col-dg-12 col-dm-12">Sugestões, comentários e/ou elogios</p>
+                <textarea rows="5" id="TxtSugestoes"></textarea>
+            </div>        
+            <div class="linha">
+                <input class="col-dg-6 col-dm-6" type="button" value="Cadastrar">
+                <input class="col-dg-6 col-dm-6" type="button" value="Limpar">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

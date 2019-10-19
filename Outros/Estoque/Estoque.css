@@ -1,0 +1,67 @@
+h2{
+	color: rgb(215,96,100);
+	margin:0px;
+	text-align: center;
+}
+.center{
+	position: absolute;
+	top:10%;
+	left: 50%;
+	transform: translate(-50%);
+	border: 0px;
+	width:360px;
+}
+.center2{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%);
+	border: 0px;
+	top:-60px;
+}
+.vermelho{
+	background-color: rgb(215,96,100);
+	height: 150px;
+	border-radius: 10px;
+}
+label{
+	color:white;
+}
+.lbcampo, .campo{
+	float:left;
+}
+.lbcampo{
+	margin: 10px 0px 0px 5px;
+	width:160px;
+	text-align: right;
+}
+.campo{
+	margin: 10px 0px 0px 5px;
+	width:170px;
+}
+.qt{
+	width:40px;
+	margin-right: 100px;
+}
+.botao{
+	color:white;
+	background-color: black;
+	border-radius: 10px;
+	width: 100px;
+	height: 30px;
+	border: 0px;
+	margin: 15px 0px 0px 12px;
+	font-weight: bold;
+}
+/*margin: top right bottom left*/
+.carrinho{
+	position: absolute;
+	left: 78%;
+}
+iframe{
+	border:0;
+	margin:0;
+	width:100%;
+}
+.pgestoque{
+	height: 450px;
+}
