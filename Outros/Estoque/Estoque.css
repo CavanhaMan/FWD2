@@ -65,3 +65,9 @@ iframe{
 .pgestoque{
 	height: 450px;
 }
+.resultado{
+	position: absolute;
+	top:40%;
+	border: 0px;
+	width:100%;
+}
