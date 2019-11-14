@@ -22,14 +22,13 @@
 		var nome = prompt("Digite seu nome completo:");
 		var nomao = document.getElementById("bigname")
 		nomao.innerHTML = nome;
-		
-			setInterval(function(){
-				if(aux<30){
-					aux+=2;
-					console.log(aux);
-					nomao.style.fontSize=aux+"px";
-				}
-			},500);
+		setInterval(function(){
+			if(aux<30){
+				aux+=2;
+				console.log(aux);
+				nomao.style.fontSize=aux+"px";
+			}
+		},500);
 	
 	</script>
 
