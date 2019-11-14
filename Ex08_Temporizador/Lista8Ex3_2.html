@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- @author Michelle Naves -->
+<!-- Rodrigo Cavanhaman -->
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -8,27 +8,32 @@
     <title>Ex03</title>
 	<style>
 		fieldset{height:120px;}
-		p{font-size:14px;}
+		p{
+			font-size:14px;
+			-webkit-transition: font-size 1s; /* For Safari 3.1 to 6.0 */
+  			transition: font-size 1s;
+  		}
 	</style>
   </head>
   <body>
 	<p>Crie uma página web para solicitar o nome completo do usuário e, em seguida, exibi-lo no corpo do documento com o tamanho de fonte igual a 14 pixels. O tamanho do texto irá aumentar gradativamente e automaticamente até chegar o tamanho de 40 pixels. O incremento deverá ser de 2 em 2 pixels a cada intervalo de 0,5 segundo (meio segundo).</p>
-	<fieldset>
-		<legend>Nome do Usuário:</legend>
-		<p id="bigname"></p>
-	</fieldset>
+	<p>Adicionada a função extra de solicitar o tamanho.</p>
+	<h3>Nome do Usuário:</h3>
+	<p id="bigname"></p>
+	
 	<script>
 		var aux=14;
 		var nome = prompt("Digite seu nome completo:");
+		var tam = prompt("Qual tamanho quer o nome? (digite um número)");
 		var nomao = document.getElementById("bigname")
 		nomao.innerHTML = nome;
 		setInterval(function(){
-			if(aux<40){
+			if(aux<tam){
 				aux+=2;
 				console.log(aux);
 				nomao.style.fontSize=aux+"px";
 			}
-		},500);
+		},100);
 	
 	</script>
 

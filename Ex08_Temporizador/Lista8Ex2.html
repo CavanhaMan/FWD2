@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Rodrigo Cavanhaman -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex02</title>
+
+<script>
+    function trocaTexto(){
+        var x = document.getElementById("texto1").value;
+		console.log(x);
+        if(x != ""){
+            document.getElementById("texto2").value = x;
+			document.getElementById("texto1").value = "";
+		}
+        else 
+			document.getElementById("texto2").value = "erro";
+    }
+	
+	function pegaTempo(){
+		var t = document.getElementById("tempo").value;
+		console.log(t);
+		return t*1000;
+	}
+</script>
+</head>
+<body>
+	<p>Crie uma página web contendo um formulário composto por duas caixas de texto, uma caixa de seleção (< select >) composta pelos seguintes valores (1, 2, ... 10) e um botão. Ao clicar sobre o botão a página irá aguardar o tempo correspondente aos segundos selecionado pelo usuário na caixa de seleção para remover o texto da primeira caixa e inseri-lo na segunda caixa.</p>
+    <form action></form>
+        <fieldset>
+			<legend>Troca de texto</legend>
+			Texto1:<br>
+			<input type="text" id="texto1" name="tex" value="CavanhaMan"><br>
+			<br>
+			Texto2<br> 
+			<input type="text" id="texto2" name="texto5" value=""><br>
+			<br>
+			Tempo:<br> 
+			<select id="tempo">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select><br><br>
+
+          <input type="submit" value="troca texto sem timer" onclick="trocaTexto()">
+          <input type="submit" value="troca texto com timer" onclick="setTimeout(trocaTexto, pegaTempo())">
+		  
+        </fieldset>
+    </form>
+
+</body>
+</html>
