@@ -8,13 +8,13 @@
     <title>Ex05</title>
   </head>
   <body>
+
 	<p>Crie uma página web que solicite N nomes ao usuário, armazene-os em um vetor e, em seguida, exiba-os no corpo do documento (um embaixo do outro). Cada nome deverá ser exibido automaticamente um após o outro após o intervalo de 1 segundo.</p>
-	<h3>Lista de Nomes</h3>
-	<ul id="listanomes"></ul> 
 
-	<script>
-		var lista = document.getElementById("listanomes");
-
+	<h3>Lista de Nomes:</h3>
+	<ul id="listanomes"></ul>
+	  
+    <script>
 		var nomes = prompt("Digite os nomes separando-os com espaço:");
 		console.log(nomes);
 		var vetnomes = nomes.split(" ");
@@ -23,15 +23,25 @@
 		console.log(n);
 		var aux=0;
 
+		var lista = document.getElementById("listanomes");
+
 		setInterval(function(){
 			if(aux<n){
-				var node = document.createElement("LI");
-				node.appendChild(vetnomes[aux]);
-				lista.appendChild(node);
-				aux++;
+			var node = document.createElement("LI");
+			var textnode = document.createTextNode(vetnomes[aux]);
+			node.appendChild(textnode);
+			lista.appendChild(node);
+			aux++;
 			}
 		},1000);
-				
 	</script>
-  </body>
+	  
+
+</body>
 </html>
+<!-- Note:
+First create an LI node,
+then create a Text node,
+then append the Text node to the LI node.
+Finally append the LI node to the list.
+-->
