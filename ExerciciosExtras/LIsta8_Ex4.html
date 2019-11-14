@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- @author Michelle Naves -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex04</title>
+	<style>
+		fieldset{height:120px;}
+		p{font-size:14px;}
+	</style>
+  </head>
+  <body>
+	<p>Crie uma página web para exibir a seguinte mensagem no corpo do documento “Por favor, aguarde X segundos para carregar a página do Google”. O valor de X deverá ser informado primeiro pelo usuário. O texto deverá ser exibido no corpo do documento e atualizado a cada 1 segundo, onde o valor de X deverá ser decrementado em 1 unidade a cada segundo até chegar ao valor zero. Após esse critério ter sido cumprido a página do Google (www.google.com) será aberta na mesma aba.</p>
+	<fieldset>
+		<legend>Carregando a Página do GOOGLE:</legend>
+		<h1 id="google">Por favor, aguarde <div id="tempogl"></div> segundos para carregar a página do Google!</h1>
+	</fieldset>
+	<script>
+		var aux=16;
+		var tempo = prompt("Informe o tempo de espera para abrir a página do Google:");
+		var vgoogle = document.getElementById("google");
+		var vtempogl = document.getElementById("tempogl");
+		nomao.innerHTML = nome;
+		nomao.style.fontSize=30;
+		
+			setInterval(function(){
+				if(aux<30){
+					aux+=2;
+					console.log(aux);
+					nomao.style.fontSize=aux+"px";
+				}
+			},500);
+	
+	</script>
+
+  </body>
+</html>

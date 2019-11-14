@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- @author Michelle Naves -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex03</title>
+	<style>
+		fieldset{height:120px;}
+		p{font-size:14px;}
+	</style>
+  </head>
+  <body>
+	<p>Crie uma página web para solicitar o nome completo do usuário e, em seguida, exibi-lo no corpo do documento com o tamanho de fonte igual a 14 pixels. O tamanho do texto irá aumentar gradativamente e automaticamente até chegar o tamanho de 40 pixels. O incremento deverá ser de 2 em 2 pixels a cada intervalo de 0,5 segundo (meio segundo).</p>
+	<fieldset>
+		<legend>Nome do Usuário:</legend>
+		<p id="bigname"></p>
+	</fieldset>
+	<script>
+		var aux=14;
+		var nome = prompt("Digite seu nome completo:");
+		var nomao = document.getElementById("bigname")
+		nomao.innerHTML = nome;
+		
+			setInterval(function(){
+				if(aux<30){
+					aux+=2;
+					console.log(aux);
+					nomao.style.fontSize=aux+"px";
+				}
+			},500);
+	
+	</script>
+
+  </body>
+</html>

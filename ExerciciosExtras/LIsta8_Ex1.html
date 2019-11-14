@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- @author Michelle Naves -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex01</title>
+
+<script>
+    function trocaTexto(){
+        var x = document.getElementById("texto1").value;
+		console.log(x);
+        if(x != ""){
+            document.getElementById("texto2").value = x;
+			document.getElementById("texto1").value = "";
+		}
+        else 
+			document.getElementById("texto2").value = "erro";
+    }
+</script>
+</head>
+<body>
+	<p>Crie uma página web contendo um formulário composto por duas caixas de texto e um botão. Ao clicar sobre o botão a página irá aguardar 2 segundos para remover o texto da primeira caixa e inseri-lo na segunda caixa</p>
+    <form action></form>
+        <fieldset>
+          <legend>Troca de texto</legend>
+		  Texto1:<br>
+          <input type="text" id="texto1" name="tex" value="michelle"><br>
+		  <br>
+          Texto2<br> 
+          <input type="text" id="texto2" name="texto5" value=""><br><br>
+
+          <input type="submit" value="troca texto sem timer" onclick="trocaTexto()">
+          <input type="submit" value="troca texto com timer" onclick="setTimeout(trocaTexto, 3000)">
+		  
+        </fieldset>
+    </form>
+
+</body>
+</html>
