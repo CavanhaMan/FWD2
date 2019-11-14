@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- @author Michelle Naves -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ex07</title>
+	<style>
+		.cartas, #botao{
+			margin:10px;
+			width:208px;
+		}
+	</style>
+  </head>
+  <body>
+	<p>Refaça o exercício 7, porém ao clicar sobre o botão deverão ser exibidas duas cartas aleatórias, uma ao lado da outra.</p>
+
+	<h3>Carta Sorteada:</h3>
+	<img id="carta1" class="cartas" src="cartas/joker.png">
+	<img id="carta2" class="cartas" src="cartas/joker.png">
+	<BR>
+	<button id="botao" onclick="trocaCarta()" title="Clique aqui para sortear uma carta">Troca Carta</button>
+
+
+    <script>
+		function trocaCarta(){
+			var baralho = ['copas1', 'copas2', 'copas3', 'copas4', 'copas5', 'copas6', 'copas7', 'copas8', 'copas9', 'copas10', 'copas11', 'copas12', 'copas13', 'espadas1', 'espadas2', 'espadas3', 'espadas4', 'espadas5', 'espadas6', 'espadas7', 'espadas8', 'espadas9', 'espadas10', 'espadas11', 'espadas12', 'espadas13', 'ouros1', 'ouros2', 'ouros3', 'ouros4', 'ouros5', 'ouros6', 'ouros7', 'ouros8', 'ouros9', 'ouros10', 'ouros11', 'ouros12', 'ouros13', 'paus1', 'paus2', 'paus3', 'paus4', 'paus5', 'paus6', 'paus7', 'paus8', 'paus9', 'paus10', 'paus11', 'paus12', 'paus13'];
+
+			var sorteado1 = Math.floor(Math.random() * (52));//sorteia entre 0 e total de cartas
+			console.log('sorteado1= ', sorteado1);
+			var cartasorteada1 = (baralho[sorteado1]);
+			console.log('sorteada1= ', cartasorteada1);
+			document.getElementById("carta1").src = "cartas/" + cartasorteada1 + ".png";
+
+			baralho.splice(sorteado1, 1); //retira a carta sorteada do baralho para não repetir
+
+			var sorteado2 = Math.floor(Math.random() * (51));//sorteia entre 0 e total de cartas -1 ja sorteada
+			console.log('sorteado2= ', sorteado2);
+			var cartasorteada2 = (baralho[sorteado2]);
+			console.log('sorteada2= ', cartasorteada2);
+			document.getElementById("carta2").src = "cartas/" + cartasorteada2 + ".png";
+		}
+	</script>
+
+</body>
+</html>
