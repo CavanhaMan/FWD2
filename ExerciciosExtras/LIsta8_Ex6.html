@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- @author Michelle Naves -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ex06</title>
+	<style>
+		.cartas{
+			margin:10px;
+			width:208px;
+		}
+	</style>
+  </head>
+  <body>
+	<p>Crie uma página web que solicite N nomes ao usuário, armazene-os em um vetor e, em seguida, exiba-os no corpo do documento (um embaixo do outro). Cada nome deverá ser exibido automaticamente um após o outro após o intervalo de 1 segundo.</p>
+
+	<h3>Carta Sorteada:</h3>
+	<img id="carta" class="cartas" src="cartas/joker.png">
+	  
+    <script>
+		var baralho = ['copas1', 'copas2', 'copas3', 'copas4', 'copas5', 'copas6', 'copas7', 'copas8', 'copas9', 'copas10', 'copas11', 'copas12', 'copas13', 'espadas1', 'espadas2', 'espadas3', 'espadas4', 'espadas5', 'espadas6', 'espadas7', 'espadas8', 'espadas9', 'espadas10', 'espadas11', 'espadas12', 'espadas13', 'ouros1', 'ouros2', 'ouros3', 'ouros4', 'ouros5', 'ouros6', 'ouros7', 'ouros8', 'ouros9', 'ouros10', 'ouros11', 'ouros12', 'ouros13', 'paus1', 'paus2', 'paus3', 'paus4', 'paus5', 'paus6', 'paus7', 'paus8', 'paus9', 'paus10', 'paus11', 'paus12', 'paus13'];
+		var sorteado = Math.floor(Math.random() * (52));//sorteia entre 0 e total de cartas
+		console.log('sorteado= ', sorteado);
+		var cartasorteada = (baralho[sorteado]);
+		console.log('carta sorteada= ', cartasorteada);
+		
+		document.getElementById("carta").src = "cartas/" + cartasorteada + ".png";
+	</script>
+
+</body>
+</html>
