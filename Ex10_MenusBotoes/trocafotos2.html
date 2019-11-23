@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Rodrigo CavanhaMan">
+		<title>Lista de Exercícios 7-20</title>
+		<style>
+			.banda{
+				width:500px;
+			    display: block;
+				position:absolute;
+				left:50%;
+				top:50%;
+				transform: translate(-30%, -50%);
+			}
+			#resultado{
+				width=250px;
+				height=250px;
+				color:red;
+				display: block;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			.img3{
+				max-width:177px;
+				margin-botton:20px;
+			}
+			body{background:black;}
+			.colunas{float:left;}
+			.col1{width:200px;}
+		</style>
+	</head>
+	<body>
+		<div class="colunas col1">
+			<img class="img3" id="0" src="image/logo1.jpg" /><BR>
+			<img class="img3" id="1" src="image/logo2.jpg" /><BR>
+			<img class="img3" id="2" src="image/logo3.jpg" /><BR>
+			<img class="img3" id="3" src="image/logo4.jpg" />
+		</div>
+		<div class="colunas col2">
+			<img id="resultado" class="banda" src="image/logo1.jpg">
+		</div>
+				
+		<script>
+			//=======================================================================
+			//Manipulação imagens com atributo customizado "ligada"
+			var trocaImagem = [];
+			trocaImagem[0] = "image/logo1.jpg";
+			trocaImagem[1] = "image/logo2.jpg";
+			trocaImagem[2] = "image/logo3.jpg";
+			trocaImagem[3] = "image/logo4.jpg";
+			var num = 0;
+			//var trocaImagem = ["logo1.jpg", "logo2.jpg", "logo3.jpg", "logo4.jpg"];
+			//var trocaImagem = "logo1.jpg";
+			
+			var imagens = document.querySelectorAll(".img3");
+			for(var i=0;i<4;i++){
+				imagens[i].onclick = function(){
+					if (this.id === "0") num=0;
+					if (this.id === "1") num=1;
+					if (this.id === "2") num=2;
+					if (this.id === "3") num=3;
+					resultado.src = trocaImagem[num];
+				}
+			}
+			//=======================================================================
+		</script>
+	</body>
+</html>

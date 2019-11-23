@@ -1,0 +1,38 @@
+.bandas{
+    width:500px;
+	height:500px;
+	color:red;
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+}
+body{background:black;}
+p{
+	font-size:50px;
+	font-weight:bold;
+}
+button:focus { outline: none; }
+.botao{
+    font-size:24px;
+    width:130px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.botao:hover:enabled {
+	background-color: gray;
+	color: white;
+}
+.auto{color:blue;}
+.manual{color:green;}
+button:disabled{color:red;}
+.bolas{
+	width:200px;
+    /*codigo para centralizar horizontalmente:*/
+    margin: 0;
+    position: absolute;
+    left: 50%;
+	transform: translate(-50%);
+}
+.btb{float: left;}
+.btn{float: right;}

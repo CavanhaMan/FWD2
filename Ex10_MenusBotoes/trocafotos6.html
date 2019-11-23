@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<style>
+			.banda{
+				width:500px;
+				border: 1px solid red;
+			}
+			img{
+				max-width:20%;
+				margin-left:2%;
+				margin-right:2%;
+				padding:0px;
+				border:0px;
+			}
+			body{background:black;}
+			p{
+				font-size:50px;
+				font-weight:bold;
+			}
+			button{
+				width:150px;
+				height:40px;
+				color: white;
+				background:black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<center>
+			<img src="image/logo1.jpg" name="buildingpic"/>
+			<img src="image/logo2.jpg" name="buildingpic"/>
+			<img src="image/logo3.jpg" name="buildingpic"/>
+			<img src="image/logo4.jpg" name="buildingpic"/>
+			<img src="image/logo5.jpg" class="banda" name="buildingpic"/><!-- escondido pra dar certo -->
+			<!--p><A href="javascript:changepic();">next</A></p--> 
+			<BR><BR><BR>
+			<button id="btlista13" onclick="changepic()">Alterna as Imagens</button>
+	
+		</center>
+
+		<script type="text/javascript">
+			var building = [];
+			building[0] = "image/logo1.jpg";
+			building[1] = "image/logo2.jpg";
+			building[2] = "image/logo3.jpg";
+			building[3] = "image/logo4.jpg";
+			building[4] = "image/logo5.jpg";
+			var num = 0;
+
+			//FAZ DE FRENTE PRA TRÁS:
+			function changepic(){
+				for(var i=4 ; i>=0 ; i--){
+					if (num>=building.length-1){
+						num=0;
+					}
+					num=num+1;
+					document.buildingpic[i].src=building[num];
+				}
+			}
+			
+			//FAZ DE TRÁS PRA FRENTE:
+/*			function changepic(){
+				for(var i=0 ; i<=3 ; i++){
+					if (num>=building.length-1){
+						num=0;
+					}
+					num=num+1;
+					document.buildingpic[i].src=building[num];
+				}
+			}*/
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Rodrigo Cavanhaman -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <link href="css/trocafotos.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
+    <title>Teste Temporizador</title>
+</head>
+<body>
+    <center>
+        <img src="image/logo1.jpg" name="buildingpic" class="bandas" />
+        <BR>
+        <img src="image/5bolas1.png" name="bolas" class="bolas" usemap="#image-map" alt="Botoes">
+        <BR><BR><BR><BR>
+        <button class="botao auto" id="play" onclick="crPlay()" title="Inicia o visualizador automático de fotos"><i class='far fa-play-circle'></i> Play</button>
+        <button class="botao auto" id="pause" onclick="crPause()" disabled title="Pausa o visualizador automático de fotos"><i class='far fa-pause-circle'></i> Pause</button>
+        <button class="botao auto" id="stop" onclick="crStop()" disabled title="Para o visualizador automático de fotos"><i class='far fa-stop-circle'></i> Stop</button>
+        <BR><BR>
+        <button class="botao manual btb" id="back" onclick="changePicBack()" title="Muda para a próxima foto a cada clique"><i class='far fa-arrow-alt-circle-left'></i> Back</button>
+        <button class="botao manual btn" id="next" onclick="changePic()" title="Muda a foto anterior a cada clique">Next <i class='far fa-arrow-alt-circle-right'></i></button>
+
+     </center>
+  
+    <script type="text/javascript" src="js/trocafotos.js"></script>
+</body>
+</html>
+
+
+<!-- 
+Para pegar novos ícones:
+https://www.w3schools.com/icons/icons_reference.asp
+-->
