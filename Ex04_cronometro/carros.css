@@ -1,0 +1,13 @@
+h1{
+    color: red;
+    text-align: center;
+}
+h2{
+    margin-top: 70px;
+    color: green;
+    text-align: center;
+}
+#carro, #descricao {float: left;}
+#carro{width: 400px;}
+#descricao{width: 350px;}
+li{margin: 10px 0px 0px 40px;}
