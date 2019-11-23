@@ -1,4 +1,4 @@
-img{
+.bandas{
     width:500px;
 	height:500px;
 	color:red;
@@ -26,3 +26,13 @@ button:focus { outline: none; }
 .auto{color:blue;}
 .manual{color:green;}
 button:disabled{color:red;}
+.bolas{
+	width:200px;
+    /*codigo para centralizar horizontalmente:*/
+    margin: 0;
+    position: absolute;
+    left: 50%;
+	transform: translate(-50%);
+}
+.btb{float: left;}
+.btn{float: right;}

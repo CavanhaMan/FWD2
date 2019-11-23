@@ -11,3 +11,11 @@ h2{
 #carro{width: 400px;}
 #descricao{width: 350px;}
 li{margin: 10px 0px 0px 40px;}
+.bolas{
+    width:100px;
+    /*codigo para centralizar horizontalmente:*/
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
