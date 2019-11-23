@@ -1,6 +1,6 @@
 @font-face {
     font-family: "digit";
-    src: url("DS-DIGIT.TTF") format("truetype");
+    src: url("../fonts/DS-DIGIT.TTF") format("truetype");
     }
 .digit{
     font-family: "digit";

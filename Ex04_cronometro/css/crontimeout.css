@@ -1,30 +1,16 @@
-@font-face {
-    font-family: "digito";
-    src: url("DS-DIGIT.TTF") format("truetype");
-    }
-.digito{
-    font-family: "digit";
-    font-size: 80px;
-    margin:0px;
-	width: 80px;
-	color:black;
-	background: gainsboro;
-	height:60px;
-	border:0px;
-}
+.digit{color:black;}
 .display{color:black;}
 .center{background:#ccff99;}
-.pontos{margin:-20px;}
 .grande{width:200px;}
 .pequeno{
-    font-size:17px;
-    width:90px;
+    font-size:20px;
+    width:100px;
 }
 .center{
     text-align: center;
     background:beige;
-    width:290px;
-    height:230px;
+    width:310px;
+    height:280px;
 	position: relative;
 	left: 50%;
 	/* bring your own prefixes */
@@ -36,11 +22,10 @@
 	border-width:3px;  
 	border-style:inset;
     color:black;
-	width:290px;
+	width:310px;
     height:80px;
     position: relative;
 	left: 50%;
 	/* bring your own prefixes */
 	transform: translate(-50%);
-
 }

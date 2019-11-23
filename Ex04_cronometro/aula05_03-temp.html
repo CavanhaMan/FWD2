@@ -8,27 +8,33 @@
     <form>
         <input type="button" value="Muda" id="btMudar" onclick="btnMudar()">
         <input type="button" value="Volta" id="btVoltar" onclick="btnVoltar()">
-        <input type="button" value="Temporizador" id="btMudaTexto" onclick="mudarTexto()">
+        <input type="button" value="Temporizador" id="btMudaTexto" onclick="setInterval(mudarTexto, 3000)">
         <BR><BR>
     </form>
-    <p id="texto">CavanhaMan</p>
+    <h1 id="texto">CavanhaMan</h1>
     <script>
+		var frase=0;
+		texto1 = "Sistemas para Internet";
+		texto2 = "CavanhaMan";
+		var origem = document.getElementById("texto");
+
         function btnMudar(){
-            document.getElementById("texto").innerHTML = "Sistemas para Internet"
+            origem.innerHTML = texto1;
         }
         function btnVoltar(){
-            document.getElementById("texto").innerHTML = "CavanhaMan"
+            origem.innerHTML = texto2;
         }
 
         function mudarTexto(){
-            setTimeout("btnMudar()",3000);
-            setTimeout("btnVoltar()",3000);
+			if(frase==0){
+	            btnMudar();
+				frase=1;
+			}
+			else{
+				btnVoltar();
+				frase=0;
+			}
         }
     </script>
 </body>
 </html>
-<!--
-TEMPORIZADORES
-
-
--->

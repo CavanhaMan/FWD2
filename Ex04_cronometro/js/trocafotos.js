@@ -1,8 +1,8 @@
 var building = [];
-building[0] = "logo1.jpg";
-building[1] = "logo4.jpg";
-building[2] = "logo5.jpg";
-building[3] = "logo6.jpg";
+building[0] = "image/logo1.jpg";
+building[1] = "image/logo4.jpg";
+building[2] = "image/logo5.jpg";
+building[3] = "image/logo6.jpg";
 var num = 0;
 var pausado=0;
 
