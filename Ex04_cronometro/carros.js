@@ -1,29 +1,21 @@
 var num = 0;
 
-var carr = [];
-carr[0] = "car0.jpg"
-carr[1] = "car1.jpg"
-carr[2] = "car2.jpg"
-
-var nome = [];
-nome[0] = "Civic";
-nome[1] = "Corola";
-nome[2] = "Focus";
-
-var pote = [];
-pote[0] = "140 cv";
-pote[1] = "155 cv";
-pote[2] = "172 cv";
-
-var gara = [];
-gara[0] = "3 anos";
-gara[1] = "3 anos";
-gara[2] = "5 anos";
-
-var cons = [];
-cons[0] = "9,2 km/l";
-cons[1] = "não informado";
-cons[2] = "8,5 km/l";
+var carros = [][];
+carros[0][0] = "car0.jpg"
+carros[0][1] = "car1.jpg"
+carros[0][2] = "car2.jpg"
+carros[1][0] = "Civic";
+carros[1][1] = "Corola";
+carros[1][2] = "Focus";
+carros[2][0] = "140 cv";
+carros[2][1] = "155 cv";
+carros[2][2] = "172 cv";
+carros[3][0] = "3 anos";
+carros[3][1] = "3 anos";
+carros[3][2] = "5 anos";
+carros[4][0] = "9,2 km/l";
+carros[4][1] = "não informado";
+carros[4][2] = "8,5 km/l";
 
 var imag = document.getElementById("imag");
 var vnome = document.getElementById("nome");
@@ -38,14 +30,10 @@ setInterval(function () {
 function mudaCarro() {
     if (num >= 2) num = 0;
     else num++;
-    imag.src = carr[num];
-    vnome.innerHTML = nome[num];
-    vpote.innerHTML = pote[num];
-    vgara.innerHTML = gara[num];
-    vcons.innerHTML = cons[num];
-    console.log(imag);
-    console.log(nome);
-    console.log(pote);
-    console.log(gara);
-    console.log(cons);
+    imag.src = carros[0][num];
+    vnome.innerHTML = carros[1][num];
+    vpote.innerHTML = carros[2][num];
+    vgara.innerHTML = carros[3][num];
+    vcons.innerHTML = carros[4][num];
+
 }
