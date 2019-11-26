@@ -1,0 +1,23 @@
+
+ p1    p2
+
+ p4    p3
+
+p1(x,y) -> x=(objP.left) e y=(objP.top)
+p2(x,y) -> x=(objP.left + objP.width) e y=(objP.top)
+p4(x,y) -> x=(objP.left + objP.width) e y=(objP.top + objP.height)
+p3(x,y) -> x=(objP.left) e y=(objP.top + objP.height)
+
+o1    o2
+
+o3    o4
+
+o1(x,y) -> x=(objO.left) e y=(objO.top)
+o2(x,y) -> x=(objO.left + objO.width) e y=(objO.top)
+o4(x,y) -> x=(objO.left + objO.width) e y=(objO.top + objO.height)
+o3(x,y) -> x=(objO.left) e y=(objO.top + objO.height)
+
+
+quando vai haver colisão?
+quando:
+p4 > o1
