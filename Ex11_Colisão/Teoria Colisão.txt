@@ -20,4 +20,16 @@ o3(x,y) -> x=(objO.left) e y=(objO.top + objO.height)
 
 quando vai haver colisão?
 quando:
-p4 > o1
+P1
+p1X >= o1X e
+p1Y >= o1Y e
+p1X <= o2X e
+p1Y <= o2Y
+
+P2
+p2X >= o4X e
+p2Y <= o4Y e
+p2X >= o1X e
+p2Y >= o2Y
+
+
