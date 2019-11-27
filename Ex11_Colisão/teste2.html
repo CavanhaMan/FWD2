@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<!-- This is just my HTML5-valid template. Make sure you set this up correctly for your personal needs -->
-<html>
+<!-- Rodrigo Cavanhaman -->
+<html lang="pt-br">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title></title>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Language" content="pt-br">
+	<link href="index.css" rel="stylesheet">
+  <title>EXERCÍCIO COLISÃO</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     img{width: 100px;}
     html {background-color: black;}
     div {float: left;}
-    #page_Wrapper {}
   </style>
 </head>
 
 <body>
-  <div id="page_Wrapper">
-    <img src="pacman6b.gif" id="pacman" style="position: fixed;" />
-  </div>
-
-  <!-- Include the script after all DOM elements have been created, to avoid any potential DOM-related errors -->
+  <img src="pacman6b.gif" id="pacman" style="position: fixed;" />
   <script>
     window.onLoad = Prep();
 
@@ -37,11 +35,11 @@
     }
 
     function movepacman() {
-      var randNum_V = Math.round(Math.random() * espacoV);
-      var randNum_H = Math.round(Math.random() * espacoH);
+      var posicaoV = Math.round(Math.random() * espacoV);
+      var posicaoH = Math.round(Math.random() * espacoH);
 
-      pacman.style.top = randNum_V + "px";
-      pacman.style.left = randNum_H + "px";
+      pacman.style.top = posicaoV + "px";
+      pacman.style.left = posicaoH + "px";
     }
   </script>
 </body>
