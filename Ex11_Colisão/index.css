@@ -5,7 +5,7 @@ html{
 #pacman{width: 50px; height: 50px;}
 #fantasma{width: 100px; height: 100px;}
 .centro{
-    /*codigo para centralizar horizontalmente:*/
+    /*codigo para centralizar*/
     margin: 0;
     position: absolute;
     left: 50%;
@@ -18,3 +18,12 @@ form{
     background-color: gray;
 }
 .campo{width: 50px;}
+#aviso{
+	font-weight:bold;
+	background-color:red;
+    /*codigo para centralizar*/
+    margin: 0;
+    position: absolute;
+    left: 50%;
+	transform: translate(-50%);
+}

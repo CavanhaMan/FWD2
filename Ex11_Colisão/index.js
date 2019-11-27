@@ -1,3 +1,16 @@
+var aviso = document.getElementById("aviso");
+var i = 0;    
+function doAnimate() {
+	if (i++ % 2)
+		aviso.style.backgroundColor = "black";
+	else
+		aviso.style.backgroundColor = "red";
+	setTimeout(doAnimate, 200);
+};
+doAnimate();
+
+/*************************************************/
+
 h = window.innerHeight;
 w = window.innerWidth;
 var campoX = document.getElementById("vrX");
@@ -31,3 +44,4 @@ function movepacman() {
   campoX.value=posicaoH;
   campoY.value=posicaoV;
 }
+
