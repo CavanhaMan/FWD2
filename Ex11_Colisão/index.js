@@ -24,7 +24,6 @@ function imgPacman() {
   pacmanW = pacman.clientWidth;
   espacoV = h - pacmanH;
   espacoH = w - pacmanW;
-  movepacman();
 }
 
 function imgFantasma() {
@@ -36,7 +35,7 @@ function imgFantasma() {
 }
 
 
-function movepacman() {
+function movePacman() {
   var posicaoV = Math.round(Math.random() * espacoV);
   var posicaoH = Math.round(Math.random() * espacoH);
   pacman.style.top = posicaoV + "px";
@@ -45,3 +44,11 @@ function movepacman() {
   campoY.value=posicaoV;
 }
 
+function movePacmanXY() {
+  var posicaoV = campoX.value;
+  var posicaoH = campoY.value;
+  pacman.style.top = posicaoV + "px";
+  pacman.style.left = posicaoH + "px";
+  campoX.value=posicaoH;
+  campoY.value=posicaoV;
+}

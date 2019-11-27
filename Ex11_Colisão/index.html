@@ -15,9 +15,9 @@
 	<label for="vrY">Y:</label>
 	<input type="text" class="campo" id="vrY" title="Digite um valor numérico" />
 	
-	<input type="submit" value="Mover" name="mover" title="Clique aqui para mover o PacMan" onclick="movepacman()"/>
-	<input type="submit" value="Mover Aleatorio" name="moverale" title="Clique aqui para mover o PacMan aleatoriamente" onclick="movepacman()"/>
-	<input type="submit" value="Mover Aleatorio Automático" name="moverale" title="Clique aqui para mover o PacMan aleatoriamente com timer" onclick="setInterval(movepacman, 2000)"/>
+	<input type="submit" value="Mover coordenadas" name="mover" onclick="movePacmanXY()" title="Clique aqui para mover o PacMan para os pontos inseridos" />
+	<input type="submit" value="Mover Aleatorio" name="moverale" onclick="movePacman()" title="Clique aqui para mover o PacMan aleatoriamente" />
+	<input type="submit" value="Mover Aleatorio Automático" name="moverauto" onclick="setInterval(movePacman, 2000)" title="Clique aqui para mover o PacMan aleatoriamente com timer" />
 	<spam id="aviso">COLISÃO</spam>
   </div>
 
