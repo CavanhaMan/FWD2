@@ -34,7 +34,6 @@ function imgFantasma() {
   espacoH = w - fantasmaW;
 }
 
-
 function movePacman() {
   var posicaoV = Math.round(Math.random() * espacoV);
   var posicaoH = Math.round(Math.random() * espacoH);
@@ -44,11 +43,29 @@ function movePacman() {
   campoY.value=posicaoV;
 }
 
+// MOVE O PACMAN PARA COORDENADAS ESPECÍFICAS INFORMADAS
 function movePacmanXY() {
   var posicaoV = campoX.value;
   var posicaoH = campoY.value;
-  pacman.style.top = posicaoV + "px";
-  pacman.style.left = posicaoH + "px";
-  campoX.value=posicaoH;
-  campoY.value=posicaoV;
+  if (posicaoV=="" || posicaoH=="")
+	  alert("Erro! Favor informar um valor!");
+  else if (posicaoV>espacoV || posicaoH>espacoH)
+	  alert("Erro! Valores fora do tamanho da tela!");
+  else{
+	  pacman.style.top = posicaoV + "px";
+	  pacman.style.left = posicaoH + "px";
+	  campoX.value=posicaoH;
+	  campoY.value=posicaoV;
+  }
 }
+
+/* DECLARANDO PONTOS PARA VERIFICAR COLISÃO: */
+var p1;
+var p2;
+var p3;
+var p4;
+
+var f1;
+var f2;
+var f3;
+var f4;
