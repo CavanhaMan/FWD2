@@ -37,10 +37,10 @@ function imgFantasma() {
 function movePacman() {
   var posicaoV = Math.round(Math.random() * espacoV);
   var posicaoH = Math.round(Math.random() * espacoH);
-  pacman.style.top = posicaoV + "px";
-  pacman.style.left = posicaoH + "px";
-  campoX.value=posicaoH;
-  campoY.value=posicaoV;
+  pacman.style.top = posicaoH + "px";
+  pacman.style.left = posicaoV + "px";
+  campoX.value=posicaoV;
+  campoY.value=posicaoH;
 }
 
 // MOVE O PACMAN PARA COORDENADAS ESPECÍFICAS INFORMADAS
@@ -52,10 +52,10 @@ function movePacmanXY() {
   else if (posicaoV>espacoV || posicaoH>espacoH)
 	  alert("Erro! Valores fora do tamanho da tela!");
   else{
-	  pacman.style.top = posicaoV + "px";
-	  pacman.style.left = posicaoH + "px";
-	  campoX.value=posicaoH;
-	  campoY.value=posicaoV;
+	  pacman.style.top = posicaoH + "px";
+	  pacman.style.left = posicaoV + "px";
+	  campoX.value=posicaoV;
+	  campoY.value=posicaoH;
   }
 }
 
