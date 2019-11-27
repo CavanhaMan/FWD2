@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Michelle Naves -->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <title>Prova Sub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .imagem {
+            height: 140px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btMario" onclick="mudaFigura('m')">Mario</button>
+    <button id="btLuigi" onclick="mudaFigura('l')">Luigi</button>
+    <BR>
+    <div class="imagem"><img src="mario.gif" id="figura" /></div>
+    <BR>
+    <p>Contador do Mario: <spam id="contaM">0</spam>
+    </p>
+    <p>Contador do Luigi: <spam id="contaL">0</spam>
+    </p>
+
+    <script>
+        var figura = document.getElementById("figura");
+        console.log(figura);
+        var contaM = document.getElementById("contaM");
+        var numM = parseInt(contaM.innerHTML);
+        console.log(numM);
+        var contaL = document.getElementById("contaL");
+        var numL = parseInt(contaL.innerHTML);
+        console.log(numL);
+
+        function mudaFigura(quem) {
+            console.log(quem);
+            if (quem == "m") {
+                figura.src = "mario.gif"
+                numM++;
+                contaM.innerHTML = numM;
+            }
+            else if (quem == "l") {
+                figura.src = "luigi.gif"
+                numL++
+                contaL.innerHTML = numL;
+            }
+        }
+    </script>
+</body>
+
+</html>

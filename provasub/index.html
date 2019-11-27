@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- Michelle Naves -->
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <title>Prova Sub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+</style>
+
+<body>
+    <form name="formCad" novalidate="novalidate">
+        <label for="txtNome">Nome:</label>
+        <input type="text" id="txtNome" placeholder="Digite seu nome" />
+        <label for="txtSobrenome">Sobrenome:</label>
+        <input type="text" id="txtSobrenome" placeholder="Digite seu sobrenome" />
+        <label for="cbSexo">Sexo:</label>
+        <select name="estado" id="cbSexo">
+            <option value="m">Masculino</option>
+            <option value="f">Feminino</option>
+        </select>
+        <input type="submit" value="Enviar" name="enviar" />
+    </form>
+
+    <script>
+        //TRATANDO O FORMULÁRIO
+        document.forms["formCad"].onsubmit = function () {
+            var nomee = document.formCad.txtNome.value
+            console.log(nomee);
+            var sobree = document.formCad.txtSobrenome.value
+            console.log(sobree);
+            if (nomee == "" || nomee == " " || nomee.length < 1 || sobree == "" || sobree == " " || sobree.length < 1) {
+                alert("É necessário digitar um nome e um sobrenome!");
+                document.formCad.txtNome.focus();
+                return false;
+            }
+            else {
+                var nomecompleto = (nomee + " " + sobree);
+                console.log(nomecompleto);
+                localStorage.setItem("storageName",nomecompleto);
+                var sexoe = document.formCad.cbSexo.value;
+                console.log(sexoe);
+                if (sexoe == "m")
+                    window.open("masculino.html");
+                else if (sexoe == "f")
+                    window.open("feminino.html");
+                else
+                    return false;
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
