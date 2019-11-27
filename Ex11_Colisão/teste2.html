@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- This is just my HTML5-valid template. Make sure you set this up correctly for your personal needs -->
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title></title>
+  <style>
+    img{width: 100px;}
+    html {background-color: black;}
+    div {float: left;}
+    #page_Wrapper {}
+  </style>
+</head>
+
+<body>
+  <div id="page_Wrapper">
+    <img src="pacman6b.gif" id="pacman" style="position: fixed;" />
+  </div>
+
+  <!-- Include the script after all DOM elements have been created, to avoid any potential DOM-related errors -->
+  <script>
+    window.onLoad = Prep();
+
+    function Prep() {
+      h = window.innerHeight;
+      w = window.innerWidth;
+
+      pacman = document.getElementById("pacman");
+      pacmanH = pacman.clientHeight;
+      pacmanW = pacman.clientWidth;
+
+      espacoV = h - pacmanH;
+      espacoH = w - pacmanW;
+
+      var t = 3000; // Time has to be in miliseconds. So, 3000 is 3 seconds
+      setInterval(movepacman, t);
+    }
+
+    function movepacman() {
+      var randNum_V = Math.round(Math.random() * espacoV);
+      var randNum_H = Math.round(Math.random() * espacoH);
+
+      pacman.style.top = randNum_V + "px";
+      pacman.style.left = randNum_H + "px";
+    }
+  </script>
+</body>
+
+</html>
