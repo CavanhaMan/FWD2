@@ -39,7 +39,7 @@ function cronometro(){
     setInterval(function() {
         if(pausado==0)
             changePic()
-    },3000);
+    },2000);
 }
 
 function crPlay(){

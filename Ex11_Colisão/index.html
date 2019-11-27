@@ -9,7 +9,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  <form>
+	<label for="vrX" >X:</label>
+	<input type="text" class="campo" id="vrX" title="Digite um valor numérico" />
+	<label for="vrY">Y:</label>
+	<input type="text" class="campo" id="vrY" title="Digite um valor numérico" />
+	<input type="submit" value="Mover" name="mover" title="Clique aqui para mover o PacMan" onclick="movepacman()"/>
+	<input type="submit" value="Mover Aleatorio" name="moverale" title="Clique aqui para mover o PacMan aleatoriamente" onclick="movepacman()"/>
+  </form>
+
 	<img src="pacman6b.gif" id="pacman" style="position: fixed;" />
+	<img src="fantasma1.png" id="fantasma" class="centro" style="position: fixed;" />
 	
 	<script type="text/javascript" src="index.js"></script>
 
