@@ -13,17 +13,15 @@ html{
 	transform: translate(-50%,-50%);
 }
 
-form{
+#entrada{
     border: 5px solid gray;
     background-color: gray;
 }
 .campo{width: 50px;}
 #aviso{
+	width:100px;
+	text-align:center;
 	font-weight:bold;
 	background-color:red;
-    /*codigo para centralizar*/
-    margin: 0;
-    position: absolute;
-    left: 50%;
-	transform: translate(-50%);
+	margin-left:200px;
 }
