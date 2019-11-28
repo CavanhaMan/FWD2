@@ -89,8 +89,8 @@ function movePacmanXY() {
 
   console.log("_________________");
 
-  if(p3x>=f1x && p3y>=f1y) alert("COLISÃO!");
-  if(p4x<=f2x && p4y>=f2y) alert("COLISÃO!");
+  if(p3x>=f1x && p3y>=f1y && p3x<=f2x &&) alert("COLISÃO 1!");
+  if(p4x<=f2x && p4y>=f2y) alert("COLISÃO 2!");
 }
 
 /*colisões:
