@@ -74,10 +74,6 @@ function movePacmanXY() {
 
   posicaoFV = parseInt(fantasma.offsetLeft);
   posicaoFH = parseInt(fantasma.offsetTop);
-  console.log("offsetleft:"+posicaoFV);
-  console.log("offsettop: "+posicaoFH);
-  console.log("offsetleft:"+pacman.offsetLeft);
-  console.log("offsettop: "+pacman.offsetTop);
   var f1x = posicaoFV;
   var f1y = posicaoFH;
   console.log("f1:"+f1x+":"+f1y);
@@ -91,8 +87,10 @@ function movePacmanXY() {
   var f4y = posicaoFV + fantasmaH + 0;
   console.log("f4:"+f4x+":"+f4y);
 
-  if(p3x==f1x && p3y==f3y) alert("COLISÃO!");
-  if(p1x==f1x && p1y==f1y) alert("COLISÃO!");
+  console.log("_________________");
+
+  if(p3x>=f1x && p3y>=f1y) alert("COLISÃO!");
+  if(p4x<=f2x && p4y>=f2y) alert("COLISÃO!");
 }
 
 /*colisões:
