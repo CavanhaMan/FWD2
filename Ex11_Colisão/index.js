@@ -19,53 +19,82 @@ var campoY = document.getElementById("vrY");
 window.onLoad = imgPacman();
 
 function imgPacman() {
-  pacman = document.getElementById("pacman");
-  pacmanH = pacman.clientHeight;
-  pacmanW = pacman.clientWidth;
-  espacoV = h - pacmanH;
-  espacoH = w - pacmanW;
-}
-
-function imgFantasma() {
-  pacman = document.getElementById("fantasma");
+  fantasma = document.getElementById("fantasma");
   fantasmaH = fantasma.clientHeight;
   fantasmaW = fantasma.clientWidth;
-  espacoV = h - fantasmaH;
-  espacoH = w - fantasmaW;
+  espacoFV = h - fantasmaH;
+  espacoFH = w - fantasmaW;
+  
+  pacman = document.getElementById("pacman");
+  pacmanH = parseInt(pacman.clientHeight);
+  pacmanW = parseInt(pacman.clientWidth);
+  espacoPV = h - pacmanH;
+  espacoPH = w - pacmanW;
+  
 }
 
+
 function movePacman() {
-  var posicaoV = Math.round(Math.random() * espacoV);
-  var posicaoH = Math.round(Math.random() * espacoH);
-  pacman.style.top = posicaoH + "px";
-  pacman.style.left = posicaoV + "px";
-  campoX.value=posicaoV;
-  campoY.value=posicaoH;
+  var posicaoPV = Math.round(Math.random() * espacoPV);
+  var posicaoPH = Math.round(Math.random() * espacoPH);
+  pacman.style.top = posicaoPH + "px";
+  pacman.style.left = posicaoPV + "px";
+  campoX.value=posicaoPV;
+  campoY.value=posicaoPH;
 }
 
 // MOVE O PACMAN PARA COORDENADAS ESPECÍFICAS INFORMADAS
 function movePacmanXY() {
-  var posicaoV = campoX.value;
-  var posicaoH = campoY.value;
-  if (posicaoV=="" || posicaoH=="")
+  var posicaoPV = parseInt(campoX.value);
+  var posicaoPH = parseInt(campoY.value);
+  if (posicaoPV=="" || posicaoPH=="")
 	  alert("Erro! Favor informar um valor!");
-  else if (posicaoV>espacoV || posicaoH>espacoH)
+  else if (posicaoPV>espacoPV || posicaoPH>espacoPH)
 	  alert("Erro! Valores fora do tamanho da tela!");
   else{
-	  pacman.style.top = posicaoH + "px";
-	  pacman.style.left = posicaoV + "px";
-	  campoX.value=posicaoV;
-	  campoY.value=posicaoH;
+	  pacman.style.top = posicaoPH + "px";
+	  pacman.style.left = posicaoPV + "px";
+	  campoX.value=posicaoPV;
+    campoY.value=posicaoPH;
   }
+
+  /* DECLARANDO PONTOS PARA VERIFICAR COLISÃO: */
+  var p1x = posicaoPV;
+  var p1y = posicaoPH;
+  console.log("p1:"+p1x+":"+p1y);
+  var p2x = posicaoPV + pacmanH + 0;
+  var p2y = posicaoPH;
+  console.log("p2:"+p2x+":"+p2y);
+  var p3x = posicaoPH + pacmanH + 0;
+  var p3y = posicaoPH + pacmanH + 0;
+  console.log("p3:"+p3x+":"+p3y);
+  var p4x = posicaoPV;
+  var p4y = posicaoPV + pacmanH + 0;
+  console.log("p4:"+p4x+":"+p4y);
+
+  posicaoFV = parseInt(fantasma.offsetLeft);
+  posicaoFH = parseInt(fantasma.offsetTop);
+  var f1x = posicaoFV;
+  var f1y = posicaoFH;
+  console.log("f1:"+f1x+":"+f1y);
+  var f2x = posicaoFV + fantasmaH + 0;
+  var f2y = posicaoFH;
+  console.log("f2:"+f2x+":"+f2y);
+  var f3x = posicaoFH + fantasmaH + 0;
+  var f3y = posicaoFH + fantasmaH + 0;
+  console.log("f3:"+f3x+":"+f3y);
+  var f4x = posicaoFV;
+  var f4y = posicaoFV + fantasmaH + 0;
+  console.log("f4:"+f4x+":"+f4y);
+
+  if(p3x==f1x && p3y==f3y) alert("COLISÃO!");
+  if(p1x==f1x && p1y==f1y) alert("COLISÃO!");
 }
 
-/* DECLARANDO PONTOS PARA VERIFICAR COLISÃO: */
-var p1;
-var p2;
-var p3;
-var p4;
+/*colisões:
+p3 -> f1
+p4 -> f2
+p1 -> f3
+p2 -> f4
 
-var f1;
-var f2;
-var f3;
-var f4;
+*/
