@@ -74,6 +74,10 @@ function movePacmanXY() {
 
   posicaoFV = parseInt(fantasma.offsetLeft);
   posicaoFH = parseInt(fantasma.offsetTop);
+  console.log("offsetleft:"+posicaoFV);
+  console.log("offsettop: "+posicaoFH);
+  console.log("offsetleft:"+pacman.offsetLeft);
+  console.log("offsettop: "+pacman.offsetTop);
   var f1x = posicaoFV;
   var f1y = posicaoFH;
   console.log("f1:"+f1x+":"+f1y);
