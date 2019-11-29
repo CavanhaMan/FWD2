@@ -8,17 +8,39 @@ p2(x,y) -> x=(objP.left + objP.width) e y=(objP.top)
 p4(x,y) -> x=(objP.left + objP.width) e y=(objP.top + objP.height)
 p3(x,y) -> x=(objP.left) e y=(objP.top + objP.height)
 
-o1    o2
+f1    f2
 
-o3    o4
+f3    f4
 
-o1(x,y) -> x=(objO.left) e y=(objO.top)
-o2(x,y) -> x=(objO.left + objO.width) e y=(objO.top)
-o4(x,y) -> x=(objO.left + objO.width) e y=(objO.top + objO.height)
-o3(x,y) -> x=(objO.left) e y=(objO.top + objO.height)
+f1(x,y) -> x=(objO.left) e y=(objO.top)
+f2(x,y) -> x=(objO.left + objO.width) e y=(objO.top)
+f4(x,y) -> x=(objO.left + objO.width) e y=(objO.top + objO.height)
+f3(x,y) -> x=(objO.left) e y=(objO.top + objO.height)
 
 
 quando vai haver colisão?
 quando:
 
-p3x>f1x && pxy>f1y && p3x<
+p3
+p3x>=f1x
+p3x<=f2x
+p3y>=f1y
+p3y<=f4y
+
+p4
+p4x<=f2x
+p4x>=f1x
+p4y>=f2y
+p4y<=f3y
+
+p2
+p2x>=f4x
+p2x<=f3x
+p2y>=f4y
+p2y<=f1y
+
+p1
+p1x<=f3x
+p1x>=f4x
+p1y<=f3y
+p1y>=f2y

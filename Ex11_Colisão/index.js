@@ -89,14 +89,40 @@ function movePacmanXY() {
 
   console.log("_________________");
 
-  if(p3x>=f1x && p3y>=f1y && p3x<=f2x &&) alert("COLISÃO 1!");
-  if(p4x<=f2x && p4y>=f2y) alert("COLISÃO 2!");
+  //P3
+  if((p3x>=f1x && p3x<=f2x && p3y>=f1y && p3y<=f4y) || 
+     (p4x<=f2x && p4x>=f1x && p4y>=f2y && p4y<=f3y) || 
+     (p2x>=f4x && p2x<=f3x && p2y>=f4y && p2y<=f1y) || 
+     (p1x<=f3x && p1x>=f4x && p1y<=f3y && p1y>=f2y)) alert("COLISÃO P1!");
+
+
+
 }
 
 /*colisões:
-p3 -> f1
-p4 -> f2
-p1 -> f3
-p2 -> f4
+p3
+p3x>=f1x
+p3x<=f2x
+p3y>=f1y
+p3y<=p4y
+
+p4
+p4x<=f2x
+p4x>=f1x
+p4y>=f2y
+p4y<=f3y
+
+p2
+p2x>=f4x
+p2x<=f3x
+p2y>=f4y
+p2y<=f1y
+
+p1
+p1x<=f3x
+p1x>=f4x
+p1y<=f3y
+p1y>=f2y
+
 
 */
