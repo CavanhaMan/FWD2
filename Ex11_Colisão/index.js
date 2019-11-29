@@ -41,6 +41,8 @@ function movePacman() {
   pacman.style.left = posicaoPV + "px";
   campoX.value=posicaoPV;
   campoY.value=posicaoPH;
+
+  testaColisao();
 }
 
 // MOVE O PACMAN PARA COORDENADAS ESPECÍFICAS INFORMADAS
@@ -58,7 +60,13 @@ function movePacmanXY() {
     campoY.value=posicaoPH;
   }
 
+  testaColisao(posicaoPH,posicaoPV);
+}
+
+function testaColisao(){
   /* DECLARANDO PONTOS PARA VERIFICAR COLISÃO: */
+  posicaoPV = parseInt(pacman.offsetLeft);
+  posicaoPH = parseInt(pacman.offsetTop);
   var p1x = posicaoPV;
   var p1y = posicaoPH;
   console.log("p1:"+p1x+":"+p1y);
@@ -92,10 +100,8 @@ function movePacmanXY() {
   //P3
   if((p3x>=f1x && p3x<=f2x && p3y>=f1y && p3y<=f4y) || 
      (p4x<=f2x && p4x>=f1x && p4y>=f2y && p4y<=f3y) || 
-     (p2x>=f4x && p2x<=f3x && p2y>=f4y && p2y<=f1y) || 
+     (p2x>=f4x && p2x<=f3x && p2y<=f4y && p2y>=f1y) || 
      (p1x<=f3x && p1x>=f4x && p1y<=f3y && p1y>=f2y)) alert("COLISÃO P1!");
-
-
 
 }
 
@@ -115,8 +121,8 @@ p4y<=f3y
 p2
 p2x>=f4x
 p2x<=f3x
-p2y>=f4y
-p2y<=f1y
+p2y<=f4y
+p2y>=f1y
 
 p1
 p1x<=f3x
