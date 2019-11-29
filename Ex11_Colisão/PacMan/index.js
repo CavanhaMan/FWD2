@@ -1,17 +1,20 @@
-h = window.innerHeight;
-w = window.innerWidth;
 var campoX = document.getElementById("vrX");
 var campoY = document.getElementById("vrY");
-
 window.onLoad = imgPacman();
 
 function imgPacman() {
+  h = window.innerHeight;
+  console.log("Altura Janela: "+h);
+  w = window.innerWidth;
+  console.log("Largura Janela: "+w);
+
   //DADOS FIGURA FANTASMA
   fantasma = document.getElementById("fantasma");
   fAltura = fantasma.clientHeight;
   fLargura = fantasma.clientWidth;
   espacoFV = h - fAltura;
   espacoFH = w - fLargura;
+  
   //DADOS FIGURA PACMAN
   pacman = document.getElementById("pacman");
   pAltura = parseInt(pacman.clientHeight);
@@ -38,6 +41,8 @@ function movePacman() {
 function moveFantasma() {
   var posicaoFV = Math.round(Math.random() * espacoFV);
   var posicaoFH = Math.round(Math.random() * espacoFH);
+  console.log("Fantasma X: "+posicaoFV);
+  console.log("Fantasma Y: "+posicaoFH);
   fantasma.style.top = posicaoFH + "px";
   fantasma.style.left = posicaoFV + "px";
   campoX.value=posicaoFV;
@@ -55,10 +60,12 @@ function movePacmanXY() {
   else if (posicaoPV>espacoPV || posicaoPH>espacoPH)
 	  alert("Erro! Valores fora do tamanho da tela!");
   else{
+      console.log("PacMan X: "+posicaoPV);
+      console.log("PacMan Y: "+posicaoPH);
 	  pacman.style.top = posicaoPH + "px";
 	  pacman.style.left = posicaoPV + "px";
 	  campoX.value=posicaoPV;
-    campoY.value=posicaoPH;
+      campoY.value=posicaoPH;
   }
   //CHAMA O TESTE DE COLISÃO
   testaColisao();
