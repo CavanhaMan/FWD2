@@ -70,11 +70,11 @@ function testaColisao(){
   var p1x = posicaoPV;
   var p1y = posicaoPH;
   console.log("p1:"+p1x+":"+p1y);
-  var p2x = posicaoPV + pacmanH + 0;
-  var p2y = posicaoPH;
+  var p2x = posicaoPV;
+  var p2y = posicaoPH + pacmanH;
   console.log("p2:"+p2x+":"+p2y);
-  var p3x = posicaoPH + pacmanH + 0;
-  var p3y = posicaoPH + pacmanH + 0;
+  var p3x = posicaoPV + pacmanV;
+  var p3y = posicaoPH + pacmanH;
   console.log("p3:"+p3x+":"+p3y);
   var p4x = posicaoPV;
   var p4y = posicaoPV + pacmanH + 0;
@@ -97,14 +97,22 @@ function testaColisao(){
 
   console.log("_________________");
 
-  //P3
-  if((p3x>=f1x && p3x<=f2x && p3y>=f1y && p3y<=f4y) || 
+/*  if((p3x>=f1x && p3x<=f2x && p3y>=f1y && p3y<=f4y) || 
      (p4x<=f2x && p4x>=f1x && p4y>=f2y && p4y<=f3y) || 
      (p2x>=f4x && p2x<=f3x && p2y<=f4y && p2y>=f1y) || 
-     (p1x<=f3x && p1x>=f4x && p1y<=f3y && p1y>=f2y)) alert("COLISÃO P1!");
+     (p1x<=f3x && p1x>=f4x && p1y<=f3y && p1y>=f2y)) alert("COLISÃO!");
+*/
+  if(p3x>=f1x && p3x<=f2x && p3y>=f1y && p3y<=f4y) alert("COLISÃO P3!"); 
+  if(p4x<=f2x && p4x>=f1x && p4y>=f2y && p4y<=f3y) alert("COLISÃO P4!"); 
+  if(p2x>=f4x && p2x<=f3x && p2y<=f4y && p2y>=f1y) alert("COLISÃO P2!"); 
+  if(p1x<=f3x && p1x>=f4x && p1y<=f3y && p1y>=f2y) alert("COLISÃO P1!");
 
 }
+/*
+Não colisões - casos especiais:
+p1
 
+*/
 /*colisões:
 p3
 p3x>=f1x
