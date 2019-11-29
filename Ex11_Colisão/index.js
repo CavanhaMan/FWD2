@@ -20,16 +20,16 @@ window.onLoad = imgPacman();
 
 function imgPacman() {
   fantasma = document.getElementById("fantasma");
-  fantasmaH = fantasma.clientHeight;
-  fantasmaW = fantasma.clientWidth;
-  espacoFV = h - fantasmaH;
-  espacoFH = w - fantasmaW;
+  fAltura = fantasma.clientHeight;
+  fLargura = fantasma.clientWidth;
+  espacoFV = h - fAltura;
+  espacoFH = w - fLargura;
   
   pacman = document.getElementById("pacman");
-  pacmanH = parseInt(pacman.clientHeight);
-  pacmanW = parseInt(pacman.clientWidth);
-  espacoPV = h - pacmanH;
-  espacoPH = w - pacmanW;
+  pAltura = parseInt(pacman.clientHeight);
+  pLargura = parseInt(pacman.clientWidth);
+  espacoPV = h - pAltura;
+  espacoPH = w - pLargura;
   
 }
 
@@ -70,14 +70,14 @@ function testaColisao(){
   var p1x = posicaoPV;
   var p1y = posicaoPH;
   console.log("p1:"+p1x+":"+p1y);
-  var p2x = posicaoPV;
-  var p2y = posicaoPH + pacmanH;
+  var p2x = posicaoPV + pLargura;
+  var p2y = posicaoPH;
   console.log("p2:"+p2x+":"+p2y);
-  var p3x = posicaoPV + pacmanV;
-  var p3y = posicaoPH + pacmanH;
+  var p3x = posicaoPV + pAltura;
+  var p3y = posicaoPH + pLargura;
   console.log("p3:"+p3x+":"+p3y);
   var p4x = posicaoPV;
-  var p4y = posicaoPV + pacmanH + 0;
+  var p4y = posicaoPH + pAltura;
   console.log("p4:"+p4x+":"+p4y);
 
   posicaoFV = parseInt(fantasma.offsetLeft);
@@ -85,28 +85,28 @@ function testaColisao(){
   var f1x = posicaoFV;
   var f1y = posicaoFH;
   console.log("f1:"+f1x+":"+f1y);
-  var f2x = posicaoFV + fantasmaH + 0;
+  var f2x = posicaoFV + fLargura;
   var f2y = posicaoFH;
   console.log("f2:"+f2x+":"+f2y);
-  var f3x = posicaoFH + fantasmaH + 0;
-  var f3y = posicaoFH + fantasmaH + 0;
+  var f3x = posicaoFV + fAltura;
+  var f3y = posicaoFH + fLargura;
   console.log("f3:"+f3x+":"+f3y);
   var f4x = posicaoFV;
-  var f4y = posicaoFV + fantasmaH + 0;
+  var f4y = posicaoFH + fAltura;
   console.log("f4:"+f4x+":"+f4y);
 
   console.log("_________________");
 
-/*  if((p3x>=f1x && p3x<=f2x && p3y>=f1y && p3y<=f4y) || 
+  if((p3x>=f1x && p3x<=f2x && p3y>=f1y && p3y<=f4y) || 
      (p4x<=f2x && p4x>=f1x && p4y>=f2y && p4y<=f3y) || 
      (p2x>=f4x && p2x<=f3x && p2y<=f4y && p2y>=f1y) || 
      (p1x<=f3x && p1x>=f4x && p1y<=f3y && p1y>=f2y)) alert("COLISÃO!");
-*/
-  if(p3x>=f1x && p3x<=f2x && p3y>=f1y && p3y<=f4y) alert("COLISÃO P3!"); 
+
+/*  if(p3x>=f1x && p3x<=f2x && p3y>=f1y && p3y<=f4y) alert("COLISÃO P3!"); 
   if(p4x<=f2x && p4x>=f1x && p4y>=f2y && p4y<=f3y) alert("COLISÃO P4!"); 
   if(p2x>=f4x && p2x<=f3x && p2y<=f4y && p2y>=f1y) alert("COLISÃO P2!"); 
   if(p1x<=f3x && p1x>=f4x && p1y<=f3y && p1y>=f2y) alert("COLISÃO P1!");
-
+*/
 }
 /*
 Não colisões - casos especiais:
