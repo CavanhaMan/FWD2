@@ -18,6 +18,32 @@ function imgPacman() {
   pLargura = parseInt(pacman.clientWidth);
   espacoPV = h - pAltura;
   espacoPH = w - pLargura;
+  
+  moveFantasma();
+}
+
+// MOVE O PACMAN ALEATORIAMENTE
+function movePacman() {
+  var posicaoPV = Math.round(Math.random() * espacoPV);
+  var posicaoPH = Math.round(Math.random() * espacoPH);
+  pacman.style.top = posicaoPH + "px";
+  pacman.style.left = posicaoPV + "px";
+  campoX.value=posicaoPV;
+  campoY.value=posicaoPH;
+
+  testaColisao();
+}
+
+// MOVE O FANTASMA ALEATORIAMENTE
+function moveFantasma() {
+  var posicaoFV = Math.round(Math.random() * espacoFV);
+  var posicaoFH = Math.round(Math.random() * espacoFH);
+  fantasma.style.top = posicaoFH + "px";
+  fantasma.style.left = posicaoFV + "px";
+  campoX.value=posicaoFV;
+  campoY.value=posicaoFH;
+
+  testaColisao();
 }
 
 // MOVE O PACMAN PARA COORDENADAS ESPECÍFICAS INFORMADAS
