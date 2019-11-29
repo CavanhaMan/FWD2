@@ -2,7 +2,7 @@ html{
     color: yellow;
     background-color: black;
 }
-#pacman{width: 100px; height: 100px;}
+#pacman{width: 50px; height: 50px;}
 #fantasma{width: 100px; height: 100px;}
 .centro{
     /*codigo para centralizar*/

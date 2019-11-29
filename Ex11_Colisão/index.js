@@ -108,11 +108,7 @@ function testaColisao(){
   if(p1x<=f3x && p1x>=f4x && p1y<=f3y && p1y>=f2y) alert("COLISÃO P1!");
 */
 }
-/*
-Não colisões - casos especiais:
-p1
 
-*/
 /*colisões:
 p3
 p3x>=f1x
