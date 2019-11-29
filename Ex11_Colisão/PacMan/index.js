@@ -3,10 +3,14 @@ var campoY = document.getElementById("vrY");
 window.onLoad = imgPacman();
 
 function imgPacman() {
-  h = window.innerHeight;
-  console.log("Altura Janela: "+h);
   w = window.innerWidth;
   console.log("Largura Janela: "+w);
+  h = window.innerHeight;
+  console.log("Altura Janela: "+h);
+
+  var sh = screen.height;
+  var sw = screen.width;
+  console.log("Resolução Monitor: "+sw+":"+sh);
 
   //DADOS FIGURA FANTASMA
   fantasma = document.getElementById("fantasma");
@@ -19,16 +23,17 @@ function imgPacman() {
   pacman = document.getElementById("pacman");
   pAltura = parseInt(pacman.clientHeight);
   pLargura = parseInt(pacman.clientWidth);
-  espacoPV = h - pAltura;
-  espacoPH = w - pLargura;
+  espacoPV = h - pAltura -100;
+  espacoPH = w - pLargura -100;
   
   moveFantasma();
 }
 
 // MOVE O PACMAN ALEATORIAMENTE
 function movePacman() {
-  var posicaoPV = Math.round(Math.random() * espacoPV);
-  var posicaoPH = Math.round(Math.random() * espacoPH);
+  //var x = (Math.floor(Math.random() * 60) + 1);
+  var posicaoPV = parseInt(Math.floor(Math.random() * espacoPV +1));
+  var posicaoPH = parseInt(Math.floor(Math.random() * espacoPH +1));
   pacman.style.top = posicaoPH + "px";
   pacman.style.left = posicaoPV + "px";
   campoX.value=posicaoPV;
