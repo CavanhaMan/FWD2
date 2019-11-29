@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- Michelle Naves -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+	<link href="index.css" rel="stylesheet">
+    <title>Jogo Colisão PacMan</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div id="entrada">
+	<label for="vrX" >X:</label>
+	<input type="text" class="campo" id="vrX" title="Digite um valor numérico" />
+	<label for="vrY">Y:</label>
+	<input type="text" class="campo" id="vrY" title="Digite um valor numérico" />
+	
+	<input type="submit" value="Mover coordenadas" name="mover" onclick="movePacmanXY()" title="Clique aqui para mover o PacMan para os pontos inseridos" />
+  </div>
+
+	<img src="pacman.gif" id="pacman" style="position: fixed;" />
+	<img src="fantasma.png" id="fantasma" class="centro" style="position: fixed;" />
+	
+	<script type="text/javascript" src="index.js"></script>
+
+</body>
+</html>
