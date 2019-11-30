@@ -4,13 +4,12 @@ window.onLoad = imgPacman();
 
 function imgPacman() {
   w = window.innerWidth;
-  console.log("Largura Janela: "+w);
   h = window.innerHeight;
-  console.log("Altura Janela: "+h);
+  console.log("Janela: "+w+":"+h);
 
   var sh = screen.height;
   var sw = screen.width;
-  console.log("Resolução Monitor: "+sw+":"+sh);
+  console.log("Monitor: "+sw+":"+sh);
 
   //DADOS FIGURA FANTASMA
   fantasma = document.getElementById("fantasma");
@@ -46,8 +45,7 @@ function movePacman() {
 function moveFantasma() {
   var posicaoFV = Math.round(Math.random() * espacoFV);
   var posicaoFH = Math.round(Math.random() * espacoFH);
-  console.log("Fantasma X: "+posicaoFV);
-  console.log("Fantasma Y: "+posicaoFH);
+  console.log("Fantasma: "+posicaoFV+":"+posicaoFH);
   fantasma.style.top = posicaoFH + "px";
   fantasma.style.left = posicaoFV + "px";
   campoX.value=posicaoFV;
@@ -60,13 +58,15 @@ function moveFantasma() {
 function movePacmanXY() {
   var posicaoPV = parseInt(campoX.value);
   var posicaoPH = parseInt(campoY.value);
+  console.log("Espaço : "+espacoPV+":"+espacoPH);
   if (posicaoPV=="" || posicaoPH=="")
 	  alert("Erro! Favor informar um valor!");
+  else if (posicaoPV<1 || posicaoPH<1)
+	  alert("Erro! Favor informar um valor positivo!");
   else if (posicaoPV>espacoPV || posicaoPH>espacoPH)
 	  alert("Erro! Valores fora do tamanho da tela!");
   else{
-      console.log("PacMan X: "+posicaoPV);
-      console.log("PacMan Y: "+posicaoPH);
+    console.log("PacMan: "+posicaoPV+":"+posicaoPH);
 	  pacman.style.top = posicaoPH + "px";
 	  pacman.style.left = posicaoPV + "px";
 	  campoX.value=posicaoPV;
@@ -82,32 +82,32 @@ function testaColisao(){
   posicaoPH = parseInt(pacman.offsetTop);
   var p1x = posicaoPV;
   var p1y = posicaoPH;
-  console.log("p1:"+p1x+":"+p1y);
+  console.log("p1-> "+p1x+":"+p1y);
   var p2x = posicaoPV + pLargura;
   var p2y = posicaoPH;
-  console.log("p2:"+p2x+":"+p2y);
+  console.log("p2->"+p2x+":"+p2y);
   var p3x = posicaoPV + pAltura;
   var p3y = posicaoPH + pLargura;
-  console.log("p3:"+p3x+":"+p3y);
+  console.log("p3->"+p3x+":"+p3y);
   var p4x = posicaoPV;
   var p4y = posicaoPH + pAltura;
-  console.log("p4:"+p4x+":"+p4y);
+  console.log("p4->"+p4x+":"+p4y);
 
   //DECLARANDO PONTOS DO FANTASMA PARA VERIFICAR COLISÃO:
   posicaoFV = parseInt(fantasma.offsetLeft);
   posicaoFH = parseInt(fantasma.offsetTop);
   var f1x = posicaoFV;
   var f1y = posicaoFH;
-  console.log("f1:"+f1x+":"+f1y);
+  console.log("f1->"+f1x+":"+f1y);
   var f2x = posicaoFV + fLargura;
   var f2y = posicaoFH;
-  console.log("f2:"+f2x+":"+f2y);
+  console.log("f2->"+f2x+":"+f2y);
   var f3x = posicaoFV + fAltura;
   var f3y = posicaoFH + fLargura;
-  console.log("f3:"+f3x+":"+f3y);
+  console.log("f3->"+f3x+":"+f3y);
   var f4x = posicaoFV;
   var f4y = posicaoFH + fAltura;
-  console.log("f4:"+f4x+":"+f4y);
+  console.log("f4->"+f4x+":"+f4y);
 
   console.log("_________________");
 
