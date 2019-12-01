@@ -3,6 +3,7 @@ html{
     color: yellow;
     background-color: black;
 }
+#logo{height: 60px;}
 #pacman{width: 60px; height: 60px;}
 #fantasma{width: 100px; height: 100px;}
 .centro{

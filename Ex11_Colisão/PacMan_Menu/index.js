@@ -11,41 +11,17 @@ function doAnimate() {
 doAnimate();
 
 /*************************************************/
+var telaJogo = document.getElementById("jogo");
 var campoX = document.getElementById("vrX");
 var campoY = document.getElementById("vrY");
 window.onLoad = imgPacman();
 var h;
 var w;
 
-function tamanhoTela() {
-  // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
-  if (typeof window.innerWidth != 'undefined') {
-    w = window.innerWidth,
-    h = window.innerHeight
-  }
-  // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
-  else if (typeof document.documentElement != 'undefined'
-           && typeof document.documentElement.clientWidth != 'undefined' 
-           && document.documentElement.clientWidth != 0) {
-    w = document.documentElement.clientWidth,
-    h = document.documentElement.clientHeight
-  }
-  // older versions of IE
-  else {
-    w = document.getElementsByTagName('body')[0].clientWidth,
-    h = document.getElementsByTagName('body')[0].clientHeight
-  }
-  console.log("Janela1: " + w + ":" + h);
-}
-
 function imgPacman() {
-  var x = $("html");
-  $("x").last().text("innerWidth:" + x.innerWidth());
-
-  tamanhoTela();
-  //w = window.innerWidth;
-  //h = window.innerHeight;
-  //console.log("Janela2: " + w + ":" + h);
+  w = telaJogo.innerWidth;
+  h = telaJogo.innerHeight;
+  console.log("Janela: " + w + ":" + h);
 
   var sh = screen.height;
   var sw = screen.width;

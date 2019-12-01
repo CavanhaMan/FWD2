@@ -5,30 +5,31 @@
     <meta charset="UTF-8">
     <title>Jogo Colisão PacMan</title>
 	<link href="index.css" rel="stylesheet">
-    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script-->
     <script src="jquery.min.js"></script>
   </head>
   <body>
-	<script type="text/javascript" src="script.js"></script>
+
 
 	<table>
 		<tr>
-			<td colspan="2"><div class="header"><h1>PACMAN JAVASCRIPT</H1></div></td>
+			<td colspan="2"><BR>
+				<div class="header"><img src="paclogo.png" id="logo"></div>
+			<BR></td>
 		</tr>
 		<tr>
-			<td id="entrada">
+			<td id="entrada" valign="top">
 				Mover PacMan por coordenadas:
 				<label for="vrX" >X:</label>
 				<input type="text" class="campo" id="vrX" title="Digite um valor numérico" />
 				<label for="vrY">Y:</label>
 				<input type="text" class="campo" id="vrY" title="Digite um valor numérico" />
 				
-				<input type="submit" class="botao" value="Mover" name="mover" onclick="movePacmanXY()" title="Clique aqui para mover o PacMan para os pontos inseridos" />
+				<input type="submit" class="botao" value="Mover" name="mover" onclick="NmovePacmanXY()" title="Clique aqui para mover o PacMan para os pontos inseridos" />
 				<BR><BR>
-				<input type="submit" class="botao" value="Mover PacMan Aleatorio" name="moverale" onclick="movePacman()" title="Clique aqui para mover o PacMan aleatoriamente" />
+				<input type="submit" class="botao" value="Mover PacMan Aleatorio" name="moverale" onclick="NmovePacman()" title="Clique aqui para mover o PacMan aleatoriamente" />
 				<BR><BR>
-				<input type="submit" class="botao" value="Mover Aleatorio Automático" name="moverauto" onclick="movePacAuto()" title="Clique aqui para mover o PacMan aleatoriamente com timer" id="moveauto" />
-				<input type="submit" class="botao" value="Desativar PacMan Automatico " name="pararauto" onclick="stopPacAuto()" title="Clique aqui para parar de mover o PacMan aleatoriamente" id="paraauto" />
+				<input type="submit" class="botao" value="Mover Aleatorio Automático" name="moverauto" onclick="NmovePacAuto()" title="Clique aqui para mover o PacMan aleatoriamente com timer" id="moveauto" />
+				<input type="submit" class="botao" value="Desativar PacMan Automatico " name="pararauto" onclick="NstopPacAuto()" title="Clique aqui para parar de mover o PacMan aleatoriamente" id="paraauto" />
 				<spam id="aviso"></spam>
 			</td>
 			<td id="jogo">
@@ -37,6 +38,6 @@
 		</tr>
 	</table>
 	
-	<script type="text/javascript" src="pacman.js"></script>
+	<script type="text/javascript" src="index.js"></script>
   </body>
 </html>
