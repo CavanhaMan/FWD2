@@ -1,0 +1,32 @@
+/* Rodrigo CavanhaMan */
+html{
+    color: yellow;
+    background-color: black;
+}
+#pacman{width: 60px; height: 60px;}
+#fantasma{width: 100px; height: 100px;}
+.centro{
+    margin: 0;
+    position: absolute;
+    left: 300px;
+    top: 300px;
+    /*codigo para centralizar*/
+    /*
+    left: 50%;
+    top: 50%;
+	transform: translate(-50%,-50%);*/
+}
+#entrada{
+    border: 5px solid gray;
+    background-color: gray;
+}
+.campo{width: 50px;}
+#aviso{
+    font-size: 20px;
+	text-align:center;
+	font-weight:bold;
+	background-color:red;
+	margin-left:100px;
+}
+#paraauto{display: none;}
+#paraauto,#moveauto{width:200px;}
