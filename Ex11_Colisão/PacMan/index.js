@@ -83,7 +83,7 @@ function movePacman() {
 }
 
 // MOVE O FANTASMA ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
-var moveAuto;
+var movePacA;
 var moveauto = document.getElementById("moveauto");
 var paraauto = document.getElementById("paraauto");
 function movePacAuto(){
@@ -174,9 +174,13 @@ function testaColisao() {
       (p1x <= f3x && p1x >= f4x && p1y <= f3y && p1y >= f2y)) 
     {
       aviso.innerHTML = "_C O L I S Ã O !_";
+      fantasma.src="fantasmaX.png";
       stopPacAuto();
   }
-  else aviso.innerHTML = "";
+  else {
+    aviso.innerHTML = "";
+    fantasma.src="fantasma.png";
+  }
 
   //TESTA COLISÃO INDIVIDUAL POR PONTOS DO PACMAN:
   /*  if(p3x>=f1x && p3x<=f2x && p3y>=f1y && p3y<=f4y) alert("COLISÃO P3!"); 
