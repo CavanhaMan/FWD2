@@ -82,6 +82,22 @@ function movePacman() {
   testaColisao();
 }
 
+// MOVE O FANTASMA ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
+var moveAuto;
+var moveauto = document.getElementById("moveauto");
+var paraauto = document.getElementById("paraauto");
+function movePacAuto(){
+  movePacA = setInterval(movePacman, 500);
+  moveauto.style.display  = "none";
+  paraauto.style.display = "inline";
+}
+// INTERROMPE O AUTOMATICO (VIA BOTAO OU QUANDO DER COLISÃO)
+function stopPacAuto(){
+  clearInterval(movePacA);
+  moveauto.style.display = "inline";
+  paraauto.style.display  = "none";
+}
+
 // MOVE O FANTASMA ALEATORIAMENTE
 function moveFantasma() {
   var posicaoFV = parseInt(Math.floor(Math.random() * espacoFV) + 1);
@@ -107,8 +123,8 @@ function movePacmanXY() {
     alert("Erro! Valores fora do tamanho da tela!");
   else {
     console.log("PacMan: " + posicaoPV + ":" + posicaoPH);
-    pacman.style.top = posicaoPH + "px";
-    pacman.style.left = posicaoPV + "px";
+    pacman.style.top = posicaoPV + "px";
+    pacman.style.left = posicaoPH + "px";
     campoX.value = posicaoPV;
     campoY.value = posicaoPH;
   }
@@ -153,9 +169,13 @@ function testaColisao() {
 
   //TESTA COLISÃO GERAL:
   if ((p3x >= f1x && p3x <= f2x && p3y >= f1y && p3y <= f4y) ||
-    (p4x <= f2x && p4x >= f1x && p4y >= f2y && p4y <= f3y) ||
-    (p2x >= f4x && p2x <= f3x && p2y <= f4y && p2y >= f1y) ||
-    (p1x <= f3x && p1x >= f4x && p1y <= f3y && p1y >= f2y)) aviso.innerHTML = "_C O L I S Ã O !_";
+      (p4x <= f2x && p4x >= f1x && p4y >= f2y && p4y <= f3y) ||
+      (p2x >= f4x && p2x <= f3x && p2y <= f4y && p2y >= f1y) ||
+      (p1x <= f3x && p1x >= f4x && p1y <= f3y && p1y >= f2y)) 
+    {
+      aviso.innerHTML = "_C O L I S Ã O !_";
+      stopPacAuto();
+  }
   else aviso.innerHTML = "";
 
   //TESTA COLISÃO INDIVIDUAL POR PONTOS DO PACMAN:
