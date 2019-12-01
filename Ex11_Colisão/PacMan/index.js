@@ -1,3 +1,15 @@
+var aviso = document.getElementById("aviso");
+var i = 0;    
+function doAnimate() {
+	if (i++ % 2)
+		aviso.style.backgroundColor = "black";
+	else
+		aviso.style.backgroundColor = "red";
+	setTimeout(doAnimate, 200);
+};
+doAnimate();
+
+/*************************************************/
 var campoX = document.getElementById("vrX");
 var campoY = document.getElementById("vrY");
 window.onLoad = imgPacman();
@@ -115,7 +127,8 @@ function testaColisao(){
   if((p3x>=f1x && p3x<=f2x && p3y>=f1y && p3y<=f4y) || 
      (p4x<=f2x && p4x>=f1x && p4y>=f2y && p4y<=f3y) || 
      (p2x>=f4x && p2x<=f3x && p2y<=f4y && p2y>=f1y) || 
-     (p1x<=f3x && p1x>=f4x && p1y<=f3y && p1y>=f2y)) alert("COLISÃO!");
+     (p1x<=f3x && p1x>=f4x && p1y<=f3y && p1y>=f2y)) aviso.innerHTML = " C O L I S Ã O ! ";
+  else aviso.innerHTML = "";
 
   //TESTA COLISÃO INDIVIDUAL POR PONTOS DO PACMAN:
 /*  if(p3x>=f1x && p3x<=f2x && p3y>=f1y && p3y<=f4y) alert("COLISÃO P3!"); 

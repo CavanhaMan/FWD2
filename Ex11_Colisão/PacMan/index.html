@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Michelle Naves -->
+<!-- Rodrigo CavanhaMan -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
 	<link href="index.css" rel="stylesheet">
     <title>Jogo Colisão PacMan</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </head>
 <body>
   <div id="entrada">
@@ -17,7 +18,7 @@
 	
 	<input type="submit" value="Mover PacMan por coordenadas" name="mover" onclick="movePacmanXY()" title="Clique aqui para mover o PacMan para os pontos inseridos" />
 	<input type="submit" value="Mover PacMan Aleatorio" name="moverale" onclick="movePacman()" title="Clique aqui para mover o PacMan aleatoriamente" />
-
+	<spam id="aviso"></spam>
   </div>
 
 	<img src="pacman.gif" id="pacman" style="position: fixed;" />
