@@ -19,9 +19,9 @@ var h;
 var w;
 
 function imgPacman() {
-  w = telaJogo.innerWidth;
-  h = telaJogo.innerHeight;
-  console.log("Janela: " + w + ":" + h);
+  w = telaJogo.offsetWidth;
+  h = telaJogo.offsetHeight;
+  console.log("TelaJogo: " + w + ":" + h);
 
   var sh = screen.height;
   var sw = screen.width;

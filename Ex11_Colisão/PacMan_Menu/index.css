@@ -1,4 +1,16 @@
 /* Rodrigo CavanhaMan */
+/******************************************/
+#logo{height: 60px;}
+#pacman{width: 60px; height: 60px;}
+#fantasma{width: 100px; height: 100px;}
+.centro{
+    margin: 0;
+    position: absolute;
+    left: 300px;
+    top: 300px;
+}
+#paraauto{display: none;}
+/******************************************/
 html{
     color: yellow;
     background-color: black;
@@ -15,13 +27,16 @@ html{
 .campo{width: 50px;}
 #aviso{
     font-size: 20px;
-	text-align:center;
 	font-weight:bold;
 	background-color:red;
-	margin-left:100px;
+	width:100%;
+}
+#tdaviso{
+	width:240px;
+	height: 600px;
 }
 #paraauto{display: none;}
-.botao{width:220px;}
+.botao{width:250px;}
 .botao:hover {
 	background-color: black;
 	color: yellow;
@@ -35,5 +50,5 @@ iframe{width:100%;}
 	padding-left: 40px;
 	margin: -10px;
 }
-
-
+/******************************************/
+#jogo{border: 1px solid yellow;}
