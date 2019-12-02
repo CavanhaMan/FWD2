@@ -62,21 +62,48 @@ function movePacman() {
   testaColisao();
 }
 
-// MOVE O FANTASMA ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
-var movePacA;
+// BOTOES PARA MOVER ALEATORIAMENTE:
 var moveauto = document.getElementById("moveauto");
 var paraauto = document.getElementById("paraauto");
+var moveTauto = document.getElementById("moveTauto");
+var paraTauto = document.getElementById("paraTauto");
+// MOVE O PACMAN ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
+var movePacA;
 function movePacAuto(){
   movePacA = setInterval(movePacman, 500);
   moveauto.disabled = true;
   paraauto.disabled = false;
+  moveTauto.disabled = true;
+  paraTauto.disabled = true;
 }
 // INTERROMPE O AUTOMATICO (VIA BOTAO OU QUANDO DER COLISÃO)
 function stopPacAuto(){
   clearInterval(movePacA);
   moveauto.disabled = false;
   paraauto.disabled = true;
+  moveTauto.disabled = false;
+  paraTauto.disabled = true;
 }
+// MOVE TODOS ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
+var moveFanA;
+function moveTodosAuto(){
+  movePacAuto();
+  moveFanA = setInterval(moveFantasma, 500);
+  moveauto.disabled = true;
+  paraauto.disabled =true;
+  moveTauto.disabled = true;
+  paraTauto.disabled = false;
+}
+// INTERROMPE O AUTOMATICO (VIA BOTAO OU QUANDO DER COLISÃO)
+function stopTodosAuto(){
+  clearInterval(moveFanA);
+  clearInterval(movePacA);
+  moveauto.disabled = false;
+  paraauto.disabled = true;
+  moveTauto.disabled = false;
+  paraTauto.disabled = true;
+}
+
 
 // MOVE O FANTASMA ALEATORIAMENTE
 function moveFantasma() {
@@ -93,8 +120,8 @@ function moveFantasma() {
 
 // MOVE O PACMAN PARA COORDENADAS ESPECÍFICAS INFORMADAS
 function movePacmanXY() {
-  var posicaoPV = parseInt(campoX.value-auxV);
-  var posicaoPH = parseInt(campoY.value-auxH);
+  var posicaoPV = parseInt(campoX.value);
+  var posicaoPH = parseInt(campoY.value);
   if (posicaoPV == "" || posicaoPH == "")
     alert("Erro! Favor informar um valor!");
   else if (posicaoPV < 1 || posicaoPH < 1)
@@ -156,6 +183,7 @@ function testaColisao() {
       aviso.innerHTML = "_C O L I S Ã O !_";
       fantasma.src="fantasmaX.png";
       stopPacAuto();
+      stopTodosAuto();
   }
   else {
     aviso.innerHTML = "";

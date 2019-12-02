@@ -36,6 +36,10 @@ html{
 	height: 200px;
 }
 .botao{width:100px;}
+.stop:enabled{
+    background-color: red;
+	color: yellow;
+}
 .botao:hover:enabled {
 	background-color: black;
 	color: yellow;

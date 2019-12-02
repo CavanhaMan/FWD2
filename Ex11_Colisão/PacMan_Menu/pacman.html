@@ -36,10 +36,23 @@
 		</fieldset>
 		<BR>
 		<fieldset id="field">
+		<legend class="titulo">Mover Fantasma aleatoriamente:</legend>
+			<BR>
+			<input type="submit" onclick="moveFantasma()" class="botao" value="Mover" name="moverale" title="Clique aqui para mover o PacMan aleatoriamente" />
+		</fieldset>
+		<BR>
+		<fieldset id="field">
 		<legend class="titulo">Mover PacMan aleatoriamente automaticamente:</legend>
 			<BR>
 			<input type="submit" onclick="movePacAuto()" class="botao" value="Mover" name="moverauto" title="Clique aqui para mover o PacMan aleatoriamente com timer" id="moveauto" />
-			<input type="submit" onclick="stopPacAuto()" class="botao" value="Parar" name="pararauto" title="Clique aqui para parar de mover o PacMan aleatoriamente" id="paraauto" disabled />
+			<input type="submit" onclick="stopPacAuto()" class="botao stop" value="Parar" name="pararauto" title="Clique aqui para parar de mover o PacMan aleatoriamente" id="paraauto" disabled />
+		</fieldset>
+		<BR>
+		<fieldset id="field">
+		<legend class="titulo">Mover PacMan e Fantasma aleatoriamente automaticamente:</legend>
+			<BR>
+			<input type="submit" onclick="moveTodosAuto()" class="botao" value="Mover" name="moverauto" title="Clique aqui para mover o PacMan aleatoriamente com timer" id="moveTauto" />
+			<input type="submit" onclick="stopTodosAuto()" class="botao stop" value="Parar" name="pararauto" title="Clique aqui para parar de mover o PacMan aleatoriamente" id="paraTauto" disabled />
 		</fieldset>
 		<BR><BR>
 	  </td>
