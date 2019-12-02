@@ -180,7 +180,7 @@ function testaColisao() {
       (p2x >= f4x && p2x <= f3x && p2y <= f4y && p2y >= f1y) ||
       (p1x <= f3x && p1x >= f4x && p1y <= f3y && p1y >= f2y)) 
     {
-      aviso.innerHTML = "_C O L I S Ã O !_";
+      aviso.innerHTML = "C O L I S Ã O !";
       fantasma.src="fantasmaX.png";
       stopPacAuto();
       stopTodosAuto();

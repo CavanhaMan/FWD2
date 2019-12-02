@@ -25,13 +25,19 @@ html{
     background-color: black;
 }
 .campo{width: 80px;}
-#aviso{
+#aviso{background-color:red;}
+#divaviso{
     font-size: 20px;
 	font-weight:bold;
-	background-color:red;
-	width:100%;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%);
 }
-#tdaviso{
+#tdResultado{
 	width:240px;
 	height: 200px;
 }
