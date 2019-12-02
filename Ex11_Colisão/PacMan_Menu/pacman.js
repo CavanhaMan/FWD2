@@ -1,4 +1,7 @@
 /* Rodrigo CavanhaMan */
+var auxV=14;
+var auxH=280;
+/*************************************************/
 var aviso = document.getElementById("aviso");
 var i = 0;
 function doAnimate() {
@@ -19,8 +22,8 @@ var h;
 var w;
 
 function imgPacman() {
-  w = telaJogo.offsetWidth;
-  h = telaJogo.offsetHeight;
+  w = parseInt(telaJogo.offsetWidth);
+  h = parseInt(telaJogo.offsetHeight);
   console.log("TelaJogo: " + w + ":" + h);
 
   var sh = screen.height;
@@ -29,8 +32,8 @@ function imgPacman() {
 
   //DADOS FIGURA FANTASMA
   fantasma = document.getElementById("fantasma");
-  fAltura = fantasma.clientHeight;
-  fLargura = fantasma.clientWidth;
+  fAltura = parseInt(fantasma.clientHeight);
+  fLargura = parseInt(fantasma.clientWidth);
   espacoFV = h - fAltura;
   espacoFH = w - fLargura;
   console.log("EspaçoF : " + espacoFH + ":" + espacoFV);
@@ -48,8 +51,8 @@ function imgPacman() {
 // MOVE O PACMAN ALEATORIAMENTE
 function movePacman() {
   //var x = (Math.floor(Math.random() * 60) + 1);
-  var posicaoPV = parseInt(Math.floor(Math.random() * espacoPV) + 1);
-  var posicaoPH = parseInt(Math.floor(Math.random() * espacoPH) + 1);
+  var posicaoPV = parseInt(Math.floor(Math.random() * espacoPV) + auxV);
+  var posicaoPH = parseInt(Math.floor(Math.random() * espacoPH) + auxH);
   console.log("PacMan: " + posicaoPH + ":" + posicaoPV);
   pacman.style.top = posicaoPV + "px";
   pacman.style.left = posicaoPH + "px";
@@ -65,20 +68,20 @@ var moveauto = document.getElementById("moveauto");
 var paraauto = document.getElementById("paraauto");
 function movePacAuto(){
   movePacA = setInterval(movePacman, 500);
-  moveauto.style.display  = "none";
-  paraauto.style.display = "inline";
+  moveauto.disabled = true;
+  paraauto.disabled = false;
 }
 // INTERROMPE O AUTOMATICO (VIA BOTAO OU QUANDO DER COLISÃO)
 function stopPacAuto(){
   clearInterval(movePacA);
-  moveauto.style.display = "inline";
-  paraauto.style.display  = "none";
+  moveauto.disabled = false;
+  paraauto.disabled = true;
 }
 
 // MOVE O FANTASMA ALEATORIAMENTE
 function moveFantasma() {
-  var posicaoFV = parseInt(Math.floor(Math.random() * espacoFV) + 1);
-  var posicaoFH = parseInt(Math.floor(Math.random() * espacoFH) + 1);
+  var posicaoFV = parseInt(Math.floor(Math.random() * espacoFV) + auxV);
+  var posicaoFH = parseInt(Math.floor(Math.random() * espacoFH) + auxH);
   console.log("Fantasma: " + posicaoFH + ":" + posicaoFV);
   fantasma.style.top = posicaoFV + "px";
   fantasma.style.left = posicaoFH + "px";
@@ -90,8 +93,8 @@ function moveFantasma() {
 
 // MOVE O PACMAN PARA COORDENADAS ESPECÍFICAS INFORMADAS
 function movePacmanXY() {
-  var posicaoPV = parseInt(campoX.value);
-  var posicaoPH = parseInt(campoY.value);
+  var posicaoPV = parseInt(campoX.value-auxV);
+  var posicaoPH = parseInt(campoY.value-auxH);
   if (posicaoPV == "" || posicaoPH == "")
     alert("Erro! Favor informar um valor!");
   else if (posicaoPV < 1 || posicaoPH < 1)
@@ -100,8 +103,8 @@ function movePacmanXY() {
     alert("Erro! Valores fora do tamanho da tela!");
   else {
     console.log("PacMan: " + posicaoPV + ":" + posicaoPH);
-    pacman.style.top = posicaoPV + "px";
-    pacman.style.left = posicaoPH + "px";
+    pacman.style.top = (posicaoPV+auxV) + "px";
+    pacman.style.left = (posicaoPH+auxH) + "px";
     campoX.value = posicaoPV;
     campoY.value = posicaoPH;
   }
