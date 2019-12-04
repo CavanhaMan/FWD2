@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Rodrigo CavanhaMan -->
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Jogo Colisão PacMan</title>
+	<link href="pacman.css" rel="stylesheet">
+	<script src="jquery.min.js"></script>
+</head>
+<body>
+  <table>
+	<tr>
+	  <td align="center"><img src="paclogo.png" id="logo"><BR></td>
+	  <td id="jogo" rowspan="3">
+		<img src="pacman.gif" id="pacman" style="position: fixed;" />
+		<img src="fantasma.png" id="fantasma" class="centro" style="position: fixed;" />
+		<div id="divaviso"><spam id="aviso"></spam></div>
+	  </td>
+	</tr>
+	<tr>
+	  <td id="entrada" valign="top">
+	    <fieldset id="field">
+		<legend class="titulo">Mover PacMan por coordenadas:</legend>
+			<BR>
+			<label for="vrX">X:</label>
+			<input type="text" class="campo" id="vrX" title="Digite um valor numérico" />
+			<label for="vrY">Y:</label>
+			<input type="text" class="campo" id="vrY" title="Digite um valor numérico" />
+			<BR><BR>
+			<input type="submit" onclick="movePacmanXY()" class="botao" value="Mover" name="mover" title="Clique aqui para mover o PacMan para os pontos inseridos" />
+	    </fieldset>
+		<BR>
+		<fieldset id="field">
+		<legend class="titulo">Mover PacMan aleatoriamente:</legend>
+			<BR>
+			<input type="submit" onclick="movePacman()" class="botao" value="Mover" name="moverale" title="Clique aqui para mover o PacMan aleatoriamente" />
+		</fieldset>
+		<BR>
+		<fieldset id="field">
+		<legend class="titulo">Mover Fantasma aleatoriamente:</legend>
+			<BR>
+			<input type="submit" onclick="moveFantasma()" class="botao" value="Mover" name="moverale" title="Clique aqui para mover o PacMan aleatoriamente" />
+		</fieldset>
+		<BR>
+		<fieldset id="field">
+		<legend class="titulo">Mover PacMan aleatoriamente automaticamente:</legend>
+			<BR>
+			<input type="submit" onclick="movePacAuto()" class="botao" value="Mover" name="moverauto" title="Clique aqui para mover o PacMan aleatoriamente com timer" id="moveauto" />
+			<input type="submit" onclick="stopPacAuto()" class="botao stop" value="Parar" name="pararauto" title="Clique aqui para parar de mover o PacMan aleatoriamente" id="paraauto" disabled />
+		</fieldset>
+		<BR>
+		<fieldset id="field">
+		<legend class="titulo">Mover PacMan e Fantasma aleatoriamente automaticamente:</legend>
+			<BR>
+			<input type="submit" onclick="moveTodosAuto()" class="botao" value="Mover" name="moverauto" title="Clique aqui para mover o PacMan aleatoriamente com timer" id="moveTauto" />
+			<input type="submit" onclick="stopTodosAuto()" class="botao stop" value="Parar" name="pararauto" title="Clique aqui para parar de mover o PacMan aleatoriamente" id="paraTauto" disabled />
+		</fieldset>
+		<BR><BR>
+	  </td>
+	</tr>
+	<tr>
+	  <td id="tdResultado" valign="top" align="center">Resultado</td>
+	</tr>
+  </table>
+  
+	<script type="text/javascript" src="pacman.js"></script>
+</body>
+
+</html>
