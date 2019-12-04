@@ -1,6 +1,7 @@
-/* Rodrigo CavanhaMan */
-/******************************************/
-#logo{height: 60px;}
+html{
+    color: yellow;
+    background-color: black;
+}
 #pacman{width: 60px; height: 60px;}
 #fantasma{width: 100px; height: 100px;}
 .centro{
@@ -8,58 +9,23 @@
     position: absolute;
     left: 300px;
     top: 300px;
-}
-/******************************************/
-html{
-    color: yellow;
-    background-color: #333333;
+    /*codigo para centralizar*/
+    /*
+    left: 50%;
+    top: 50%;
+	transform: translate(-50%,-50%);*/
 }
 #entrada{
-    border: 5px solid #333333;
-	background-color: black;
-	width: 230px;
+    border: 5px solid gray;
+    background-color: gray;
 }
-#jogo{
-	width: 100%;
-    height: 100%;
-    background-color: black;
-}
-.campo{width: 80px;}
-#aviso{background-color:red;}
-#divaviso{
+.campo{width: 50px;}
+#aviso{
     font-size: 20px;
+	text-align:center;
 	font-weight:bold;
-    width: 200px;
-    height: 30px;
-    text-align: center;
-    position: relative;
-	left: 50%;
-	/* bring your own prefixes */
-	transform: translate(-50%);
+	background-color:red;
+	margin-left:100px;
 }
-#tdResultado{
-	width:240px;
-	height: 200px;
-}
-.botao{width:100px;}
-.stop:enabled{
-    background-color: red;
-	color: yellow;
-}
-.botao:hover:enabled {
-	background-color: black;
-	color: yellow;
-}
-a:link{text-decoration:none;}
-.clicked {background-color: red;}
-/******************************************/
-iframe{width:100%;}
-.header {
-	color: yellow;
-	padding-left: 40px;
-	margin: -10px;
-}
-/******************************************/
-#jogo{border: 1px solid yellow;}
-legend{border:1px solid white;}
-fieldset{width:220px;}
+#paraauto{display: none;}
+#paraauto,#moveauto{width:200px;}

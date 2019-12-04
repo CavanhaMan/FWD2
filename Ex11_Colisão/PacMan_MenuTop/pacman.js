@@ -1,7 +1,3 @@
-/* Rodrigo CavanhaMan */
-var auxV=14;
-var auxH=280;
-/*************************************************/
 var aviso = document.getElementById("aviso");
 var i = 0;
 function doAnimate() {
@@ -14,7 +10,6 @@ function doAnimate() {
 doAnimate();
 
 /*************************************************/
-var telaJogo = document.getElementById("jogo");
 var campoX = document.getElementById("vrX");
 var campoY = document.getElementById("vrY");
 window.onLoad = imgPacman();
@@ -22,9 +17,9 @@ var h;
 var w;
 
 function imgPacman() {
-  w = parseInt(telaJogo.offsetWidth);
-  h = parseInt(telaJogo.offsetHeight);
-  console.log("TelaJogo: " + w + ":" + h);
+  w = window.innerWidth;
+  h = window.innerHeight;
+  console.log("Janela2: " + w + ":" + h);
 
   var sh = screen.height;
   var sw = screen.width;
@@ -32,8 +27,8 @@ function imgPacman() {
 
   //DADOS FIGURA FANTASMA
   fantasma = document.getElementById("fantasma");
-  fAltura = parseInt(fantasma.clientHeight);
-  fLargura = parseInt(fantasma.clientWidth);
+  fAltura = fantasma.clientHeight;
+  fLargura = fantasma.clientWidth;
   espacoFV = h - fAltura;
   espacoFH = w - fLargura;
   console.log("EspaçoF : " + espacoFH + ":" + espacoFV);
@@ -51,77 +46,50 @@ function imgPacman() {
 // MOVE O PACMAN ALEATORIAMENTE
 function movePacman() {
   //var x = (Math.floor(Math.random() * 60) + 1);
-  var posicaoPV = parseInt(Math.floor(Math.random() * espacoPV) + auxV);
-  var posicaoPH = parseInt(Math.floor(Math.random() * espacoPH) + auxH);
+  var posicaoPV = parseInt(Math.floor(Math.random() * espacoPV) + 1);
+  var posicaoPH = parseInt(Math.floor(Math.random() * espacoPH) + 1);
   console.log("PacMan: " + posicaoPH + ":" + posicaoPV);
   pacman.style.top = posicaoPV + "px";
   pacman.style.left = posicaoPH + "px";
-  campoX.value = posicaoPV;
-  campoY.value = posicaoPH;
+  campoX.value = posicaoPH;
+  campoY.value = posicaoPV;
 
   testaColisao();
 }
 
-// BOTOES PARA MOVER ALEATORIAMENTE:
+// MOVE O FANTASMA ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
+var movePacA;
 var moveauto = document.getElementById("moveauto");
 var paraauto = document.getElementById("paraauto");
-var moveTauto = document.getElementById("moveTauto");
-var paraTauto = document.getElementById("paraTauto");
-// MOVE O PACMAN ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
-var movePacA;
 function movePacAuto(){
   movePacA = setInterval(movePacman, 500);
-  moveauto.disabled = true;
-  paraauto.disabled = false;
-  moveTauto.disabled = true;
-  paraTauto.disabled = true;
+  moveauto.style.display  = "none";
+  paraauto.style.display = "inline";
 }
 // INTERROMPE O AUTOMATICO (VIA BOTAO OU QUANDO DER COLISÃO)
 function stopPacAuto(){
   clearInterval(movePacA);
-  moveauto.disabled = false;
-  paraauto.disabled = true;
-  moveTauto.disabled = false;
-  paraTauto.disabled = true;
+  moveauto.style.display = "inline";
+  paraauto.style.display  = "none";
 }
-// MOVE TODOS ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
-var moveFanA;
-function moveTodosAuto(){
-  movePacAuto();
-  moveFanA = setInterval(moveFantasma, 500);
-  moveauto.disabled = true;
-  paraauto.disabled =true;
-  moveTauto.disabled = true;
-  paraTauto.disabled = false;
-}
-// INTERROMPE O AUTOMATICO (VIA BOTAO OU QUANDO DER COLISÃO)
-function stopTodosAuto(){
-  clearInterval(moveFanA);
-  clearInterval(movePacA);
-  moveauto.disabled = false;
-  paraauto.disabled = true;
-  moveTauto.disabled = false;
-  paraTauto.disabled = true;
-}
-
 
 // MOVE O FANTASMA ALEATORIAMENTE
 function moveFantasma() {
-  var posicaoFV = parseInt(Math.floor(Math.random() * espacoFV) + auxV);
-  var posicaoFH = parseInt(Math.floor(Math.random() * espacoFH) + auxH);
+  var posicaoFV = parseInt(Math.floor(Math.random() * espacoFV) + 1);
+  var posicaoFH = parseInt(Math.floor(Math.random() * espacoFH) + 1);
   console.log("Fantasma: " + posicaoFH + ":" + posicaoFV);
   fantasma.style.top = posicaoFV + "px";
   fantasma.style.left = posicaoFH + "px";
-  campoX.value = posicaoFV;
-  campoY.value = posicaoFH;
+  campoX.value = posicaoFH;
+  campoY.value = posicaoFV;
 
   testaColisao();
 }
 
 // MOVE O PACMAN PARA COORDENADAS ESPECÍFICAS INFORMADAS
 function movePacmanXY() {
-  var posicaoPV = parseInt(campoX.value);
-  var posicaoPH = parseInt(campoY.value);
+  var posicaoPH = parseInt(campoX.value);
+  var posicaoPV = parseInt(campoY.value);
   if (posicaoPV == "" || posicaoPH == "")
     alert("Erro! Favor informar um valor!");
   else if (posicaoPV < 1 || posicaoPH < 1)
@@ -130,10 +98,10 @@ function movePacmanXY() {
     alert("Erro! Valores fora do tamanho da tela!");
   else {
     console.log("PacMan: " + posicaoPV + ":" + posicaoPH);
-    pacman.style.top = (posicaoPV+auxV) + "px";
-    pacman.style.left = (posicaoPH+auxH) + "px";
-    campoX.value = posicaoPV;
-    campoY.value = posicaoPH;
+    pacman.style.top = posicaoPV + "px";
+    pacman.style.left = posicaoPH + "px";
+    campoX.value = posicaoPH;
+    campoY.value = posicaoPV;
   }
   //CHAMA O TESTE DE COLISÃO
   testaColisao();
@@ -143,33 +111,33 @@ function testaColisao() {
   //DECLARANDO PONTOS DO PACMAN PARA VERIFICAR COLISÃO:
   posicaoPV = parseInt(pacman.offsetLeft);
   posicaoPH = parseInt(pacman.offsetTop);
-  var p1x = posicaoPV;
-  var p1y = posicaoPH;
+  var p1x = posicaoPH;
+  var p1y = posicaoPV;
   console.log("p1-> " + p1x + ":" + p1y);
-  var p2x = posicaoPV + pLargura;
-  var p2y = posicaoPH;
+  var p2x = posicaoPH + pLargura;
+  var p2y = posicaoPV;
   console.log("p2->" + p2x + ":" + p2y);
-  var p3x = posicaoPV + pAltura;
-  var p3y = posicaoPH + pLargura;
+  var p3x = posicaoPH + pLargura;
+  var p3y = posicaoPV + pAltura;
   console.log("p3->" + p3x + ":" + p3y);
-  var p4x = posicaoPV;
-  var p4y = posicaoPH + pAltura;
+  var p4x = posicaoPH;
+  var p4y = posicaoPV + pAltura;
   console.log("p4->" + p4x + ":" + p4y);
 
   //DECLARANDO PONTOS DO FANTASMA PARA VERIFICAR COLISÃO:
   posicaoFV = parseInt(fantasma.offsetLeft);
   posicaoFH = parseInt(fantasma.offsetTop);
-  var f1x = posicaoFV;
-  var f1y = posicaoFH;
+  var f1x = posicaoFH;
+  var f1y = posicaoFV;
   console.log("f1->" + f1x + ":" + f1y);
-  var f2x = posicaoFV + fLargura;
-  var f2y = posicaoFH;
+  var f2x = posicaoFH + fLargura;
+  var f2y = posicaoFV;
   console.log("f2->" + f2x + ":" + f2y);
-  var f3x = posicaoFV + fAltura;
-  var f3y = posicaoFH + fLargura;
+  var f3x = posicaoFH + fLargura;
+  var f3y = posicaoFV + fAltura;
   console.log("f3->" + f3x + ":" + f3y);
-  var f4x = posicaoFV;
-  var f4y = posicaoFH + fAltura;
+  var f4x = posicaoFH;
+  var f4y = posicaoFV + fAltura;
   console.log("f4->" + f4x + ":" + f4y);
 
   console.log("_________________");
@@ -180,10 +148,9 @@ function testaColisao() {
       (p2x >= f4x && p2x <= f3x && p2y <= f4y && p2y >= f1y) ||
       (p1x <= f3x && p1x >= f4x && p1y <= f3y && p1y >= f2y)) 
     {
-      aviso.innerHTML = "C O L I S Ã O !";
+      aviso.innerHTML = "_C O L I S Ã O !_";
       fantasma.src="fantasmaX.png";
       stopPacAuto();
-      stopTodosAuto();
   }
   else {
     aviso.innerHTML = "";
