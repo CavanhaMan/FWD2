@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- Rodrigo CavanhaMan -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+	<link href="css/pacman.css" rel="stylesheet">
+    <title>Jogo Colisão PacMan</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+  <div id="entrada">
+	<input type="submit" onclick="moveFanAuto()" class="botao" value="Mover" name="moverauto" title="Clique aqui para mover o PacMan aleatoriamente com timer" id="moveauto" />
+	<input type="submit" onclick="stopFanAuto()" class="botao stop" value="Parar" name="pararauto" title="Clique aqui para parar de mover o PacMan aleatoriamente" id="paraauto" disabled />
+	<spam id="aviso"></spam>
+  </div>
+
+	<img src="image/pacman.gif" id="pacman" style="position: fixed;" />
+	<img src="image/fantasma.png" id="fantasma" class="centro" style="position: fixed;" />
+	
+	<script type="text/javascript" src="js/fantasmaautomatico.js"></script>
+
+</body>
+</html>

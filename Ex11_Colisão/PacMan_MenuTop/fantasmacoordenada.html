@@ -11,15 +11,19 @@
 </head>
 <body>
   <div id="entrada">
-	<input type="submit" onclick="moveFanAuto()" class="botao" value="Mover" name="moverauto" title="Clique aqui para mover o PacMan aleatoriamente com timer" id="moveauto" />
-	<input type="submit" onclick="stopFanAuto()" class="botao stop" value="Parar" name="pararauto" title="Clique aqui para parar de mover o PacMan aleatoriamente" id="paraauto" disabled />
+	<label for="vrX" >X:</label>
+	<input type="text" class="campo" id="vrX" title="Digite um valor numérico" />
+	<label for="vrY">Y:</label>
+	<input type="text" class="campo" id="vrY" title="Digite um valor numérico" />
+	
+	<input type="submit" value="Mover" name="mover" onclick="moveFantasmaXY()" class="botao" title="Clique aqui para mover o PacMan para os pontos inseridos" />
 	<spam id="aviso"></spam>
   </div>
 
 	<img src="image/pacman.gif" id="pacman" style="position: fixed;" />
 	<img src="image/fantasma.png" id="fantasma" class="centro" style="position: fixed;" />
 	
-	<script type="text/javascript" src="js/pacmanfantasmaale.js"></script>
+	<script type="text/javascript" src="js/fantasmacoordenada.js"></script>
 
 </body>
 </html>
