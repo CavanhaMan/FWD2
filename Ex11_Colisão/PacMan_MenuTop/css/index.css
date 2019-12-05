@@ -101,7 +101,6 @@ iframe {display:block; width:100%; height:700px; border:none}
 	font-family: Comic Sans MS;
 	margin-top: 50px
 }
-#beard{width:200px;}
 hr{
 	width:98%;
 	margin-left:0px;
@@ -124,3 +123,4 @@ hr{
   float: left;
   margin-top: 0;
 }
+#fantasmacapa,.capa{width:200px;}
