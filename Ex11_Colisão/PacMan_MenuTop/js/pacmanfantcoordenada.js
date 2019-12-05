@@ -10,6 +10,8 @@ function doAnimate() {
 doAnimate();
 
 /*************************************************/
+var campoX = document.getElementById("vrX");
+var campoY = document.getElementById("vrY");
 window.onLoad = imgPacman();
 var h;
 var w;
@@ -38,7 +40,7 @@ function imgPacman() {
   espacoPV = h - pAltura;
   espacoPH = w - pLargura;
   console.log("EspaçoP : " + espacoPH + ":" + espacoPV);
-  moveFantasma();
+  movePacman();
 }
 
 // MOVE O PACMAN ALEATORIAMENTE
@@ -49,18 +51,30 @@ function movePacman() {
   console.log("PacMan: " + posicaoPH + ":" + posicaoPV);
   pacman.style.top = posicaoPV + "px";
   pacman.style.left = posicaoPH + "px";
+  campoX.value = posicaoPH;
+  campoY.value = posicaoPV;
 
   testaColisao();
 }
 
-// MOVE O FANTASMA ALEATORIAMENTE
-function moveFantasma() {
-  var posicaoFV = parseInt(Math.floor(Math.random() * espacoFV) + 1);
-  var posicaoFH = parseInt(Math.floor(Math.random() * espacoFH) + 1);
-  console.log("Fantasma: " + posicaoFH + ":" + posicaoFV);
-  fantasma.style.top = posicaoFV + "px";
-  fantasma.style.left = posicaoFH + "px";
-
+// MOVE O PACMAN PARA COORDENADAS ESPECÍFICAS INFORMADAS
+function moveFantasmaXY() {
+  var posicaoFH = parseInt(campoX.value);
+  var posicaoFV = parseInt(campoY.value);
+  if (posicaoFV == "" || posicaoFH == "")
+    alert("Erro! Favor informar um valor!");
+  else if (posicaoFV < 1 || posicaoFH < 1)
+    alert("Erro! Favor informar um valor positivo!");
+  else if (posicaoFV > espacoFV || posicaoFH > espacoFH)
+    alert("Erro! Valores fora do tamanho da tela!");
+  else {
+    console.log("PacMan: " + posicaoFV + ":" + posicaoFH);
+    fantasma.style.top = posicaoFV + "px";
+    fantasma.style.left = posicaoFH + "px";
+    campoX.value = posicaoFH;
+    campoY.value = posicaoFV;
+  }
+  //CHAMA O TESTE DE COLISÃO
   testaColisao();
 }
 
@@ -107,10 +121,10 @@ function testaColisao() {
     {
       aviso.innerHTML = "_C O L I S Ã O !_";
       fantasma.src="image/fantasmaX.png";
+      stopPacAuto();
   }
   else {
     aviso.innerHTML = "";
     fantasma.src="image/fantasma.png";
   }
-
 }

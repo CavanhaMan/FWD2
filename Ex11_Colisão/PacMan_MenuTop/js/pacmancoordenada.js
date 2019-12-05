@@ -43,36 +43,6 @@ function imgPacman() {
   moveFantasma();
 }
 
-// MOVE O PACMAN ALEATORIAMENTE
-function movePacman() {
-  //var x = (Math.floor(Math.random() * 60) + 1);
-  var posicaoPV = parseInt(Math.floor(Math.random() * espacoPV) + 1);
-  var posicaoPH = parseInt(Math.floor(Math.random() * espacoPH) + 1);
-  console.log("PacMan: " + posicaoPH + ":" + posicaoPV);
-  pacman.style.top = posicaoPV + "px";
-  pacman.style.left = posicaoPH + "px";
-  campoX.value = posicaoPH;
-  campoY.value = posicaoPV;
-
-  testaColisao();
-}
-
-// MOVE O FANTASMA ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
-var movePacA;
-var moveauto = document.getElementById("moveauto");
-var paraauto = document.getElementById("paraauto");
-function movePacAuto(){
-  movePacA = setInterval(movePacman, 500);
-  moveauto.style.display  = "none";
-  paraauto.style.display = "inline";
-}
-// INTERROMPE O AUTOMATICO (VIA BOTAO OU QUANDO DER COLISÃO)
-function stopPacAuto(){
-  clearInterval(movePacA);
-  moveauto.style.display = "inline";
-  paraauto.style.display  = "none";
-}
-
 // MOVE O FANTASMA ALEATORIAMENTE
 function moveFantasma() {
   var posicaoFV = parseInt(Math.floor(Math.random() * espacoFV) + 1);
@@ -157,36 +127,4 @@ function testaColisao() {
     fantasma.src="image/fantasma.png";
   }
 
-  //TESTA COLISÃO INDIVIDUAL POR PONTOS DO PACMAN:
-  /*  if(p3x>=f1x && p3x<=f2x && p3y>=f1y && p3y<=f4y) alert("COLISÃO P3!"); 
-    if(p4x<=f2x && p4x>=f1x && p4y>=f2y && p4y<=f3y) alert("COLISÃO P4!"); 
-    if(p2x>=f4x && p2x<=f3x && p2y<=f4y && p2y>=f1y) alert("COLISÃO P2!"); 
-    if(p1x<=f3x && p1x>=f4x && p1y<=f3y && p1y>=f2y) alert("COLISÃO P1!");
-  */
 }
-
-/*colisões:
-p3
-p3x>=f1x
-p3x<=f2x
-p3y>=f1y
-p3y<=p4y
-
-p4
-p4x<=f2x
-p4x>=f1x
-p4y>=f2y
-p4y<=f3y
-
-p2
-p2x>=f4x
-p2x<=f3x
-p2y<=f4y
-p2y>=f1y
-
-p1
-p1x<=f3x
-p1x>=f4x
-p1y<=f3y
-p1y>=f2y
-*/
