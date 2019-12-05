@@ -38,7 +38,7 @@ function imgPacman() {
   espacoPV = h - pAltura;
   espacoPH = w - pLargura;
   console.log("EspaçoP : " + espacoPH + ":" + espacoPV);
-  moveFantasma();
+  movePacman();
 }
 
 // BOTOES PARA MOVER ALEATORIAMENTE:
@@ -59,6 +59,17 @@ function stopFanAuto(){
   paraauto.disabled = true;
 }
 
+// MOVE O PACMAN ALEATORIAMENTE
+function movePacman() {
+  //var x = (Math.floor(Math.random() * 60) + 1);
+  var posicaoPV = parseInt(Math.floor(Math.random() * espacoPV) + 1);
+  var posicaoPH = parseInt(Math.floor(Math.random() * espacoPH) + 1);
+  console.log("PacMan: " + posicaoPH + ":" + posicaoPV);
+  pacman.style.top = posicaoPV + "px";
+  pacman.style.left = posicaoPH + "px";
+
+  testaColisao();
+}
 // MOVE O FANTASMA ALEATORIAMENTE
 function moveFantasma() {
   var posicaoFV = parseInt(Math.floor(Math.random() * espacoFV) + 1);
