@@ -10,8 +10,6 @@ function doAnimate() {
 doAnimate();
 
 /*************************************************/
-var campoX = document.getElementById("vrX");
-var campoY = document.getElementById("vrY");
 window.onLoad = imgPacman();
 var h;
 var w;
@@ -51,26 +49,40 @@ function movePacman() {
   console.log("PacMan: " + posicaoPH + ":" + posicaoPV);
   pacman.style.top = posicaoPV + "px";
   pacman.style.left = posicaoPH + "px";
-  campoX.value = posicaoPH;
-  campoY.value = posicaoPV;
 
   testaColisao();
 }
 
-// MOVE O FANTASMA ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
+// BOTOES PARA MOVER ALEATORIAMENTE:
+var moveTauto = document.getElementById("moveTauto");
+var paraTauto = document.getElementById("paraTauto");
+// MOVE O PACMAN ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
 var movePacA;
-var moveauto = document.getElementById("moveauto");
-var paraauto = document.getElementById("paraauto");
 function movePacAuto(){
   movePacA = setInterval(movePacman, 500);
-  moveauto.style.display  = "none";
-  paraauto.style.display = "inline";
+  moveTauto.disabled = true;
+  paraTauto.disabled = true;
 }
 // INTERROMPE O AUTOMATICO (VIA BOTAO OU QUANDO DER COLISÃO)
 function stopPacAuto(){
   clearInterval(movePacA);
-  moveauto.style.display = "inline";
-  paraauto.style.display  = "none";
+  moveTauto.disabled = false;
+  paraTauto.disabled = true;
+}
+// MOVE TODOS ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
+var moveFanA;
+function moveTodosAuto(){
+  movePacAuto();
+  moveFanA = setInterval(moveFantasma, 500);
+  moveTauto.disabled = true;
+  paraTauto.disabled = false;
+}
+// INTERROMPE O AUTOMATICO (VIA BOTAO OU QUANDO DER COLISÃO)
+function stopTodosAuto(){
+  clearInterval(moveFanA);
+  clearInterval(movePacA);
+  moveTauto.disabled = false;
+  paraTauto.disabled = true;
 }
 
 // MOVE O FANTASMA ALEATORIAMENTE
@@ -80,30 +92,7 @@ function moveFantasma() {
   console.log("Fantasma: " + posicaoFH + ":" + posicaoFV);
   fantasma.style.top = posicaoFV + "px";
   fantasma.style.left = posicaoFH + "px";
-  campoX.value = posicaoFH;
-  campoY.value = posicaoFV;
 
-  testaColisao();
-}
-
-// MOVE O PACMAN PARA COORDENADAS ESPECÍFICAS INFORMADAS
-function movePacmanXY() {
-  var posicaoPH = parseInt(campoX.value);
-  var posicaoPV = parseInt(campoY.value);
-  if (posicaoPV == "" || posicaoPH == "")
-    alert("Erro! Favor informar um valor!");
-  else if (posicaoPV < 1 || posicaoPH < 1)
-    alert("Erro! Favor informar um valor positivo!");
-  else if (posicaoPV > espacoPV || posicaoPH > espacoPH)
-    alert("Erro! Valores fora do tamanho da tela!");
-  else {
-    console.log("PacMan: " + posicaoPV + ":" + posicaoPH);
-    pacman.style.top = posicaoPV + "px";
-    pacman.style.left = posicaoPH + "px";
-    campoX.value = posicaoPH;
-    campoY.value = posicaoPV;
-  }
-  //CHAMA O TESTE DE COLISÃO
   testaColisao();
 }
 
@@ -150,7 +139,7 @@ function testaColisao() {
     {
       aviso.innerHTML = "_C O L I S Ã O !_";
       fantasma.src="image/fantasmaX.png";
-      stopPacAuto();
+      stopTodosAuto();
   }
   else {
     aviso.innerHTML = "";

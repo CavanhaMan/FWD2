@@ -41,21 +41,22 @@ function imgPacman() {
   moveFantasma();
 }
 
-// MOVE O FANTASMA ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
-var moveFanA;
+// BOTOES PARA MOVER ALEATORIAMENTE:
 var moveauto = document.getElementById("moveauto");
 var paraauto = document.getElementById("paraauto");
 
+// MOVE FANTASMA ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
+var moveFanA;
 function moveFanAuto(){
   moveFanA = setInterval(moveFantasma, 500);
-  moveauto.style.display  = "none";
-  paraauto.style.display = "inline";
+  moveauto.disabled = true;
+  paraauto.disabled = false;
 }
 // INTERROMPE O AUTOMATICO (VIA BOTAO OU QUANDO DER COLISÃO)
 function stopFanAuto(){
   clearInterval(moveFanA);
-  moveauto.style.display = "inline";
-  paraauto.style.display  = "none";
+  moveauto.disabled = false;
+  paraauto.disabled = true;
 }
 
 // MOVE O FANTASMA ALEATORIAMENTE
@@ -112,7 +113,7 @@ function testaColisao() {
     {
       aviso.innerHTML = "_C O L I S Ã O !_";
       fantasma.src="image/fantasmaX.png";
-      stopPacAuto();
+      stopFanAuto();
   }
   else {
     aviso.innerHTML = "";

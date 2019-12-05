@@ -27,5 +27,14 @@ html{
 	background-color:red;
 	margin-left:100px;
 }
-#paraauto{display: none;}
-#paraauto,#moveauto{width:200px;}
+.botao{width:100px;}
+.stop:enabled{
+    background-color: red;
+	color: yellow;
+}
+.botao:hover:enabled {
+	background-color: black;
+	color: yellow;
+}
+a:link{text-decoration:none;}
+.clicked {background-color: red;}

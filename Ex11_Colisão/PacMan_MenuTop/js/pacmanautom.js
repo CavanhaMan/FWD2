@@ -53,20 +53,21 @@ function movePacman() {
   testaColisao();
 }
 
-// MOVE O FANTASMA ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
-var movePacA;
+// BOTOES PARA MOVER ALEATORIAMENTE:
 var moveauto = document.getElementById("moveauto");
 var paraauto = document.getElementById("paraauto");
+// MOVE O PACMAN ALEATORIAMENTE AUTOMATICAMENTE A CADA MEIO SEGUNDO
+var movePacA;
 function movePacAuto(){
   movePacA = setInterval(movePacman, 500);
-  moveauto.style.display  = "none";
-  paraauto.style.display = "inline";
+  moveauto.disabled = true;
+  paraauto.disabled = false;
 }
 // INTERROMPE O AUTOMATICO (VIA BOTAO OU QUANDO DER COLISÃO)
 function stopPacAuto(){
   clearInterval(movePacA);
-  moveauto.style.display = "inline";
-  paraauto.style.display  = "none";
+  moveauto.disabled = false;
+  paraauto.disabled = true;
 }
 
 // MOVE O FANTASMA ALEATORIAMENTE
