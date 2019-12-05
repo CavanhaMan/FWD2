@@ -7,6 +7,7 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #333;
+  height: 70px;
 }
 .topnav a {
   float: left;
@@ -18,8 +19,9 @@ body {
   font-size: 17px;
 }
 .active {
-  background-color: #008080;
+  background-color: gray;
   color: white;
+  width: 40px;
 }
 .topnav .icon {display: none;}
 .dropdown {
@@ -112,7 +114,13 @@ hr{
   top: 55%;
 	transform: translate(-50%,-50%);
 }
-#icone{
+.icone{
+  float: left;
   width: 60px;
   margin: -10px 0px -10px -10px;
+}
+.txtMenu{
+  top: -20px -20px -20px -20px;
+  float: left;
+  margin-top: 0;
 }
