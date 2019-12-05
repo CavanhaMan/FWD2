@@ -149,12 +149,12 @@ function testaColisao() {
       (p1x <= f3x && p1x >= f4x && p1y <= f3y && p1y >= f2y)) 
     {
       aviso.innerHTML = "_C O L I S Ã O !_";
-      fantasma.src="fantasmaX.png";
+      fantasma.src="image/fantasmaX.png";
       stopPacAuto();
   }
   else {
     aviso.innerHTML = "";
-    fantasma.src="fantasma.png";
+    fantasma.src="image/fantasma.png";
   }
 
   //TESTA COLISÃO INDIVIDUAL POR PONTOS DO PACMAN:

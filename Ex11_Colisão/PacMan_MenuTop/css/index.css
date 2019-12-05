@@ -104,3 +104,15 @@ hr{
 	width:98%;
 	margin-left:0px;
 }
+/**************************************************************/
+.blank{
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+	transform: translate(-50%,-50%);
+}
+#icone{
+  width: 60px;
+  margin: -10px 0px -10px -10px;
+}
