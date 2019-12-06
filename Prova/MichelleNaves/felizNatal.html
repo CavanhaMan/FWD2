@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- Michelle Naves -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <title>Prova PG3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #botaoNoel{
+            background-color: green;
+            color: white;
+            padding: 20px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <label for="txtTexto">Quantas falas do Papai Noel? </label>
+    <input type="text" id="txtTexto" placeholder="Digite aqui" />
+    <BR><BR>
+    <input type="submit" id="botaoNoel" value="Mostrar falas do Papai Noel" name="btmostrar" />
+    <p id="saida"></p>
+
+    <script>
+        botaoNoel = document.getElementById("botaoNoel");
+        
+        botaoNoel.onmouseover = function(){
+            botaoNoel.style.backgroundColor  = "red";
+        }
+
+        var texto = document.getElementById("txtTexto");
+        var saida = document.getElementById("saida");
+        botaoNoel.onclick = function(){
+            if (texto.value=="") 
+                alert("Erro! Campo de texto em branco!");
+            else {
+                var qtd = parseInt(texto.value);
+                for (var x=0 ; x<qtd ; x++){
+                    saida.innerHTML = saida.innerHTML +"<BR>"+ "Ho Ho Ho Feliz Natal!";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+<!--
+Ho Ho Ho Feliz Natal!
+
+-->
