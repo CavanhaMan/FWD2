@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <!-- Rodrigo CavanhaMan -->
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <title>Ex02</title>
-  </head>
-  <body>
-	<p>Construa uma página web contendo uma caixa de texto e um botão (um ao lado do outro). Ao retirar o mouse sobre o botão deverão aparecer no corpo do documento, logo abaixo da caixa de texto e do botão, os seguintes textos (cada um em uma linha diferente) relativos ao conteúdo informado pelo usuário dentro da caixa de texto:</p>
-    <ul>
-        <li>Quantidade de caracteres do texto = ...</li>
-        <li>Primeira palavra do texto = ...</li>
-        <li>Última palavra do texto = ...</li>
-        <li>Quantidade de palavras contidas no texto = ...</li>
-    </ul>
-    <p>OBS: Validação a ser utilizada: caixa vazia</p>
-    <BR><hr><BR><BR>
-    
-	<input type="text" id="texto" value="Some text...">
 
-	<button onclick="myFunction()">Try it</button>
+<head>
+  <meta charset="UTF-8">
+  <title>Ex02</title>
+</head>
 
-	<p id="lista"></p>
+<body>
+  <p>Construa uma página web contendo uma caixa de texto e um botão (um ao lado do outro). Ao retirar o mouse sobre o
+    botão deverão aparecer no corpo do documento, logo abaixo da caixa de texto e do botão, os seguintes textos (cada um
+    em uma linha diferente) relativos ao conteúdo informado pelo usuário dentro da caixa de texto:</p>
+  <ul>
+    <li>Quantidade de caracteres do texto = ...</li>
+    <li>Primeira palavra do texto = ...</li>
+    <li>Última palavra do texto = ...</li>
+    <li>Quantidade de palavras contidas no texto = ...</li>
+  </ul>
+  <p>OBS: Validação a ser utilizada: caixa vazia</p>
+  <BR>
+  <hr><BR><BR>
 
-	<script>
-		var lista = document.getElementById("lista");
-		function myFunction() {
-			var x = document.getElementById("texto").value;
-			lista.innerHTML = x;
-		}
-	</script>
+  <input type="text" id="texto" value="Some text...">
+
+  <button id="botao">OK</button>
+
+  <p id="lista"></p>
+
+  <script>
+    var lista = document.getElementById("lista");
+    botao.onclick = function () {
+      if (texto.value == "") alert("Caixa de texto vazia");
+      else alert(texto.value);
+    }
+    botao.onmouseout = function () {
+      var node = document.createElement("LI");
+
+      //Quantidade de caracteres do texto = ...
+      var quant = texto.value.length;
+      console.log(quant);
+      var textnode = document.createTextNode("Quantidade de caracteres do texto = "+quant);
+      node.appendChild(textnode);
+      lista.appendChild(node);
+
+      //Primeira palavra do texto = ...
+/*      var lista = texto.split(" ");
+      console.log(lista[0]);
+      textnode = document.createTextNode("Primeira palavra do texto = "+lista[0]);
+      node.appendChild(textnode);
+      lista.appendChild(node);
+*/
+      //Última palavra do texto = ...
+      //Quantidade de palavras contidas no texto = ...
+    }
+
+
+    /*		function myFunction() {
+          var x = document.getElementById("texto").value;
+          lista.innerHTML = x;
+        }*/
+  </script>
 
 </body>
+
 </html>
