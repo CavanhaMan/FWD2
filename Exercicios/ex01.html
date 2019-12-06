@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- Rodrigo CavanhaMan -->
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Exercicio 01</title>
+  </head>
+  <body>
+    <p>1) Construa uma página web contendo uma caixa de texto e um botão (um ao lado do outro). Ao clicar sobre o botão, o conteúdo dessa caixa deverá ser exibido dentro de uma caixa de diálogo. OBS: Validação a ser utilizada: caixa vazia.</p>
+    <BR><hr><BR><BR>
+    <label for="txtTexto">Digite algo:</label>
+    <input type="text" id="txtTexto" placeholder="Digite um texto" />
+    <input type="submit" value="Ok" name="ok" onclick="validaTexto()" />
+    <script>
+        function validaTexto(){
+            var texto = document.getElementById("txtTexto").value;
+            if (texto=="") alert("Caixa de texto vazia");
+            else alert(texto);
+        }
+    </script>
+  </body>
+</html>
