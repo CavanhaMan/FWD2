@@ -1,23 +1,34 @@
 <!DOCTYPE html>
-<html>
-<body>
+<!-- Rodrigo CavanhaMan -->
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ex02</title>
+  </head>
+  <body>
+	<p>Construa uma página web contendo uma caixa de texto e um botão (um ao lado do outro). Ao retirar o mouse sobre o botão deverão aparecer no corpo do documento, logo abaixo da caixa de texto e do botão, os seguintes textos (cada um em uma linha diferente) relativos ao conteúdo informado pelo usuário dentro da caixa de texto:</p>
+    <ul>
+        <li>Quantidade de caracteres do texto = ...</li>
+        <li>Primeira palavra do texto = ...</li>
+        <li>Última palavra do texto = ...</li>
+        <li>Quantidade de palavras contidas no texto = ...</li>
+    </ul>
+    <p>OBS: Validação a ser utilizada: caixa vazia</p>
+    <BR><hr><BR><BR>
+    
+	<input type="text" id="texto" value="Some text...">
 
-<h3>A demonstration of how to access a Text Field</h3>
+	<button onclick="myFunction()">Try it</button>
 
-<input type="text" id="myText" value="Some text...">
+	<p id="lista"></p>
 
-<p>Click the "Try it" button to get the text in the text field.</p>
-
-<button onclick="myFunction()">Try it</button>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myText").value;
-  document.getElementById("demo").innerHTML = x;
-}
-</script>
+	<script>
+		var lista = document.getElementById("lista");
+		function myFunction() {
+			var x = document.getElementById("texto").value;
+			lista.innerHTML = x;
+		}
+	</script>
 
 </body>
 </html>
