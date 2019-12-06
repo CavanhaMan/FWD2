@@ -14,11 +14,18 @@
     <label for="txtTexto">Informe um texto qualquer: </label>
     <input type="text" id="txtTexto" placeholder="Digite um texto" value="Instituto Federal do Triângulo Mineiro Minas Gerais meu preferido" />
     <BR>
-    <input type="submit" value="enviar" name="btenviar" onclick="validaTexto()" />
+    <input type="submit" value="enviar" name="btEnviar" onclick="validaTexto()" />
     <script>
         alert("Seja bem-vindo!");
+        var txtTexto = document.getElementById("txtTexto");
+        var btEnviar = document.getElementById("btEnviar");
         function validaTexto(){
-
+            if (txtTexto=="")
+                alert("“Informe o texto seguindo o padrão esperado")
+            else if (txtTexto.length<9 || txtTexto.length>50)
+                alert("“Informe o texto seguindo o padrão esperado");
+            else
+            window.open("analisarTxt.html","_self")
         }
     </script>
 </body>

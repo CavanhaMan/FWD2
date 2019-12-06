@@ -21,6 +21,8 @@
     <BR><BR>
     <input type="submit" id="botaoNoel" value="Mostrar falas do Papai Noel" name="btmostrar" />
     <p id="saida"></p>
+    <img src="" id="imgNatal" />
+    <p id="saida2"></p>
 
     <script>
         botaoNoel = document.getElementById("botaoNoel");
@@ -31,20 +33,42 @@
 
         var texto = document.getElementById("txtTexto");
         var saida = document.getElementById("saida");
+        var imgNatal = document.getElementById("imgNatal");
         botaoNoel.onclick = function(){
             if (texto.value=="") 
                 alert("Erro! Campo de texto em branco!");
             else {
                 var qtd = parseInt(texto.value);
-                for (var x=0 ; x<qtd ; x++){
-                    saida.innerHTML = saida.innerHTML +"<BR>"+ "Ho Ho Ho Feliz Natal!";
-                }
+                var conta = 0;
+                var tempo = setInterval(function() {
+                        if (conta<qtd){
+                            saida.innerHTML = saida.innerHTML +"<BR>"+ "Ho Ho Ho Feliz Natal!";
+                            conta++;
+                        }
+                        else{
+                            clearInterval(tempo);
+                            imgNatal.src = "imagens/papaiNoel.jpg";
+                        }
+                    },1000);
             }
+        }
+
+        imgNatal.onmouseover = function(){
+            alert("Voce quer ganhar um presente?\nSe sim, clique sobre mim!");
+        }
+        imgNatal.onclick = function(){
+            imgNatal.src = "imagens/presente.png";
+            document.getElementById("saida2").innerHTML = "Feliz Natal!";
         }
     </script>
 </body>
 </html>
 <!--
 Ho Ho Ho Feliz Natal!
-
+function cronometro(){
+    setInterval(function() {
+        if(pausado==0)
+            changePic()
+    },3000);
+}
 -->

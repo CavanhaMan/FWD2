@@ -1,18 +1,30 @@
 <!DOCTYPE html>
 <!-- Michelle Naves -->
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Language" content="pt-br">
     <title>Prova PG2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
+    <style>
+            #txtTexto{width:400px;}
+        </style>
+    </head>
 <body>
-    <script>
+    <h1>Texto informado pelo usuário na página anterior:</h1>
+    <p id="textoAnt"></p>
+    <h1>Voce gostaria de analisar a informação disponibilizada pelo usuário na página anterior?</h1>
+    <p>OBS: Se voce respondeu "não" na pergunta anterior (2), por favor informe um novo texto na caixa abaixo:</p>
+    <input type="text" id="txtTexto" placeholder="Digite um texto" />
+    <input type="submit" value="Analisar texto" name="btEnviar" onclick="validaTexto()" />
+    <BR><HR><BR><BR>
 
+    <input type="submit" value="Abrir página do papai noel" id="btPapai" />
+    <script>
+        var btPapai = document.getElementById("btPapai");
+        btPapai.onclick = function(){
+            window.open("felizNatal.html","_self")
+        }
     </script>
 </body>
-
 </html>
