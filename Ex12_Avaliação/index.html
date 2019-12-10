@@ -15,29 +15,37 @@
     <input type="text" id="txtTexto" placeholder="Digite um texto" value="Instituto Federal do Triângulo Mineiro Minas Gerais meu preferido" />
     <BR>
     <input type="submit" value="enviar" name="btEnviar" onclick="validaTexto()" />
+    <p>O texto deve respeitar as regras:</p>
+    <ul>
+        <li>conter apenas letras (podendo ter acento ou não)</li>
+        <li>espaços em branco e vírgulas</li>
+        <li>(mínimo de 9 caracteres e no máximo 50 caracteres)</li>
+        <li>O texto DEVE iniciar com a palavra INSTITUTO - (a primeira letra dessa palavra deve ser maiúscula as demais podem ser tanto maiúsculas quanto minúsculas)</li>
+    </ul>
     <script>
-        alert("Seja bem-vindo!");
+        //alert("Seja bem-vindo!");
         var txtTexto = document.getElementById("txtTexto");
         var btEnviar = document.getElementById("btEnviar");
         function validaTexto(){
-            if (txtTexto=="")
+            var dado = txtTexto.value;
+            console.log(dado);
+            //var padrao = /^I(N|n)(S|s)(T|t)(I|i)(T|t)(U|u)(T|t)(O|o)\w{0,41}$/;
+            var padrao = /^[A-Za-z]$/;
+/*            if (txtTexto=="")
                 alert("“Informe o texto seguindo o padrão esperado")
             else if (txtTexto.length<9 || txtTexto.length>50)
                 alert("“Informe o texto seguindo o padrão esperado");
-            else
-            window.open("analisarTxt.html","_self")
+            else*/
+            console.log(padrao.test(dado));
+            if (padrao.test(dado)){
+                txtTexto.style.backgroundColor = "green";
+            }
+            else{
+                txtTexto.style.backgroundColor = "red";
+		    }
+//            window.open("analisarTxt.html","_self")
         }
     </script>
 </body>
 </html>
 
-<!--
-conter apenas letras (podendo ter acento ou não)
-espaços em branco e vírgulas
-(mínimo de 9 caracteres e no máximo 50 caracteres)
-O texto DEVE iniciar com a palavra INSTITUTO
-(a primeira letra dessa palavra deve ser maiúscula
-as demais podem ser tanto maiúsculas quanto minúsculas)
-
-Informe o texto seguindo o padrão esperado
--->
