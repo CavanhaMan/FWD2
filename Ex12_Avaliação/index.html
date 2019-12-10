@@ -29,8 +29,9 @@
         function validaTexto(){
             var dado = txtTexto.value;
             console.log(dado);
+			console.log(dado.length);
             //var padrao = /^I(N|n)(S|s)(T|t)(I|i)(T|t)(U|u)(T|t)(O|o)\w{0,41}$/;
-            var padrao = /^[A-Za-z]$/;
+            var padrao = /^[A-Za-z\s]{9,70}$/;
 /*            if (txtTexto=="")
                 alert("“Informe o texto seguindo o padrão esperado")
             else if (txtTexto.length<9 || txtTexto.length>50)
