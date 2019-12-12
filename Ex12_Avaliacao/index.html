@@ -30,8 +30,10 @@
             var dado = txtTexto.value;
             console.log(dado);
 			console.log(dado.length);
+			var padraoD = /^MT-\d{2}\.\d{3}-IFTM$/i;
             //var padrao = /^I(N|n)(S|s)(T|t)(I|i)(T|t)(U|u)(T|t)(O|o)\w{0,41}$/;
-            var padrao = /^[A-Za-z\s]{9,70}$/;
+            //var padrao = /^[A-Za-z\s]{9,70}$/;
+			var padrao = /^I(N|n)(S|s)(T|t)(I|i)(T|t)(U|u)(T|t)(O|o)[\w\s,]{9,70}$/;
 /*            if (txtTexto=="")
                 alert("“Informe o texto seguindo o padrão esperado")
             else if (txtTexto.length<9 || txtTexto.length>50)
@@ -50,3 +52,30 @@
 </body>
 </html>
 
+<!--  
+/***LETRA D*******************************************************************/
+//Único formato permitido: MT-xx.xxx-IFTM. Onde x é um dígito e 
+//as letras do padrão poderão ser tanto maiúsculas quanto minúsculas.
+document.getElementById("txtD").onfocus = function() {
+    document.getElementById("validaD").checked=false;
+    document.getElementById("mensagemD").innerHTML="";
+}
+document.getElementById("validaD").onclick = function() {
+	if (document.getElementById("validaD").checked==false){
+		document.getElementById("validaD").checked=false;
+		document.getElementById("mensagemD").innerHTML="";
+	}
+	else{
+		var dadoD = document.getElementById("txtD").value;
+		var padraoD = /^MT-\d{2}\.\d{3}-IFTM$/i;
+		if (padraoD.test(dadoD)){
+			document.getElementById("mensagemD").innerHTML=" = Válido!";
+			document.getElementById("mensagemD").style.backgroundColor = "green";
+		}
+		else{
+			document.getElementById("mensagemD").innerHTML=" = Inválido!";
+			document.getElementById("mensagemD").style.backgroundColor = "red";
+		}
+	}
+};
+-->
