@@ -33,7 +33,7 @@
 			var padraoD = /^MT-\d{2}\.\d{3}-IFTM$/i;
             //var padrao = /^I(N|n)(S|s)(T|t)(I|i)(T|t)(U|u)(T|t)(O|o)$/;
             //var padrao = /^[\wÀ-ú\s,]{9,100}$/;
-			var padrao = /^I(N|n)(S|s)(T|t)(I|i)(T|t)(U|u)(T|t)(O|o)[\wÀ-ú\s,]{9,100}$/;
+			var padrao = /^I(N|n)(S|s)(T|t)(I|i)(T|t)(U|u)(T|t)(O|o)[\wÀ-ú\s,]{9,50}$/;
 /*            if (txtTexto=="")
                 alert("“Informe o texto seguindo o padrão esperado")
             else if (txtTexto.length<9 || txtTexto.length>50)
@@ -42,11 +42,13 @@
             console.log(padrao.test(dado));
             if (padrao.test(dado)){
                 txtTexto.style.backgroundColor = "green";
+                localStorage.setItem("storageFrase",dado);
+                window.open("analisarTxt.html","_self")
             }
             else{
                 txtTexto.style.backgroundColor = "red";
+                alert("Informe o texto seguindo o padrão esperado!");
 		    }
-//            window.open("analisarTxt.html","_self")
         }
     </script>
 </body>

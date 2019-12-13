@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Rodrigo CavanhaMan -->
+/* Rodrigo CavanhaMan */
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -7,20 +7,63 @@
     <title>Prova PG2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-            #txtTexto{width:400px;}
+        html{font-size: x-large;}
+        #textoNovo{width: 600px;}
+        #textoAnt{color: red;}
+        #pergunta{display:inline}
         </style>
     </head>
 <body>
-    <h1>Texto informado pelo usuário na página anterior:</h1>
+    <p><b>1) Texto informado pelo usuário na página anterior:</b></p>
     <p id="textoAnt"></p>
-    <h1>Voce gostaria de analisar a informação disponibilizada pelo usuário na página anterior?</h1>
-    <p>OBS: Se voce respondeu "não" na pergunta anterior (2), por favor informe um novo texto na caixa abaixo:</p>
-    <input type="text" id="txtTexto" placeholder="Digite um texto" />
+    <p id="pergunta"><b>2) Voce gostaria de analisar a informação disponibilizada pelo usuário na página anterior?</b></p>
+    <select name="analisar" id="analisar">
+        <option value="s">Sim</option>
+        <option value="n">Não</option>
+    </select>
+    <BR><BR>
+    <p id="pergunta">OBS: Se voce respondeu "não" na pergunta anterior (2), por favor informe um novo texto na caixa abaixo:</p>
+    <BR>
+    <input type="text" id="textoNovo" placeholder="Digite um texto" disabled />
+    <BR><BR>
     <input type="submit" value="Analisar texto" name="btEnviar" onclick="validaTexto()" />
-    <BR><HR><BR><BR>
+
+    <BR><BR><HR><BR><BR>
 
     <input type="submit" value="Abrir página do papai noel" id="btPapai" />
     <script>
+        var textoAnterior = (localStorage.getItem("storageFrase"));
+        var textoAnt = document.getElementById("textoAnt");
+        textoAnt.innerHTML = textoAnterior;
+
+        var textoNovo = document.getElementById("textoNovo");
+        var analisar = document.getElementById("analisar");
+        analisar.onchange = function(){
+            if (analisar.value == "n"){
+                textoNovo.disabled = false;
+                textoAnt.style.color="blue";
+            }
+            if (analisar.value == "s"){
+                textoNovo.disabled = true;
+                textoNovo.value = "";
+                textoAnt.style.color="yellow";
+            }
+            /* Item 3) Deverá ser utilizado um parágrafo para informar a
+               quantidade de palavras presentes no texto informado pelo
+               usuário, conforme mostrado na figura anterior;*/
+            /* Item 4) Listar dentro de uma caixa de texto todas as palavras
+               contidas no texto iniciadas com a letra “M” ou “m”, separadas
+               por vírgula, conforme mostrado na figura anterior;*/
+            /* Item 5) Listar dentro de uma caixa de texto a primeira palavra
+               informada pelo usuário, conforme mostrado na figura anterior;*/
+            /* Item 6) Listar dentro de uma caixa de texto a segunda palavra
+               informada pelo usuário, conforme mostrado na figura anterior.
+               OBS: E se o texto informado pelo usuário contiver apenas uma
+               palavra? Nesse caso, o seguinte texto deverá ser informado
+               dentro dessa caixa de texto “O texto não possui mais palavras”;*/
+            /* Item 7) Listar dentro de uma caixa de texto a última palavra
+               informada pelo usuário, conforme mostrado na figura anterior;*/            
+        }
         var btPapai = document.getElementById("btPapai");
         btPapai.onclick = function(){
             window.open("felizNatal.html","_self")
