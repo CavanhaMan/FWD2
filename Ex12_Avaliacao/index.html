@@ -31,9 +31,9 @@
             console.log(dado);
 			console.log(dado.length);
 			var padraoD = /^MT-\d{2}\.\d{3}-IFTM$/i;
-            //var padrao = /^I(N|n)(S|s)(T|t)(I|i)(T|t)(U|u)(T|t)(O|o)\w{0,41}$/;
-            //var padrao = /^[A-Za-z\s]{9,70}$/;
-			var padrao = /^I(N|n)(S|s)(T|t)(I|i)(T|t)(U|u)(T|t)(O|o)[\w\s,]{9,70}$/;
+            //var padrao = /^I(N|n)(S|s)(T|t)(I|i)(T|t)(U|u)(T|t)(O|o)$/;
+            //var padrao = /^[\wÀ-ú\s,]{9,100}$/;
+			var padrao = /^I(N|n)(S|s)(T|t)(I|i)(T|t)(U|u)(T|t)(O|o)[\wÀ-ú\s,]{9,100}$/;
 /*            if (txtTexto=="")
                 alert("“Informe o texto seguindo o padrão esperado")
             else if (txtTexto.length<9 || txtTexto.length>50)
