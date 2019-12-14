@@ -10,6 +10,7 @@
         html{font-size: x-large;}
         input{font-size: large;}
         #textoNovo{width: 600px;}
+        .resposta{width: 300px;}
         #textoAnt{color: red;}
         .pergunta{display:inline}
         .nops{visibility: hidden;}
@@ -34,15 +35,15 @@
     <BR><BR><HR><BR><BR>
 
     <p id="p3" class="pergunta nops"><b>3) Quantidade de palavras contidas no texto:</b></p>
-    <span id="r3" class="nops"></span><BR><BR>
+    <span id="r3" class="resposta nops"></span><BR><BR>
     <p id="p4" class="pergunta nops"><b>4) Palavras iniciadas com a letra M: </b></p>
-    <input type="text" id="r4" disabled class="nops" /><BR><BR>
+    <input type="text" id="r4" disabled class="resposta nops" /><BR><BR>
     <p id="p5" class="pergunta nops"><b>5) Primeira palavra do texto: <span></span></b></p>
-    <input type="text" id="r5" disabled class="nops" /><BR><BR>
+    <input type="text" id="r5" disabled class="resposta nops" /><BR><BR>
     <p id="p6" class="pergunta nops"><b>6) Segunda palavra do texto: <span></span></b></p>
-    <input type="text" id="r6" disabled class="nops" /><BR><BR>
+    <input type="text" id="r6" disabled class="resposta nops" /><BR><BR>
     <p id="p7" class="pergunta nops"><b>7) Última palavra do texto: <span></span></b></p>
-    <input type="text" id="r7" disabled class="nops" />
+    <input type="text" id="r7" disabled class="resposta nops" />
 
     <input type="submit" value="Abrir página do papai noel" id="btPapai" />
     <script>
@@ -97,6 +98,7 @@
             document.getElementById("p4").style.visibility = "visible";
             var r4 = document.getElementById("r4");
             r4.style.visibility = "visible";
+            var vetResultM = [];
             for(var x=0 ; x<textoPartido.length ; x++){
                 if(/^(M|m)/.test(textoPartido[x]))
                 vetResultM.push(textoPartido[x]);
