@@ -54,6 +54,7 @@
         var analisar = document.getElementById("analisar");
         var oTexto;
         var vetResultM;
+        var saidaM;
         textoNovo.disabled = true;
         textoAnt.style.color="yellow";
         oTexto = textoAnterior;
@@ -100,7 +101,8 @@
                 if(/^(M|m)/.test(textoPartido[x]))
                     vetResultM.push(textoPartido[x]);
             }
-            
+            saidaM = vetResultM.join(", ");
+            r4.value = saidaM;
 
             /* Item 5) Listar dentro de uma caixa de texto a primeira palavra
                informada pelo usuário, conforme mostrado na figura anterior;*/
