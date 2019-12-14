@@ -53,7 +53,7 @@
         var textoNovo = document.getElementById("textoNovo");
         var analisar = document.getElementById("analisar");
         var oTexto;
-        var vetResultM;
+        var vetResultM = [];
         var saidaM;
         textoNovo.disabled = true;
         textoAnt.style.color="yellow";
@@ -99,7 +99,7 @@
             r4.style.visibility = "visible";
             for(var x=0 ; x<textoPartido.length ; x++){
                 if(/^(M|m)/.test(textoPartido[x]))
-                    vetResultM.push(textoPartido[x]);
+                vetResultM.push(textoPartido[x]);
             }
             saidaM = vetResultM.join(", ");
             r4.value = saidaM;
