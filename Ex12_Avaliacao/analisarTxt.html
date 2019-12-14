@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-/* Rodrigo CavanhaMan */
+<!-- Rodrigo CavanhaMan -->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -8,27 +8,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         html{font-size: x-large;}
+        input{font-size: large;}
         #textoNovo{width: 600px;}
         #textoAnt{color: red;}
-        #pergunta{display:inline}
+        .pergunta{display:inline}
+        .nops{visibility: hidden;}
+        .yeps{visibility: visible;}
         </style>
     </head>
 <body>
     <p><b>1) Texto informado pelo usuário na página anterior:</b></p>
     <p id="textoAnt"></p>
-    <p id="pergunta"><b>2) Voce gostaria de analisar a informação disponibilizada pelo usuário na página anterior?</b></p>
+    <p class="pergunta"><b>2) Voce gostaria de analisar a informação disponibilizada pelo usuário na página anterior?</b></p>
     <select name="analisar" id="analisar">
         <option value="s">Sim</option>
         <option value="n">Não</option>
     </select>
     <BR><BR>
-    <p id="pergunta">OBS: Se voce respondeu "não" na pergunta anterior (2), por favor informe um novo texto na caixa abaixo:</p>
+    <p class="pergunta">OBS: Se voce respondeu "não" na pergunta anterior (2), por favor informe um novo texto na caixa abaixo:</p>
     <BR>
     <input type="text" id="textoNovo" placeholder="Digite um texto" disabled />
     <BR><BR>
-    <input type="submit" value="Analisar texto" name="btEnviar" onclick="validaTexto()" />
+    <input type="submit" value="Analisar texto" name="btValidar" onclick="analisaTexto()" />
 
     <BR><BR><HR><BR><BR>
+
+    <p id="p3" class="pergunta nops"><b>3) Quantidade de palavras contidas no texto:</b></p>
+    <span id="r3" class="nops"></span><BR><BR>
+    <p id="p4" class="pergunta nops"><b>4) Palavras iniciadas com a letra M: </b></p>
+    <input type="text" id="r4" disabled class="nops" /><BR><BR>
+    <p id="p5" class="pergunta nops"><b>5) Primeira palavra do texto: <span></span></b></p>
+    <input type="text" id="r5" disabled class="nops" /><BR><BR>
+    <p id="p6" class="pergunta nops"><b>6) Segunda palavra do texto: <span></span></b></p>
+    <input type="text" id="r6" disabled class="nops" /><BR><BR>
+    <p id="p7" class="pergunta nops"><b>7) Última palavra do texto: <span></span></b></p>
+    <input type="text" id="r7" disabled class="nops" />
 
     <input type="submit" value="Abrir página do papai noel" id="btPapai" />
     <script>
@@ -38,32 +52,79 @@
 
         var textoNovo = document.getElementById("textoNovo");
         var analisar = document.getElementById("analisar");
+        var oTexto;
+        var vetResultM;
+        textoNovo.disabled = true;
+        textoAnt.style.color="yellow";
+        oTexto = textoAnterior;
+        console.log(oTexto);
         analisar.onchange = function(){
             if (analisar.value == "n"){
                 textoNovo.disabled = false;
                 textoAnt.style.color="blue";
+                textoNovo.focus();
             }
-            if (analisar.value == "s"){
+            else if (analisar.value == "s"){
                 textoNovo.disabled = true;
                 textoNovo.value = "";
                 textoAnt.style.color="yellow";
             }
+        }
+
+        function analisaTexto(){
+            if (analisar.value == "n"){
+                oTexto = textoNovo.value;
+                console.log(oTexto);
+            }
+            else if (analisar.value == "s"){
+                oTexto = textoAnterior;
+                console.log(oTexto);
+            }
+            var textoPartido = oTexto.split(" ");
+            console.log(textoPartido);
             /* Item 3) Deverá ser utilizado um parágrafo para informar a
                quantidade de palavras presentes no texto informado pelo
                usuário, conforme mostrado na figura anterior;*/
+            document.getElementById("p3").style.visibility = "visible";
+            var r3 = document.getElementById("r3");
+            r3.style.visibility = "visible";
+            r3.innerHTML = textoPartido.length;
+            
             /* Item 4) Listar dentro de uma caixa de texto todas as palavras
                contidas no texto iniciadas com a letra “M” ou “m”, separadas
                por vírgula, conforme mostrado na figura anterior;*/
+            document.getElementById("p4").style.visibility = "visible";
+            var r4 = document.getElementById("r4");
+            r4.style.visibility = "visible";
+            for(var x=0 ; x<textoPartido.length ; x++){
+                if(/^(M|m)/.test(textoPartido[x]))
+                    vetResultM.push(textoPartido[x]);
+            }
+            
+
             /* Item 5) Listar dentro de uma caixa de texto a primeira palavra
                informada pelo usuário, conforme mostrado na figura anterior;*/
+            document.getElementById("p5").style.visibility = "visible";
+            var r5 = document.getElementById("r5");
+            r5.style.visibility = "visible";
+            r5.value = textoPartido[0];
             /* Item 6) Listar dentro de uma caixa de texto a segunda palavra
                informada pelo usuário, conforme mostrado na figura anterior.
                OBS: E se o texto informado pelo usuário contiver apenas uma
                palavra? Nesse caso, o seguinte texto deverá ser informado
                dentro dessa caixa de texto “O texto não possui mais palavras”;*/
+            document.getElementById("p6").style.visibility = "visible";
+            var r6 = document.getElementById("r6");
+            r6.style.visibility = "visible";
+            r6.value = textoPartido[1];
             /* Item 7) Listar dentro de uma caixa de texto a última palavra
                informada pelo usuário, conforme mostrado na figura anterior;*/            
+            document.getElementById("p7").style.visibility = "visible";
+            var r7 = document.getElementById("r7");
+            r7.style.visibility = "visible";
+            r7.value = textoPartido[textoPartido.length-1];
         }
+
         var btPapai = document.getElementById("btPapai");
         btPapai.onclick = function(){
             window.open("felizNatal.html","_self")
