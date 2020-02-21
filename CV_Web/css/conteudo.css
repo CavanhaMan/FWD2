@@ -1,0 +1,10 @@
+/*Rodrigo Cavanhaman*/
+@font-face {
+    font-family: "texto";
+    src: url("../fonts/Thisay_Font.otf");
+    }
+.texto{font-family: "texto";}
+body{
+    color: black;
+    margin:0px;
+}
