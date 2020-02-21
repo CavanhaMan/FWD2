@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>Parent File</title>
+</head>
+
+<body>
+
+  <iframe id="iframe" src="child.html" style="width:100%;border:none;"></iframe>
+
+  <script>
+    window.onmessage = (e) => {
+      if (e.data.hasOwnProperty("frameHeight")) {
+        document.getElementById("iframe").style.height = `${e.data.frameHeight + 30}px`;
+      }
+    };
+
+  </script>
+
+</body>
+
+</html>
