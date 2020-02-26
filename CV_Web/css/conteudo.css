@@ -11,9 +11,9 @@ body{
 table, tr, td, th{
     border: 1px solid black;
     border-collapse:collapse;
-    vertical-align: top;
 }
 th{
+    vertical-align: top;
     text-align: left;
     font-size: large;
     background-color: black;
