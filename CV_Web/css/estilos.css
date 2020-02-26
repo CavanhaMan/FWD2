@@ -43,15 +43,19 @@ li :hover{
 }
 #dMenu {width: 300px;}
 #dImagem {width: 900px;}
-.iframe-container {
+.content {
     background-color: white;
-}
-#iframe{
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    overflow: hidden;
     position: absolute;
+    top: 150px;
+    left: 400px;
+    width: 65%;
+    border: 0;
+}
+iframe{
+    height: 450px;
+    width: 100%;
+    border: 0;
+    background-color: white;
 }
 #menu{
     /*codigo para centralizar verticalmente:*/
@@ -110,7 +114,7 @@ li :hover{
     /*codigo para centralizar horizontalmente:*/
     margin: 0;
     position: absolute;
-    bottom: 15px;
+    bottom: -50px;
     left: 50%;
     transform: translate(-50%);
 }
@@ -129,4 +133,4 @@ li :hover{
 .none{
     visibility: collapse; 
 }
-.content {width: 75%;}
+

@@ -13,9 +13,10 @@
 <body>
 
     <div class="header"></div>
-    <img src="img/beard1_G.png" id="imgLogo" alt="Barber Club Pole">
-    <h1 id="hTitulo" class="texto">Currículo Profissional do Cavanha</h1>
-
+    <a href="#" src="index.html" title="Clique para voltar para a página inicial">
+        <img src="img/beard1_G.png" id="imgLogo" alt="Barber Club Pole">
+        <h1 id="hTitulo" class="texto">Currículo Profissional do Cavanha</h1>
+    </a>
     <div class="clearfix">
 		<div id="dMenu">
 			<ul id="menu">
@@ -28,10 +29,10 @@
 			</ul>
         </div>
 		<div class="column content">
-			<iframe name="content" name="framehtml" id="framehtml" src="conteudo/curric0.html" height="450px"> </iframe>
+			<iframe name="content" name="framehtml" id="framehtml" src="conteudo/curric0.html" > </iframe>
+            <img src="img/buttons0.png" id="botoes" alt="Botoes">
 		</div>
         <!--<img src="img/barbearia0.jpg" id="barber" alt="CavanhaMan">-->
-        <img src="img/buttons0.png" id="botoes" alt="Botoes">
     </div>
 
     <div class="footer"></div>
@@ -39,20 +40,13 @@
         <h2 id="legenda">Bem vindo à barbearia do Cavanha!</h2>
     </div>
 
-    <div id="leg1" class="none">Seja bem vindo à barbearia do Cavanha!</div>
-    <div id="leg2" class="none">Aqui você encontra o melhor tratamento para sua barba e o barbear mais perfeito!</div>
-    <div id="leg3" class="none">Cortes modernos, estilosos e com acabamento primoroso para todos os estilos!</div>
-    <div id="leg4" class="none">Ceras, pomadas, gel e muita experiência para deixar seu bigode bem hidratado e com o formato certo para o seu gosto!</div>
-    <div id="leg5" class="none">Descontos especiais para serviço completo - barba e cabelo com tratamento capilar e facial!</div>
-    <div id="leg6" class="none">Não deixe de adquirir nossos produtos e leve para casa toda a qualidade dos nossos 20 anos de experiência! </div>
+    <div id="leg1" class="none">Seja bem vindo ao currículo online do Cavanha!</div>
+    <div id="leg2" class="none">Dados pessoais, informações de contato e redes sociais</div>
+    <div id="leg3" class="none">Formação acadêmica</div>
+    <div id="leg4" class="none">Minha experiência profissional</div>
+    <div id="leg5" class="none">Cursos voltados para minha formação profissional</div>
+    <div id="leg6" class="none">Atividades extracurriculares - minhas paixões e hobbies.</div>
 
-    <script>
-		window.onmessage = (e) => {
-			if (e.data.hasOwnProperty("frameHeight")) {
-				document.getElementById("iframe").style.height = `${e.data.frameHeight + 30}px`;
-			}
-		};
-	</script>
 </body>
 </html>
 <!--
