@@ -8,3 +8,14 @@ body{
     color: black;
     background-color: white;
 }
+table, tr, td, th{
+    border: 1px solid black;
+    border-collapse:collapse;
+    vertical-align: top;
+}
+th{
+    text-align: left;
+    font-size: large;
+    background-color: black;
+    color: white;
+}
