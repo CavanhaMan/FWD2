@@ -14,12 +14,12 @@
         var n3 = prompt("Digite o terceiro número entre 0 e 255:");
         var str = "<h1>Fundamentos de Web Design II</h1>";
         if (n1 && n2 && n3){
-            var n1h = Number(n1).toString(16);  //converrte pra string
-            var n2h = Number(n2).toString(16);
+            var n1h = Number(n1).toString(16);  //converrte pra string com número em hexadecimal
+            var n2h = Number(n2).toString(16);  //para mudar a cor no formato: #000000
             var n3h = Number(n3).toString(16);
             if (n1h.length < 2) n1h = "0" + n1h;//concatena para ter 2 caracteres
-            if (n2h.length < 2) n2h = "0" + n2h;
-            if (n3h.length < 2) n3h = "0" + n3h;
+            if (n2h.length < 2) n2h = "0" + n2h;//para o caso de termos apenas uma
+            if (n3h.length < 2) n3h = "0" + n3h;//letra ou número
 
             var cor = "#" + n1h + n2h + n3h;    //monta a string da cor
             console.log(cor);
