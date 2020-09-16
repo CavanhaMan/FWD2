@@ -14,21 +14,22 @@
         var n1 = prompt("A seguir você deverá informar três números distintos entre 0 e 255.\n\nDigite o primeiro número:");
         var n2 = prompt("Digite o segundo número entre 0 e 255:");
         var n3 = prompt("Digite o terceiro número entre 0 e 255:");
+        var str = "<h1>Fundamentos de Web Design II</h1>";
         if (n1 && n2 && n3){
-            var n1h = Number(n1).toString(16);
+            var n1h = Number(n1).toString(16);  //converrte pra string
             var n2h = Number(n2).toString(16);
             var n3h = Number(n3).toString(16);
-            if (n1h.length < 2) n1h = "0" + n1h;
+            if (n1h.length < 2) n1h = "0" + n1h;//concatena para ter 2 caracteres
             if (n2h.length < 2) n2h = "0" + n2h;
             if (n3h.length < 2) n3h = "0" + n3h;
-            console.log(n1h);
-            console.log(n2h);
-            console.log(n3h);
-            var cor = "#" + n1h + n2h + n3h;
+
+            var cor = "#" + n1h + n2h + n3h;    //monta a string da cor
             console.log(cor);
-            var str = "Fundamentos de Web Design II";
-            document.write(str.fontcolor("#"+cor));
-            //document.write(str.style.color = rgb(0,0,254));
+            document.write(str.fontcolor(cor));
+
+            //var corRgb = "rgb(" + n1 + "," + n2 + "," + n3 + ")";
+            //console.log(corRgb);
+            //document.write(str.fontcolor(corRgb));
         }
         else
             alert("Algum valor não foi informado corretamente.")
