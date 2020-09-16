@@ -11,6 +11,13 @@
 </head>
 <body>
 	<script>
+        var num = prompt("Digite um valor inteiro positivo (X) maior do que zero:");
+        var nome = prompt("Digite o seu nome completo:")
+        if(num && nome)
+            for(var i=0 ; i<num ; i++)
+                document.write(nome + "<br>");
+        else
+            alert("A expressão matemática não foi informada corretamente.")
 	</script>
 </body>
 </html>
