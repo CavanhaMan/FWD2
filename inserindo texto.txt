@@ -1,0 +1,195 @@
+Inserindo Texto
+
+Método do objeto documento
+Como já foi explicado anteriormente, o que aparece na tela pode ser dividido em objetos o que dá ao Javascript apossibilidade de acessar a este objetos (um pouco de teoria do objeto).
+A página Html que aparece na janela do browser é um objeto tipo document.
+A cada objeto Javascript, o programador da linguagem prevê um conjunto de métodos (ou funções dedicadas a este objeto). Para document o Javascript usa o método "escrever no documento" , é o método write().
+O chamado do método se faz segundo a notação:
+nome_do_objeto.nome_do_método
+Para chamar o método write() do documento, escreva-se:
+document.write();
+
+O método write()
+
+A sintaxe é bastante simples
+write("seu texto");
+
+Pode-se também escrever uma variável, seja a variável resultado,write(resultado);
+
+Para associar texto (cadeia de caracteres) e variáveis, utiliza-se a instruçãowrite("O resultado é" + resultado);
+
+Pode-se utilizar as tags Html para incrementar o texto
+write("<B>O resultado é</B>" + resultado);
+ 
+ou
+write ("<B>" + "O resultado é" + "</B>" + resultado)
+
+Exemplo (clássico !)
+Agora vamos escrever texto em Html e em Javascript.
+<HTML>
+  <BODY>
+	<H1>Isto é Html</H1>
+	<!--document.write("<H1>E isto é Javascript</H1>");//-->
+  </BODY>
+</HTML>
+E o resultado é:
+
+--------------------------------------
+Formatação dos carateres em Javascript
+
+variável.big();
+
+O uso de .big() vai inserir a variável como se ela estivesse compreendida entre as tags Html<BIG></BIG>.
+As quatro instruções Javascript seguintes são equivalentes:
+str="Texto";
+ (str é uma variável)
+document.write("<BIG>"+str+"</BIG>");
+document.write('<BIG>Texto</BIG>');
+document.write(str.big());
+document.write("Texto".big());
+
+variável.small();
+
+O uso de .small() vai inserir a variável como se ela estivesse compreendida entre as tags Html<SMALL></SMALL>.
+As quatro instruções Javascript seguintes são equivalentes:
+str="Texto";
+
+document.write("<SMALL>"+str +"</SMALL>");
+document.write("<SMALL>Texto" +"</SMALL>");
+document.write(str.small());
+document.write("Texto".small());
+
+variável.blink();
+
+O uso de .blink() vai inserir a variável como se ela estivesse compreendida entre as tags Html
+<BLINK></BLINK>.
+As quatro instruções Javascript seguintes são equivalentes:
+
+str="Texto";
+
+document.write('<BLINK>'+str+'</BLINK>');
+document.write("<BLINK>Texto</BLINK>");
+document.write(str.blink());
+
+document.write("Texto".blink());
+
+variável.bold();
+
+O uso de .bold() vai inserir a variável como se ela estivesse compreendida entre as tags Html
+<B></B>.
+As quatro instruções Javascript seguintes são equivalentes:
+str="Texto";
+
+document.write("<B>"+str+"</B>");
+document.write("<B>Texto</B>");
+document.write(str.bold());
+document.write("Texto".bold());
+
+variável.fixed();
+
+O uso de .fixed() vai inserir a variável como se ela estivesse compreendida entre as tags Html<TT></TT>.
+As quatro instruções Javascript seguintes são equivalentes:
+str="Texto";
+
+document.write("<TT>"+str+"</TT>");
+document.write("<TT>Texto</TT>");
+document.write(str.fixed());
+document.write("Texto".fixed());
+
+variavel.italics();
+
+O uso de .italics() vai inserir a variável como se ela estivesse compreendida entre as tags Html<I></I>.
+As quatro instruções Javascript seguintes são equivalentes:
+str="Texto";
+ (str é uma variável)
+document.write("<I>"+str+"</I>");
+document.write('<I>Texto</I>');
+document.write(str.italics());
+document.write("Texto".italics());
+
+variavel.fontcolor(color);
+
+O uso de .fontcolor(color) vai inserir a variável como se ela estivesse compreendida entre as tags
+Html <FONT COLOR='color'></FONT>.
+As quatro instruções Javascript seguintes são equivalentes:
+str1="Texto";
+str2="red"
+document.write("<FONT COLOR='red'>"+str1+"</FONT>");
+document.write("<FONT COLOR='red'>"+"Texto</FONT>");
+document.write(str1.fontcolor(str2));
+document.write("Texto".fontcolor("red"));
+
+variavel.fontsize(x);
+
+O uso de .fontsize(x) vai inserir a variável como se ela estivesse compreendida entre as tags Html<FONT SIZE="x"></FONT>.
+As quatro instruções Javascript seguintes são equivalentes:
+str="Texto";
+x=3
+document.write('<FONT SIZE=3>'+str+'</FONT>');
+document.write("<FONT SIZE=3>"+"Texto</FONT>");
+document.write(str.fontsize(x)));
+document.write(str.fontsize(3));
+
+variavel.strike();
+
+O uso de.strike() vai inserir a variável como se ela estivesse compreendida entre as tags Html<STRIKE></STRIKE>.
+As quatro instruções Javascript seguintes são equivalentes:
+str="Texto";
+
+document.write("<STRIKE>"+str+"</STRIKE>");
+document.write("<STRIKE>Texto"+"</STRIKE>");
+document.write(str.strike());
+document.write("Texto".strike());
+
+variavel.sub();
+
+O uso de .sub() vai inserir a variável como se ela estivesse compreendida entre as tags Html<SUB></SUB>.
+As quatro instruções Javascript seguintes são equivalentes:
+str="Texto";
+
+document.write("<SUB>"+str+"</SUB>");
+document.write("<SUB>Texto</SUB>");
+document.write(str.sub());
+document.write("Texto".sub());
+
+variavel.sup();
+
+O uso de .sup() vai inserir a variável como se ela estivesse compreendida entre as tags Html<SUP></SUP>.
+As quatro instruções Javascript seguintes são equivalentes:
+str="Texto";
+
+document.write("<SUP>"+str+"</SUP>");
+document.write("<SUP>Texto</SUP>");
+document.write(str.sup());
+document.write("Texto".sup());
+
+Instruções de formatação do document
+Vale lembrar que o que se segue é opcional e que se pode utilizar a instrução document.write() de maneira clássica.
+Seja document.write("<BODY BGCOLOR="#FFFFFF");
+
+document.bgColor
+Esta instrução permite especificar a cor do fundo de um objeto document. pode-se utilizar o nome da cor ou o seu valor RGB.
+document.bgColor="white";
+document.bgColor="#FFFFFF";
+
+document.fgColor
+Esta instrução permite especificar a cor do primeiro plano (texto) de um objeto document. pode-se utilizar o nome da cor ou o seu valor RGB.
+document.fgColor="black";
+document.fgColor="#000000";
+
+document.alinkColor
+Esta instrução permite especificar a cor de um link ativo (depois do clique do mouse mas antes de saír do link) de um objeto document. pode-se utilizar o nome da cor ou o seu valor RGB.
+document.alinkColor="red";
+document.alinkColor="#FF0000";
+
+document.linkColor
+Esta instrução permite especificar a cor de um link de um objeto document. pode-se utilizar o nome da cor ou o seu valor RGB.
+document.linkColor="blue";
+document.linkColor="#0000FF";
+
+document.vlinkColor
+Esta instrução permite especificar a cor de um link já visitados (depois do clique do mouse mas antes de saír do link) de um objeto document. pode-se utilizar o nome da cor ou o seu valor RGB.
+document.vlinkColor="red";
+document.vlinkColor="#FF0000";
+
+
