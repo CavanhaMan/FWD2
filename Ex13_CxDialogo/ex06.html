@@ -7,13 +7,18 @@
     <title>Lista de Exercícios Javascript</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        p{
+            color: red;
+            font-size: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 	<script>
         var nome = prompt("Digite seu nome completo:");
         if (nome)
-            document.write(nome.length);
+            document.write("<p>" + nome + "</p>");
         else
             alert("Nome não informado.")
 	</script>
