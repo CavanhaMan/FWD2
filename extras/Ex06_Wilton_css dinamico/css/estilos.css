@@ -50,6 +50,7 @@ li a:hover {
 p{
     font-size: 40px;
     border-bottom: 1px solid black;
+    padding-left: 70px;
 }
 .azul {color:blue;}
 .amarela {color:yellow;}
