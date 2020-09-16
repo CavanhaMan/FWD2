@@ -6,8 +6,6 @@
     <meta http-equiv="Content-Language" content="pt-br">
     <title>Lista de Exercícios Javascript</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-    </style>
 </head>
 <body>
 	<script>
@@ -26,30 +24,16 @@
             var cor = "#" + n1h + n2h + n3h;    //monta a string da cor
             console.log(cor);
             document.write(str.fontcolor(cor));
-
-            //var corRgb = "rgb(" + n1 + "," + n2 + "," + n3 + ")";
-            //console.log(corRgb);
-            //document.write(str.fontcolor(corRgb));
         }
         else
             alert("Algum valor não foi informado corretamente.")
-
-        //This is in RGB since it's the one I'm most used to
-        function FontColor(r,g,b,textHolder){
-            textHolder.style.color = "rgb("+r+","+g+","+b+")"
-        }
-
-        //This will make the font color of the "text" box yellow
-        const text = document.getElementById("TextHolder")
-        FontColor(255,255,0,text)
-
 	</script>
 </body>
 </html>
 <!--
 Construa uma página web capaz de solicitar ao usuário três valores numéricos diferentes,
 correspondentes aos valores RGB, nesta ordem. Informe na caixa de diálogo que cada valor
-deverá estar dentro do intervalo [0,255]. Após a leitura dos três valores, o texto “Fundamentos
-de Web Design II” deverá ser exibido ao usuário no corpo do documento da página com a cor
-informado pela usuário
+deverá estar dentro do intervalo [0,255]. Após a leitura dos três valores, o texto 
+“Fundamentos de Web Design II” deverá ser exibido ao usuário no corpo do documento da
+página com a cor informado pela usuário
 */
