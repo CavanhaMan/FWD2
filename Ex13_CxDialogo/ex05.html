@@ -12,8 +12,10 @@
 <body>
 	<script>
         var nome = prompt("Digite seu nome completo:");
-        if (nome != "")
-            document.write(nome.length);
+        //nome = nome.toString();     //converte para string
+        console.log(nome);
+        if (nome)
+            document.write("O nome informado contem um total de " + nome.length + " caracteres.");
         else
             alert("Nome não informado.")
 	</script>

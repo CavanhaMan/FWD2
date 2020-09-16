@@ -13,7 +13,7 @@
 	<script>
         var nome = prompt("Digite seu nome completo:");
         var idade = prompt("Digite sua idade:");
-        if (nome != "" && idade != ""){
+        if (nome && idade ){
             idade = parseInt(idade);    //converte para inteiro
             console.log(!isNaN(idade)); //checa se é número
             nome = nome.toString();     //converte para string
