@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+    <title>Sarah Pet Shop e Hotelzinho </title>
+	<script src="js/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="sorteio" style="text-align: center;">
+        <p> Entre com o número inicial
+            <input type="number" name="minimo" placeholder="digite o número inicial" id="minimo" size="25%" /></p>
+
+        <p> Entre com o número final
+            <input type="number" name="maximo" placeholder="digite o número final" id="maximo"></p>
+        <button onclick="sorteio()"> Sortear </button>
+
+        <h1 id="resultado" style="color: red; font-weight: bold;"> FAÇA O SORTEIO AGORA ! </h1>
+    </div>
+	<script>
+	function sorteio() {
+		const min = parseInt(document.getElementById("minimo").value);
+		const max = parseInt(document.getElementById("maximo").value);
+		console.log(min);
+		console.log(max);
+		const sorteado = Math.floor(Math.random() * (max-min)) + 0;
+		console.log(sorteado);
+		const sort = min+sorteado;
+		console.log(sort);
+		document.getElementById("resultado").innerHTML = " Parabéns ! O Roberto Peludo é da nota número " + sort;
+	}
+	</script>
+
+
+</body>
+
+</html>
