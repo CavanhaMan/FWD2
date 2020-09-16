@@ -13,8 +13,10 @@
 	<script>
         var nome = prompt("Digite seu nome:");
         var sobrenome = prompt("Digite seu sobrenome:");
-        if (nome != null && sobrenome != null)
+        if (nome != "" && sobrenome != "")
             document.write(nome + " " + sobrenome);
+        else
+            alert("Nome ou sobrenome não informado.")
 	</script>
 </body>
 </html>
