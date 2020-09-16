@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- LISTA DE EXERCÍCIOS JAVASCRIPT - CAIXAS DE DIÁLOGO -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <title>Lista de Exercícios Javascript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    </style>
+</head>
+<body>
+	<script>
+        var nota1 = parseFloat(prompt("Digite a nota do 1º semestre:"));
+        console.log(!isNaN(nota1)); //checa se é número
+        var nota2 = parseFloat(prompt("Digite a nota do 2º semestre:"));
+        console.log(!isNaN(nota2)); //checa se é número
+        var notaFinal = nota1 + nota2;
+        if (isNaN(nota1) || isNaN(nota2))
+            alert("Nota 1 ou nota 2 não informadas.")
+        else{
+            if (notaFinal >= 60.0)
+                alert("Aprovado! (" + notaFinal.toFixed(2) + " pontos)");
+            else{
+                var falta = (60.0 - notaFinal).toFixed(2); //arredonda para 2 casas decimais
+                alert("Faltaram " + falta + " pontos para sua aprovação.");
+            }
+        }
+	</script>
+</body>
+</html>
+<!--
+Solicite ao usuário as notas do 1º e 2º bimestres e, em seguida, informe se ele foi
+aprovado/reprovado na disciplina. Um aluno será aprovado se a soma das notas for maior ou
+igual a 60,0 pontos. Caso ele tenha sido reprovado informe a quantidade de pontos faltantes
+para ele ter sido aprovado
+*/

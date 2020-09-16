@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- LISTA DE EXERCÍCIOS JAVASCRIPT - CAIXAS DE DIÁLOGO -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <title>Lista de Exercícios Javascript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    </style>
+</head>
+<body>
+	<script>
+        var num = prompt("Digite um valor inteiro positivo (X) maior do que zero:");
+        var nome = prompt("Digite o seu nome completo:")
+        if(num && nome)
+            for(var i=0 ; i<num ; i++)
+                document.write(nome + "<br>");
+        else
+            alert("A expressão matemática não foi informada corretamente.")
+	</script>
+</body>
+</html>
+<!--
+Construa uma página web capaz de solicitar do usuário um valor inteiro positivo (X) maior
+do que zero e, em seguida, o nome completo dele. Exiba no corpo do documento HTML o
+nome da pessoa informado X vezes. Os nomes deverão ser exibidos em linhas diferentes.
+*/
