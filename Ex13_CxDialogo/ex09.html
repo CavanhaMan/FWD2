@@ -11,6 +11,11 @@
 </head>
 <body>
 	<script>
+        var expressao = prompt("Digite uma expressão matemática:\nExemplo: ((5*8)-9).");
+        if(expressao)
+            document.write(eval(expressao));
+        else
+            alert("A expressão matemática não foi informada corretamente.")
 	</script>
 </body>
 </html>
