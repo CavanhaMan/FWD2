@@ -47,15 +47,13 @@ li a:hover {
     color:rgb(189,191,9);
     background-color: black;
 }
-
-.azul {
-    color:blue;
-    font-size: 20px;
+p{
+    font-size: 40px;
     border-bottom: 1px solid black;
 }
-.amarelo {
-    color:yellow;
-    font-size: 20px;
-    border-bottom: 1px solid black;
-}
+.azul {color:blue;}
+.amarela {color:yellow;}
+.rosa {color:pink;}
+.cinza {color:grey;}
+.marrom {color:brown;}
 
