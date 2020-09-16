@@ -11,6 +11,21 @@
 </head>
 <body>
 	<script>
+        var nota1 = parseFloat(prompt("Digite a nota do 1º semestre:"));
+        console.log(!isNaN(nota1)); //checa se é número
+        var nota2 = parseFloat(prompt("Digite a nota do 2º semestre:"));
+        console.log(!isNaN(nota2)); //checa se é número
+        var notaFinal = nota1 + nota2;
+        if (isNaN(nota1) || isNaN(nota2))
+            alert("Nota 1 ou nota 2 não informadas.")
+        else{
+            if (notaFinal >= 60.0)
+                alert("Aprovado! (" + notaFinal.toFixed(2) + " pontos)");
+            else{
+                var falta = (60.0 - notaFinal).toFixed(2); //arredonda para 2 casas decimais
+                alert("Faltaram " + falta + " pontos para sua aprovação.");
+            }
+        }
 	</script>
 </body>
 </html>
