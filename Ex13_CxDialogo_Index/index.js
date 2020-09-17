@@ -18,3 +18,16 @@ var d8 = "Construa uma página web capaz de solicitar o nome completo do usuári
 var d9 = "Construa uma página web capaz de solicitar ao usuário uma expressão matemática, como por exemplo ((5*8)-9), e, em seguida, informar, através de uma mensagem de alerta, o resultado da expressão."
 var d10 = "Construa uma página web capaz de solicitar do usuário um valor inteiro positivo (X) maior do que zero e, em seguida, o nome completo dele. Exiba no corpo do documento HTML o nome da pessoa informado X vezes. Os nomes deverão ser exibidos em linhas diferentes."
 
+
+var tex = document.getElementById("descreve");
+
+$(document).ready(function(){
+  $("#bt2").hover(
+    function(){
+      $("descreve").text=d2;
+    },
+    function(){
+      $(this).css("background-color", "brown");
+    }
+  );
+});

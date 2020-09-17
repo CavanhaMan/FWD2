@@ -1,0 +1,2 @@
+Exercício 10
+Construa uma página web capaz de solicitar do usuário um valor inteiro positivo (X) maior do que zero e, em seguida, o nome completo dele. Exiba no corpo do documento HTML o nome da pessoa informado X vezes. Os nomes deverão ser exibidos em linhas diferentes.

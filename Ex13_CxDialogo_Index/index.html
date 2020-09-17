@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Language" content="pt-br">
 	<link href="index.css" rel="stylesheet">
-    <title>Exercicio 03-03</title>
+    <title>Exercicios JavaScript</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="jquery.min.js"></script>
+	<script src="jquery-3.1.0.js"></script>
 </head>
 <body>
 
@@ -59,7 +61,7 @@
 		<p id="resumo">Lista de Exercícios sobre Caixas de Diálogo.</p>
 		<hr>
 	</div>
-	<div class="titulo descreve">
+	<div class="titulo" id="descreve">
 		aaa
 	</div>
 	<div class="column content">
@@ -67,7 +69,19 @@
 	</div>
 	</div>
 
-    <script type="text/javascript" src="index.js"></script>
-
+    <script src="index.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$("#bt1").hover(
+				function(){
+					$("descreve").text=d1;
+				},
+				function(){
+				$(this).css("background-color", "pink");
+				}
+			);
+		});
+	</script>
 </body>
 </html>
