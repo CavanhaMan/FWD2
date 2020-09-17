@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Rodrigo CavanhaMan -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <title>Lista de Exercícios Javascript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/style.css" rel="stylesheet">
+	<style>
+        p{  color: red;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="atividade">
+	<h3>Crie uma página web capaz de solicitar ao usuário o nome completo dele. Em seguida, mostre o nome digitado no corpo da página, contendo a seguinte formatação:</h3>
+    <ul>
+        <li>Cor: vermelho</li>
+        <li>Tamanho da fonte: 20px</li>
+        <li>Alinhamento: centralizado</li>
+    </ul>
+	<script>
+        var nome = prompt("Digite seu nome completo:");
+        if (nome)
+            document.write("<p>" + nome + "</p>");
+        else
+            alert("Nome não informado.")
+	</script>
+</body>
+</html>
