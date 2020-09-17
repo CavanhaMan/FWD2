@@ -36,7 +36,7 @@ iframe{width:100%;}
 }
 .clicked {background-color: red;}
 a:link{text-decoration:none;}
-.menu li:hover {background-color: #0099cc;}
+.menu li:hover {background-color: yellow;}
 
 #beard{width: 200px;}
 .blank{
