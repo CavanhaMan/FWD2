@@ -10,6 +10,11 @@ $(document).ready(function (){
 		function(){$(this).css("font-weight", "normal");},
 	);
 	
+	$('#rec').click(function(e){
+		document.location.reload(true);
+	});
+	$('#rec').mouseover(function(e){$("#frametxt").attr("src", "txt/recarrega.html");});
+
 	$('#mem').click(function(e){
 		$("#frametxt").attr("src", "txt/lembrar.html");
 		$("#framehtml").attr("src", "txt/ListaJSB-Caixas_de_Diálogo.pdf");

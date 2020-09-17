@@ -15,8 +15,8 @@ iframe{width:100%;}
 	clear: both;
 	display: table;
 }
-.menu {width: 25%;}
-.content {width: 75%;}
+.menu {width: 20%;}
+.content {width: 80%;}
 .menu ul {
 	list-style-type: none;
 	margin: 0;
@@ -28,7 +28,11 @@ iframe{width:100%;}
 	background-color: #ffcc99;
 	color: black;
 	width: 100%;
-	text-align: left;
+	text-align: center;
+	border-radius: 15px;
+	width: 80px;
+	height: 80px;
+	font-size: 40px;
 }
 .clicked {background-color: red;}
 a:link{text-decoration:none;}
@@ -42,3 +46,8 @@ a:link{text-decoration:none;}
 }
 .atividade,.descreve{background-color: #ffcc99;}
 #titBlank{color:black;}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+  }
