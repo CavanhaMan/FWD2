@@ -3,8 +3,15 @@ html{
 	font-size:200%;
 }
 img{
-	width:200px;
-	margin:40px;
+	width:150px;
+	margin:10px;
+}
+h3{margin:0px;}
+table{width:100%;}
+table, th, td {
+	border: 3px solid #e9e9af;
+	border-collapse: collapse;
+	text-align:center;
 }
 .hand {cursor: url(maozinha.png), none;}
 #mycursor {
