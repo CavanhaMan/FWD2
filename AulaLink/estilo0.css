@@ -40,4 +40,6 @@ table, th, td {
 #saida{
 	position: absolute;
 	bottom: -30px;
+	background-color: black;
+	color:white;
 }

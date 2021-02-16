@@ -25,7 +25,24 @@ table, th, td {
 	left: 0;
 	z-index: 10000;
 }
+.btn {
+	border: none;
+	color: blue;
+	text-decoration: underline;
+	font-weight: bold;
+	background-color: inherit;
+	font-size:110%;
+	display: inline-block;
+	outline: none;
+}
+.btnIm {
+	border: none;
+	margin: 0;
+	outline: none;
+}
 #saida{
 	position: absolute;
 	bottom: -30px;
+	background-color: black;
+	color:white;
 }

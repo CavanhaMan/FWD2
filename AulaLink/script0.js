@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	$('.hand').mouseout(function(){
+		$("#saida")[0].innerHTML="";
 		$('#mycursor').hide();
 			return false;
 	});
