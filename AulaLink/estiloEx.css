@@ -2,18 +2,9 @@ html{
 	background-color:beige;
 	font-size:200%;
 }
-#pg1{background-color:MediumTurquoise;}
-#pg2{background-color:MediumSeaGreen;}
-#pg3{
-	background-color:Red;
-	color :yellow;
-}
-#pg4{background-color:yellow;}
-h1,h2,h3{margin:0px;}
-table, th, td {
-	border: 3px solid #e9e9af;
-	border-collapse: collapse;
-	text-align:center;
+img{
+	width:200px;
+	margin:40px;
 }
 .hand {cursor: url(maozinha.png), none;}
 #mycursor {
