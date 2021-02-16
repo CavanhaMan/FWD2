@@ -10,3 +10,6 @@ function changePic(){
     else num++;
     document.fotofausto.src=foto[num];
 }
+
+
+/*=========================================*/
