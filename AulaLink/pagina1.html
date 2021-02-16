@@ -3,24 +3,25 @@
 <head>
 	<title>O que é um LINK?</title>
     <meta charset="utf-8"/>
-	<style>
-		html{
-			background-color:MediumTurquoise;
-			font-size:200%;
-		}
-		#pg1{background-color:MediumTurquoise;}
-		#pg2{background-color:MediumSeaGreen;}
-		img{width:200px;}
-	</style>
+	<link href="estilo1.css" rel="stylesheet">
 </head>
-
 <body>
-
 <table>
   <tr>
-	<td><h1>ESTA É A PÁGINA 1</h1></td>
+	<td>
+		<h1>ESTA É A PÁGINA 1</h1>
+		<button class="btn hand" id="pg2" onclick="document.location='pagina2.html'" value="pagina2.html">PÁGINA 2</button>
+	</td>
 	<td><img src="image/animal_c.png" alt="cat"></td>
   </tr>
 </table>
+<div id="mycursor"></div>
+
+<div id="mycursor"></div>
+<p id="saida"></p>
+
+<script src="jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="script0.js"></script>
+
 </body>
 </html>

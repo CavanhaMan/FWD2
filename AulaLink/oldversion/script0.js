@@ -4,7 +4,7 @@ $(document).ready(function(){
 			return false;
 	});
 	$('.hand').mouseenter(function(){
-		$("#saida")[0].innerHTML=$(this).attr('value');
+		$("#saida")[0].innerHTML=$(this).attr('href');
 		$('#mycursor').show();
 			return false;
 	});

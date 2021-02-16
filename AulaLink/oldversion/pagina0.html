@@ -16,25 +16,25 @@
 	<tr>
 		<td>
 			<h3>Clique no LINK abaixo<br>para acessar a página 1:</h3>
-			<button class="btn hand" id="pg1" onclick="document.frame.location='pagina1.html'" value="pagina1.html">PÁGINA 1</button>
+			<h3><a href="pagina1.html" id="pg1" target="frame" class="hand">PÁGINA 1</a></h3>
 		</td>
 		<td>
 			<h3>Clique no LINK abaixo<br>para acessar a página 2:</h3>
-			<button class="btn hand" id="pg2" onclick="document.frame.location='pagina2.html'" value="pagina2.html">PÁGINA 2</button>
+			<h3><a href="pagina2.html" id="pg2" target="frame" class="hand">PÁGINA 2</a></h3>
 		</td>
 		<td>
 			<h3>Clique no LINK abaixo<br>para ganhar um prêmio:</h3>
-			<button class="btn hand" id="pg3" onclick="document.location='pagform.html'" value="pagform.html">PRÊMIO!</button>
+			<h3><a href="pagform.html" id="pg3" class="hand">PRÊMIO!</a></h3>
 		</td>
 		<td>
 			<h3>LINK mostrando exemplos:</h3>
-			<button class="btn hand" id="pg4" onclick="document.location='pagexemp.html'" value="pagexemp.html">EXEMPLOS!</button>		</td>
+			<div class="hand">
+				<h3><a href="pagexemp.html" id="pg4" class="hand">EXEMPLOS!</a></h3>
+			</div>
+			<div id="mycursor"></div>
+		</td>
 	</tr>
 </table>
-<div id="mycursor"></div>
-
-<p id="saida"></p>
-
 
 <script src="jquery-3.5.1.min.js"></script>
 <script type="text/javascript" src="script0.js"></script>

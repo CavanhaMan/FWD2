@@ -27,6 +27,7 @@ table, th, td {
 	left: 0;
 	z-index: 10000;
 }
+
 .btn {
 	border: none;
 	color: blue;
@@ -36,8 +37,4 @@ table, th, td {
 	font-size:110%;
 	display: inline-block;
 	outline: none;
-}
-#saida{
-	position: absolute;
-	bottom: -30px;
 }
