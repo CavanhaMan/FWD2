@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+	#test-area {
+		height: 200px;
+		border: 3px dashed #CCCCCC;
+		background: #FFFFFF;
+		padding: 20px;
+		cursor: url(maozinha.png), none;
+	}
+	#mycursor {
+		cursor: none;
+		width: 102px;
+		height: 133px;
+		background: url("maozinha.png") no-repeat left top;
+		position: absolute;
+		display: none;
+		top: 0;
+		left: 0;
+		z-index: 10000;
+	}
+  </style>
+  </script>
+
+<script src="jquery.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>JavaScript Demos - Custom Cursors Demo</title>
+
+
+</head>
+<body>
+
+<div id="test-area">
+     Move mouse over this area.
+</div>
+<div id="mycursor"></div>
+
+ 
+<script type="text/javascript">
+     $(document).ready(function(){
+          $('#test-area').mouseout(function(){
+               $('#mycursor').hide();
+               return false;
+          });
+          $('#test-area').mouseenter(function(){
+               $('#mycursor').show();
+               return false;
+          });
+          $('#test-area').mousemove(function(e){
+               $('#mycursor').css('left', e.clientX - 20).css('top', e.clientY + 7);
+          });
+	});
+</script>
+</body>
+</html>

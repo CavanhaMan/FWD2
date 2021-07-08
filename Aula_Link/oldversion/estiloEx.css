@@ -1,0 +1,31 @@
+html{
+	background-color:beige;
+	font-size:200%;
+}
+img{
+	width:150px;
+	margin:10px;
+}
+h3{margin:0px;}
+table{width:100%;}
+table, th, td {
+	border: 3px solid #e9e9af;
+	border-collapse: collapse;
+	text-align:center;
+}
+.hand {cursor: url(maozinha.png), none;}
+#mycursor {
+	cursor: none;
+	width: 105px;
+	height: 133px;
+	background: url("maozinha.png") no-repeat left top;
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+}
+#saida{
+	position: absolute;
+	bottom: -30px;
+}
