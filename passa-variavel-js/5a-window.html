@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Window Data Passing Part 1</title>
+    <script>
+    function go(){
+      // (A) VARIABLES TO PASS
+      var first = "Foo Bar",
+          second = ["Hello", "World"];
+
+      // (B) OPEN NEW WINDOW
+      // Just pass variables over to new window
+      var newwin = window.open("5b-window.html");
+      newwin.onload = function(){
+        // "this" refers to newwin
+        this.first = first;
+        this.second = second;
+      };
+    }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="GO" onclick="go()"/>
+  </body>
+</html>

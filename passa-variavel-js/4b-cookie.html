@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cookie Storage Part 2</title>
+    <script>
+    function get () {
+      // (A) GET BACK PASS VARS
+      var passvars = document.cookie
+        .split("; ")
+        .find(row => row.startsWith("pass"))
+        .substring(5);
+
+      // (B) PARSE BACK
+      var params = new URLSearchParams(passvars),
+          first = params.get("first"),
+          second = JSON.parse(params.get("second"));
+
+      // (C) IT WORKS!
+      console.log(first); // Foo Bar
+      console.log(second); // ["Hello", "World"]
+    }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Get" onclick="get()"/>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Session Storage Part 2</title>
+    <script>
+    function get () {
+      // (A) GET FROM SESSION
+      var first = sessionStorage.getItem("first"),
+          // JSON parse to turn stored sting back into array
+          second = JSON.parse(sessionStorage.getItem("second"));
+
+      // (B) IT WORKS!
+      // Manually opening 1b-session.html will not work though
+      // Session data will perish once tab/window is closed
+      console.log(first); // Foo Bar
+      console.log(second); // ["Hello", "World"]
+
+      // (EXTRA) TO CLEAR
+      // sessionStorage.removeItem("KEY");
+      // sessionStorage.clear();
+    }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Get From Session Storage" onclick="get()"/>
+  </body>
+</html>

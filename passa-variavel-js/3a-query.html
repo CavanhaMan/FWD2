@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Query String</title>
+    <script>
+    function go(){
+      // (A) VARIABLES TO PASS
+      var first = "Foo Bar",
+          second = ["Hello", "World"];
+  
+      // (B) URL PARAMETERS
+      var params = new URLSearchParams();
+      params.append("first", first);
+      params.append("second", JSON.stringify(second));
+
+      // (C) GO!
+      var url = "3b-query.html?" + params.toString();
+      location.href = url;
+      // window.open(url);
+    }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="GO" onclick="go()"/>
+  </body>
+</html>

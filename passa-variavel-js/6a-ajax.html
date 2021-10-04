@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AJAX Processing Part 1</title>
+    <script>
+    function next () {
+      // (A) GET SELECTED VALUE
+      var selected = document.querySelector("#stepA input[type=radio]:checked").value;
+
+      // (B) LOAD FORM VIA AJAX
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "6b-ajax.html");
+      xhr.onload = function(){
+        // Hide step A
+        document.getElementById("stepA").style.display = "none";
+
+        // Set loaded HTML and selected
+        document.getElementById("stepB").innerHTML = this.response;
+        document.getElementById("radsel").value = selected;
+
+        // Show step B
+        document.getElementById("stepB").style.display = "block";
+      };
+      xhr.send();
+    }
+    </script>
+  </head>
+  <body>
+    <!-- (A) SELECT ITEM -->
+    <div id="stepA">
+      <label>
+        <input type="radio" name="radopt" value="Foo" checked/> Foo
+      </label>
+      <label>
+        <input type="radio" name="radopt" value="Bar"/> Bar
+      </label><br>
+      <input type="button" value="Next" onclick="next()"/>
+    </div>
+    
+    <!-- (B) FORM -->
+    <div id="stepB" style="display:none"></div>
+  </body>
+</html>

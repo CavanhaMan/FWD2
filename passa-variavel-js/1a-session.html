@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Session Storage Part 1</title>
+    <script>
+    function store () {
+      // (A) VARIABLES TO PASS
+      var first = "Foo Bar",
+          second = ["Hello", "World"];
+
+      // (B) SAVE TO SESSION STORAGE
+      // sessionStorage.setItem("KEY", "VALUE");
+      sessionStorage.setItem("first", first);
+      // session storage cannot store array and objects
+      // JSON encode before storing, convert to string
+      sessionStorage.setItem("second", JSON.stringify(second));
+
+      // (C) REDIRECT
+      location.href = "1b-session.html";
+      // Opening new window works too
+      // window.open("1b-session.html");
+    }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Store To Session Storage" onclick="store()"/>
+  </body>
+</html>

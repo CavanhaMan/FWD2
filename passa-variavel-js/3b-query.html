@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Query String</title>
+    <script>
+    function get(){
+      // (A) GET THE PARAMETERS
+      var params = new URLSearchParams(window.location.search),
+          first = params.get("first"),
+          second = JSON.parse(params.get("second"));
+
+      // (B) IT WORKS!
+      console.log(first); // Foo Bar
+      console.log(second); // ["Hello", "World"]
+    }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Get" onclick="get()"/>
+  </body>
+</html>

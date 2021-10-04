@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local Storage Part 1</title>
+    <script>
+    function store () {
+      // (A) VARIABLES TO PASS
+      var first = "Foo Bar",
+          second = ["Hello", "World"];
+
+      // (B) SAVE TO LOCAL STORAGE
+      // localStorage.setItem("KEY", "VALUE");
+      localStorage.setItem("first", first);
+      // local storage cannot store array and objects
+      // JSON encode before storing, convert to string
+      localStorage.setItem("second", JSON.stringify(second));
+
+      // (C) REDIRECT OR OPEN NEW WINDOW IF YOU WANT
+      // window.open("2b-local-storage.html");
+      location.href = "2b-local-storage.html";
+    }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Store To Local Storage" onclick="store()"/>
+  </body>
+</html>
