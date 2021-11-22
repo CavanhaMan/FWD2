@@ -1,0 +1,74 @@
+/*essa opção já subtrai alterações no tamanho como visto no block hover*/
+*{box-sizing: border-box;}
+body{background-color: #bbb;}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;/* = largura do block + 2 margens x 3 */
+}
+.block{
+    width: 280px;
+    height: 200px;
+    font-size: 24px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 20px 20px 20px 20px;
+}
+.block:hover{
+    box-shadow: 10px 10px 10px 5px DimGrey;
+    margin: 10px 30px 20px 10px;
+    /* esse esquema da margem e do box-shadow agem de forma que um compensa o outro
+    quando a ideia que o botão "levanta" quando se passa o mouse sobre ele
+    a ideia é diminuir as margens acima e abaixo e compensar as magens abaixo e à direita
+    de forma que só o quadrado se mova, sem afetar a aparencia do conjunto*/
+    cursor: pointer;
+}
+/* Subtrario os valores referente à borda de 2 px adicionada
+.block:hover{
+    border: 2px solid red;
+    width: 276px;
+    height: 196px;
+}*/
+/*exemplo de imagem com legenda*/
+.eiffel {
+    float: right;
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    text-indent: 0;
+    border: thin white solid;
+    margin: 0.5em;
+    padding: 0.5em;
+  }
+.blockSmile{
+    width: 280px;
+    border-radius: 50%;
+    margin: 20px;
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid black;
+}
+.blockSmile:hover{
+    box-shadow: 10px 10px 10px 5px DimGrey;
+    margin: 10px 30px 20px 10px;
+    cursor: pointer;
+}
+.circle {
+    background-color: #aaa;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+  }
+  .circle img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+.redondas{
+    display: flex;
+    flex-wrap: wrap;
+}
