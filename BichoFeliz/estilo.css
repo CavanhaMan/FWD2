@@ -1,3 +1,6 @@
+/***************************************************************/
+/*                      Rodrigo Cavanhaman                     */
+/***************************************************************/
 html{background-color: beige;}
 #inicialb{
     width: 150px;
@@ -28,6 +31,12 @@ a{text-decoration:none;}
     margin-left: auto;
     margin-right: auto;
     font-size: 21px;
+    cursor: pointer;
+    padding: 20px;
+}
+.menu:hover{
+    font-weight: bold;
+    padding-right: 12px;
 }
 #divmenu{
     background-color: chocolate;
@@ -45,3 +54,6 @@ a{text-decoration:none;}
     display: inline;
     vertical-align: middle;
 }
+.button {
+}
+  
