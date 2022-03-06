@@ -1,0 +1,9 @@
+.git
+git
+.git/
+git/
+
+# Chaves das API para o projeto TestaClima
+google.key
+darksky.key
+darksky.key2

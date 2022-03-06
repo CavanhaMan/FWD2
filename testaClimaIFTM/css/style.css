@@ -1,0 +1,89 @@
+.wi {font-size: 100px;}
+#clima,#icon{text-align: center;}
+#icon{margin: 20px;}
+#logo{width: 800px;}
+legend{
+    border: 1px solid white;
+    text-align: center;
+}
+#obterClima{
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+ul {
+    list-style-type: none;
+    margin-left: -5px;
+}
+li{margin-top: 20px;}
+html{
+    background-image: url('../img/fundo.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    background-color: SkyBlue;
+    font-size:large;
+}
+/*==========================================*/
+.center{
+	border: 7px ridge #ccc;
+	background: #e6ffff;
+	width:400px;
+	border-radius: 0px 0px 20px 20px;
+}
+.titulo{
+	background: #ccc;
+	height: 25px;
+	border-radius: 20px 20px 0px 0px;
+}
+h2{	margin: 5px 0px 0px 0px;}
+.col2{width:180px;}
+.colunas{
+    float:left;
+	margin: 10px;
+}
+.pointer {cursor: pointer;}
+.titu{
+    font-size:larger;
+    text-align: center;
+    font-weight: bold;
+}
+.city{
+    font-size: x-large;
+    margin: 0px 0px 0px 20px;
+    font-weight: bold;
+}
+#city-search{
+    font-size:larger;
+    width: 300px;
+    border-radius: 5px;
+}
+#obterClima{
+    font-size:larger;
+    border-radius: 5px;
+}
+.dados{
+    padding-top: -20px;
+    padding-bottom: -20px;
+}
+#saida{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#figurinha,#localAtual{
+    float: left;
+}
+hr{
+    margin-top: 300px;
+}
+/*==========================================*/
+.output{
+    float: left;
+}
+#tabela{
+    padding: 20px;
+    background-color: #e6ffff;
+}
+.destaque{
+    font-size: x-large;
+}

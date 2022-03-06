@@ -1,0 +1,97 @@
+<!-- HTML5 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <style>
+    table,td,tr{
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<!--
+https://api.darksky.net/forecast/8eeafa93fa171bb970bfac9b03caa3a3/-18.89152746498772,-48.27901701187268?exclude=minutely,hourly,daily,flags,alerts
+-->
+</head>
+<body>
+<h2>TESTA CLIMA</h2>
+<table>
+  <tr><td colspan="2" id="icon">ícone</td></tr>
+  <tr><td>Local:</td><td id="c1">2</td></tr>
+  <tr><td>Latitude:</td><td id="c2">a</td></tr>
+  <tr><td>Longitude:</td><td id="c3">2</td></tr>
+  <tr><td colspan="2">Atualmente:</td></tr>
+  <tr><td>Tempo:</td><td id="c4">2</td></tr>
+  <tr><td>Resumo:</td><td id="c5">2</td></tr>
+  <tr><td>Intensidade de precipitação:</td><td id="c6">2</td></tr>
+  <tr><td>Probabilidade de precipitação:</td><td id="c7">2</td></tr>
+  <tr><td>Temperatura:</td><td id="c8">2</td></tr>
+  <tr><td>Temperatura aparente:</td><td id="c9">2</td></tr>
+  <tr><td>Ponto de orvalho:</td><td id="c10">2</td></tr>
+  <tr><td>Umidade:</td><td id="c11">2</td></tr>
+  <tr><td>Pressão:</td><td id="c12">2</td></tr>
+  <tr><td>Velocidade do vento:</td><td id="c13">2</td></tr>
+  <tr><td>Rajada de vento:</td><td id="c14">2</td></tr>
+  <tr><td>Direção do vento:</td><td id="c15">2</td></tr>
+  <tr><td>Cobertura de nuvens:</td><td id="c16">2</td></tr>
+  <tr><td>Índice UV:</td><td id="c17">2</td></tr>
+  <tr><td>Visibilidade:</td><td id="c18">2</td></tr>
+  <tr><td>Ozônio:</td><td id="c19">2</td></tr>
+  <tr><td>Deslocamento:</td><td id="c20">2</td></tr>
+</table>
+
+<script>//ESTE SCRIPT ESTÁ FUNCIONANDO!
+  $.get( "https://api.darksky.net/forecast/8eeafa93fa171bb970bfac9b03caa3a3/-18.89152746498772,-48.27901701187268?exclude=minutely,hourly,daily,flags,alerts", function( data ) {
+    var clima = data;
+    //console.log( data ); // HTML content of the jQuery.ajax page
+    //console.log( clima );
+    
+    var icon = data.currently.icon; console.log(icon);
+    icon.innerHTML = icon;
+    
+    c1.innerHTML = data.timezone;
+    var latitude = data.latitude; console.log(latitude);
+    c2.innerHTML = latitude;
+    var longitude = data.longitude; console.log(longitude);
+    c3.innerHTML = longitude;
+    var time = data.currently.time; console.log(time);
+    c4.innerHTML = time;
+    var summary = data.currently.summary; console.log(summary);
+    c5.innerHTML = summary;
+    var precipIntensity = data.currently.precipIntensity; console.log(precipIntensity);
+    c6.innerHTML = precipIntensity;
+    var precipProbability = data.currently.precipProbability; console.log(precipProbability);
+    c7.innerHTML = precipProbability;
+    var temperature = data.currently.temperature; console.log(temperature);
+    c8.innerHTML = temperature;
+    var apparentTemperature = data.currently.apparentTemperature; console.log(apparentTemperature);
+    c9.innerHTML = apparentTemperature;
+    var dewPoint = data.currently.dewPoint; console.log(dewPoint);
+    c10.innerHTML = dewPoint;
+    var humidity = data.currently.humidity; console.log(humidity);
+    c11.innerHTML = humidity;
+    var pressure = data.currently.pressure; console.log(pressure);
+    c12.innerHTML = pressure;
+    var windSpeed = data.currently.windSpeed; console.log(windSpeed);
+    c13.innerHTML = windSpeed;
+    var windGust = data.currently.windGust; console.log(windGust);
+    c14.innerHTML = windGust;
+    var windBearing = data.currently.windBearing; console.log(windBearing);
+    c15.innerHTML = windBearing;
+    var cloudCover = data.currently.cloudCover; console.log(cloudCover);
+    c16.innerHTML = cloudCover;
+    var uvIndex = data.currently.uvIndex; console.log(uvIndex);
+    c17.innerHTML = uvIndex;
+    var visibility = data.currently.visibility; console.log(visibility);
+    c18.innerHTML = visibility;
+    var ozone = data.currently.ozone; console.log(ozone);
+    c19.innerHTML = ozone;
+    var offset = data.offset; console.log(offset);
+    c20.innerHTML = offset;
+  });
+  
+  </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!-- HTML5 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="css/weather-icons.css">
+  <style>
+    table,td,tr{
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    .wi {
+        font-size: 80px;
+        margin: 10px;
+      }
+  </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<!--
+https://api.darksky.net/forecast/8eeafa93fa171bb970bfac9b03caa3a3/-18.9127749,-48.2755227?exclude=minutely,hourly,daily,flags,alerts
+-->
+</head>
+<body>
+<h2>TESTA CLIMA</h2>
+<table>
+  <tr><td>Local:</td><td id="c1">2</td><td rowspan="3" id="icon" align="center"><i class="wi wi-night-sleet display-2 mb-3"></i></td></tr>
+  <tr><td>Latitude:</td><td id="c2">a</td></tr>
+  <tr><td>Longitude:</td><td id="c3">2</td></tr>
+  <tr><td colspan="2">Data/Hora:</td><td id="c4">2</td></tr>
+  <tr><td colspan="2">Resumo:</td><td id="c5">2</td></tr>
+  <tr><td colspan="2">Intensidade de precipitação:</td><td id="c6">2</td></tr>
+  <tr><td colspan="2">Probabilidade de precipitação:</td><td id="c7">2</td></tr>
+  <tr><td colspan="2">Temperatura:</td><td id="c8">2</td></tr>
+  <tr><td colspan="2">Sensação térmica:</td><td id="c9">2</td></tr>
+  <tr><td colspan="2">Ponto de orvalho:</td><td id="c10">2</td></tr>
+  <tr><td colspan="2">Umidade:</td><td id="c11">2</td></tr>
+  <tr><td colspan="2">Pressão:</td><td id="c12">2</td></tr>
+  <tr><td colspan="2">Velocidade do vento:</td><td id="c13">2</td></tr>
+  <tr><td colspan="2">Rajada de vento:</td><td id="c14">2</td></tr>
+  <tr><td colspan="2">Direção do vento:</td><td id="c15">2</td></tr>
+  <tr><td colspan="2">Cobertura de nuvens:</td><td id="c16">2</td></tr>
+  <tr><td colspan="2">Índice UV:</td><td id="c17">2</td></tr>
+  <tr><td colspan="2">Visibilidade:</td><td id="c18">2</td></tr>
+  <tr><td colspan="2">Ozônio:</td><td id="c19">2</td></tr>
+  <tr><td colspan="2">Deslocamento:</td><td id="c20">2</td></tr>
+</table>
+
+<script>//ESTE SCRIPT ESTÁ FUNCIONANDO!
+  $.get( "https://api.darksky.net/forecast/8eeafa93fa171bb970bfac9b03caa3a3/-18.9127749,-48.2755227?exclude=minutely,hourly,daily,flags,alerts", function( data ) {
+    var clima = data;
+    //console.log( data ); // HTML content of the jQuery.ajax page
+    //console.log( clima );
+    
+    let icone = data.currently.icon;
+    get_icon(icone);
+    //icon.innerHTML = get_icon(icone);
+    //icon.innerHTML = data.currently.icon;
+    c1.innerHTML = data.timezone.split("/")[1];
+    c2.innerHTML = data.latitude;
+    c3.innerHTML = data.longitude;
+    c4.innerHTML = new Date(data.currently.time * 1000).toISOString().slice(0, 19).replace('T', ' ');
+    c5.innerHTML = data.currently.summary;
+    c6.innerHTML = data.currently.precipIntensity + " milimetros por hora";
+    c7.innerHTML = parseFloat(data.currently.precipProbability)*100 + "%";
+    c8.innerHTML = Math.round((parseFloat(data.currently.temperature) - 32) * 5 / 9) + "º celsius";
+    c9.innerHTML = Math.round((parseFloat(data.currently.apparentTemperature) - 32) * 5 / 9) + "º celsius";
+    c10.innerHTML = data.currently.dewPoint + "º celsius";
+    c11.innerHTML = data.currently.humidity;
+    c12.innerHTML = data.currently.pressure + " hectopascais";
+    c13.innerHTML = data.currently.windSpeed + " metros por segundo";
+    c14.innerHTML = data.currently.windGust + " metros por segundo";
+    c15.innerHTML = data.currently.windBearing;
+    c16.innerHTML = data.currently.cloudCover;
+    c17.innerHTML = data.currently.uvIndex;
+    c18.innerHTML = data.currently.visibility + " kilometros";
+    c19.innerHTML = data.currently.ozone;
+    c20.innerHTML = data.offset;
+
+    function get_icon(icone){
+      console.log(icone);
+      if(icone==='clear-day'){
+        icon.innerHTML = '<i class="wi wi-day-sunny display-2 mb-3"></i>'
+      }
+      else if(icone==='clear-night'){
+        icon.innerHTML = '<i class="wi wi-night-clear display-2 mb-3"></i>'
+      }
+      else if(icone==='partly-cloudy-day'){
+        icon.innerHTML = '<i class="wi wi-day-cloudy display-2 mb-3"></i>'
+      }
+      else if(icone==='partly-cloudy-night'){
+        icon.innerHTML = '<i class="wi wi-night-alt-cloudy display-2 mb-3"></i>'
+      }
+      else if(icone==='cloudy'){
+        icon.innerHTML = '<i class="wi wi-cloudy display-2 mb-3"></i>'
+      }
+      else if(icone==='rain'){
+        icon.innerHTML = '<i class="wi wi-rain display-2 mb-3"></i>'
+      }
+      else if(icone==='sleet'){
+        icon.innerHTML = '<i class="wi wi-sleet display-2 mb-3"></i>'
+      }
+      else if(icone==='snow'){
+        icon.innerHTML = '<i class="wi wi-snow display-2 mb-3"></i>'
+      }
+      else if(icone==='wind'){
+        icon.innerHTML = '<i class="wi wi-strong-wind display-2 mb-3"></i>'
+      }
+      else if(icone==='fog'){
+        icon.innerHTML = '<i class="wi wi-fog display-2 mb-3"></i>'
+      }
+    }
+
+  });
+
+
+  </script>
+</body>
+</html>

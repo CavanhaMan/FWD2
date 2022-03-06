@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- Rodrigo CavanhaMan -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Testa Clima IFTM</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </head>
+  <!--body onload="getLocation()"-->
+  <body>
+    <label for="usarLocal">Quer usar a sua localização atual?</label>
+    <input type="checkbox" id="usarLocal" name="usarLocal" value="1">
+    <button onclick="getLocation()" id="localOk" disabled>Ok</button>
+
+    <BR><BR>
+		Você está aqui:
+		<div id="saida"></div>
+		<BR>
+
+<script src="leposicao.js"></script>
+</body>
+</html>

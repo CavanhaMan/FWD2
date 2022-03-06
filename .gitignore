@@ -2,3 +2,49 @@
 git
 .git/
 git/
+
+# Chaves das API para o projeto TestaClima
+google.key
+darksky.key
+darksky.key2
+
+#diversas
+.git
+git
+.git/
+git/
+
+/.settings/
+.settings
+.settings
+.project
+.project/
+.bak
+.classpath
+.classpath/
+
+#JAVA 
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+
+
+
+#C++
+
+*.lib
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Executables
+*.exe
+*.out
+*.app

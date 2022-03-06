@@ -1,0 +1,50 @@
+<!-- HTML5 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="css/weather-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+</head>
+<body>
+  <input type="button" id="obterClima" value="Obter clima" onclick="get()"/>
+  <BR><BR>
+    <div id="figurinha">
+      <div id="icon"></div>
+      <BR>
+      <div id="clima"></div>
+    </div>
+
+    <table id="tabela">
+    <tr><td id="c4" colspan="2">?</td></tr>
+    <tr><td>Local:</td><td id="c1">?</td></tr>
+    <tr><td>Latitude:</td><td id="c2">?</td></tr>
+    <tr><td>Longitude:</td><td id="c3">?</td></tr>
+    <tr><td>Fuso horário:</td><td id="c20">?</td></tr>
+    <tr><td>Resumo:</td><td id="c5">?</td></tr>
+    <tr><td>Intensidade de precipitação:</td><td id="c6">?</td></tr>
+    <tr><td>Probabilidade de precipitação:</td><td id="c7">?</td></tr>
+    <tr><td>Temperatura:</td><td id="c8">?</td></tr>
+    <tr><td>Sensação térmica:</td><td id="c9">?</td></tr>
+    <tr><td>Ponto de orvalho:</td><td id="c10">?</td></tr>
+    <tr><td>Umidade:</td><td id="c11">?</td></tr>
+    <tr><td>Pressão:</td><td id="c12">?</td></tr>
+    <tr><td>Velocidade do vento:</td><td id="c13">?</td></tr>
+    <tr><td>Rajada de vento:</td><td id="c14">?</td></tr>
+    <tr><td>Direção do vento:</td><td id="c15">?</td></tr>
+    <tr><td>Cobertura de nuvens:</td><td id="c16">?</td></tr>
+    <tr><td>Índice UV:</td><td id="c17">?</td></tr>
+    <tr><td>Visibilidade:</td><td id="c18">?</td></tr>
+    <tr><td>Ozônio:</td><td id="c19">?</td></tr>
+  </table>
+
+  <script src="js/darksky.js"></script>
+</body>
+</html>
+<!--
+https://api.darksky.net/forecast/8eeafa93fa171bb970bfac9b03caa3a3/-18.9127749,-48.2755227?exclude=minutely,hourly,daily,flags,alerts
+-->

@@ -1,0 +1,77 @@
+<!-- HTML5 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <style>
+    table,td,tr{
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<!--
+https://api.darksky.net/forecast/8eeafa93fa171bb970bfac9b03caa3a3/-18.9127749,-48.2755227?exclude=minutely,hourly,daily,flags,alerts
+-->
+</head>
+<body>
+<h2>TESTA CLIMA</h2>
+<table>
+  <tr><td colspan="2" id="icon">ícone</td></tr>
+  <tr><td>Local:</td><td id="c1">2</td></tr>
+  <tr><td>Latitude:</td><td id="c2">a</td></tr>
+  <tr><td>Longitude:</td><td id="c3">2</td></tr>
+  <tr><td colspan="2">Atualmente:</td></tr>
+  <tr><td>Tempo:</td><td id="c4">2</td></tr>
+  <tr><td>Resumo:</td><td id="c5">2</td></tr>
+  <tr><td>Intensidade de precipitação:</td><td id="c6">2</td></tr>
+  <tr><td>Probabilidade de precipitação:</td><td id="c7">2</td></tr>
+  <tr><td>Temperatura:</td><td id="c8">2</td></tr>
+  <tr><td>Temperatura aparente:</td><td id="c9">2</td></tr>
+  <tr><td>Ponto de orvalho:</td><td id="c10">2</td></tr>
+  <tr><td>Umidade:</td><td id="c11">2</td></tr>
+  <tr><td>Pressão:</td><td id="c12">2</td></tr>
+  <tr><td>Velocidade do vento:</td><td id="c13">2</td></tr>
+  <tr><td>Rajada de vento:</td><td id="c14">2</td></tr>
+  <tr><td>Direção do vento:</td><td id="c15">2</td></tr>
+  <tr><td>Cobertura de nuvens:</td><td id="c16">2</td></tr>
+  <tr><td>Índice UV:</td><td id="c17">2</td></tr>
+  <tr><td>Visibilidade:</td><td id="c18">2</td></tr>
+  <tr><td>Ozônio:</td><td id="c19">2</td></tr>
+  <tr><td>Deslocamento:</td><td id="c20">2</td></tr>
+</table>
+
+<script>//ESTE SCRIPT ESTÁ FUNCIONANDO!
+  $.get( "https://api.darksky.net/forecast/8eeafa93fa171bb970bfac9b03caa3a3/-18.9127749,-48.2755227?exclude=minutely,hourly,daily,flags,alerts", function( data ) {
+    var clima = data;
+    //console.log( data ); // HTML content of the jQuery.ajax page
+    //console.log( clima );
+    
+    icon.innerHTML = data.currently.icon;
+    c1.innerHTML = data.timezone.split("/")[1];
+    c2.innerHTML = data.latitude;
+    c3.innerHTML = data.longitude;
+    c4.innerHTML = data.currently.time;
+    c5.innerHTML = data.currently.summary;
+    c6.innerHTML = data.currently.precipIntensity;
+    c7.innerHTML = data.currently.precipProbability;
+    c8.innerHTML = data.currently.temperature;
+    c9.innerHTML = data.currently.apparentTemperature;
+    c10.innerHTML = data.currently.dewPoint;
+    c11.innerHTML = data.currently.humidity;
+    c12.innerHTML = data.currently.pressure;
+    c13.innerHTML = data.currently.windSpeed;
+    c14.innerHTML = data.currently.windGust;
+    c15.innerHTML = data.currently.windBearing;
+    c16.innerHTML = data.currently.cloudCover;
+    c17.innerHTML = data.currently.uvIndex;
+    c18.innerHTML = data.currently.visibility;
+    c19.innerHTML = data.currently.ozone;
+    c20.innerHTML = data.offset;
+
+  });
+  
+  </script>
+</body>
+</html>
