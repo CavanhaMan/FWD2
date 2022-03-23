@@ -1,0 +1,51 @@
+/* -------- PRIMEIRA TABELA: -------- */
+html{
+    background-color: black;
+    color: aliceblue;
+}
+.capadisco{
+    height:300px;
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+.nomebanda{
+    text-align: center;
+    color: gray;
+    text-shadow: 2px 2px white;
+}
+.descricao{
+    margin: 0px 20px 0px 20px;
+    font-size: large;
+    text-align: justify;
+}
+.tabeladescricao{
+    vertical-align: top;
+}
+/* -------- SEGUNDA TABELA: -------- */
+.capadiscop{
+    height:200px;
+    width: 200px;
+}
+#tb2, .tb2tr,.tb2td,th{
+    border: 1px solid #262626;
+    border-collapse: collapse;
+    font-size: 25px;
+}
+#tb2{
+    border:0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+th{
+    background-color: #262626;
+    color:bisque;
+    height: 40px;
+}
+.tb2td{
+    padding: 0px 10px 0px 10px;
+}
+caption{
+    color: gray;
+    text-shadow: 2px 2px white;
+}
