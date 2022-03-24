@@ -2,9 +2,13 @@
 html{
     background-color: black;
     color: aliceblue;
+    /*Acrescenta uma imagem ao fundo do site:*/
     background-image: url("../fotos/rocklonglive.jpeg");
+    /*indica se essa imagem irá se repetir ou não:*/
     background-repeat: no-repeat;
+    /*indica que a imagem será fixa (não irá se mover junto com o site):*/
     background-attachment: fixed;
+    /*escode a barra de rolagem horizontal:*/
     overflow-x: hidden;
 }
 .capadisco{
@@ -17,6 +21,8 @@ html{
 .nomebanda{
     text-align: center;
     color: gray;
+    /*acrescenta uma sombra no texto deslocada
+      2xp pra baixo e 2px para a direita*/
     text-shadow: 2px 2px white;
 }
 .descricao{
@@ -45,9 +51,7 @@ th{
     height: 60px;
     text-align: left;
 }
-.tb2td{
-    padding: 0px 10px 0px 10px;
-}
+.tb2td{padding: 0px 10px 0px 10px;}
 .ano{width: 40px;}
 .capa{width:201px;}
 .nome{font-size: 40px;}
@@ -58,10 +62,12 @@ caption{
     font-size: 30px;
     margin-top:40px;
     padding-left: 10px;
-    border-radius: 30px;
     background-color: black;
-    opacity: 0.7;
     margin-bottom: 20px;
+    /*opacidade serve para deixar o elemento transparente*/
+    opacity: 0.7;
+    /*border-radius acrescenta curvatura na borda*/
+    border-radius: 30px;
 }
 h1{margin: 20px 0px 20px 0px;}
 #rockright{
@@ -77,6 +83,7 @@ h1{margin: 20px 0px 20px 0px;}
 table{
     width: 1200px;
     clear: both;
+    /*estas duas linhas abaixo servem para centralizar um elemento*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -88,6 +95,13 @@ table{
     position: relative;
     margin: 20px 0px 0px 20px;
 }
+/* Este código abaixo é para ampliar a foto quando
+   o mouse passar por cima (hover). A escala indica
+   quantas vezes a imagem será ampliada.
+   Este efeito também poderá ser usado para um botao
+   ou qualquer outro elemento. Para usa-lo, coloque
+   o id ou o nome da classe sequido de :hover e cole
+   o restante do código.*/
 .rockrightp:hover {
     -webkit-transform:scale(2); /* Safari and Chrome */
     -moz-transform:scale(3); /* Firefox */
@@ -95,6 +109,7 @@ table{
     -o-transform:scale(3); /* Opera */
     transform:scale(3);
 	max-width: 100%;
+    /*esta parte aqui é para suavizar a ampliacao (ou qq transicao):*/
 	-moz-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
