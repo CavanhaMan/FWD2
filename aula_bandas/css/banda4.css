@@ -127,22 +127,38 @@ table{
 }
 .icone{width: 30px;}
 /* CODIGO PARA A CRIACAO DO MENU */
+body{margin:0px;}
 .iconmenu{width: 20px;}
-#listamenu{
-    float: left;
-    margin: 0px;
-}
-.menu{
+#dMenu {
+    float:left;
+    width:300px;
     list-style: none;
-    background-color: black;
-    margin: 10px;
-    width: 180px;
-    padding: 10px;
-    font-size: 25px;
+    padding: 0px;
+    width: 190px;
+}
+ul, li{
+    margin: 10px 0px 10px 0px;
+}
+li a{
     text-align: right;
+    color: aliceblue;
+    text-decoration: none;
+    background-color: black;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 10px;
+    display: block;
+    transition: all 0.1s;
     /*opacidade serve para deixar o elemento transparente*/
     opacity: 0.7;
     /*border-radius acrescenta curvatura na borda*/
-    border-radius: 30px;
-    
+    border-radius: 0px 20px 20px 0px;
+}
+li :hover{
+    background-color: black;
+    color: rgb(189,191,9);
+    border-radius: 0px 15px 15px 0px;
+    transform-origin: top left;
+    transform: scaleX(1.1);
 }
