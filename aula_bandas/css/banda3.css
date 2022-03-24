@@ -2,7 +2,7 @@
 html{
     background-color: black;
     color: aliceblue;
-    background-image: url("rocklonglive.jpeg");
+    background-image: url("../fotos/rocklonglive.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     overflow-x: hidden;
