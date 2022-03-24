@@ -87,7 +87,7 @@ table{
     margin-left: auto;
     margin-right: auto;
 }
-.rockrightp{
+.fotobandap{
     height: 100px;
     float: right;
     bottom: 0;
@@ -102,19 +102,21 @@ table{
    ou qualquer outro elemento. Para usa-lo, coloque
    o id ou o nome da classe sequido de :hover e cole
    o restante do código.*/
-.rockrightp:hover {
-    -webkit-transform:scale(2); /* Safari and Chrome */
-    -moz-transform:scale(3); /* Firefox */
-    -ms-transform:scale(3); /* IE 9 */
-    -o-transform:scale(3); /* Opera */
-    transform:scale(3);
+.fotobandap:hover {
+    transform-origin: right;
+    -webkit-transform:scale(4); /* Safari and Chrome */
+    -moz-transform:scale(4); /* Firefox */
+    -ms-transform:scale(4); /* IE 9 */
+    -o-transform:scale(4); /* Opera */
+    transform:scale(4);
 	max-width: 100%;
     /*esta parte aqui é para suavizar a ampliacao (ou qq transicao):*/
-	-moz-transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
 }
 .capadisco:hover {
+    transform-origin: left;
     -webkit-transform:scale(2); /* Safari and Chrome */
     -moz-transform:scale(2); /* Firefox */
     -ms-transform:scale(2); /* IE 9 */
