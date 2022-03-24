@@ -125,3 +125,6 @@ table{
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
 }
+.icone{
+    width: 30px;
+}
