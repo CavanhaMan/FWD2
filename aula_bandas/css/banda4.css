@@ -126,10 +126,23 @@ table{
 	transition: all 0.3s;
 }
 .icone{width: 30px;}
-.noline{
-    /*Opacidade serve para deixar o elemento transparente
-      Adicionei aqui para deixar o divisor de tabelas sem cor
-      Porque tive que adicionar background-color black na tabela
-      por causa da foto de fundo!*/
-    opacity: 0;
+/* CODIGO PARA A CRIACAO DO MENU */
+.iconmenu{width: 20px;}
+#listamenu{
+    float: left;
+    margin: 0px;
+}
+.menu{
+    list-style: none;
+    background-color: black;
+    margin: 10px;
+    width: 180px;
+    padding: 10px;
+    font-size: 25px;
+    text-align: right;
+    /*opacidade serve para deixar o elemento transparente*/
+    opacity: 0.7;
+    /*border-radius acrescenta curvatura na borda*/
+    border-radius: 30px;
+    
 }
