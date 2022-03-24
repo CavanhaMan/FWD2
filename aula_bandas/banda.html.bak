@@ -17,7 +17,7 @@
         </tr>
         <tr>
             <td><img class="capadisco" src="logoGuns.jpg"></td>
-            <td><img class="capadisco" src="logoMetallica.jpg"></td>
+            <td><img class="capadisco" src="LogoMetalica.jpg"></td>
             <td><img class="capadisco" src="logoLed.jpg"></td>
             <td><img class="capadisco" src="logoPink.jpg"></td>
         </tr>
@@ -105,7 +105,7 @@
             <th class="tb2td">Formato</th>
         </tr>
         <tr class="tb2tr">
-            <td class="tb2td" rowspan="10"><img class="capadiscop" src="logoMetallica.jpg"></td>
+            <td class="tb2td" rowspan="10"><img class="capadiscop" src="LogoMetalica.jpg"></td>
             <td class="tb2td">1983</td>
             <td class="tb2td">Kill 'Em All</td>
             <td class="tb2td">Julho de 1983</td>
