@@ -58,7 +58,6 @@ caption{
     margin-top:40px;
     padding-left: 10px;
     background-color: black;
-    margin-bottom: 20px;
     /*opacidade serve para deixar o elemento transparente*/
     opacity: 0.7;
     /*border-radius acrescenta curvatura na borda*/
@@ -81,7 +80,7 @@ table{
     /*estas duas linhas abaixo servem para centralizar um elemento*/
     margin-left: 15%;
     margin-right: auto;
-    border:0px;
+    border:0px !important;
 }
 
 .fotobandap{
@@ -125,6 +124,13 @@ table{
 	transition: all 0.3s;
 }
 .icone{width: 30px;}
+.noline{
+    /*Opacidade serve para deixar o elemento transparente
+      Adicionei aqui para deixar o divisor de tabelas sem cor
+      Porque tive que adicionar background-color black na tabela
+      por causa da foto de fundo!*/
+    opacity: 0;
+}
 /* ---------------- MENU LATERAL ---------------- */
 body{margin:0px;}
 .iconmenu{width: 20px;}

@@ -40,11 +40,6 @@ html{
     font-size: 22px;
 }
 td,tr{background-color: black;}
-#tb2{
-    border:0px;
-    margin-left: auto;
-    margin-right: auto;
-}
 th{
     background-color: #262626;
     color:bisque;
@@ -55,6 +50,14 @@ th{
 .ano{width: 40px;}
 .capa{width:201px;}
 .nome{font-size: 40px;}
+#tb2{
+    border:0px;
+    width: 1200px;
+    clear: both;
+    /*estas duas linhas abaixo servem para centralizar um elemento*/
+    margin-left: auto;
+    margin-right: auto;
+}
 /* -------- EXTRAS: -------- */
 caption{
     color: white;
@@ -79,13 +82,6 @@ h1{margin: 20px 0px 20px 0px;}
     height: 100px;
     float: left;
     margin-top: 50px;
-}
-table{
-    width: 1200px;
-    clear: both;
-    /*estas duas linhas abaixo servem para centralizar um elemento*/
-    margin-left: auto;
-    margin-right: auto;
 }
 .fotobandap{
     height: 100px;
