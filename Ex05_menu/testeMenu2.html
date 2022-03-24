@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Rodrigo CavanhaMan -->
+<html lang="tp-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="css\testeMenu2.css" rel="stylesheet">
+    <title>CSS dinâmico + JavaScript</title>
+    <meta http-equiv="refresh" content="2">
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Celke</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#section1">Curso</a></li>
+                    <li><a href="#section2">Apresentação</a></li>
+                    <li><a href="#section3">Abordagem</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Conteúdo <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section41">Módulo 1</a></li>
+                            <li><a href="#section42">Módulo 2</a></li>
+                            <li><a href="#section43">Módulo 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="section1" class="container-fluid">
+        <h1 class="text-center">Curso de PHP, MySQLi e Bootstrap</h1>
+        <p>Aprenda o PHP, MySQLi e Bootstrap de forma fácil e prática.</p>
+        <p>Curso 100% em vídeo aulas interativas. Matricule-se agora e aproveite mais esta oportunidade.</p>
+    </div>
+    
+    <div id="section2" class="container-fluid">
+        <h1 class="text-center">Torne-se um Expert em PHP, MySQLi e Bootstrap.</h1>
+        <p>Inscreva-se no curso de PHP, MySQLi e bootstrap e aprenda o principais elementos do PHP de forma fácil, prática para impulsionar de vez sua carreira de desenvolvedor web.</p>
+        <p>Além de aprender o PHP você vai entender como montar sistemas responsivos, sistemas que adaptam-se ao tamanho da tela do dispositivo utilizado pelo usuário, computador, tablet, smartphone.</p>
+    </div>
+    
+    <div id="section3" class="container-fluid">
+        <h1 class="text-center">Section 3</h1>
+        <p>O curso de PHP, MySQLi e bootstrap vai abordar três módulos que irão lhe ensinar o passo a passo o PHP e como criar estruturar de um sistema do zero com PHP, MySQLi e Bootstrap. Para agilizar o desenvolvimento aprenderá utilizar o framework bootstrap.</p>
+        <p>Se você deseja se tornar um Expert em PHP e desenvolvimento de sistemas responsivos, continue a leitura e veja o que vai aprender com esse curso e quais as vantagens em aderi-lo.</p>
+    </div>
+    
+    <div id="section41" class="container-fluid">
+        <h1 class="text-center">Módulo 1 - PHP</h1>
+        <p>Requisitos para programar em PHP;</p>
+        <p>Sintaxe básica do PHP;</p>
+    </div>
+    <div id="section42" class="container-fluid">
+        <h1 class="text-center">Módulo 2 - MySQLi</h1>
+        <p>Introdução ao SQL;</p>
+        <p>Iniciando com o PHPMyAdmin;</p>
+    </div>
+    <div id="section43" class="container-fluid">
+        <h1 class="text-center">Módulo 3 - Desenvolvendo um sistema responsivo</h1>
+        <p>Início da montagem do layout do blog com Bootstrap</p>
+        <p>Criar espaço para o carrousel</p>
+    </div>
+
+    
+</body>
+</html>
+<!--
+    fazer uma lista automaticamente
+    ul>(li>a)*5 
+    control + ; = comenta
+-->
