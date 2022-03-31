@@ -1,0 +1,75 @@
+html{background-color:darkgray;}
+body{margin: 0px;}
+.item1 {
+  grid-area: header;
+  margin: 0px;
+  background-image: linear-gradient(black, darkgray);
+}
+.item2 {
+  width:200px;
+  grid-area: menu;
+}
+.item3 {
+  grid-area: main;
+  width: 500px;
+}
+.item4 {
+  width: 400px;
+  grid-area: right1;
+}
+.item4b {grid-area: right2;}
+.item5 {grid-area: footer1;}
+.item6 {grid-area: footer3;}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right1 right2'
+    'footer1 footer1 footer1 footer3 footer3 footer3';
+  gap: 0px;
+  padding: 0px;
+}
+.grid-container > div {
+  padding: 10px 0;
+  /* ESSA BORDA ABAIXO PERMITE VER AS DIVISÕES!*/
+  /*border: 1px solid black;*/
+}
+/* ------ CABEÇALHO (item1) --------------------------------- */
+#cavanha{
+  width: 140px;
+  float: left;
+  margin: 0px 20px 0px 20px;
+}
+#lojao{
+  font-size: 130px;
+  font-family:'Algerian', sans-serif;
+  margin: 0px 0px 0px 180px;
+  /* cor gradiente para o título da loja */
+  background: -webkit-linear-gradient(white, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* ------ MENU (item2) -------------------------------------- */
+#nomeproduto{
+  font-size: 40px;
+  margin-top: 150px;
+}
+/* ------ MAIN - IMAGEM)(item3) ------------------------------ */
+#fotoproduto{
+  margin: 0px;
+  padding: 0px;
+  width: 500px;
+}
+/* ------ RIGHT (item4) -------------------------------------- */
+.lista1{font-size: 26px;}
+/* ------ RIGHT2 (imagem preço) ------------------------------ */
+#imgpreco{width: 300px;}
+/* ------ FOOTER (item5) ------------------------------------- */
+#titulo3{
+  margin: 0px;
+}
+.lista2{font-size: 22px;}
+.pdescricao{
+  font-size: 22px;
+  margin: 0px 0px 0px 20px;
+}
