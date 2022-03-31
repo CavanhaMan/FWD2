@@ -10,7 +10,7 @@ body{margin: 0px;}
     background-image: linear-gradient(black, white);
 }
 .item2 {
-    width:200px;
+    width:100px;
     grid-area: menu;
 }
 .item3 {
@@ -18,7 +18,7 @@ body{margin: 0px;}
     width: 500px;
 }
 .item4 {
-    width: 400px;
+    width: 500px;
     grid-area: right1;
 }
 .item4b {grid-area: right2;}
@@ -50,8 +50,19 @@ body{margin: 0px;}
     position:fixed;
 }
 /* ------ MENU (item2) -------------------------------------- */
-#nomeproduto{
-    font-size: 30px;
+.thumb{
+    list-style-type: none;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    margin: 10px 0px 10px 0px;
+}
+.thumb:hover, .thumb:active {
+    box-shadow: 0 0 6px orange;
+  }
+.thumbnail{
+    width: 50px;
+    height: 50px;
 }
 /* ------ MAIN - IMAGEM)(item3) ------------------------------ */
 #fotoproduto{
@@ -60,17 +71,16 @@ body{margin: 0px;}
     width: 500px;
 }
 /* ------ RIGHT (item4) -------------------------------------- */
+#nomeproduto{font-size: 30px;}
 .lista1{
-    font-size: 20px;
+    font-size: 18px;
     margin-left: -20px;
 }
+#titulo3{margin: 0px;}
+.lista2{font-size: 18px;}
 /* ------ RIGHT2 (imagem preço) ------------------------------ */
 #imgpreco{width: 300px;}
 /* ------ FOOTER (item5) ------------------------------------- */
-#titulo3{
-    margin: 0px;
-}
-.lista2{font-size: 22px;}
 .pdescricao{
     font-size: 22px;
     margin: 0px 0px 0px 20px;
