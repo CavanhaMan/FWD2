@@ -83,6 +83,19 @@ body{margin: 0px;}
     padding: 0px;
     width: 500px;
 }
+#fotoproduto:hover {
+    transform-origin: left;
+    -webkit-transform:scale(1.4); /* Safari and Chrome */
+    -moz-transform:scale(1.4); /* Firefox */
+    -ms-transform:scale(1.4); /* IE 9 */
+    -o-transform:scale(1.4); /* Opera */
+    transform:scale(1.4);
+	max-width: 100%;
+    /*esta parte aqui é para suavizar a ampliacao (ou qq transicao):*/
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
 /* ------ RIGHT (item4) -------------------------------------- */
 #nomeproduto{font-size: 30px;}
 .lista1{
