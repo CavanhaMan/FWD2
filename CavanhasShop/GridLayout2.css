@@ -12,17 +12,22 @@ body{margin: 0px;}
 .item2 {
     width:100px;
     grid-area: menu;
+    margin-left: 0px;
 }
 .item3 {
     grid-area: main;
     width: 500px;
 }
 .item4 {
+    margin-left: 20px;
     width: 500px;
     grid-area: right1;
 }
 .item4b {grid-area: right2;}
-.item5 {grid-area: footer1;}
+.item5 {
+    grid-area: footer1;
+    margin-left: 20px;
+}
 .item6 {grid-area: footer3;}
 .grid-container {
     display: grid;
@@ -55,15 +60,23 @@ body{margin: 0px;}
     border: 1px solid black;
     width: 50px;
     height: 50px;
-    margin: 10px 0px 10px 0px;
+    margin: 15px 0px 15px 0px;
+    cursor:pointer;
 }
-.thumb:hover, .thumb:active {
-    box-shadow: 0 0 6px orange;
-  }
+.thini{margin-top: 0px !important;}
+.thfim{margin-bottom: 0px;}
+.thumb:hover {box-shadow: 0 0 6px orange;}
 .thumbnail{
     width: 50px;
     height: 50px;
 }
+#boxprox{display: none;}
+#boxsetas{margin: -10px 0px 0px 45px;}
+.setas{
+    width: 20px;
+    cursor:pointer;
+}
+.setas:hover {box-shadow: 0 0 6px orange;}
 /* ------ MAIN - IMAGEM)(item3) ------------------------------ */
 #fotoproduto{
     margin: 0px;
