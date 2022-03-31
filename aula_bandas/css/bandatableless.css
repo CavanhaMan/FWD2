@@ -1,0 +1,87 @@
+/* ---------------- MENU LATERAL ---------------- */
+body{margin:0px;}
+html{background-color: black;}
+.iconmenu{width: 20px;}
+#dMenu {
+    position:fixed;
+    float:left;
+    width:300px;
+    list-style: none;
+    padding: 0px;
+    width: 190px;
+}
+ul, li{
+    margin: 10px 0px 20px 0px;
+}
+li a{
+    text-align: right;
+    color: aliceblue;
+    text-decoration: none;
+    background-color: gray;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 20px;
+    padding: 10px;
+    display: block;
+    transition: all 0.1s;
+    /*opacidade serve para deixar o elemento transparente*/
+    opacity: 0.7;
+    /*border-radius acrescenta curvatura na borda*/
+    border-radius: 0px 20px 20px 0px;
+}
+li :hover{
+    background-color: black;
+    border: 1px solid aliceblue;
+    color: rgb(189,191,9);
+    border-radius: 0px 15px 15px 0px;
+    transform-origin: top left;
+    transform: scaleX(1.1);
+}
+#linktopo{
+    font-size: 0px;
+    margin: 0;
+}
+/* ---------------- iframe ---------------- */
+.content{width:82%;}
+.column {float: left;}
+* {box-sizing: border-box;}
+.header{height: 130px;}
+.header,.footer {
+	background-color: black;
+	color: white;
+	padding: 5px;
+}
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+iframe{
+    width:100%;
+    margin-left: 220px;
+}
+
+/* imagem na blank page inicial - tamanho e centralização */
+#javascript {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+}
+
+/* ---------------- titulo ---------------- */
+h1{
+    margin: 30px 0px 20px 220px;
+    font-size: 45px;
+}
+#rockright{
+    height: 100px;
+    float: right;
+    margin-top: 10px;
+}
+#rockleft{
+    height: 80px;
+    float: left;
+    margin-top: 25px;
+}
