@@ -9,13 +9,58 @@
     <link href="GridLayout2.css" rel="stylesheet">
     <script src="jquery-3.1.0.js" type="text/javascript"></script>
     <script src="GridLayout2.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="grid-container">
+        <!-- MENU SUPERIOR - INICIO ----------------------------------------->
         <div class="item0">
-            <img id="barra" src="barrasup.png">
+            <img id="logocavanha" src="menusup/logocavanhashop.png">
+    
+            <form action="/action_page.php" id="formulario">
+                <select name="depto" id="dropdepto">
+                    <option selected hidden value="0">Todos</option>
+                    <option class="op" value="1">Alimentos e Bebidas</option>
+                    <option class="op" value="2">Apps e Jogos</option>
+                    <option class="op" value="3">Armas ninja</option>
+                    <option class="op" value="4">Artes marciais</option>
+                    <option class="op" value="5">Automotivo</option>
+                    <option class="op" value="6">Aventura</option>
+                    <option class="op" value="7">Barba e Cabelo</option>
+                    <option class="op" value="8">Beleza</option>
+                    <option class="op" value="9">Brinquedos</option>
+                    <option class="op" value="10">Casa</option>
+                    <option class="op" value="11">Cutelaria</option>
+                    <option class="op" value="12">Eletrodomésticos</option>
+                    <option class="op" value="13">Eletrônicos</option>
+                    <option class="op" value="14">Equipamentos de Sobrevivencia</option>
+                    <option class="op" value="15">Equipamentos Táticos</option>
+                    <option class="op" value="16">Escritório e papelaria</option>
+                    <option class="op" value="17">Esportes</option>
+                    <option class="op" value="18">Ferramentas elétricas</option>
+                    <option class="op" value="19">Ferramentas manuais</option>
+                    <option class="op" value="20">Instrumentos musicais</option>
+                    <option class="op" value="21">Jardinagem</option>
+                    <option class="op" value="22">Jogos</option>
+                    <option class="op" value="23">Livros eletrônicos</option>
+                    <option class="op" value="24">Livros físicos</option>
+                    <option class="op" value="25">Móveis</option>
+                    <option class="op" value="26">Pet shop</option>
+                    <option class="op" value="27">Roupas, Calçados e jóias</option>
+                    <option class="op" value="28">Saúde e cuidados pessoais</option>
+                    <option class="op" value="29">Video-games</option>
+                </select>
+                <input type="text" id="procura" placeholder="Procurar..." name="procura">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div id="login">
+                <p id="loginp">Olá visitante!<br>Faça login</p>
+                <img id="loginbt" src="menusup/btdown.png">
+            </div>
+            <img id="carrinho" src="menusup/carrinho.png">
+            <p id="numcarrinho">0</p>
         </div>
+        <!-- MENU SUPERIOR - FIM -------------------------------------------->
         <div class="item2">
             <ul id="boxant">
                 <li class="thumb thini"><a href="#" onmouseover="trocarImg1(1)"><img class="thumbnail" src="img/bosch01.png"></a></li>

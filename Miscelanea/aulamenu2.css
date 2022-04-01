@@ -1,0 +1,43 @@
+.voltar{
+    float:right;
+    color: red;
+}
+h1, h4 {text-align: center;}
+p {text-align: justify;}
+hr {width: 80%;}
+.btvoltar{
+    float:left;
+    width: 20px;
+    margin: 8px 10px 0px 0px;
+}
+/*****************************************/
+#bt1{margin-top: 22px;}
+/*Colocando a lista centralizada, com background e sem marcas de lista*/
+#menu ul {
+	padding:0px;
+	margin:0px;
+	background-color:#EDEDED;
+	list-style:none;
+    text-align: center;
+}
+/*Colocando todos os elementos em uma linha*/
+#menu ul li {display: inline;}
+
+/*Distância entre os elementos*/
+#menu ul li a {
+	padding: 10px;
+	display: inline-block;
+
+	/*VISUAL DO LINK SEM O MOUSE*/
+	color: black;
+	text-decoration: none;
+	border-bottom:3px solid #EDEDED;
+}
+#menu ul li a:hover {
+    /*VISUAL DO LINK COM O MOUSE SOBRE ELE*/
+	background-color: gray;
+	color: yellow;
+	border-bottom:3px solid red;
+}
+
+/*****************************************/

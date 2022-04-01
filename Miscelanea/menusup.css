@@ -1,0 +1,84 @@
+body{background-color: black;}
+#logocavanha, #formulario, #login, #carrinho, #numcarrinho {
+    float: left;
+    margin: 0px 30px 0px 30px;
+}
+
+.item0 {background-color: black;}
+/*************************************************************/
+#dropdepto{
+    margin-right: -5px;
+    background: #e6e6e6;
+    width: 60px;
+    height: 40px;
+    border-radius: 10px 0px 0px 10px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    font-size: 17px;
+
+}
+#procura{
+    margin-right: -5px;
+    background: white;
+    width: 600px;
+    height: 40px;
+    border: 1px solid transparent;
+    font-size: 17px;
+}
+.op{background-color: white;}
+
+
+/*************************************************************/
+button {
+    padding: 6px 10px;
+    background: #ddd;
+    font-size: 17px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid transparent;
+  }
+
+  #dropdepto:hover, button:hover {
+    background: rgb(255, 200, 100);
+    cursor: pointer;
+  }
+  /*************************************************************/
+  
+::-webkit-scrollbar {
+    width: 7px;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 50px;
+    background: orange;
+}
+
+/*************************************************************/
+#formulario{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 702px;
+    background: #e6e6e6;
+}
+/*************************************************************/
+#login{
+    color: white;
+    cursor: pointer;
+
+}
+/*************************************************************/
+#carrinho{
+    width: 40px;
+    cursor: pointer;
+}
+#numcarrinho{
+    font-size: 40px;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: -5px;
+    margin-left: 0px;
+}
