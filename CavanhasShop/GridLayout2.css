@@ -172,10 +172,10 @@ button {
 
 /*************************************************************/
 #formulario{
-    margin-top: 7px;
+    margin-top: 10px;
     border: 1px solid black;
     border-radius: 10px;
-    width: 718px;
+    width: 716px;
     background: #e6e6e6;
 }
 /*************************************************************/
@@ -185,18 +185,21 @@ button {
     margin-top: 12px;
 }
 /*************************************************************/
-#carrinho{
+#carrinho{cursor: pointer;}
+#iconecarrinho{
     width: 40px;
-    margin-top: 10px;
+    margin-top: 15px;
     cursor: pointer;
 }
 #numcarrinho{
     font-size: 40px;
     color: white;
     font-family:Arial, Helvetica, sans-serif;
-    margin-top: 8px;
-    margin-left:-15px;
+    margin-top: 10px;
+    margin-left: 5px;
 }
+#iconecarrinho, #numcarrinho {float: left;}
+
 #loginbt{
     width: 30px;
     margin: 5px 0px 0px 10px;
@@ -205,3 +208,7 @@ button {
     margin-top: 0px;
 }
 #loginp, #loginbt{float: left;}
+#logocavanha{
+    margin-top: 5px;
+    cursor: pointer;
+}
