@@ -1,13 +1,9 @@
 body{margin: 0px;}
 /* ------ ÁREAS GRID ----------------------------------- */
 .item0 {
-    grid-area: header0;
-    margin-bottom: 58px;
-}
-.item1 {
     grid-area: header;
-    margin: 0px;
-    background-image: linear-gradient(black, white);
+    margin-bottom: 80px;
+    background-color: black;
 }
 .item2 {
     width:100px;
@@ -32,7 +28,6 @@ body{margin: 0px;}
 .grid-container {
     display: grid;
     grid-template-areas:
-        'header0 header0 header0 header0 header0 header0'
         'header header header header header header'
         'menu main main main right1 right2'
         'footer1 footer1 footer1 footer3 footer3 footer3';
