@@ -4,7 +4,11 @@ var d = new Date();
 day = d.getDate();
 diasemana =d.getDay();
 dmes = d.getMonth();
-document.getElementById("data_atual").innerHTML = semana[diasemana] + ", " + day + " de " + mes[dmes] + ", ";
+//document.getElementById("data_atual").innerHTML = semana[diasemana] + ", " + day + " de " + mes[dmes] + ", ";
+var conteiner = document.getElementById("entrega");
+var textodia = "<b>" + semana[diasemana] + ", " + day + " de " + mes[dmes] + "</b>, "
+conteiner.innerHTML += textodia;
+conteiner.innerHTML += "se pedir dentro de <b>2hs e 24 mins</b>.";
 
 
 /** FUNÇÃO PARA OBTER CIDADE *******************/
@@ -14,7 +18,7 @@ function preencherDados(dados) {
 
 
 
-/** FUNÇÃO PARA OBTER CIDADE *******************
+/** FUNÇÃO ORIGINAL PARA OBTER CIDADE *******************
 navigator.geolocation.getCurrentPosition(function(posicao) {
     var url = "http://nominatim.openstreetmap.org/reverse?lat="+posicao.coords.latitude+"&lon="+posicao.coords.longitude+"&format=json&json_callback=preencherDados";
 
