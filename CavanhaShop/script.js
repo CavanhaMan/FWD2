@@ -1,8 +1,8 @@
 function trocarImg1(num){
-    document.getElementById("fotoproduto").src="img/bosch0"+num+".png";
+    document.getElementById("fotoproduto").src="produto/bosch0"+num+".png";
 }
 function trocarImg2(num){
-    document.getElementById("fotoproduto").src="img/bosch1"+num+".png";
+    document.getElementById("fotoproduto").src="produto/bosch1"+num+".png";
 }
 
 /** BOTAO-SETINHAS PASSAR PROXIMAS FOTOS ***************************/
@@ -28,5 +28,7 @@ $(document).ready(function(){
         var qtd = $("select.quant").children("option:selected").val();;
         console.log("qtd="+qtd);
         $("#numcarrinho").text(qtd);
+        $("#numcarrinho").css("color","red");
+        document.getElementById("iconecarrinho").src="menusup/carrinhor.png";
     });
 });
