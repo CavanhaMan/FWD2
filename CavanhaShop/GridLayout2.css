@@ -12,11 +12,11 @@ body{margin: 0px;}
 }
 .item3 {
     grid-area: main;
-    width: 500px;
+    width: 450px;
 }
 .item4 {
-    margin-left: 20px;
-    width: 500px;
+    margin-left: 50px;
+    width: 420px;
     grid-area: right1;
 }
 .item4b {grid-area: right2;}
@@ -29,7 +29,7 @@ body{margin: 0px;}
     display: grid;
     grid-template-areas:
         'header header header header header header'
-        'menu main main main right1 right2'
+        'menu main main right1 right1 right2'
         'footer1 footer1 footer1 footer3 footer3 footer3';
     gap: 0px;
     padding: 0px;
@@ -211,4 +211,9 @@ button {
 #logocavanha{
     margin-top: 5px;
     cursor: pointer;
+}
+framehtml{
+    margin: 0px;
+    padding: 0px;
+    border: none;
 }
