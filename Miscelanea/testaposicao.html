@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+  <body>
+    <script>
+      navigator.geolocation.getCurrentPosition(function(posicao) {
+        var url = "http://nominatim.openstreetmap.org/reverse?lat="+posicao.coords.latitude+"&lon="+posicao.coords.longitude+"&format=json&json_callback=preencherDados";
+
+        var script = document.createElement('script');
+        script.src = url;
+        document.body.appendChild(script);
+      });
+      function preencherDados(dados) {
+        alert(dados.address.city);  
+      }
+    </script>
+  </body>
+</html>
