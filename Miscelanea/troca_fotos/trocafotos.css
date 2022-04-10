@@ -1,0 +1,28 @@
+#foto{
+    width: 500px;
+    /* código para centralizar: */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.listafotos{
+    cursor: pointer;
+    font-size: 30px;
+    
+}
+/* COLOCANDO FOTOS NO MARCADOR DA LISTA: */
+li {list-style-image: url('trocafotos/rock2.png');}
+
+/* DEFININDO O TAMANHO DA FOTO NO MARCADOR DA LISTA */
+/*ul {list-style-type: none;}
+ul li:before {
+    content: '';
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-size: 25px;
+    background-image: url('trocafotos/rock1.png');
+    background-repeat: no-repeat;
+    margin-right: 5px;
+}*/
