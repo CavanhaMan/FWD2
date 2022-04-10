@@ -17,7 +17,7 @@
 .local{
     font-size: 18px;
     float: left;
-    color: #e68a00;
+    color: #ff9900;
     font-weight: bold;
 }
 .estoque{
@@ -27,7 +27,7 @@
 }
 .seguro{
     float:left;
-    color: green;
+    color: #ff9900;
     font-weight: bold;
     font-size: 20px;
 }
@@ -38,7 +38,7 @@
 }
 #preco{}
 .botao{
-    background-color: orange;
+    background-color: #ff9900;
     border-radius: 25px;
     text-align: center;
     font-size: 20px;

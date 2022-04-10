@@ -8,7 +8,7 @@ dmes = d.getMonth();
 var conteiner = document.getElementById("entrega");
 var textodia = "<b>" + semana[diasemana] + ", " + day + " de " + mes[dmes] + "</b>, "
 conteiner.innerHTML += textodia;
-conteiner.innerHTML += "se pedir dentro de <b>2hs e 24 mins</b>.";
+conteiner.innerHTML += "se pedir dentro de <b>2hs e 30 mins</b>.";
 
 
 /** FUNÇÃO PARA OBTER CIDADE *******************/
