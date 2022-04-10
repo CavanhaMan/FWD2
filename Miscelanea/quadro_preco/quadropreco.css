@@ -37,6 +37,9 @@
     float: left;
 }
 #preco{}
+#iconseguro{margin-top: 10px;}
+.espaco {margin-top: 20px;}
+#quant{cursor: pointer;}
 .botao{
     background-color: #ff9900;
     border-radius: 25px;
@@ -44,6 +47,22 @@
     font-size: 20px;
     padding: 10px;
     margin: 10px 0px 10px 0px;
+    cursor: pointer;
 }
-#iconseguro{margin-top: 10px;}
-.espaco {margin-top: 20px;}
+/*
+.botao:hover{
+    box-shadow: 0 0 6px #ff9900;
+}
+.botao:hover{
+    box-shadow: 2px 10px 14px 0px DimGrey;
+  /*margin: 10px 0px 10px 0px;
+    margin: 6px 0px 14px 0px;
+  }
+
+     box-shadow: 10px 10px 10px 5px DimGrey;
+*/
+// Size can also be negative; see how it's smaller than the element
+.botao:hover, .botao:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}

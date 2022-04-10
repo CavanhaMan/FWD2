@@ -18,12 +18,14 @@ body{background-color: #bbb;}
 .block:hover{
     box-shadow: 10px 10px 10px 5px DimGrey;
     margin: 10px 30px 20px 10px;
-    /* esse esquema da margem e do box-shadow agem de forma que um compensa o outro
-    quando a ideia que o botão "levanta" quando se passa o mouse sobre ele
-    a ideia é diminuir as margens acima e abaixo e compensar as magens abaixo e à direita
-    de forma que só o quadrado se mova, sem afetar a aparencia do conjunto*/
+    /* esse esquema da margem e do box-shadow agem de forma que um compensa
+    o outro quando a ideia que o botão "levanta" quando se passa o mouse 
+    sobre ele a ideia é diminuir as margens acima e abaixo e compensar as
+    magens abaixo e à direita de forma que só o quadrado se mova, sem afetar 
+    a aparencia do conjunto*/
     cursor: pointer;
 }
+
 /* Subtrario os valores referente à borda de 2 px adicionada
 .block:hover{
     border: 2px solid red;
