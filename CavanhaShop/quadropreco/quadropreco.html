@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="author" content="Rodrigo CavanhaMan" />
+    <link href="quadropreco/quadropreco.css" rel="stylesheet">
+    <script src="jquery-3.1.0.js" type="text/javascript"></script>
+    
+</head>
+  <body>
+    <div class="boxpreco">
+        <div class="valor" id="preco1">R$</div>
+        <div class="valor" id="preco">631</div>
+        <div class="valor" id="preco2">,65</div>
+        <div class="limpafloat"></div>
+        <div class="espaco"></div>
+        <div class="data" id="entrega">Entrega GRÁTIS: &nbsp</div>
+        <div class="espaco"></div>
+        <div class="local"><img src="quadropreco/iconlocal.png" id="iconlocal" alt="local:"> &nbsp</div>
+        <div class="local">Enviar para &nbsp</div>
+        <div class="local" id="pegalocal"> </div>
+        <div class="limpafloat"></div>
+        <div class="espaco"></div>
+        <div class="estoque">Em estoque</div>
+        <div class="limpafloat"></div>
+        <div class="espaco"></div>
+        <div class="quantidade">Quantidade: &nbsp</div>
+        <div class="quantidade">
+            <select name="qtde" id="quant">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div class="limpafloat"></div>
+        <div class="espaco"></div>
+        <div class="botao" id="addcarrinho">Adicionar ao carrinho</div>
+        <div class="botao" id="comprar">Comprar agora</div>
+        <div class="seguro"><img src="quadropreco/iconseguro2.png" id="iconseguro" alt="seguro!"> &nbsp</div>
+        <div class="espaco"></div>
+        <div class="seguro">Transação Segura</div>
+        <br><br><br>
+    </div>
+
+
+
+    
+
+    
+    <script src="quadropreco/quadropreco.js"></script>
+    <!-- FUNÇÃO PARA OBTER CIDADE -->
+    <script src="http://nominatim.openstreetmap.org/reverse?lat=-18.9366272&amp;lon=-48.2803712&amp;format=json&amp;json_callback=preencherDados"></script>
+  </body>
+</html>

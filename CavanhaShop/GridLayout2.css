@@ -212,8 +212,10 @@ button {
     margin-top: 5px;
     cursor: pointer;
 }
-framehtml{
+#boxpreco{
     margin: 0px;
     padding: 0px;
     border: none;
+    height:560px;
+    width: 340px;
 }

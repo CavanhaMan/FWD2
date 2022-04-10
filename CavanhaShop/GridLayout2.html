@@ -110,8 +110,48 @@
             </ul>
         </div>
         <div class="item4b">
-            <div id="boxpreco" src="quadropreco.html"></div>
-            <iframe name="framehtml" id="boxpreco" src="quadropreco.html" style="border:none;" height="540px" width="340px"> </iframe>
+            <!---boxpreco------------------------------------------------->
+            <div class="boxpreco">
+                <div class="valor" id="preco1">R$</div>
+                <div class="valor" id="preco">631</div>
+                <div class="valor" id="preco2">,65</div>
+                <div class="limpafloat"></div>
+                <div class="espaco"></div>
+                <div class="data" id="entrega">Entrega GRÁTIS: &nbsp</div>
+                <div class="espaco"></div>
+                <div class="local"><img src="quadropreco/iconlocal.png" id="iconlocal" alt="local:"> &nbsp</div>
+                <div class="local">Enviar para &nbsp</div>
+                <div class="local" id="pegalocal"> </div>
+                <div class="limpafloat"></div>
+                <div class="espaco"></div>
+                <div class="estoque">Em estoque</div>
+                <div class="limpafloat"></div>
+                <div class="espaco"></div>
+                <div class="quantidade">Quantidade: &nbsp</div>
+                <div class="quantidade">
+                    <select name="qtde" id="quant">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="limpafloat"></div>
+                <div class="espaco"></div>
+                <div class="botao" id="addcarrinho">Adicionar ao carrinho</div>
+                <div class="botao" id="comprar">Comprar agora</div>
+                <div class="seguro"><img src="quadropreco/iconseguro2.png" id="iconseguro" alt="seguro!"> &nbsp</div>
+                <div class="espaco"></div>
+                <div class="seguro">Transação Segura</div>
+                <br><br>
+            </div>
+                    <!--iframe name="framehtml" id="boxpreco" src="quadropreco.html" style="border:none;" height="540px" width="340px"> </iframe-->
         </div>
         <div class="item5">
             <h3 id="titulo3">Detalhes técnicos:</h3>
@@ -135,5 +175,11 @@
             </ul>
         </div>
     </div>
+
+    <script src="quadropreco/quadropreco.js"></script>
+    <!-- FUNÇÃO PARA OBTER CIDADE -->
+    <script src="http://nominatim.openstreetmap.org/reverse?lat=-18.9366272&amp;lon=-48.2803712&amp;format=json&amp;json_callback=preencherDados"></script>
+
+
 </body>
 </html>
