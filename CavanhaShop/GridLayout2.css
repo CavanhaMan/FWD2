@@ -2,7 +2,7 @@ body{margin: 0px;}
 /* ------ ÁREAS GRID ----------------------------------- */
 .item0 {
     grid-area: header;
-    margin-bottom: 85px;
+    margin-bottom: 50px;
     background-color: black;
 }
 .item2 {
@@ -98,7 +98,10 @@ body{margin: 0px;}
     margin-left: -20px;
 }
 #titulo3{margin: 0px;}
-.lista2{font-size: 18px;}
+.lista2{
+    font-size: 18px;
+    margin-left: -5px;
+}
 /* ------ RIGHT2 (imagem preço) ------------------------------ */
 #imgpreco{width: 300px;}
 /* ------ FOOTER (item5) ------------------------------------- */
