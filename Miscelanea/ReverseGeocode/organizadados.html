@@ -1,0 +1,31 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Reverse Geocode</title>
+    <meta name="author" content="Rodrigo CavanhaMan" />
+    <script src="jquery-3.1.0.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <p>Click the button to get Location.</p>
+    <p>Try with and without providing a permission to access your location. </p>
+    <button type="button" onclick="getLocation()">Share my Location</button>
+    <table>
+        <tr><td colspan="2">Informações do Local:</td></tr>
+        <div class="output">Latitude:&nbsp;</div><div class="output" id="c2">?</div><BR>
+        <tr><td>city:</td><td id="s1">city</td></tr>
+        <tr><td>countryName:</td><td id="s2">countryName</td></tr>
+        <tr><td>latitude:</td><td id="s3">latitudea</td></tr>
+        <tr><td>longitude:</td><td id="s4">longitude</td></tr>
+        <tr><td>continent:</td><td id="s5">continent</td></tr>
+        <tr><td>principalSubdivision:</td><td id="s6">principalSubdivision</td></tr>
+        <tr><td>locality:</td><td id="s7">locality</td></tr>
+        <tr><td>name:</td><td id="s8">name(setor sul)</td></tr>
+    </table>
+    <pre id="jsonresult">aaaa</pre>
+
+</body>
+</html>
