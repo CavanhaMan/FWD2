@@ -51,7 +51,3 @@ let editPost = (e) => {
 };
 
 
-let clickjacking = () => {
-    console.log('${data.text}');
-  };
-  
