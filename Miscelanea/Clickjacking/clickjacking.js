@@ -24,6 +24,7 @@ let data = {};
 
 let acceptData = () => {
   data["text"] = input.value;
+  console.log("Dados Roubados!")
   console.log(data);
   createPost();
 };
@@ -49,9 +50,3 @@ let editPost = (e) => {
   input.value = e.parentElement.previousElementSibling.innerHTML;
   e.parentElement.parentElement.remove();
 };
-
-
-let clickjacking = () => {
-    console.log('${data.text}');
-  };
-  
