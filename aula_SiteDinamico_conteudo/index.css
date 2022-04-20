@@ -1,0 +1,36 @@
+/*-------------------------------------------*/
+.site {grid-area: site;}
+.menu {grid-area: menu;}
+.foto {grid-area: foto;}
+.titulo {grid-area: titulo;}
+.noticia {grid-area: noticia;}
+
+.news {
+    display: grid;
+    grid-template-areas:
+        'site site site site site site'
+        'menu foto foto foto titulo titulo'
+        'menu noticia noticia noticia noticia noticia';
+    gap: 10px;
+    padding: 10px;
+}
+
+.news > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    border: 1px solid black;
+}
+/*-------------------------------------------*/
+#fotof{width: 200px;}
+#titulot{width: 100%;}
+#notician{width: 100%;}
+.menus{
+    list-style: none;
+    margin: 10px 0px 10px 0px;
+    cursor: pointer;
+    text-align: left;
+}
+.menu{
+    width: 220px;
+}
