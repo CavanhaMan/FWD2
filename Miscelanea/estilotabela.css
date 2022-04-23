@@ -1,0 +1,9 @@
+.tabela, .linha, .cordt, h1 {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 400px;
+    height: 30px;
+    text-align: center;
+    background-color: red;
+}
+
