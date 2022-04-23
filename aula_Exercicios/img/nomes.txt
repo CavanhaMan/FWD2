@@ -1,0 +1,26 @@
+960x540	1PeterJackson.png
+1080x1920	2BruceSpringsteen.gif
+960x960	3Jay-Z.jpg
+960x960	4DwayneJohnson.jpg
+960x540	5KanyeWest.jpg
+960x540	6TreyParkerMattStone.png
+960x1707	7PaulSimon.jpg
+960x540	8TylerPerry.jpg
+960x960	9RyanTedder.jpg
+960x1707	10BobDylan.png
+960x540	11RedHotChiliPeppers.jpg
+960x960	12ReeseWitherspoon.jpg
+960x960	13ChuckLorre.jpg
+960x540	14SeanCombs.jpg
+960x540	15DickWolf.jpg
+960x960	16HowardStern.jpg
+960x540	17KevinMartaDavid.jpg
+960x960	18ShondaRhimes.jpg
+960x1707	19NeilYoung.jpg
+960x960	20GregBerlanti.png
+960x540	21LindseyBuckingham.jpg
+960x540	22MotleyCrue.jpg
+960x540	23BeachBoys.jpg
+960x960	24BlakeShelton.jpg
+960x960	25TaylorSwift.png
+	

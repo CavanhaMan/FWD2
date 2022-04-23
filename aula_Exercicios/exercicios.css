@@ -1,0 +1,178 @@
+/*** QUESTAO 1 ********************************************/
+#q1, .q1tr, .q1td, .q1th, .tdc, .tdr{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 0px 10px 0px 10px;
+}
+.tdc{text-align: center;}
+.tdr{text-align: right;}
+.trcor2{background-color: #cccccc;}
+.trcor1{background-color: #f2f2f2;}
+/*** QUESTAO 2 ********************************************/
+/*** QUESTAO 3 ********************************************/
+#q3{height: 420px;}
+#q3t1, #q3t2, #q3t3, #q3t4 {
+    margin: 25px 20px 25px 20px;
+    font-size: 40px;
+    float: left;
+    border: 1px solid navy;
+    border-radius: 50px;
+    height: 100px;
+    width: 500px;
+    text-align: center;
+    padding-top: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.5);
+}
+#q3t1{
+    color: yellow;
+    background-color: blue;
+}
+#q3t2{
+    color: green;
+    background-color: yellow;
+}
+#q3t3{
+    color: orange;
+    background-color: green;
+}
+#q3t4{
+    color: blue;
+    background-color: orange;
+}
+
+/*** QUESTAO 4 ********************************************/
+#q4{height: 650px;}
+.hero{
+    width:  300px;
+    height: 300px;
+    float: left;
+    cursor: pointer;
+}
+#batman{
+    background-color: black;
+    border: 2px solid beige;
+    border-radius: 30px 0px 0px 0px;
+}
+#wwoman{
+    background-color: black;
+    border: 2px solid beige;
+    border-radius: 0px 30px 0px 0px;
+}
+#superm{
+    background-color: black;
+    border: 2px solid beige;
+    border-radius: 0px 0px 0px 30px;
+}
+.titulo{
+    background-color: black;
+    color: beige;
+    width:  300px;
+    height: 300px;
+    border: 2px solid beige;
+    border-radius: 0px 0px 30px 0px;
+}
+#titulo{
+    font-size: 60px;
+    margin: 30px 0px 0px 15px;
+}
+
+#q4top, #q4bot{clear: both;}
+/*** QUESTAO 5 ********************************************/
+.menudiv{
+    display: block;
+    text-decoration:none;
+    cursor: pointer;
+    width: 260px;
+    height: 40px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: left;
+    color: white;
+    background-color: chocolate;
+    border-radius: 0px 50px 50px 0px;
+    border-color: brown;
+    border-style: solid;
+    margin: 20px 0px 20px 0px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    /*esta parte aqui é para suavizar a transicao):*/
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+.menudiv:hover {
+    background-color: rgb(255, 170, 100);
+    color: black;
+    font-weight: bold;
+    margin-left: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.5);
+    /*esta parte aqui é para suavizar a transicao):*/
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+
+}
+
+/*** QUESTAO 6 ********************************************/
+/*** QUESTAO 7 ********************************************/
+/*** QUESTAO 8 ********************************************/
+/*** QUESTAO 9 ********************************************/
+/*** QUESTAO 10********************************************/
+/*** QUESTAO 19********************************************/
+.q19th, .q19titulo, .q19nome, .q19img, .q19texto{float: left;}
+
+.q19img{}
+.famoso{height: 300px;}
+.q19tr{
+    height: 300px;
+    border: 4px solid navy;
+    border-radius: 30px 30px 30px 30px;
+    margin: 10px 0px 10px 0px;
+}
+.q19titulo{
+    border: 2px solid blue;
+    border-radius: 30px 0px 30px 0px;
+    background-color: rgb(207, 207, 207);
+    margin: -1px 10px 0px -1px;
+    text-align: center;
+    height: 50px;
+    width:  30px;
+    background-color: navy;
+}
+.q19num{
+    color: beige;
+    margin: 0%;
+    font-size: 36px;
+    font-weight: bold;
+}
+#q19{}
+.q19th{}
+.q19titulo{
+    font-size: 30px;
+    vertical-align: bottom;
+    width: 80px;
+    padding-top: 10px;
+}
+.q19nome, .q19grana{
+    font-size: 30px;
+    font-weight: bold;
+    width: 220px;
+}
+.q19nome{color: navy;}
+.q19grana{color:black}
+.imleft{width: 550px;}
+.q19texto{
+    font-size: 22px;
+    width: 550px;
+}
+.txtright{width: 360px;}
+#q19topo{
+    background-color: navy;
+    color: beige;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid navy;
+    border-radius: 30px 30px 30px 30px;
+}
