@@ -7,3 +7,8 @@ function trocanoticia(num){
     document.getElementById("titulot").src="titulos/t" + num + ".html";
     document.getElementById("notician").src="noticias/n" + num + ".html";
 }
+var x = document.getElementById("testaconsole").innerHTML;
+console.log(x);
+
+var y = $("#testaconsole").text();
+console.log(y);

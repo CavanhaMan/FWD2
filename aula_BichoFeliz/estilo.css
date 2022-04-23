@@ -28,7 +28,10 @@ html{background-color: beige;}
 /***************************************************************/
 /*  MENU                                                       */
 /***************************************************************/
-a{text-decoration:none;}
+a{
+    text-decoration:none;
+    display:inline-flex;
+}
 .menu{
     color: white;
     margin-left: auto;
@@ -36,14 +39,29 @@ a{text-decoration:none;}
     font-size: 21px;
     cursor: pointer;
     padding: 20px;
+    height: 40px;
+    text-align: center;
 }
-.menu:hover{
-    font-weight: bold;
-    padding-right: 12px;
+.divmenu{
+    display:inline-flex;
+    width: 220px;
 }
+.menu:hover {
+    transform-origin: center;
+    -webkit-transform:scale(2); /* Safari and Chrome */
+    -moz-transform:scale(2); /* Firefox */
+    -ms-transform:scale(2); /* IE 9 */
+    -o-transform:scale(2); /* Opera */
+    transform:scale(2);
+	max-width: 100%;
+    /*esta parte aqui é para suavizar a ampliacao (ou qq transicao):*/
+	-moz-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
 #divmenu{
     background-color: chocolate;
-    width: 500px;
     border-radius: 30px;
     border-color: brown;
     border-style: solid;
@@ -57,9 +75,4 @@ a{text-decoration:none;}
 #divmenu,#imgmenu{
     display: inline;
     vertical-align: middle;
-}
-.button {
-}
-.menuNew{
-    background-color: coral;
 }
