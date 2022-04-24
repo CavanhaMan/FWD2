@@ -115,6 +115,69 @@
 }
 
 /*** QUESTAO 6 ********************************************/
+.q6{height: 100px;}
+/*--- 1) ------------------------------*/
+#q61{height: 220px;}
+#q61-a{background-color: yellow;}
+#q61-b{background-color: blue;}
+#q61-c{background-color: green;}
+#q61-b, #q61-c{
+    float: left;
+    width: 50%;
+    height: 200px;
+}
+/*--- 2) ------------------------------*/
+#q62{height: 420px;}
+#q62-a{border: 1px solid red;}
+#q62-b{border: 1px solid blue;}
+#q62-c{border: 1px solid green;}
+#q62-b, #q62-c{
+    height: 200px;
+    float: left;
+    width: 49.86%;
+}
+#q62-d{
+    clear: both;
+    border: 1px solid red;
+    background-color: yellow;
+}
+/*--- 3) ------------------------------*/
+#q63{height: 220px;}
+#q63-a, #q63-b{
+    width: 100px;
+    border: 1px solid red;}
+/*--- 4) ------------------------------*/
+#q64{height: 220px;}
+#q64-a, #q64-b, #q64-c, #q64-d{
+    width: 100px;
+    border: 3px solid red;
+}
+.q6left{float: left;}
+.q6right{float: right;}
+/*--- 5) ------------------------------*/
+#q65{height: 420px;}
+#q65-a, #q65-b, #q65-c, #q65-d{
+    border: 1px solid red;
+    margin: 0%;
+}
+#q65-a{
+    height: 350px;
+    width: 350px;
+}
+#q65-b{
+    height: 210px;
+    width: 210px;
+}
+#q65-c{
+    width: 100px;
+    float: right;
+    margin-top: 109px;
+}
+#q65-d{
+    width: 100px;
+    float: right;
+}
+
 /*** QUESTAO 7 ********************************************/
 /*** QUESTAO 8 ********************************************/
 /*** QUESTAO 9 ********************************************/

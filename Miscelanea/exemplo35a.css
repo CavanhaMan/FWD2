@@ -1,0 +1,63 @@
+body {background-image: url('exemplo35a/fundoPagina.png');}
+* {box-sizing: border-box;}
+#boxGeral {
+    width:1300px;
+    margin:auto;
+    background-color:white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px 2px gray;
+}
+.carro {
+    float:left;
+    width:20%;
+    text-align: center;
+}
+#boxCarros img {
+    width:180px;
+    border:1px solid gray;
+    padding:5px;
+    border-radius: 5px;
+}
+.carro h4, p {
+    margin: 0;
+}
+.avisos {
+    width:33%;
+    float:left;
+    padding:20px;
+}
+#boxIntroducao, #boxAvisos, #boxCarros {
+    overflow: auto;
+}
+.fotoCarro {
+    width: 60%;
+    float: left;
+}
+.textoIntro {
+    width: 38%;
+    float: left;
+	margin-left: 10px;
+}
+.intro{
+	font-size: 22px;
+}
+#boxIntroducao img {
+    padding:20px;
+}
+/*******************************************/
+#carrograndao{width:800px}
+.justificado{text-align: justify;}
+#boxLogo, #boxMenu{float: left;}
+#boxTopo{
+    margin: 30px 0px 0px 150px;
+    height: 90px;
+}
+#listaMenu{
+    list-style: none;
+    margin-left: 300px;
+}
+.menu{
+    display: inline;
+    margin: 20px 20px 20px 20px;
+    font-size: 20px;
+}
