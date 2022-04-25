@@ -1,0 +1,11 @@
+/*** QUESTAO 1 ********************************************/
+/*#q1, .q1tr, .q1td, .q1th, .tdc, .tdr{*/
+table, th, tr, td{
+        border: 1px solid black;
+    border-collapse: collapse;
+    padding: 0px 10px 0px 10px;
+}
+.tdc{text-align: center;}
+.tdr{text-align: right;}
+.trcor2{background-color: #cccccc;}
+.trcor1{background-color: #f2f2f2;}

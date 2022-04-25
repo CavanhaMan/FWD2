@@ -1,0 +1,64 @@
+/*** QUESTAO 6 ********************************************/
+.box{height: 100px;}
+/*--- 1) ------------------------------*/
+#box1{height: 220px;}
+#box1-a{background-color: yellow;}
+#box1-b{background-color: blue;}
+#box1-c{background-color: green;}
+#box1-b, #box1-c{
+    float: left;
+    width: 50%;
+    height: 200px;
+}
+/*--- 2) ------------------------------*/
+#box2{height: 420px;}
+#box2-a{border: 1px solid red;}
+#box2-b{border: 1px solid blue;}
+#box2-c{border: 1px solid green;}
+#box2-b, #box2-c{
+    height: 200px;
+    float: left;
+    width: 49.86%;
+}
+#box2-d{
+    clear: both;
+    border: 1px solid red;
+    background-color: yellow;
+}
+/*--- 3) ------------------------------*/
+#box3{height: 220px;}
+#box3-a, #box3-b{
+    width: 100px;
+    border: 1px solid red;}
+/*--- 4) ------------------------------*/
+#box4{height: 220px;}
+#box4-a, #box4-b, #box4-c, #box4-d{
+    width: 100px;
+    border: 3px solid red;
+}
+.boxleft{float: left;}
+.boxright{float: right;}
+/*--- 5) ------------------------------*/
+#box5{height: 420px;}
+#box5-a, #box5-b, #box5-c, #box5-d{
+    border: 1px solid red;
+    margin: 0%;
+}
+#box5-a{
+    height: 350px;
+    width: 350px;
+}
+#box5-b{
+    height: 210px;
+    width: 210px;
+}
+#box5-c{
+    width: 100px;
+    float: right;
+    margin-top: 109px;
+}
+#box5-d{
+    width: 100px;
+    float: right;
+}
+

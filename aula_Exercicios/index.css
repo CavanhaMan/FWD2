@@ -1,0 +1,55 @@
+embed{width: 100%;}
+#questao1{height: 400px;}
+#questao2{height: 1000px;}
+#questao3{height: 600px;}
+#questao4{height: 1600px;}
+#questao5{height: 600px;}
+#questao6{height: 2100px;}
+#questao7{height: 600px;}
+#questao8{height: 1000px;}
+#questao9{height: 8400px;}
+
+#topo{height: 30px;}
+
+
+.menuflutuante {
+    /*codigo para centralizar horizontal e verticalmente:*/
+    margin: 20px 0px 0px 0px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	width: 100%;
+}
+
+
+/*Colocando a lista centralizada, com background e sem marcas de lista*/
+#menu ul {
+	padding:0px;
+	margin:0px;
+	background-color:#EDEDED;
+	list-style:none;
+    text-align: center;
+    font-size: 25px;
+}
+/*Colocando todos os elementos em uma linha*/
+#menu ul li {display: inline;}
+
+/*Distância entre os elementos*/
+#menu ul li a {
+	padding: 15px;
+	display: inline-block;
+
+	/*VISUAL DO LINK SEM O MOUSE*/
+	color: black;
+	text-decoration: none;
+	border-bottom:3px solid #EDEDED;
+}
+#menu ul li a:hover {
+    /*VISUAL DO LINK COM O MOUSE SOBRE ELE*/
+	background-color: gray;
+	color: yellow;
+	border-bottom:3px solid red;
+}
+
+/*****************************************/

@@ -1,0 +1,27 @@
+/*** QUESTAO 2 ********************************************/
+h2{
+    margin-bottom: -8px;
+    width: 650px;
+    text-align: center;
+}
+ol{
+    padding: 0%;
+    list-style-position: inside;
+    color: red;
+    font-weight: bold;
+    width: 650px;
+    font-size: 20px;
+}
+b{color: black;}
+k{
+    font-weight: normal;
+    color: darkblue;
+}
+.liA{
+    background: #dde5ff;
+    padding: 5px 0px 5px 10px;
+}
+.liB{
+    background: #aae5ff;
+    padding: 5px 0px 5px 10px;
+}

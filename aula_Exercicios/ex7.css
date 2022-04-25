@@ -1,0 +1,46 @@
+/*** QUESTAO 7 ********************************************/
+#topo{
+    width: 98.5%;
+    height: 80px;
+    background-color: #806600;
+    color: beige;
+    padding: 10px 0px 10px 20px;
+}
+#meio{
+    width: 98.5%;
+    height: 300px;
+}
+#menu, #conteudo{
+    float: left;
+}
+#menu{
+    width: 30%;
+}
+ul{
+    list-style: none;
+}
+li{
+    margin: 10px 0px 10px 0px;
+    background-color: #ffcc00;;
+    padding: 10px;
+    width: 350px;
+    font-weight: bold;
+    font-size: 20px;
+}
+#conteudo{
+    width: 60%;
+}
+#pconteudo{
+    font-size: 22px;
+}
+#rodape{
+    width: 98.5%;
+    background-color: #806600;
+    color: white;
+    padding: 10px 0px 10px 20px;
+    font-size: 20px;
+}
+li:hover{
+    background-color: #806600;
+    color: beige;
+}
