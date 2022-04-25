@@ -1,7 +1,7 @@
 /*** QUESTAO 6 ********************************************/
 .box{height: 100px;}
 /*--- 1) ------------------------------*/
-#box1{height: 220px;}
+#box1{height: 310px;}
 #box1-a{background-color: yellow;}
 #box1-b{background-color: blue;}
 #box1-c{background-color: green;}
@@ -11,53 +11,104 @@
     height: 200px;
 }
 /*--- 2) ------------------------------*/
-#box2{height: 420px;}
-#box2-a{border: 1px solid red;}
-#box2-b{border: 1px solid blue;}
-#box2-c{border: 1px solid green;}
+#box2{height: 450px;}
+#box2-a{
+    border: 5px solid red;
+    background-color: #ffcccc;
+}
+#box2-b{
+    border: 5px solid blue;
+    background-color: #ccccff;
+}
+#box2-c{
+    border: 5px solid green;
+    background-color: #ccffcc;
+}
 #box2-b, #box2-c{
     height: 200px;
     float: left;
-    width: 49.86%;
+/*    width: 49.25%;*/
+    width: 47.7%;
 }
 #box2-d{
     clear: both;
-    border: 1px solid red;
-    background-color: yellow;
+    border: 5px solid red;
+    background-color: #ffcccc;
 }
 /*--- 3) ------------------------------*/
-#box3{height: 220px;}
-#box3-a, #box3-b{
-    width: 100px;
-    border: 1px solid red;}
+#box3{height: 450px;}
+#box3-a{
+    border: 5px solid red;
+    background-color: yellow;
+}
+#box3-b{
+    border: 5px solid blue;
+    background-color: #ccccff;
+/*    width: 29.25%;*/
+    width: 26.25%;
+}
+#box3-c{
+    border: 5px solid green;
+    background-color: #ccffcc;
+    width: 69.25%;
+}
+#box3-b, #box3-c{
+    height: 200px;
+    float: left;
+}
+#box3-d{
+    clear: both;
+    border: 5px solid red;
+    background-color: yellow;
+}
 /*--- 4) ------------------------------*/
-#box4{height: 220px;}
-#box4-a, #box4-b, #box4-c, #box4-d{
+#box4{height: 130px;}
+#box4-a, #box4-b{
     width: 100px;
-    border: 3px solid red;
+    border: 5px solid red;
+    background-color: #ffcccc;
+    float: right;
+}
+/*--- 5) ------------------------------*/
+#box5{height: 250px;}
+#box5-a, #box5-b{
+    width: 100px;
+    border: 5px solid blue;
+    background-color: #ccccff;
+}
+#box5a{
+    float: right;
+}
+/*--- 6) ------------------------------*/
+#box6{height: 250px;}
+#box6-a, #box6-b, #box6-c, #box6-d{
+    width: 100px;
+    border: 5px solid green;
+    background-color: #ccffcc;
 }
 .boxleft{float: left;}
 .boxright{float: right;}
-/*--- 5) ------------------------------*/
-#box5{height: 420px;}
-#box5-a, #box5-b, #box5-c, #box5-d{
+/*--- 7) ------------------------------*/
+#box7{height: 420px;}
+#box7-a, #box7-b, #box7-c, #box7-d{
     border: 1px solid red;
+    background-color: #ffe6e6;
     margin: 0%;
 }
-#box5-a{
+#box7-a{
     height: 350px;
     width: 350px;
 }
-#box5-b{
+#box7-b{
     height: 210px;
     width: 210px;
 }
-#box5-c{
+#box7-c{
     width: 100px;
     float: right;
     margin-top: 109px;
 }
-#box5-d{
+#box7-d{
     width: 100px;
     float: right;
 }
