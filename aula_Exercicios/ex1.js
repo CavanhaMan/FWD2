@@ -23,6 +23,7 @@ $('document').ready(function(){
         //console.log(valor);
         var salario = parseFloat(horas)*parseFloat(valor);
         //console.log(salario);
+        //$("#total"+i).text(salario);
         $("#total"+i).html(salario);
     }
     $('.tdr').mask('#.##0,00', {reverse: true});

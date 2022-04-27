@@ -27,8 +27,8 @@
 #box2-b, #box2-c{
     height: 200px;
     float: left;
-/*    width: 49.25%;*/
-    width: 47.7%;
+    width: 49.25%;
+/*    width: 47.7%;*/
 }
 #box2-d{
     clear: both;
@@ -44,8 +44,8 @@
 #box3-b{
     border: 5px solid blue;
     background-color: #ccccff;
-/*    width: 29.25%;*/
-    width: 26.25%;
+    width: 29.25%;
+    /*width: 26.25%;*/
 }
 #box3-c{
     border: 5px solid green;
