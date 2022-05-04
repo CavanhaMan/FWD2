@@ -1,0 +1,20 @@
+.pag1{background-color: beige;}
+.pag2{background-color: burlywood;}
+
+/* FORMATACAO GERAL PARA O LINK: */
+a{
+    text-decoration: none; /*RETIRA O SUBLINHADO*/
+    font-size: 60px;
+}
+/* VISUAL DO LINK ANTES DE SER VISITADO */
+a:link{color: green;}
+/* VISUAL DO LINK JA CLICADO */
+a:visited{color: black;}
+/* LINK QUANDO O MOUSE ESTA SOBRE ELE */
+a:hover{color: red;}
+/* LINK NO MOMENTO EM QUE EH CLICADO */
+a:active{
+    background-color: red;
+    color: yellow;
+    text-decoration: underline;
+}

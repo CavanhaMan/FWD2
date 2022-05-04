@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=utf-8 />
+<title>test</title>
+    <meta name="author" content="Rodrigo CavanhaMan" />
+
+<style type="text/css">
+#hold { margin:0 auto; width:500px; height:500px; border:1px solid #000; }
+#canvas { float:left; }
+#top-layer { position:absolute; z-index:1; width:500px; height:500px; cursor:crosshair; }
+</style>
+</head>
+<body>
+
+<div id="hold">
+
+  <canvas id="canvas" width="500" height="500"></canvas>
+
+  <div id="top-layer" onmousemove="trackMouse(event);">
+    <ul>
+      <li><a href="http://www.google.com">Test Link (takes u to google)</a></li>
+      <li><a href="http://www.google.com">Test Link (takes u to google)</a></li>
+      <li><a href="http://www.google.com">Test Link (takes u to google)</a></li>
+      <li><a href="http://www.google.com">Test Link (takes u to google)</a></li>
+      <li><a href="http://www.google.com">Test Link (takes u to google)</a></li>
+      <li><a href="http://www.google.com">Test Link (takes u to google)</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+
+var ctx = document.getElementById('canvas').getContext('2d');
+
+function trackMouse(event) {
+  ctx.globalCompositeOperation = "source-over";
+  ctx.clearRect(0, 0, 500, 500);
+
+  this.r = 125; // Radius of circle
+  this.x;
+  this.y;
+
+  this.x = event.clientX - document.getElementById('canvas').offsetLeft;
+  this.y = event.clientY - document.getElementById('canvas').offsetTop;
+
+  ctx.strokeStyle = '#000';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, true);
+  ctx.closePath();
+  ctx.stroke();
+};
+
+</script>
+</body>
+</html>

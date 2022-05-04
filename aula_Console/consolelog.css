@@ -1,0 +1,12 @@
+table,tr,td,th{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td{
+    width:20px;
+    text-align: center;
+}
+#operacao{font-size: 20px;}
+.operador{font-size: 40px;}
+.numeros{width: 50px;}
+
