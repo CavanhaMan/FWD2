@@ -11,6 +11,7 @@ ol{
     font-weight: bold;
     width: 650px;
     font-size: 20px;
+    list-style-type: decimal-leading-zero;
 }
 b{color: black;}
 k{

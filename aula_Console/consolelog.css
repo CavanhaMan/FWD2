@@ -7,6 +7,8 @@ td{
     text-align: center;
 }
 #operacao{font-size: 20px;}
-.operador{font-size: 40px;}
+.operador{font-size: 30px;}
 .numeros{width: 50px;}
-
+img{
+    width: 300px;
+}

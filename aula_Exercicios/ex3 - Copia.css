@@ -1,0 +1,30 @@
+/*** QUESTAO 3 ********************************************/
+#q3{height: 420px;}
+#box1, #box2, #box3, #box4 {
+    margin: 25px 20px 25px 20px;
+    font-size: 40px;
+    float: left;
+    border: 1px solid navy;
+    border-radius: 50px;
+    height: 100px;
+    width: 500px;
+    text-align: center;
+    padding-top: 50px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.5);
+}
+#box1{
+    color: yellow;
+    background-color: blue;
+}
+#box2{
+    color: green;
+    background-color: yellow;
+}
+#box3{
+    color: orange;
+    background-color: green;
+}
+#box4{
+    color: blue;
+    background-color: orange;
+}

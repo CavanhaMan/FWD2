@@ -1,0 +1,115 @@
+/*** QUESTAO 6 ********************************************/
+.box{height: 100px;}
+/*--- 1) ------------------------------*/
+#box1{height: 310px;}
+#box1-a{background-color: yellow;}
+#box1-b{background-color: blue;}
+#box1-c{background-color: green;}
+#box1-b, #box1-c{
+    float: left;
+    width: 50%;
+    height: 200px;
+}
+/*--- 2) ------------------------------*/
+#box2{height: 450px;}
+#box2-a{
+    border: 5px solid red;
+    background-color: #ffcccc;
+}
+#box2-b{
+    border: 5px solid blue;
+    background-color: #ccccff;
+}
+#box2-c{
+    border: 5px solid green;
+    background-color: #ccffcc;
+}
+#box2-b, #box2-c{
+    height: 200px;
+    float: left;
+    width: 49.25%;
+/*    width: 47.7%;*/
+}
+#box2-d{
+    clear: both;
+    border: 5px solid red;
+    background-color: #ffcccc;
+}
+/*--- 3) ------------------------------*/
+#box3{height: 450px;}
+#box3-a{
+    border: 5px solid red;
+    background-color: yellow;
+}
+#box3-b{
+    border: 5px solid blue;
+    background-color: #ccccff;
+    width: 29.25%;
+    /*width: 26.25%;*/
+}
+#box3-c{
+    border: 5px solid green;
+    background-color: #ccffcc;
+    width: 69.25%;
+}
+#box3-b, #box3-c{
+    height: 200px;
+    float: left;
+}
+#box3-d{
+    clear: both;
+    border: 5px solid red;
+    background-color: yellow;
+}
+/*--- 4) ------------------------------*/
+#box4{height: 130px;}
+#box4-a, #box4-b{
+    width: 100px;
+    border: 5px solid red;
+    background-color: #ffcccc;
+    float: right;
+}
+/*--- 5) ------------------------------*/
+#box5{height: 250px;}
+#box5-a, #box5-b{
+    width: 100px;
+    border: 5px solid blue;
+    background-color: #ccccff;
+}
+#box5a{
+    float: right;
+}
+/*--- 6) ------------------------------*/
+#box6{height: 250px;}
+#box6-a, #box6-b, #box6-c, #box6-d{
+    width: 100px;
+    border: 5px solid green;
+    background-color: #ccffcc;
+}
+.boxleft{float: left;}
+.boxright{float: right;}
+/*--- 7) ------------------------------*/
+#box7{height: 420px;}
+#box7-a, #box7-b, #box7-c, #box7-d{
+    border: 1px solid red;
+    background-color: #ffe6e6;
+    margin: 0%;
+}
+#box7-a{
+    height: 350px;
+    width: 350px;
+}
+#box7-b{
+    height: 210px;
+    width: 210px;
+}
+#box7-c{
+    width: 100px;
+    float: right;
+    margin-top: 109px;
+}
+#box7-d{
+    width: 100px;
+    float: right;
+}
+

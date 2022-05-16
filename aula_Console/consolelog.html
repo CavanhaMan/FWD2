@@ -8,14 +8,19 @@
     <meta name="author" content="Rodrigo CavanhaMan" />
     <link href="consolelog.css" rel="stylesheet">
     <script src="jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="https://cdn.rawgit.com/adriancooney/console.image/c9e6d4fd/console.image.min.js"></script>
 </head>
 <body>
     <p>Abra o console (F12)</p>
 
+    <!------ EXEMPLO 1 ------------------------------------->
+    <h3>EXEMPLO 1</h3>
     <h1 id="titulo">Isso é um título h1</h1>
     <p id="paragrafo">Isso é um parágrafo p</p>
 
     <hr>
+    <!------ EXEMPLO 2 ------------------------------------->
+    <h3>EXEMPLO 2</h3>
     <table>
         <tr>
             <td id="vr1">1</td>
@@ -27,7 +32,8 @@
     </table>
 
     <br><hr>
-
+    <!------ EXEMPLO 3 ------------------------------------->
+    <h3>EXEMPLO 3</h3>
     <label for="escolhenum">Escolha um número:</label>
     <select name="escolhenum" id="escolhenum">
         <option value="1">1</option>
@@ -43,7 +49,8 @@
     </select>
 
     <br><br><hr>
-
+    <!------ EXEMPLO 4 ------------------------------------->
+    <h3>EXEMPLO 4</h3>
     <label for="escolheuf">Escolha um Estado:</label>
     <select name="escolheuf" id="escolheuf">
         <option value="Acre">AC</option>
@@ -76,12 +83,14 @@
     </select>
 
     <br><br><hr>
-
+    <!------ EXEMPLO 5 ------------------------------------->
+    <h3>EXEMPLO 5</h3>
     <textarea id="textao" name="textao" rows="5" cols="50">Isto é um texto grande que será usado para mostrar como podemos capturar todo o texto inserido em uma caixa de texto. Note que tudo foi capturado e armazenado numa variável que posteriormente foi mostrada no console.log.</textarea><br>
     <button type="button" id="pegatextao">Enviar</button>
 
     <br><br><hr>
-
+    <!------ EXEMPLO 6 ------------------------------------->
+    <h3>EXEMPLO 6</h3>
     <label for="nome">Nome:</label>
     <input type="text" id="nome" name="nome"><br><br>
     <label for="sobrenome">Sobrenome:</label>
@@ -89,7 +98,8 @@
     <button type="button" id="peganome">Enviar</button>
     
     <br><br><hr>
-
+    <!------ EXEMPLO 7 ------------------------------------->
+    <h3>EXEMPLO 7</h3>
     <label for="n1">Primeiro número:</label>
     <input class="numeros" type="text" id="n1" name="n1"><br><br>
     <label for="n2">Segundo número:</label>
@@ -107,30 +117,7 @@
     <label for="res">Resultado:</label>
     <input class="numeros" type="text" id="res" name="res">
 
-    <br><br><hr>
-
-    <label for="tela"></label>
-    <input type="text" id="tela" name="tela"><br>
-    <button type="button" class="calc" id="bt1" onclick="calcular('1')">1</button>
-    <button type="button" class="calc" id="bt2" onclick="calcular('2')">2</button>
-    <button type="button" class="calc" id="bt3" onclick="calcular('3')">3</button><br>
-    <button type="button" class="calc" id="bt4" onclick="calcular('4')">4</button>
-    <button type="button" class="calc" id="bt5" onclick="calcular('5')">5</button>
-    <button type="button" class="calc" id="bt6" onclick="calcular('6')">6</button><br>
-    <button type="button" class="calc" id="bt7" onclick="calcular('7')">7</button>
-    <button type="button" class="calc" id="bt8" onclick="calcular('8')">8</button>
-    <button type="button" class="calc" id="bt9" onclick="calcular('9')">9</button><br>
-    <button type="button" class="calc" id="bt0" onclick="calcular('0')">0</button><br>
-    <button type="button" id="btsom" onclick="calcular(' + ')">+</button>
-    <button type="button" id="btsub" onclick="calcular(' - ')">-</button>
-    <button type="button" id="btmul" onclick="calcular(' * ')">*</button>
-    <button type="button" id="btdiv" onclick="calcular(' / ')">/</button><br>
-    <button type="button" id="btigual" onclick="calcular('=')">=</button>
-    <label for="igual"></label>
-    <input class="numeros" type="text" id="igual" name="igual">
-    
-
-    <br><br><br><br><br><br>
+    <br><hr><br><br><br><br><br>
 
     <script src="consolelog.js"></script>
 </body>

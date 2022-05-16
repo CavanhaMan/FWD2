@@ -1,0 +1,32 @@
+html{
+    width: 80%;
+    /*para centralizar*/
+    margin-left: auto;
+    margin-right: auto;
+}
+h1, h4 {text-align: center;}
+p {text-align: justify;}
+hr {width: 80%;}
+link{list-style: none;}
+ul{
+    list-style-type: none;
+    height: 50px;
+    /*para centralizar*/
+    margin-left: auto;
+    margin-right: auto;
+}
+li{
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.btvoltar{
+    float:left;
+    width: 20px;
+    margin: 8px 10px 0px 0px;
+}
+.voltar{
+    float:right;
+    color: red;
+    margin-top: 0px;
+}

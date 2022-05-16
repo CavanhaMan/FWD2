@@ -1,4 +1,4 @@
-//alert("Abra o console (F12)");
+alert("Abra o console (F12)");
 
 console.log("É ASSIM QUE VOCE VERÁ AS MENSAGENS DO CONSOLE LOG:");
 console.log("Hello world!");
@@ -16,6 +16,8 @@ B = "BALA";
 console.log(B);
 console.log(A+B);
 
+/* Aqui começamos a usar o codigo HTML: */
+/*------ EXEMPLO 1 -------------------------------------*/
 console.log("____PEGANDO VALORES ATRAVÉS DO ID (JAVASCRIPT):____");
 A = document.getElementById("titulo").innerHTML;
 console.log(A);
@@ -28,6 +30,7 @@ console.log("____PEGANDO VALORES ATRAVÉS DO ID (JQUERY):____");
 var C = $("#titulo").text();
 console.log(C);
 
+/*------ EXEMPLO 2 -------------------------------------*/
 console.log("____PEGANDO VALORES NUMA TABELA ATRAVÉS DO ID (JQUERY):____");
 var vr1 = $("#vr1").text();
 console.log(vr1);
@@ -37,7 +40,7 @@ console.log(vr1+vr2);
 /*____INSERINDO VALORES ATRAVÉS DO ID (JQUERY):____*/
 $("#result").text(vr1+vr2);
 
-/***************************************************************/
+/*------ EXEMPLO 3 -------------------------------------*/
 $('#escolhenum').change(function(){
     console.log("____PEGANDO VALORES DE UMA DROPLIST (SELECT) COM JAVASCRIPT:____");
     var e = document.getElementById("escolhenum");
@@ -55,24 +58,21 @@ $('#escolhenum').change(function(){
     console.log(y);
 });
 
-/***************************************************************/
-
+/*------ EXEMPLO 4 -------------------------------------*/
 $('#escolheuf').change(function(){
     console.log("____ESCOLHENDO O ESTADO EM UMA DROPLIST (SELECT) COM JQUERY:____");
     var w = $("#escolheuf").val();
     console.log(w);
 });
 
-/***************************************************************/
-
+/*------ EXEMPLO 5 -------------------------------------*/
 $("#pegatextao").click(function(){
 console.log("____PEGANDO TEXTO DE UMA TEXTAREA:____");
 var textao = $("#textao").val();
 console.log(textao);
 });
 
-/***************************************************************/
-
+/*------ EXEMPLO 6 -------------------------------------*/
 $("#peganome").click(function(){
     console.log("____PEGANDO TEXTO DE UM INPUT TEXT:____");
     var nome = $("#nome").val();
@@ -80,14 +80,13 @@ $("#peganome").click(function(){
     console.log("Nome completo: "+ nome + " " + sobrenome);
 });
 
-/***************************************************************/
-
+/*------ EXEMPLO 7 -------------------------------------*/
 $("#calcular").click(function(){
-    console.log("____PEGANDO TEXTO DE UMA TEXTAREA :____");
+    console.log("____PEGANDO TEXTO DE UMA TEXTAREA E");
+    console.log("    INSERINDO O RESULTADO NA TEXTAREA:____");
     var n1 = $("#n1").val();
     var n2 = $("#n2").val();
     var op = $("#operacao").val();
-    console.log("Operação: "+ n1 + " " + op + " " + n2);
     var res;
     if(op=='+')
         res = n1*1+n2*1;
@@ -97,32 +96,6 @@ $("#calcular").click(function(){
         res = n1*n2;
     else if(op=='/')
         res = n1/n2;
-    console.log(res);
+    console.log("Operação: "+ n1 + " " + op + " " + n2 + " = " + res);
     $("#res").val(res);
 });
-
-/*____CALCULADORA:____
-$(".calc").click(function(){
-    var n = $(".calc").attr("value");
-    console.log(n);
-    $("#tela").val("ok");
-    $("#igual").val("ok");
-
-});*/
-
-function calcular(op){
-    console.log(op);
-    var result=0;
-    if(op=='='){
-        var aux = document.getElementById("tela").value;
-        var results = aux.split(" ");
-        console.log(results);
-        $("#igual").val(results);
-    }
-    else
-        document.getElementById("tela").value+=op;
-
-    //$("#tela").val(op);
-    //$("#igual").val(op);
-
-};
