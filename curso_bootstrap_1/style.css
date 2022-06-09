@@ -1,5 +1,8 @@
+.navbar{
+    padding: 0px;
+}
 .nav-link:hover{
-    background-color: gray;
+    background-color: #e6e6e6;
 }
 .btn-warning:hover{
     background-color: blue;

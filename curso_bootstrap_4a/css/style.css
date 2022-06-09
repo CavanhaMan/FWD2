@@ -1,0 +1,17 @@
+body{
+    margin:0px;
+    background-image: url("../img/fundos/woodg6.jpg");
+    background-size: 100%;
+    background-repeat: repeat;
+}
+@font-face {
+    font-family: "navbar-brand";
+    src: url("../fonts/Thisay_Font.otf");
+}
+.navbar-brand{font-family: "navbar-brand";}
+.transparent{background-color: rgba(255, 100, 100, 0.4);}
+.navbar{padding: 0px;}
+.nav-link:hover{background-color: #e6e6e6;}
+.btn-warning:hover{background-color: blue;}
+.container-fluid{background-color:rgba(180, 180, 180, 0.7);}
+.dropdown-menu{background-color:rgba(180, 180, 180);}
