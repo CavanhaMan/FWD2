@@ -1,2 +1,42 @@
 h1{color: red;}
 .btn-primary{background-color: red;}
+
+/* Breakpoint  para tamanhos de tela: */
+/*----- Small (sm) -------------------*/
+@media(min-width: 576px){
+    h1{color: blue;}
+    .btn-primary{background-color: blue;}
+}
+
+/*----- Medium (md) ------------------*/
+@media(min-width: 768px){
+    h1{color: green;}
+    .btn-primary{background-color: green;}
+}
+
+/*----- Large (lg) -------------------*/
+@media(min-width: 992px){
+    h1{color: purple;}
+    .btn-primary{background-color: purple;}
+}
+
+/*----- Extra large (xl) -------------*/
+@media(min-width: 1200px){
+    h1{color: pink;}
+    .btn-primary{background-color: pink;}
+}
+
+/*----- Extra extra large (xxl) ------*/
+@media(min-width: 1400px){
+    h1{color: goldenrod;}
+    .btn-primary{background-color: goldenrod;}
+}
+
+.container{background-color: #999;}
+.container-fluid{background-color: #888;}
+
+/* Container Breakpoint */
+.container-sm{border: 3px solid goldenrod;}
+.container-md{border: 3px solid crimson;}
+.container-lg{border: 3px solid chocolate;}
+.container-sm, .container-md, .container-lg {margin-top: 20px;}
