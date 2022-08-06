@@ -1,0 +1,130 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  text-align: center;
+  background: linear-gradient(to bottom, blue, white);
+  min-height: 100vh;
+}
+main {
+  display: inline-block;
+  margin-top: 1%;
+  padding: 15px;
+  position: relative;
+  }
+  .pokedex{
+  width: 100%;
+  max-width: 920px;
+}
+.pokemon__image {
+  position: absolute;
+  bottom: 45.5%;
+  left: 27%;
+  transform: translate(-63%, 20%);
+  height: 20%;
+  }
+.pokemon__data2 { /* NOME DO POKEMON */
+  position: absolute;
+  font-weight: 600;
+  color: black;
+  top: 32.5%;
+  left: 61%;
+  font-size: clamp(8px, 5vw, 25px);
+}
+.pokemon__name {
+  color: black;
+  text-transform: capitalize;
+  }
+.form {
+  position: absolute;
+  width: 39%;
+  top: 72%;
+  left: 6%;
+  }
+.input__search {
+  width: 100%;
+  padding: 4%;
+  outline: none;
+  border: 2px solid #333;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #3a444d;
+  font-size: clamp(8px, 5vw, 1rem);
+  box-shadow: -3px 4px 0 #888, -5px 7px 0 #333
+}
+.buttons {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  width: 65%;
+  transform: translate(-57%, 0);
+  display: flex;
+  gap: 20px;
+}
+.button {
+  width: 20%;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-weight: 600;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.659);
+  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+.button:active {
+  box-shadow: inset -4px 4px 0 #222;
+  font-size: 0.9rem;
+}
+.clicado {
+  box-shadow: inset -4px 4px 0 #222;
+  font-size: 0.9rem;
+}
+.normal{
+  box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+  font-size: clamp(8px, 5vw, 1rem);
+}
+
+/* numero do pokemon - foi colocado separado para liberar espaço */
+.pokemon__data1 { /* NUMERO DO POKEMON */
+  position: absolute;
+  font-weight: 600;
+  color: #515253;
+  top: 61.5%;
+  right: 78%;
+  font-size: clamp(8px, 12vw, 30px);
+  width: 15%;
+  border-radius: 10px;
+  text-align: right;
+}
+/* BOTAO POWER */
+.btpower{
+  height: 15%;
+  position: absolute;
+  top: 3.4%;
+  right: 84%;
+}
+/* botoes de controle pokemon */
+.controles{
+  width: 50%;
+  height: 50%;
+}
+.tela{
+  position: absolute;
+  width: 33.8%;
+  top: 28.7%;
+  left: 8.6%;
+  border-radius: 10px;
+}
+/*TABELA DE DETALHES*/
+p{
+  text-align: left;
+  margin: 0%;
+}
+.dados{
+  position: absolute;
+  top: 45%;
+  left: 57%;
+  width: 26.2%;
+  font-size: clamp(8px, 12vw, 18px);
+}
