@@ -1,0 +1,38 @@
+/*BOLAS COLORIDAS*/
+.balls{
+    border-radius: 50%;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+}
+#red {
+    background: red;
+    left: 40%;
+}
+#blue {
+    background: blue;
+    left: 45%;
+}
+#black {
+    background: black;
+    left: 50%;
+}
+#orange {
+    background: orange;
+    left: 55%;
+}
+#green {
+    background: green;
+    left: 60%;
+}
+#pink {
+    background: pink;
+    left: 65%;
+}
+
+/*BOLA DE FUTEBOL*/
+body {
+    font-size:100px;
+    color: red;
+}
